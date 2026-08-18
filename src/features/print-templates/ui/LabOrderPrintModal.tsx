@@ -3,6 +3,7 @@ import type { Patient } from '@/entities/patient/model/schemas';
 import { PatientService } from '@/entities/patient/api/patientService';
 import { useAuth } from '@/app/providers/AuthContext';
 import { PrintService } from '@/shared/lib/printService';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 import { Button } from '@/shared/ui';
 import { Printer, X, TestTubes, CheckCircle2, AlertCircle, MapPin } from 'lucide-react';
 
@@ -148,7 +149,7 @@ export function LabOrderPrintModal({
                   ORDEN DE ESTUDIOS
                 </div>
                 <p className="text-xs font-semibold text-slate-800 pt-0.5">
-                  Fecha: <strong className="text-slate-900">{new Date(note.date).toLocaleDateString('es-MX')}</strong>
+                  Fecha: <strong className="text-slate-900">{DateTimeService.formatDate(note.date)}</strong>
                 </p>
                 <p className="text-xs font-mono text-slate-700">
                   Folio: <strong className="text-slate-900">{patient.id}</strong>

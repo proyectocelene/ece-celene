@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import type { ClinicalNote } from '@/entities/clinical-note/model/schemas';
 import type { Patient } from '@/entities/patient/model/schemas';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 import { Card } from '@/shared/ui';
 import {
   Activity,
@@ -26,11 +27,10 @@ export function PatientVitalTrendsTab({ notes }: PatientVitalTrendsTabProps) {
     return notes
       .filter((n) => n.vitalSigns && Object.keys(n.vitalSigns).length > 0)
       .map((n) => {
-        const d = new Date(n.date);
         return {
           id: n.id,
           date: n.date,
-          dateFormatted: d.toLocaleDateString('es-MX', { month: 'short', day: 'numeric', year: '2-digit' }),
+          dateFormatted: DateTimeService.formatDate(n.date, { month: 'short', day: 'numeric', year: '2-digit' }),
           bpSystolic: n.vitalSigns?.bpSystolic,
           bpDiastolic: n.vitalSigns?.bpDiastolic,
           heartRate: n.vitalSigns?.heartRate,

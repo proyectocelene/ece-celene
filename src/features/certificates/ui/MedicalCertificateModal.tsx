@@ -5,6 +5,7 @@ import type { ClinicalNote, VitalSigns } from '@/entities/clinical-note/model/sc
 import { PatientService } from '@/entities/patient/api/patientService';
 import { ClinicalNoteService } from '@/entities/clinical-note/api/clinicalNoteService';
 import { PrintService } from '@/shared/lib/printService';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 import { Modal, Button, Input, Select } from '@/shared/ui';
 import {
   Printer,
@@ -77,8 +78,7 @@ export function MedicalCertificateModal({
       : patient.demographics.gender || 'No especificado';
 
   const formattedDateExtended = useMemo(() => {
-    const d = new Date();
-    return d.toLocaleDateString('es-MX', {
+    return DateTimeService.formatDate(new Date(), {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
@@ -133,7 +133,7 @@ export function MedicalCertificateModal({
             CERTIFICADO MÉDICO
           </div>
           <p className="text-[11px] font-semibold text-slate-800 pt-0.5">
-            Fecha: <strong className="text-slate-900 font-bold">{new Date().toLocaleDateString('es-MX')}</strong>
+            Fecha: <strong className="text-slate-900 font-bold">{DateTimeService.formatDate(new Date())}</strong>
           </p>
           <p className="text-[11px] font-mono text-slate-800">
             Folio: <strong className="text-slate-900 font-bold">{patient.id}</strong>

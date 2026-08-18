@@ -4,6 +4,7 @@ import type { Patient } from '@/entities/patient/model/schemas';
 import { PatientService } from '@/entities/patient/api/patientService';
 import { useAuth } from '@/app/providers/AuthContext';
 import { PrintService } from '@/shared/lib/printService';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 import { Button } from '@/shared/ui';
 import {
   Printer,
@@ -106,7 +107,7 @@ export function ServiceReceiptPrint({
             Folio: {activeReceipt.receiptFolio || `REC-${patient.id}`}
           </p>
           <p className="text-[10px] text-slate-600 font-medium">
-            Fecha: {new Date(note.date).toLocaleDateString('es-MX', { year: 'numeric', month: 'short', day: 'numeric' })}
+            Fecha: {DateTimeService.formatDate(note.date, { year: 'numeric', month: 'short', day: 'numeric' })}
           </p>
         </div>
       </div>
@@ -317,7 +318,7 @@ export function ServiceReceiptPrint({
                 <p className="text-[9px]">Tel: {clinicConfig?.phone || '661 104 4050'}</p>
                 <p className="font-bold text-xs pt-1">RECIBO DE APORTACIÓN</p>
                 <p className="text-[10px]">Folio: {activeReceipt.receiptFolio || `REC-${patient.id}`}</p>
-                <p className="text-[9px]">Fecha: {new Date(note.date).toLocaleString('es-MX')}</p>
+                <p className="text-[9px]">Fecha: {DateTimeService.formatDateTime(note.date)}</p>
               </div>
 
               <div className="text-left border-b border-dashed border-slate-400 py-1.5 space-y-0.5 text-[10px]">

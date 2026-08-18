@@ -6,6 +6,7 @@ import { ClinicalNoteService } from '@/entities/clinical-note/api/clinicalNoteSe
 import { PatientService } from '@/entities/patient/api/patientService';
 import { PrintService } from '@/shared/lib/printService';
 import { NotePermissionService } from '@/entities/clinical-note/lib/notePermissionService';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 import { MedicationSchedulePrint } from '@/features/print-templates/ui/MedicationSchedulePrint';
 import { LabOrderPrintModal } from '@/features/print-templates/ui/LabOrderPrintModal';
 import { ServiceReceiptPrint } from '@/features/print-templates/ui/ServiceReceiptPrint';
@@ -144,7 +145,7 @@ export function ClinicalNoteViewerModal({
             RECETA MÉDICA
           </div>
           <p className="text-[11px] font-semibold text-slate-800 pt-0.5">
-            Fecha: <strong className="text-slate-900 font-bold">{new Date(note.date).toLocaleDateString('es-MX')}</strong>
+            Fecha: <strong className="text-slate-900 font-bold">{DateTimeService.formatDate(note.date)}</strong>
           </p>
           <p className="text-[11px] font-mono text-slate-800">
             Folio: <strong className="text-slate-900 font-bold">{patient.id}</strong>
@@ -365,7 +366,7 @@ export function ClinicalNoteViewerModal({
         isOpen={isOpen}
         onClose={onClose}
         title={viewMode === 'note' ? 'Resumen de Consulta (SOAP)' : 'Receta Médica Oficial'}
-        description={`Expediente: ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id}) • Consulta: ${new Date(note.date).toLocaleDateString('es-MX')}`}
+        description={`Expediente: ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id}) • Consulta: ${DateTimeService.formatDate(note.date)}`}
         maxWidth="4xl"
       >
         <div className="space-y-5 text-left font-sans">

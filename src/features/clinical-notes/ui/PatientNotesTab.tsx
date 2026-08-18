@@ -3,6 +3,7 @@ import { useWorkspace } from '@/app/providers/WorkspaceContext';
 import { useAuth } from '@/app/providers/AuthContext';
 import { ClinicalNoteService } from '@/entities/clinical-note/api/clinicalNoteService';
 import { NotePermissionService } from '@/entities/clinical-note/lib/notePermissionService';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 import type { ClinicalNote } from '@/entities/clinical-note/model/schemas';
 import type { Patient } from '@/entities/patient/model/schemas';
 import { ClinicalNoteEditorModal } from './ClinicalNoteEditorModal';
@@ -120,16 +121,13 @@ export function PatientNotesTab({ patient, patientFolderName, onNotesUpdated }: 
       ) : (
         <div className="space-y-3">
           {notes.map((note) => {
-            const dateFormatted = new Date(note.date).toLocaleDateString('es-MX', {
+            const dateFormatted = DateTimeService.formatDate(note.date, {
               weekday: 'short',
               year: 'numeric',
               month: 'short',
               day: 'numeric',
             });
-            const timeFormatted = new Date(note.date).toLocaleTimeString('es-MX', {
-              hour: '2-digit',
-              minute: '2-digit',
-            });
+            const timeFormatted = DateTimeService.formatTime(note.date);
 
             return (
               <Card

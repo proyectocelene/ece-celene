@@ -3,6 +3,7 @@ import type { Patient } from '@/entities/patient/model/schemas';
 import { PatientService } from '@/entities/patient/api/patientService';
 import { useAuth } from '@/app/providers/AuthContext';
 import { PrintService } from '@/shared/lib/printService';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 import { Button } from '@/shared/ui';
 import { Printer, X, Sun, CloudSun, Moon, AlertTriangle, Pill, MapPin } from 'lucide-react';
 
@@ -173,7 +174,7 @@ export function MedicationSchedulePrint({
                   GUÍA VISUAL DE TOMA DE MEDICAMENTOS
                 </span>
                 <p className="text-xs text-slate-700 mt-1 font-semibold">
-                  Fecha: <strong className="text-slate-900">{new Date(note.date).toLocaleDateString('es-MX')}</strong>
+                  Fecha: <strong className="text-slate-900">{DateTimeService.formatDate(note.date)}</strong>
                 </p>
               </div>
             </div>

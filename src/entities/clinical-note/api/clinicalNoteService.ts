@@ -11,20 +11,15 @@ import {
   writeJsonFile,
 } from '@/shared/api/fsUtils';
 import { PatientService } from '@/entities/patient/api/patientService';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 
 export class ClinicalNoteService {
   /**
-   * Genera un nombre de archivo único y cronológico para la nota:
-   * Ej: 2026-08-17_1730_consulta.json
+   * Genera un nombre de archivo único y cronológico para la nota en zona horaria America/Tijuana:
+   * Ej: 2026-08-17_1926_consulta.json
    */
   static generateNoteFileName(dateISO: string): string {
-    const d = new Date(dateISO);
-    const year = d.getFullYear();
-    const month = String(d.getMonth() + 1).padStart(2, '0');
-    const day = String(d.getDate()).padStart(2, '0');
-    const hours = String(d.getHours()).padStart(2, '0');
-    const minutes = String(d.getMinutes()).padStart(2, '0');
-    return `${year}-${month}-${day}_${hours}${minutes}_consulta.json`;
+    return DateTimeService.generateNoteFileName(dateISO);
   }
 
   /**

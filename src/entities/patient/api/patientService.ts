@@ -8,6 +8,7 @@ import {
   getDirectory,
 } from '@/shared/api/fsUtils';
 import { PatientIndexService } from './patientIndexService';
+import { DateTimeService } from '@/shared/lib/dateTimeService';
 
 export class PatientService {
   /**
@@ -52,34 +53,9 @@ export class PatientService {
 
   /**
    * Calcula la edad en años y meses a partir de la fecha de nacimiento (YYYY-MM-DD)
+   * con precisión garantizada en zona horaria America/Tijuana.
    */
   static calculateAge(birthDateStr?: string): { years: number; months: number; displayText: string } {
-    if (!birthDateStr) return { years: 0, months: 0, displayText: 'Edad no especificada' };
-
-    const birthDate = new Date(birthDateStr);
-    if (isNaN(birthDate.getTime())) return { years: 0, months: 0, displayText: 'Fecha inválida' };
-
-    const today = new Date();
-    let years = today.getFullYear() - birthDate.getFullYear();
-    let months = today.getMonth() - birthDate.getMonth();
-
-    if (months < 0 || (months === 0 && today.getDate() < birthDate.getDate())) {
-      years--;
-      months += 12;
-    }
-
-    if (today.getDate() < birthDate.getDate()) {
-      months--;
-    }
-
-    if (years === 0) {
-      return { years: 0, months, displayText: `${months} ${months === 1 ? 'mes' : 'meses'}` };
-    }
-
-    return {
-      years,
-      months,
-      displayText: `${years} ${years === 1 ? 'año' : 'años'}${months > 0 ? ` y ${months} ${months === 1 ? 'mes' : 'meses'}` : ''}`,
-    };
+    return DateTimeService.calculateAge(birthDateStr);
   }
 }
