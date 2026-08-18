@@ -1,0 +1,35 @@
+{
+  "id": "PAC-175",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.590245+00:00",
+  "updatedAt": "2026-05-21T01:29:42.590245+00:00",
+  "demographics": {
+    "firstName": "VIVIAN ANDREA",
+    "lastName": "RODRIGUEZ RODRIGUEZ",
+    "birthDate": "1998-11-28",
+    "gender": "F",
+    "curpOrId": "",
+    "phone": "6611315424",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611315424",
+    "email": "",
+    "bloodType": "O+",
+    "address": "CONSTITUCIÓN",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

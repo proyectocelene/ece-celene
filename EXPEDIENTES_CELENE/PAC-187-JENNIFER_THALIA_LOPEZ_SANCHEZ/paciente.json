@@ -1,0 +1,35 @@
+{
+  "id": "PAC-187",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.595799+00:00",
+  "updatedAt": "2026-05-21T01:29:42.595799+00:00",
+  "demographics": {
+    "firstName": "JENNIFER THALIA",
+    "lastName": "LOPEZ SANCHEZ",
+    "birthDate": "1995-06-06",
+    "gender": "F",
+    "curpOrId": "",
+    "phone": "6615270972",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6615270972",
+    "email": "",
+    "bloodType": "O+",
+    "address": "COL. PLAN LIBERTADOR",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

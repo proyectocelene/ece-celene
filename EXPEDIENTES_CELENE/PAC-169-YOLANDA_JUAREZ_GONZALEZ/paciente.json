@@ -1,0 +1,77 @@
+{
+  "id": "PAC-169",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.587675+00:00",
+  "updatedAt": "2026-05-21T01:29:42.587675+00:00",
+  "demographics": {
+    "firstName": "YOLANDA",
+    "lastName": "JUAREZ GONZALEZ",
+    "birthDate": "1983-12-05",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "661",
+    "hasWhatsApp": false,
+    "whatsappPhone": "661",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "PB MASTITIS NO PUERPERAL",
+    "Mastitis no puerperal.",
+    "Femenina en la cuarta década de la vida con cuadro clínico sugestivo de un proceso inflamatorio/infeccioso agudo focalizado en mama izquierda. La tríada de eritema periareolar, aumento de temperatura y red venosa prominente integra el síndrome doloroso agudo, orientando el diagnóstico topográfico y nosológico hacia una probable mastitis no puerperal (posible mastitis periductal). El dolor neuropático (\"choque eléctrico\") se asocia a la irritación de las terminaciones nerviosas intercostales por la inflamación aguda, exacerbado por el estado de hiperalgesia secundario a su antecedente de fibromialgia sin tratamiento. Es imperativo descartar colecciones abscedadas o patología maligna subyacente (carcinoma inflamatorio de mama) mediante estudios de imagen, dada la edad de la paciente y la presentación unilateral.",
+    "El cuadro clínico actual es compatible con **Mastalgia Crónica de predominio Neuropático (Neuralgia Intercostal)**, exacerbada por una **Mastopatía Fibroquística** de base y un estado de sensibilización central secundario a **Fibromialgia** no controlada. La persistencia de los \"choques eléctricos\" tras la fase aguda inflamatoria confirma que el componente principal del dolor es de origen nervioso, requiriendo un ajuste en la terapia de neuromodulación."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "PB MASTITIS NO PUERPERAL",
+      "diagnosedDate": "1983",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "Mastitis no puerperal.",
+      "diagnosedDate": "1983",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-3",
+      "name": "Femenina en la cuarta década de la vida con cuadro clínico sugestivo de un proceso inflamatorio/infeccioso agudo focalizado en mama izquierda. La tríada de eritema periareolar, aumento de temperatura y red venosa prominente integra el síndrome doloroso agudo, orientando el diagnóstico topográfico y nosológico hacia una probable mastitis no puerperal (posible mastitis periductal). El dolor neuropático (\"choque eléctrico\") se asocia a la irritación de las terminaciones nerviosas intercostales por la inflamación aguda, exacerbado por el estado de hiperalgesia secundario a su antecedente de fibromialgia sin tratamiento. Es imperativo descartar colecciones abscedadas o patología maligna subyacente (carcinoma inflamatorio de mama) mediante estudios de imagen, dada la edad de la paciente y la presentación unilateral.",
+      "diagnosedDate": "1983",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-4",
+      "name": "El cuadro clínico actual es compatible con **Mastalgia Crónica de predominio Neuropático (Neuralgia Intercostal)**, exacerbada por una **Mastopatía Fibroquística** de base y un estado de sensibilización central secundario a **Fibromialgia** no controlada. La persistencia de los \"choques eléctricos\" tras la fase aguda inflamatoria confirma que el componente principal del dolor es de origen nervioso, requiriendo un ajuste en la terapia de neuromodulación.",
+      "diagnosedDate": "1983",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 4,
+  "attachmentsCount": 0
+}

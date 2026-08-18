@@ -1,0 +1,47 @@
+{
+  "id": "PAC-069",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.545328+00:00",
+  "updatedAt": "2026-05-21T01:29:42.545328+00:00",
+  "demographics": {
+    "firstName": "IZEBEL",
+    "lastName": "CRUZ CAZARES",
+    "birthDate": "1997-11-10",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "667608986",
+    "hasWhatsApp": false,
+    "whatsappPhone": "667608986",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "RETIRO DE DIU, SIN COMPLICACIONES"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "RETIRO DE DIU, SIN COMPLICACIONES",
+      "diagnosedDate": "1997",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

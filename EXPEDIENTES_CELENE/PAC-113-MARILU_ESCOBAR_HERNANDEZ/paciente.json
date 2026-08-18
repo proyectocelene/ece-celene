@@ -1,0 +1,35 @@
+{
+  "id": "PAC-113",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.562313+00:00",
+  "updatedAt": "2026-05-21T01:29:42.562313+00:00",
+  "demographics": {
+    "firstName": "MARILU",
+    "lastName": "ESCOBAR HERNANDEZ",
+    "birthDate": "1985-03-08",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6611131402",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611131402",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

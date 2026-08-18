@@ -1,0 +1,104 @@
+{
+  "id": "note-39-6",
+  "patientId": "PAC-039",
+  "fileName": "nota_2026-03-22_06.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-03-22T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "glucose": 138.0
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente masculino de 30 años de edad acude a consulta médica de seguimiento para control de Diabetes Mellitus tipo 2 y dislipidemia. Refiere encontrarse asintomático en este momento. Niega poliuria, polidipsia, polifagia, visión borrosa, mareos o pérdida de peso reciente.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Glucosa de ayuno reportada: 138 mg/dL. Se realiza toma de muestra sanguínea en consultorio para determinación de Hemoglobina Glucosilada (HbA1c).",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Paciente de 30 años con DM2 y dislipidemia. Actualmente asintomático, con glucosa basal de 138 mg/dL, lo cual se encuentra ligeramente por encima de las metas estrictas, pero metabólicamente estable. Se detecta la necesidad de optimizar la posología para garantizar una mayor adherencia terapéutica debido a la carga previa de tabletas. Se realiza simplificación del esquema migrando a terapia combinada (Metformina/Glimepirida) y manteniendo la inhibición de DPP-4 (Vildagliptina), optimizando también la dosis de estatina para riesgo cardiovascular. Se requiere intervención intensiva en el estilo de vida para reducción de peso.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Metformina/Glimepirida Tomar 1 tableta vía oral cada 24 horas (con el desayuno).; Vildagliptina Tomar 1 tableta vía oral cada 12 horas (con desayuno y cena).; Atorvastatina Tomar 1 tableta vía oral cada 24 horas (por la noche).",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Metformina/Glimepirida",
+        "dosage": "1000 mg / 4 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Vildagliptina",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Atorvastatina",
+        "dosage": "40 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-039-06",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-03-22T12:00:00.000Z",
+  "updatedAt": "2026-03-22T12:00:00.000Z"
+}

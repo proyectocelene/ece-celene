@@ -1,0 +1,47 @@
+{
+  "id": "PAC-035",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.531063+00:00",
+  "updatedAt": "2026-05-21T01:29:42.531063+00:00",
+  "demographics": {
+    "firstName": "CRISTIAN",
+    "lastName": "GOMEZ DEWITT",
+    "birthDate": "1989-01-23",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "",
+    "hasWhatsApp": false,
+    "whatsappPhone": "",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "PORTADOR DE BOLSA DE COLOSTOMIA"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "PORTADOR DE BOLSA DE COLOSTOMIA",
+      "diagnosedDate": "1989",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

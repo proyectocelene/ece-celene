@@ -1,0 +1,47 @@
+{
+  "id": "PAC-269",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-06-15T20:10:41.803110+00:00",
+  "updatedAt": "2026-06-15T20:13:28.599279+00:00",
+  "demographics": {
+    "firstName": "MIGUEL ANGEL",
+    "lastName": "TORRES TREJO",
+    "birthDate": "1962-09-02",
+    "gender": "M",
+    "curpOrId": "",
+    "phone": "6611087717",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611087717",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "Diabetes: MAMA. Hipertension: MAMA",
+    "app": "Cirugias: 2019-01-01: HERNIOPLASTIA INGLE DERECHA  (Resuelto). Enfermedades cronicas: 🍭 Diabetes Mellitus (Dx: 2025) [Tx: METFORMINA 850 MAL APEGO A TX ], Otras: HPB - TAMSULOSINA Y FINASTERIDA POR LA NOCHE - LLEVA 1 MES . Otras: HPB - TAMSULOSINA Y FINASTERIDA POR LA NOCHE - LLEVA 1 MES ",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Diabetes Mellitus tipo 2 en tratamiento irregular con Metformina 850 mg. Hiperplasia Prostática Benigna en manejo con Tamsulosina y Finasterida. Glaucoma de reciente diagnóstico sin tratamiento establecido, requiere valoración por especialidad. PSA negativo. [N40]"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Diabetes Mellitus tipo 2 en tratamiento irregular con Metformina 850 mg. Hiperplasia Prostática Benigna en manejo con Tamsulosina y Finasterida. Glaucoma de reciente diagnóstico sin tratamiento establecido, requiere valoración por especialidad. PSA negativo. [N40]",
+      "diagnosedDate": "1962",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

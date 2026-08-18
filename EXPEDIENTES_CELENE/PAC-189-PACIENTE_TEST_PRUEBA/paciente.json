@@ -1,0 +1,47 @@
+{
+  "id": "PAC-189",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:31:06.589789+00:00",
+  "updatedAt": "2026-05-21T01:31:06.659437+00:00",
+  "demographics": {
+    "firstName": "Paciente",
+    "lastName": "Test Prueba",
+    "birthDate": "1990-06-15",
+    "gender": "F",
+    "curpOrId": "",
+    "phone": "555-010203",
+    "hasWhatsApp": true,
+    "whatsappPhone": "555-010203",
+    "email": "test@example.com",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "Cardiopatias: Abuelo paterno. Diabetes: Madre, 55 años. Otros: Sin otros antecedentes",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Cefalea tensional [G44]"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Cefalea tensional [G44]",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

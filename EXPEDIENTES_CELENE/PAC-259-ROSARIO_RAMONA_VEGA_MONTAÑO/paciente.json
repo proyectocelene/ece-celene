@@ -1,0 +1,47 @@
+{
+  "id": "PAC-259",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-06-04T19:32:33.831404+00:00",
+  "updatedAt": "2026-06-04T19:33:26.669561+00:00",
+  "demographics": {
+    "firstName": "ROSARIO RAMONA",
+    "lastName": "VEGA MONTAÑO",
+    "birthDate": "1956-05-15",
+    "gender": "F",
+    "curpOrId": "",
+    "phone": "6616168824",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6616168824",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "Enfermedades cronicas: 🩺 Hipertensión Arterial (Dx: 2016) [Tx: CAPTOPRIL], ❤️ Cardiopatía [Tx: ASPIRINA ]",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "HAS<div>USG BIRAS 2</div> [I10]"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "HAS<div>USG BIRAS 2</div> [I10]",
+      "diagnosedDate": "1956",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

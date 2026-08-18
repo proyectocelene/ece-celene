@@ -1,0 +1,57 @@
+{
+  "id": "PAC-154",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.581420+00:00",
+  "updatedAt": "2026-05-21T01:29:42.581420+00:00",
+  "demographics": {
+    "firstName": "SANTIAGO",
+    "lastName": "GUTIERREZ ESTRADA",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "",
+    "hasWhatsApp": false,
+    "whatsappPhone": "",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "HIPERURICEMIA",
+    "Gota Tofácea Crónica, Hiperuricemia, Hipertensión Arterial, Dislipidemia. Riesgo de infección profunda."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "HIPERURICEMIA",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "Gota Tofácea Crónica, Hiperuricemia, Hipertensión Arterial, Dislipidemia. Riesgo de infección profunda.",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 4,
+  "attachmentsCount": 0
+}

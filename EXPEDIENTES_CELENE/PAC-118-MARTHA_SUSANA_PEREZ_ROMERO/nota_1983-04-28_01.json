@@ -1,0 +1,145 @@
+{
+  "id": "note-118-1",
+  "patientId": "PAC-118",
+  "fileName": "nota_1983-04-28_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "1983-04-28T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 82.6,
+    "heartRate": 80
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "ACUDE A CONSULTA REFERIDA DE CR MORELOS CR MORELOS PRIMERA VEZ ATENDIDA POR GRIPE HOY VIENE A REVISION DE LABS HAS INVESTIGAR DESCONOCE HOY NO S E LAS TOMO 1X1 COMPLEJO B REFIERE ADEMAS DIMENORREAS DURNATE EPRIODO MENSTRUAL SANGRADO ABUDNANTE Y COLICOS BONOCHORNOS TOLERABLES PERO MUYI INTENSOS EN LA NOCHE TECNIC AS",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "LABS 28-02-2026 BHC SIN ALTERACIONES GLUC 88 CREAT 0.41 COL TOTAL 166.5 TAG 133.3 HDL 39.2 LDL 117.5 CALCIO 6.6 PFH NORMALES HIERRO 54.3 TSH 6.13 HOY TA 155/86 FC 80 NO TOMO PASTILLAS CONSULTA ANTERIOR 84.5 KG PESO 82.6",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Hipertensión Arterial Sistémica (Descontrolada por falta de apego).\nSangrado Uterino Anormal / Dismenorrea (A descartar miomatosis vs. alt. endocrina).\nSíndrome Climatérico (Bochornos).\nHipotiroidismo Subclínico (En estudio).\nHipocalcemia Severa (A descartar error de laboratorio vs. patología).\nDislipidemia leve (Hipoalfalipoproteinemia - HDL bajo).\nPérdida de peso (Favorable: -1.9 kg).",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "ENALAPRIL TOMAR 1 TABLETA VIA ORAL CADA 24 HORAS POR LA MAÑANA - NO SUSPENDER; NAPROXENO TOMAR 1 TABLETA VIA ORAL CADA 12 HORAS POR 5 DÍAS. USAR DÍAS QUE HAYA DOLOR O SANGRADO; Citrato de Calcio + Vitamina D3 Tomar con alimentos.; COMPLEJO B Continuar tomando.; Cimicífuga Racemosa 1 tableta cada 12 horas o 40 mg una vez al día. Tarda 2-4 semanas.; Isoflavonas de Soya Tomar diariamente.; Aceite de Onagra Útil si hay tensión o dolor en senos.",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural.",
+    "warningSigns": "En caso de alguna emergencia llamar al 911 o acudir a urgencias.\nLínea SIMISAE: 800 911 32 32 (Atención psicológica gratuita 24/7).\nNivel de calcio muy bajo. Si siente hormigueo en labios, adormecimiento en manos o calambres dolorosos, acudir a URGENCIAS inmediatamente.",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "ENALAPRIL",
+        "dosage": "10 MG",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "NAPROXENO",
+        "dosage": "550 MG",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "POR 5 DÍAS",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Citrato de Calcio + Vitamina D3",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "COMPLEJO B",
+        "dosage": "",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Cimicífuga Racemosa",
+        "dosage": "20 mg a 40 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "Isoflavonas de Soya",
+        "dosage": "40 a 80 mg al día",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "Aceite de Onagra",
+        "dosage": "",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-118-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1983-04-28T12:00:00.000Z",
+  "updatedAt": "1983-04-28T12:00:00.000Z"
+}

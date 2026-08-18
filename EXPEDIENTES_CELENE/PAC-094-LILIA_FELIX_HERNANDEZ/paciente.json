@@ -1,0 +1,47 @@
+{
+  "id": "PAC-094",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.554835+00:00",
+  "updatedAt": "2026-05-21T01:29:42.554835+00:00",
+  "demographics": {
+    "firstName": "LILIA",
+    "lastName": "FELIX HERNANDEZ",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6642645181",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6642645181",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "DM2"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "DM2",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

@@ -1,0 +1,135 @@
+{
+  "id": "note-156-1",
+  "patientId": "PAC-156",
+  "fileName": "nota_2026-04-16_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-16T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "heartRate": 71,
+    "glucose": 234.0
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente masculino de 68 años acude a consulta de seguimiento refiriendo cuadro de mareo de reciente inicio. Niega fosfenos o acúfenos. Refiere haber desayunado pescado con tortilla. El paciente se encuentra en tratamiento con Losartán, Amlodipino y Tamsulosina (previamente recetados). Aporta resultados de PSA libre solicitados en consultas previas.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos Vitales y Somatometría: TA 125/66 mmHg, FC 71 lpm, Glucosa capilar 234 mg/dL (Postprandial). Resultados de Laboratorio: PSA Total 21.7 ng/mL, PSA Libre 2.57 ng/mL, Índice (Relación PSA Libre/Total) 11.8%. Exploración Física: Paciente consciente, orientado, sin déficit neurológico aparente. Hidratación adecuada.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "1. Hipotensión ortostática / iatrogénica: El mareo es secundario a la disminución drástica de la presión arterial (125/66) frente a sus cifras habituales, provocada por el efecto sinérgico de Losartán + Amlodipino sumado al efecto vasodilatador alfabloqueador de la Tamsulosina.\n2. Diabetes Mellitus tipo 2 descontrolada: Persiste con hiperglucemia postprandial (234 mg/dL) que confirma el fracaso de la terapia oral (HbA1c previa 9.9%), haciendo imperativo el inicio de terapia con insulina basal.\n3. Alta sospecha de Cáncer de Próstata: El índice de PSA libre/total es del 11.8% (un valor <15% con PSA total >20 ng/mL es altamente sugestivo de malignidad), sumado al antecedente de IPP Grado III. Requiere biopsia prostática a la brevedad.\n4. Dislipidemia aterogénica: En tratamiento.\n5. Balanopostitis candidiásica: En remisión.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Amlodipino Tomar exclusivamente por la mañana; Losartán Continuar; Tamsulosina Tomar estrictamente por la noche, justo al sentarse en la orilla de la cama antes de acostarse; Finasterida 5 mg; Atorvastatina Por la noche; Insulina Detemir Iniciar, por la noche. Aumentar 2 UI cada 3 días si glucosa en ayuno >130 mg/dL; disminuir 2 UI si glucosa <70 mg/dL",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Amlodipino",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Losartán",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Tamsulosina",
+        "dosage": "0.4 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Finasterida",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Atorvastatina",
+        "dosage": "20 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "Insulina Detemir",
+        "dosage": "15 UI",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-156-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-16T12:00:00.000Z",
+  "updatedAt": "2026-04-16T12:00:00.000Z"
+}

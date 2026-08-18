@@ -1,0 +1,67 @@
+{
+  "id": "PAC-142",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.575863+00:00",
+  "updatedAt": "2026-05-21T01:29:42.575863+00:00",
+  "demographics": {
+    "firstName": "RAMONET",
+    "lastName": "RUIZ VANESSA",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "",
+    "hasWhatsApp": false,
+    "whatsappPhone": "",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "CLIMATERIO",
+    "F90.0: Trastorno de la actividad y de la atención (combinado).",
+    "Climaterio"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "CLIMATERIO",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "F90.0: Trastorno de la actividad y de la atención (combinado).",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-3",
+      "name": "Climaterio",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 11,
+  "attachmentsCount": 0
+}

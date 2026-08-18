@@ -1,0 +1,35 @@
+{
+  "id": "PAC-178",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.591536+00:00",
+  "updatedAt": "2026-05-21T01:29:42.591536+00:00",
+  "demographics": {
+    "firstName": "CARMEN ELIZABETH",
+    "lastName": "CANO BAÑALES",
+    "birthDate": "1999-07-21",
+    "gender": "F",
+    "curpOrId": "",
+    "phone": "6611126451",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611126451",
+    "email": "",
+    "bloodType": "O+",
+    "address": "LIENZO CHARRO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

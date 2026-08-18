@@ -1,0 +1,84 @@
+{
+  "id": "note-180-1",
+  "patientId": "PAC-180",
+  "fileName": "nota_2026-05-08_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-05-08T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 83.8,
+    "heightCm": 1.74,
+    "temperature": 36.5,
+    "heartRate": 90,
+    "respiratoryRate": 12,
+    "glucose": 101.0,
+    "oxygenSaturation": 99
+  },
+  "subjective": {
+    "reasonForVisit": "HIPOACUSIA BILATERAL ",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [],
+  "plan": {
+    "generalPlan": "1. IBUPROFENO 400 MG 10 CAPSULAS\n   TOMAR 1 CÁPSULA VÍA ORAL CADA 8 HORAS\n   Duración: 5 DÍAS\n\n\n--- FORMATO LIBRE ---\n\nReferencia a Otorrinolaringología\n\nMotivo de Envío: Valoración por hipoacusia bilateral y acúfenos.\n\nResumen Clínico: Se envía a paciente que acude a consulta de primer nivel refiriendo cuadro de 1 semana de evolución caracterizado por hipoacusia de inicio en oído izquierdo con progresión a oído derecho, acompañado de acúfenos. Niega otalgia, fiebre, o antecedente de trauma. A la exploración física mediante otoscopia, se observan conductos auditivos externos permeables y libres de cerumen. Membranas timpánicas bilaterales íntegras, sin hiperemia, con ligera palidez/coloración blanquecina sugestiva de efusión serosa en oído medio.\n\nDebido a que en nuestra unidad de primer nivel no contamos con el equipo necesario para realizar estudios de audiometría o timpanometría, se solicita amablemente su apoyo para la valoración especializada del paciente, descartar hipoacusia neurosensorial vs conductiva, y establecer el manejo terapéutico definitivo.",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "IBUPROFENO 400 MG 10 CAPSULAS",
+        "dosage": "TOMAR 1 CÁPSULA VÍA ORAL CADA 8 HORAS",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "5 DÍAS",
+        "instructions": "",
+        "indicationFor": "💊 Dolor e Inflamación"
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-180-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-05-08T12:00:00.000Z",
+  "updatedAt": "2026-05-08T12:00:00.000Z"
+}

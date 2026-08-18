@@ -1,0 +1,57 @@
+{
+  "id": "PAC-111",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.561543+00:00",
+  "updatedAt": "2026-05-21T01:29:42.561543+00:00",
+  "demographics": {
+    "firstName": "MARIA",
+    "lastName": "RODRIGUEZ AGUIRRE",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6611106068",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611106068",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "HIPOTIROIDISMO",
+    "HIPOTIROIDISMO, DISLIPIDEMIA"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "HIPOTIROIDISMO",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "HIPOTIROIDISMO, DISLIPIDEMIA",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 2,
+  "attachmentsCount": 0
+}

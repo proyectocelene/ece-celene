@@ -1,0 +1,47 @@
+{
+  "id": "PAC-118",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.565173+00:00",
+  "updatedAt": "2026-05-21T01:29:42.565173+00:00",
+  "demographics": {
+    "firstName": "MARTHA SUSANA",
+    "lastName": "PEREZ ROMERO",
+    "birthDate": "1983-04-28",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "661",
+    "hasWhatsApp": false,
+    "whatsappPhone": "661",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Hipertensión Arterial Sistémica (Descontrolada por falta de apego).\nSangrado Uterino Anormal / Dismenorrea (A descartar miomatosis vs. alt. endocrina).\nSíndrome Climatérico (Bochornos).\nHipotiroidismo Subclínico (En estudio).\nHipocalcemia Severa (A descartar error de laboratorio vs. patología).\nDislipidemia leve (Hipoalfalipoproteinemia - HDL bajo).\nPérdida de peso (Favorable: -1.9 kg)."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Hipertensión Arterial Sistémica (Descontrolada por falta de apego).\nSangrado Uterino Anormal / Dismenorrea (A descartar miomatosis vs. alt. endocrina).\nSíndrome Climatérico (Bochornos).\nHipotiroidismo Subclínico (En estudio).\nHipocalcemia Severa (A descartar error de laboratorio vs. patología).\nDislipidemia leve (Hipoalfalipoproteinemia - HDL bajo).\nPérdida de peso (Favorable: -1.9 kg).",
+      "diagnosedDate": "1983",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

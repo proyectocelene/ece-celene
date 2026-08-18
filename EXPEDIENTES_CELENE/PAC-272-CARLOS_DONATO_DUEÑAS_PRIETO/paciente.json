@@ -1,0 +1,35 @@
+{
+  "id": "PAC-272",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-06-24T00:06:13.253645+00:00",
+  "updatedAt": "2026-06-24T00:06:13.253645+00:00",
+  "demographics": {
+    "firstName": "CARLOS DONATO",
+    "lastName": "DUEÑAS PRIETO",
+    "birthDate": "2000-05-30",
+    "gender": "M",
+    "curpOrId": "",
+    "phone": "6611256061",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611256061",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 0,
+  "attachmentsCount": 0
+}

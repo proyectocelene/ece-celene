@@ -1,0 +1,128 @@
+{
+  "id": "note-86-1",
+  "patientId": "PAC-086",
+  "fileName": "nota_1981-05-27_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "1981-05-27T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 87.7,
+    "heightCm": 1.6,
+    "temperature": 36.0,
+    "heartRate": 88,
+    "respiratoryRate": 12
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "ACUDE CONSULTA POR REVISON DOLOR DE PIES CRONTROL DE CRONICOS HAS, DOLOR DE BRAZO\n\nDOLRO E EXTENSORES MANO DERECHA ES TORTILLERA CODO TENISTA S EPALPAN NUDOS AHORTIA DOLO NO EST ATN INTENSO PERO A AVES ES INCAPACITANTE\n\nTX PARA ESE DOLOR APRACETAMOL PERO NO LE HACE\n\nPOMADAS\n\nFAJAS\n\nINCHAZON DE LOS PIE\n\nMENSTRUACION PROLONGDA PERO SI ES MUCHA HEMORRAGIOA\n\nDEBILIDAD PALIDA\n\nSIN BHC\n\nSIN USG\n\nMal olor cuando handa en sus dias\n\n}hace duchas VAGINALES\n\nULTRIMA\n\nMASTOGRAFIA NUNCA\n\nPAPANICLAOPU PENDIENTE\n\nMEDS\n\nHAS\n\nLOSARTAN 50 1X1\n\nCLORTALIDONA 50 MG 1X1 POR LA MAÑANA\n\nTARAMIETOJN Y RECOMENDACION PARA LO DEL CODO DE TENISTA ABRAACERA TERPAIA FISICA EJERCICITO SETC\n\nGEL DICLOFENACO MASAJE\n\nPARACETAMOL 500 MG 2 CAda 8 h por 5 dias\n\nNAPROXEON 550 MG 1 CADA 12 H POR 5 DÍAS\n\nIONVETIGAR Y VALORAR OINYECION DE PUNTO GATILLO REOMENDADA LLAMAR PAR AINFROMARSE Y AGENDAR CIRTA\n\nCITA CON FISIOTERAPIA AGREGAR DATOS DE REFERENCIA\n\nLABORATRORIOS\n\nMASTOGRAGIA\n\nPAPANICOLOIAUS\n\nCUALES PEDIR APRA CHEUQUEOI OREVENITOC OMPLETO HBAQ1C  \n\nULS ABDOMINAL INFERIOR PELVICO\n\nCUESTIOANRIO DE ASNIEDAD TRAER EN PROXIMA CONSULTA DIARIO DE ENVENTOS DESENCADENTANTES\n\nVITACORA TA POR AJSTE DE MEDICAMENTOSD AN",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: PA 141/90, FC 88, FR 12, Temp 36°C, Peso 87.7 kg, Talla 1.60 m, IMC 99.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Control de hipertensión arterial, dolor en brazo derecho (codo de tenista), dolor de pies con inflamación, menstruaciones prolongadas y abundantes, revisión preventiva.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Losartán Tomar 1 tableta cada día.; Clortalidona Tomar MEDIA tableta por la mañana.; Gel de diclofenaco Aplicar en codo y antebrazo con masaje.; Paracetamol Tomar 2 tabletas cada 8 horas por 5 días si hay dolor.; Naproxeno Tomar 1 tableta cada 12 horas por 5 días. Tomar después de alimentos.",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural.",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Losartán",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Clortalidona",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Gel de diclofenaco",
+        "dosage": "",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Paracetamol",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Naproxeno",
+        "dosage": "550 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-086-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1981-05-27T12:00:00.000Z",
+  "updatedAt": "1981-05-27T12:00:00.000Z"
+}

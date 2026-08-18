@@ -1,0 +1,112 @@
+{
+  "id": "note-55-3",
+  "patientId": "PAC-055",
+  "fileName": "nota_2026-04-13_03.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-13T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente femenina de 21 años que acude a consulta para seguimiento médico integral y revisión ginecológica. Ginecológico: Refiere que desde hace más de un mes presenta 'granitos' en región vulvar. Describe la molestia como incómoda, con comezón ocasional; niega dolor, supuración o que las lesiones hayan reventado. Niega relaciones sexuales sin protección en los últimos 6 meses. Cursa actualmente con su periodo menstrual. Salud Mental y Social: Refiere cuadro de ansiedad severa con bradipsiquia ('niebla mental'). Niega palpitaciones. Expresa ideación suicida pasiva ('sentir que sería mejor no estar en este mundo'), indicando que su hijo es su único factor protector en este momento. Cuenta con antecedente de terapia psicológica en DIF, la cual suspendió por falta de recursos económicos. Contexto Socioeconómico: Refiere vivir en condiciones de alta inestabilidad y precariedad económica. Menciona incapacidad para cubrir el pago de su vivienda, falta de empleo y ausencia de una red de apoyo social o familiar para el cuidado de su hijo, lo cual le imposibilita mantener un trabajo estable. Siente que los múltiples problemas de salud (SUA, Hipotiroidismo, Ansiedad) la sobrepasan.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Se realiza exploración ginecológica bajo consentimiento y con el acompañamiento de Trabajo Social (Sara). Se explica y normaliza la revisión durante el periodo menstrual para descartar patología urgente. Exploración Vulvar: Se observan glándulas sebáceas ligeramente dilatadas en labios externos. No se aprecian lesiones ulcerativas, vesículas, llagas, pústulas ni signos de procesos infecciosos activos (se descarta clínicamente cuadro herpético o condilomatosis). Resto de la exploración sin alteraciones que justifiquen las molestias referidas.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "1. Glándulas sebáceas prominentes: Variante anatómica fisiológica normal. Se descarta patología infecciosa (Herpes/VPH). 2. Trastorno de Ansiedad Generalizada (TAG) Severo: Con ideación suicida pasiva y sintomatología exarcebada por factores psicosociales. 3. Hipotiroidismo: En tratamiento. Se requiere descartar descontrol tiroideo como factor orgánico agravante de la ansiedad. 4. Anemia secundaria a Sangrado Uterino Anormal (SUA): En tratamiento de reposición. 5. Alta vulnerabilidad socioeconómica.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Sertralina Tomar por la mañana. Seguridad durante lactancia.; Levotiroxina En ayuno, 30 minutos antes del desayuno.; Fumarato Ferroso Tomar con jugo cítrico, separado de levotiroxina.; Ácido Fólico 1 mg cada 24 horas",
+    "nonPharmacological": "",
+    "warningSigns": "sangrado transvaginal que empape más de 1 pañal/toalla por hora\nmareo\nsíncope\ndolor abdominal agudo\nfiebre",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Sertralina",
+        "dosage": "25 mg cada 24 horas por 6 días, luego 50 mg cada 24 horas",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "6 días inicial, luego continuo",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Levotiroxina",
+        "dosage": "25 mcg cada 24 horas",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Continuar",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Fumarato Ferroso",
+        "dosage": "200 mg cada 24 horas",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 meses",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Ácido Fólico",
+        "dosage": "1 mg cada 24 horas",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 meses",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-055-03",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-13T12:00:00.000Z",
+  "updatedAt": "2026-04-13T12:00:00.000Z"
+}

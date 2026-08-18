@@ -1,0 +1,35 @@
+{
+  "id": "PAC-073",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.546758+00:00",
+  "updatedAt": "2026-05-21T01:29:42.546758+00:00",
+  "demographics": {
+    "firstName": "JAVIER",
+    "lastName": "VACA RAVADA",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6648248590",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6648248590",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

@@ -1,0 +1,47 @@
+{
+  "id": "PAC-184",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.594248+00:00",
+  "updatedAt": "2026-05-21T01:29:42.594248+00:00",
+  "demographics": {
+    "firstName": "ABRAHAM",
+    "lastName": "NAVA OROZCO",
+    "birthDate": "1987-02-14",
+    "gender": "M",
+    "curpOrId": "",
+    "phone": "NA",
+    "hasWhatsApp": false,
+    "whatsappPhone": "NA",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "dsf"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "dsf",
+      "diagnosedDate": "1987",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

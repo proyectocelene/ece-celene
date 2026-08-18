@@ -1,0 +1,57 @@
+{
+  "id": "PAC-156",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.582271+00:00",
+  "updatedAt": "2026-05-21T01:29:42.582271+00:00",
+  "demographics": {
+    "firstName": "SEBASTIAN MAXIMO",
+    "lastName": "RUIZ NAVA",
+    "birthDate": "1958-01-20",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "",
+    "hasWhatsApp": false,
+    "whatsappPhone": "",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Balanopostitis micótica, LUTS/Hiperplasia Prostática (en estudio), Diabetes Mellitus tipo 2, Hipertensión Arterial.",
+    "1. Hipotensión ortostática / iatrogénica: El mareo es secundario a la disminución drástica de la presión arterial (125/66) frente a sus cifras habituales, provocada por el efecto sinérgico de Losartán + Amlodipino sumado al efecto vasodilatador alfabloqueador de la Tamsulosina.\n2. Diabetes Mellitus tipo 2 descontrolada: Persiste con hiperglucemia postprandial (234 mg/dL) que confirma el fracaso de la terapia oral (HbA1c previa 9.9%), haciendo imperativo el inicio de terapia con insulina basal.\n3. Alta sospecha de Cáncer de Próstata: El índice de PSA libre/total es del 11.8% (un valor <15% con PSA total >20 ng/mL es altamente sugestivo de malignidad), sumado al antecedente de IPP Grado III. Requiere biopsia prostática a la brevedad.\n4. Dislipidemia aterogénica: En tratamiento.\n5. Balanopostitis candidiásica: En remisión."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Balanopostitis micótica, LUTS/Hiperplasia Prostática (en estudio), Diabetes Mellitus tipo 2, Hipertensión Arterial.",
+      "diagnosedDate": "1958",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "1. Hipotensión ortostática / iatrogénica: El mareo es secundario a la disminución drástica de la presión arterial (125/66) frente a sus cifras habituales, provocada por el efecto sinérgico de Losartán + Amlodipino sumado al efecto vasodilatador alfabloqueador de la Tamsulosina.\n2. Diabetes Mellitus tipo 2 descontrolada: Persiste con hiperglucemia postprandial (234 mg/dL) que confirma el fracaso de la terapia oral (HbA1c previa 9.9%), haciendo imperativo el inicio de terapia con insulina basal.\n3. Alta sospecha de Cáncer de Próstata: El índice de PSA libre/total es del 11.8% (un valor <15% con PSA total >20 ng/mL es altamente sugestivo de malignidad), sumado al antecedente de IPP Grado III. Requiere biopsia prostática a la brevedad.\n4. Dislipidemia aterogénica: En tratamiento.\n5. Balanopostitis candidiásica: En remisión.",
+      "diagnosedDate": "1958",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 14,
+  "attachmentsCount": 0
+}

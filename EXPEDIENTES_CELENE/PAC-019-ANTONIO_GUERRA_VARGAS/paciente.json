@@ -1,0 +1,57 @@
+{
+  "id": "PAC-019",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.520812+00:00",
+  "updatedAt": "2026-05-21T01:29:42.520812+00:00",
+  "demographics": {
+    "firstName": "ANTONIO",
+    "lastName": "GUERRA VARGAS",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "661",
+    "hasWhatsApp": false,
+    "whatsappPhone": "661",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "HAS, DM2, OBESIDAD",
+    "Diagnóstico: HAS, DM2, OBESIDAD"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "HAS, DM2, OBESIDAD",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "Diagnóstico: HAS, DM2, OBESIDAD",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 6,
+  "attachmentsCount": 0
+}

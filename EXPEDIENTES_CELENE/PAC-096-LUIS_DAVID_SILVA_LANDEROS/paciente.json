@@ -1,0 +1,47 @@
+{
+  "id": "PAC-096",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.555595+00:00",
+  "updatedAt": "2026-05-21T01:29:42.555595+00:00",
+  "demographics": {
+    "firstName": "LUIS DAVID",
+    "lastName": "SILVA LANDEROS",
+    "birthDate": "2007-01-13",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6611165588",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611165588",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "1. Enfermedad por Reflujo Gastroesofágico / Probable Trastorno de Motilidad Esofágica a descartar.\n2. Cefalea en estudio (descartar componente vascular/migrañoso).\n3. Duelo complicado / Ansiedad somatizada con insomnio severo."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "1. Enfermedad por Reflujo Gastroesofágico / Probable Trastorno de Motilidad Esofágica a descartar.\n2. Cefalea en estudio (descartar componente vascular/migrañoso).\n3. Duelo complicado / Ansiedad somatizada con insomnio severo.",
+      "diagnosedDate": "2007",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

@@ -1,0 +1,47 @@
+{
+  "id": "PAC-105",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.559261+00:00",
+  "updatedAt": "2026-05-21T01:29:42.559261+00:00",
+  "demographics": {
+    "firstName": "MARIA DEL",
+    "lastName": "CARMEN SAUCEDO MENDOZA",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6632143752",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6632143752",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "ANSIEDAD, SOBREPESO"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "ANSIEDAD, SOBREPESO",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

@@ -1,0 +1,57 @@
+{
+  "id": "PAC-139",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.574681+00:00",
+  "updatedAt": "2026-05-21T01:29:42.574681+00:00",
+  "demographics": {
+    "firstName": "PORFIRIO",
+    "lastName": "HUERTA PEREZ",
+    "birthDate": "1974-08-15",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6611106643",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611106643",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "1. Enfermedad Ácido Péptica / Probable Úlcera Duodenal: Cuadro clínico clásico (dolor en ayuno que cede con alimentos), refractario a pesar del uso crónico de IBP.\n2. CUCI en aparente remisión clínica intestinal: Sin cuadros diarreicos actuales.\n3. Probable manifestación extraintestinal de CUCI vs. Queratoconjuntivitis sicca: Ojo seco secundario, erróneamente atribuido por el paciente a la Mesalazina.\n4. DM2, HAS y Dislipidemia: En control farmacológico, pendiente de corroborar con paraclínicos.\n5. Obesidad / Sobrepeso: Factor de riesgo metabólico y articular a tratar.",
+    "CUCI, HAS"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "1. Enfermedad Ácido Péptica / Probable Úlcera Duodenal: Cuadro clínico clásico (dolor en ayuno que cede con alimentos), refractario a pesar del uso crónico de IBP.\n2. CUCI en aparente remisión clínica intestinal: Sin cuadros diarreicos actuales.\n3. Probable manifestación extraintestinal de CUCI vs. Queratoconjuntivitis sicca: Ojo seco secundario, erróneamente atribuido por el paciente a la Mesalazina.\n4. DM2, HAS y Dislipidemia: En control farmacológico, pendiente de corroborar con paraclínicos.\n5. Obesidad / Sobrepeso: Factor de riesgo metabólico y articular a tratar.",
+      "diagnosedDate": "1974",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "CUCI, HAS",
+      "diagnosedDate": "1974",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 2,
+  "attachmentsCount": 0
+}

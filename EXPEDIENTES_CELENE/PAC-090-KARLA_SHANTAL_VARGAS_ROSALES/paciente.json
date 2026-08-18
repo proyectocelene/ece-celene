@@ -1,0 +1,57 @@
+{
+  "id": "PAC-090",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.553273+00:00",
+  "updatedAt": "2026-05-21T01:29:42.553273+00:00",
+  "demographics": {
+    "firstName": "KARLA SHANTAL",
+    "lastName": "VARGAS ROSALES",
+    "birthDate": "1996-12-13",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6644929218",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6644929218",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "TINEA CORPORIS",
+    "Paciente en la tercera década de la vida. Por la morfología de la lesión (placa circular, antecedente de descamación, crecimiento centrífugo) se integra diagnóstico presuntivo principal de Tinea Corporis. Se decide iniciar prueba terapéutica con antimicótico tópico de amplio espectro. Se deja esteroide tópico en reserva estricta para evitar efecto de \"tiña incógnita\" o enmascaramiento de patologías mamarias malignas (ej. Enfermedad de Paget), con plan de derivación a Dermatología ante falla terapéutica. Adicionalmente, por IMC de 18.65, se detecta necesidad de ajuste calórico para ganancia ponderal. Se aprovecha la consulta para actualización de tamizaje cervicouterino."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "TINEA CORPORIS",
+      "diagnosedDate": "1996",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "Paciente en la tercera década de la vida. Por la morfología de la lesión (placa circular, antecedente de descamación, crecimiento centrífugo) se integra diagnóstico presuntivo principal de Tinea Corporis. Se decide iniciar prueba terapéutica con antimicótico tópico de amplio espectro. Se deja esteroide tópico en reserva estricta para evitar efecto de \"tiña incógnita\" o enmascaramiento de patologías mamarias malignas (ej. Enfermedad de Paget), con plan de derivación a Dermatología ante falla terapéutica. Adicionalmente, por IMC de 18.65, se detecta necesidad de ajuste calórico para ganancia ponderal. Se aprovecha la consulta para actualización de tamizaje cervicouterino.",
+      "diagnosedDate": "1996",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 3,
+  "attachmentsCount": 0
+}

@@ -1,0 +1,115 @@
+{
+  "id": "note-169-3",
+  "patientId": "PAC-169",
+  "fileName": "nota_2026-04-24_03.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-24T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "temperature": 36.5,
+    "heartRate": 74
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente de 42 años acude a consulta de seguimiento por persistencia de mastalgia en seno izquierdo de 1 año de evolución, exacerbada recientemente. Describe el dolor como \"piquetes\" y \"choques eléctricos\" de intensidad severa que limitan sus actividades diarias. Refiere haber completado el esquema inicial de Amoxicilina/Ácido Clavulánico y Naproxeno con mejoría mínima del componente neuropático. Acude con resultados de mastografía y ultrasonido mamario realizados recientemente. Menciona antecedente de fibromialgia sin tratamiento actual.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "-   **Signos Vitales:** Estables (TA 120/80 mmHg, FC 74 lpm, Temp 36.5 °C).\n-   **Exploración física dirigida (Mama Izquierda):** Se observa disminución del eritema periareolar previo. A la palpación, persiste tejido con fibrosis generalizada (compatible con mastopatía fibroquística). Se identifica **alodinia e hiperestesia marcada** en cuadrantes externos y región periareolar; la manipulación desencadena dolor tipo punzada/eléctrico. No se palpan masas de bordes irregulares ni adenopatías axilares sospechosas en este momento.\n-   **Gabinete:** Mastografía y Ultrasonido revisados. \\[Insertar aquí BI-RADS reportado\\]. No se observan colecciones ni abscesos agudos.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "El cuadro clínico actual es compatible con **Mastalgia Crónica de predominio Neuropático (Neuralgia Intercostal)**, exacerbada por una **Mastopatía Fibroquística** de base y un estado de sensibilización central secundario a **Fibromialgia** no controlada. La persistencia de los \"choques eléctricos\" tras la fase aguda inflamatoria confirma que el componente principal del dolor es de origen nervioso, requiriendo un ajuste en la terapia de neuromodulación.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Gabapentina 1 cápsula; Paracetamol 2 tabletas (1g) por dosis; Naproxeno 1 tableta, solo en caso de dolor o inflamación importante; Tramadol 1 tableta, solo en caso de crisis de dolor intenso (rescate)",
+    "nonPharmacological": "Eliminación estricta de metilxantinas (café, té negro, chocolate, refrescos de cola). Reducción de sodio. Incrementar ingesta de fibra y alimentos ricos en Vitamina E (almendras, aguacate). Aumento de Omega-3.",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Gabapentina",
+        "dosage": "300 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Paracetamol",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Naproxeno",
+        "dosage": "550 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Tramadol",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-169-03",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-24T12:00:00.000Z",
+  "updatedAt": "2026-04-24T12:00:00.000Z"
+}

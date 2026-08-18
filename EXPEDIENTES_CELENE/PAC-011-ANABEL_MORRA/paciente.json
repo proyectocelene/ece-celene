@@ -1,0 +1,47 @@
+{
+  "id": "PAC-011",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.515819+00:00",
+  "updatedAt": "2026-05-21T01:29:42.515819+00:00",
+  "demographics": {
+    "firstName": "ANABEL",
+    "lastName": "MORRA",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "7146091633",
+    "hasWhatsApp": true,
+    "whatsappPhone": "7146091633",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Descartar patología tiroidea / Síntomas somáticos de ansiedad."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Descartar patología tiroidea / Síntomas somáticos de ansiedad.",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

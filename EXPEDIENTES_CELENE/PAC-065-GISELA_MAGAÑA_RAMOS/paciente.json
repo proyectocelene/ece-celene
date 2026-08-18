@@ -1,0 +1,35 @@
+{
+  "id": "PAC-065",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.543687+00:00",
+  "updatedAt": "2026-05-21T01:29:42.543687+00:00",
+  "demographics": {
+    "firstName": "GISELA",
+    "lastName": "MAGAÑA RAMOS",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "",
+    "hasWhatsApp": false,
+    "whatsappPhone": "",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 2,
+  "attachmentsCount": 0
+}

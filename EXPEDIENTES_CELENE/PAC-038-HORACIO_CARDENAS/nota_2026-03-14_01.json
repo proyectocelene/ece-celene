@@ -1,0 +1,129 @@
+{
+  "id": "note-38-1",
+  "patientId": "PAC-038",
+  "fileName": "nota_2026-03-14_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-03-14T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 112.0,
+    "heightCm": 111.0,
+    "temperature": 36.5,
+    "heartRate": 90,
+    "respiratoryRate": 12,
+    "oxygenSaturation": 99
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente refiere buen apego al tratamiento, no le cuesta. Desea volver a retomar su vida, está todo el día rumiando la idea y regañándose a sí mismo. Los recuerdos le llegan. Problemas para dormir, tras tomar medicamento duerme 4 horas. Siempre cansado. Con quetiapina la ansiedad se le bajó. No asiste a NA aún, está en proceso. No trabaja en pintura.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: PA 130/110 mmHg, FC 90 lpm, FR 12 rpm, Temp 36.5°C, Peso 112 kg, Talla 111 cm, IMC 99, SatO2 99%. Glucosa no reportada. Cuestionario de estado de ánimo sugiere síntomas depresivos y ansiosos.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "HAS, DM2, Insomnio crónico. Mal control de presión por omisión de dosis. Riesgo de recaída en consumo por estrés y falta de adherencia a NA. Síntomas afectivos compatibles con trastorno depresivo/ansioso.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Amlodipino Tomar 1 tableta cada 24 horas (preferentemente por la mañana). No omitir ninguna dosis.; Metformina Tomar 1 tableta cada 12 horas con los alimentos.; Quetiapina Tomar 1 tableta por la noche, antes de dormir.; Pregabalina Tomar 1 cápsula por la noche, antes de dormir.; Clortalidona Tomar media (1/2) tableta cada 24 horas por la mañana.",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar consumo de agua natural.",
+    "warningSigns": "911\nLínea SIMISAE: 800 911 32 32",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Amlodipino",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "No suspender",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Metformina",
+        "dosage": "850 mg",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "No suspender",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Quetiapina",
+        "dosage": "100 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "No suspender",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Pregabalina",
+        "dosage": "150 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "No suspender",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Clortalidona",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "No suspender",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-038-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-03-14T12:00:00.000Z",
+  "updatedAt": "2026-03-14T12:00:00.000Z"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "PAC-072",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.546423+00:00",
+  "updatedAt": "2026-05-21T01:29:42.546423+00:00",
+  "demographics": {
+    "firstName": "JAVIER",
+    "lastName": "OCOTITLA TAPIA",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "",
+    "hasWhatsApp": false,
+    "whatsappPhone": "",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "1. Descompensación metabólica severa por DM2 no controlada. 2. Retención urinaria/intermitente posiblemente secundaria a patología prostática no tratada. 3. Edema periférico bilateral doloroso: sospecha de nefropatía diabética o insuficiencia renal. 4. Hipotiroidismo clínico sin tratamiento. 5. Condiciones sociales y económicas de riesgo que limitan el seguimiento ambulatorio."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "1. Descompensación metabólica severa por DM2 no controlada. 2. Retención urinaria/intermitente posiblemente secundaria a patología prostática no tratada. 3. Edema periférico bilateral doloroso: sospecha de nefropatía diabética o insuficiencia renal. 4. Hipotiroidismo clínico sin tratamiento. 5. Condiciones sociales y económicas de riesgo que limitan el seguimiento ambulatorio.",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 5,
+  "attachmentsCount": 0
+}

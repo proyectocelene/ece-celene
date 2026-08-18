@@ -1,0 +1,49 @@
+{
+  "id": "PAC-224",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-25T03:27:54.695712+00:00",
+  "updatedAt": "2026-05-25T03:27:54.695712+00:00",
+  "demographics": {
+    "firstName": "FULANA",
+    "lastName": "MENGANA",
+    "birthDate": "2000-05-30",
+    "gender": "F",
+    "curpOrId": "",
+    "phone": "6611256061",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611256061",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "Captura rapida brigada: Positivo. Enfermedades cronicas: DM2, HAS",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [
+    "NEGADO"
+  ],
+  "activeConditions": [
+    "Captura rápida de brigada comunitaria"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Captura rápida de brigada comunitaria",
+      "diagnosedDate": "2000",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

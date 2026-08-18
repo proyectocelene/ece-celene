@@ -1,0 +1,83 @@
+{
+  "id": "note-183-1",
+  "patientId": "PAC-183",
+  "fileName": "nota_2026-05-12_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-05-12T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 81.0,
+    "heightCm": 1.6,
+    "temperature": 36.5,
+    "heartRate": 65,
+    "respiratoryRate": 12,
+    "oxygenSaturation": 98
+  },
+  "subjective": {
+    "reasonForVisit": "RESULTADOS DE USG MAMARIO ",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [],
+  "plan": {
+    "generalPlan": "1. LOSARTAN POTASICO 50MG 30 TABLETAS\n   TOMAR 1 TABLETA VÍA ORAL CADA 12  HORAS (USO CONTINUO)",
+    "nonPharmacological": "• Dieta hiposódica: reducir sal a <2g/día.\n• Evitar embutidos, enlatados y procesados.\n• Usar especias y hierbas como sustituto de sal.",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "LOSARTAN POTASICO 50MG 30 TABLETAS",
+        "dosage": "TOMAR 1 TABLETA VÍA ORAL CADA 12  HORAS",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": "🩸 Presión Arterial"
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-183-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-05-12T12:00:00.000Z",
+  "updatedAt": "2026-05-12T12:00:00.000Z"
+}

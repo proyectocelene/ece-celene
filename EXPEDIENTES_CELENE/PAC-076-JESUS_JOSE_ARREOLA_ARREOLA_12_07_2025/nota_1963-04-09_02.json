@@ -1,0 +1,138 @@
+{
+  "id": "note-76-2",
+  "patientId": "PAC-076",
+  "fileName": "nota_1963-04-09_02.json",
+  "schemaVersion": "1.0.0",
+  "date": "1963-04-09T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 53.0,
+    "heightCm": 1.64,
+    "temperature": 36.5,
+    "heartRate": 91,
+    "respiratoryRate": 12
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "BRONQUITIS VIRAL, LESIÓN RENAL EN EL ESTUDIO",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Paracetamol Tomar 1 tableta cada 8 horas por 3 días solo si hay malestar general, fiebre o dolor.; Loratadina Tomar 1 tableta por vía oral cada 24 horas por 7 días.; Omeprazol Tomar 1 cápsula en ayunas por 14 días.; Amlodipino Tomar 2 tabletas juntas cada 24 horas por la mañana; Atorvastatina Tomar 1 tableta por la noche, después de cenar.; LEVODROPROPIZINA Tomar 1 cucharada (10 ml) cada 8 horas por 5 días",
+    "nonPharmacological": "",
+    "warningSigns": "Dificultad para respirar o sensación de ahogo\nDolor de garganta intenso que impida tragar\nFiebre persistente mayor a 38.5°C\nRonquera o tos persistente por más de 7 días\nHinchazón en cuello, lengua o cara\nEmpeoramiento de los síntomas a pesar del tratamiento",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Paracetamol",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Loratadina",
+        "dosage": "10 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Omeprazol",
+        "dosage": "20 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "14 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Amlodipino",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Atorvastatina",
+        "dosage": "20 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "LEVODROPROPIZINA",
+        "dosage": "60 mg/5 ml jarabe",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-076-02",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1963-04-09T12:00:00.000Z",
+  "updatedAt": "1963-04-09T12:00:00.000Z"
+}

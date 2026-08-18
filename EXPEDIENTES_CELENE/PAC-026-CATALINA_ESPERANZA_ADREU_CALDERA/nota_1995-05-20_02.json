@@ -1,0 +1,92 @@
+{
+  "id": "note-26-2",
+  "patientId": "PAC-026",
+  "fileName": "nota_1995-05-20_02.json",
+  "schemaVersion": "1.0.0",
+  "date": "1995-05-20T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "POST COLOCACIÓN DE ISD YA PAGO RECIBO",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Paracetamol Tomar 1-2 tabletas cada 6-8 horas si hay dolor, máximo 4 g/día.; Ibuprofeno Tomar 1 tableta cada 8 horas según necesidad si hay dolor e inflamación local, después de comer.",
+    "nonPharmacological": "Hidratación y dieta balanceada para favorecer recuperación.",
+    "warningSigns": "Dolor intenso no controlable con analgésicos.\nFiebre ≥38°C.\nHematoma grande o sangrado continuo.\nMovilidad limitada del brazo.\nSignos de reacción alérgica: sarpullido, hinchazón de cara o dificultad para respirar.",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Paracetamol",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "según necesidad",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Ibuprofeno",
+        "dosage": "400 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "según necesidad",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-026-02",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1995-05-20T12:00:00.000Z",
+  "updatedAt": "1995-05-20T12:00:00.000Z"
+}

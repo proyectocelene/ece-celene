@@ -1,0 +1,35 @@
+{
+  "id": "PAC-177",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.591140+00:00",
+  "updatedAt": "2026-05-21T01:29:42.591140+00:00",
+  "demographics": {
+    "firstName": "CORAL ANAHIS",
+    "lastName": "HORTA RODRIGUEZ",
+    "birthDate": "1997-03-23",
+    "gender": "F",
+    "curpOrId": "",
+    "phone": "6612373675",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6612373675",
+    "email": "",
+    "bloodType": "O+",
+    "address": "HUAHUATAI",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

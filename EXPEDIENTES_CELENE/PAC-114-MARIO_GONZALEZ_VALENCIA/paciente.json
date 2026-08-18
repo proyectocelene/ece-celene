@@ -1,0 +1,57 @@
+{
+  "id": "PAC-114",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.562684+00:00",
+  "updatedAt": "2026-05-21T01:29:42.562684+00:00",
+  "demographics": {
+    "firstName": "MARIO",
+    "lastName": "GONZALEZ VALENCIA",
+    "birthDate": "1962-09-12",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6461308435",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6461308435",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Diagnóstico: HBP, prostatitis, hidronefrosis derecha grado III. Hematuria macroscópica de probable origen prostático/uretral. Hidronefrosis sin litiasis evidente. Sospecha de estenosis uretral. Hígado con transaminasas elevadas. Hombro izquierdo con ruptura parcial de tendones.",
+    "1. Hematuria Macroscópica / Probable Prostatitis Crónica Agudizada: Activa, formadora de coágulos, alto riesgo de retención aguda de orina.\n2. Hidronefrosis Derecha Grado III: De etiología obstructiva a determinar (UROTAC secuestrada en HGT). Sin deterioro agudo evidente en clínica (Giordano negativo).\n3. Tendinopatía de Hombro Izquierdo + Componente Neuropático: Rotura parcial confirmada, exacerbación de dolor tipo urente refractario a fisioterapia. (Riesgo de ruptura total contraindica uso de fluoroquinolonas).\n4. Transaminasemia en estudio: Elevación de AST/ALT de origen a determinar (se descarta toxicidad por Levofloxacino ya que no lo tomó)."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Diagnóstico: HBP, prostatitis, hidronefrosis derecha grado III. Hematuria macroscópica de probable origen prostático/uretral. Hidronefrosis sin litiasis evidente. Sospecha de estenosis uretral. Hígado con transaminasas elevadas. Hombro izquierdo con ruptura parcial de tendones.",
+      "diagnosedDate": "1962",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "1. Hematuria Macroscópica / Probable Prostatitis Crónica Agudizada: Activa, formadora de coágulos, alto riesgo de retención aguda de orina.\n2. Hidronefrosis Derecha Grado III: De etiología obstructiva a determinar (UROTAC secuestrada en HGT). Sin deterioro agudo evidente en clínica (Giordano negativo).\n3. Tendinopatía de Hombro Izquierdo + Componente Neuropático: Rotura parcial confirmada, exacerbación de dolor tipo urente refractario a fisioterapia. (Riesgo de ruptura total contraindica uso de fluoroquinolonas).\n4. Transaminasemia en estudio: Elevación de AST/ALT de origen a determinar (se descarta toxicidad por Levofloxacino ya que no lo tomó).",
+      "diagnosedDate": "1962",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 2,
+  "attachmentsCount": 0
+}

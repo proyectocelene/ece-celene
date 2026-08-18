@@ -1,0 +1,67 @@
+{
+  "id": "PAC-165",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.586120+00:00",
+  "updatedAt": "2026-05-21T01:29:42.586120+00:00",
+  "demographics": {
+    "firstName": "VICTOR ALFONSO",
+    "lastName": "DENA PLASCENCIA",
+    "birthDate": "1987-01-13",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6644385123",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6644385123",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "1.  **Masa testicular en estudio:** Clínicamente sugestivo de varicocele (asintomático/indoloro), pero es imperativo descartar patología tumoral o quística dependiente del testículo mediante estudio de imagen.\n2.  **Sobrepeso (IMC 26.7):** Requiere ajuste nutricional para alcanzar peso ideal (70-75 kg).\n3.  **Tabaquismo activo:** En fase de racionalización. Representa un factor de riesgo cardiovascular y endotelial que puede exacerbar el cuadro venoso testicular.",
+    "1. Masa testicular en estudio: Clínicamente sugestivo de varicocele (asintomático/indoloro), pero es imperativo descartar patología tumoral o quística dependiente del testículo mediante estudio de imagen.\n2. Sobrepeso (IMC 26.7): Requiere ajuste nutricional para alcanzar peso ideal (70-75 kg).\n3. Tabaquismo activo: En fase de racionalización. Representa un factor de riesgo cardiovascular y endotelial que puede exacerbar el cuadro venoso testicular.",
+    "Paciente con probable varicocele, sobrepeso, tabaquismo. Se solicita ultrasonido escrotal para descartar masa testicular sólida o quística vs varicocele."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "1.  **Masa testicular en estudio:** Clínicamente sugestivo de varicocele (asintomático/indoloro), pero es imperativo descartar patología tumoral o quística dependiente del testículo mediante estudio de imagen.\n2.  **Sobrepeso (IMC 26.7):** Requiere ajuste nutricional para alcanzar peso ideal (70-75 kg).\n3.  **Tabaquismo activo:** En fase de racionalización. Representa un factor de riesgo cardiovascular y endotelial que puede exacerbar el cuadro venoso testicular.",
+      "diagnosedDate": "1987",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "1. Masa testicular en estudio: Clínicamente sugestivo de varicocele (asintomático/indoloro), pero es imperativo descartar patología tumoral o quística dependiente del testículo mediante estudio de imagen.\n2. Sobrepeso (IMC 26.7): Requiere ajuste nutricional para alcanzar peso ideal (70-75 kg).\n3. Tabaquismo activo: En fase de racionalización. Representa un factor de riesgo cardiovascular y endotelial que puede exacerbar el cuadro venoso testicular.",
+      "diagnosedDate": "1987",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-3",
+      "name": "Paciente con probable varicocele, sobrepeso, tabaquismo. Se solicita ultrasonido escrotal para descartar masa testicular sólida o quística vs varicocele.",
+      "diagnosedDate": "1987",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 3,
+  "attachmentsCount": 0
+}

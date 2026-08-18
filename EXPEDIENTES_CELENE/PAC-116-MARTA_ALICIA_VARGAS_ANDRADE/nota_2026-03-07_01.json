@@ -1,0 +1,142 @@
+{
+  "id": "note-116-1",
+  "patientId": "PAC-116",
+  "fileName": "nota_2026-03-07_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-03-07T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente con antecedentes de HAS, DM2, pie de Charcot, lumbalgia, obesidad y amputación supracondílea derecha. Se presenta para control y manejo de patologías crónicas.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales no documentados. Diagnóstico registrado: HAS, DM2, pie de Charcot, lumbalgia, obesidad, amputación supracondílea derecha.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Paciente con múltiples comorbilidades: hipertensión arterial sistémica, diabetes mellitus tipo 2, pie de Charcot izquierdo, lumbalgia, obesidad y amputación supracondílea derecha. Requiere control glucémico y de presión arterial, así como protección renal y manejo del dolor.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Insulina Glargina (Lantus) Aplicar 30 Unidades por vía subcutánea todas las noches a la misma hora. La dosis se ajustará dependiendo de sus niveles de azúcar en casa.; Linagliptina Tomar 1 tableta cada 24 horas, por la mañana junto con el desayuno. Uso continuo, no suspender.; Losartán Tomar 1 tableta cada 24 horas, por la noche.; Omeprazol Tomar 1 cápsula cada 24 horas, por la mañana en ayunas (30 minutos antes del desayuno). Tomar solo por 15 días.; Complejo B Tomar 1 tableta por la mañana, junto con el desayuno.; Paracetamol Tomar 1 tableta cada 8 horas solo en caso de presentar dolor. Usar máximo por 5 días seguidos.; Salbutamol Inhalador Aplicar 1 o 2 disparos (inhalaciones) solo en caso de sentir falta de aire o silbido en el pecho (Por razón necesaria).",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural.",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Insulina Glargina (Lantus)",
+        "dosage": "100 UI/mL",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "continuo",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Linagliptina",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "continuo",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Losartán",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "continuo",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Omeprazol",
+        "dosage": "20 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "15 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Complejo B",
+        "dosage": "",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "Paracetamol",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "máximo 5 días seguidos",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "Salbutamol Inhalador",
+        "dosage": "",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-116-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-03-07T12:00:00.000Z",
+  "updatedAt": "2026-03-07T12:00:00.000Z"
+}

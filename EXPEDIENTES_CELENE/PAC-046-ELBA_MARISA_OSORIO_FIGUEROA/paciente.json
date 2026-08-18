@@ -1,0 +1,67 @@
+{
+  "id": "PAC-046",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.536086+00:00",
+  "updatedAt": "2026-06-06T18:17:25.724119+00:00",
+  "demographics": {
+    "firstName": "ELBA MARISA",
+    "lastName": "OSORIO FIGUEROA",
+    "birthDate": "1976-09-08",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6611288199",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611288199",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "1. Patología Biliar Aguda / Síndrome Ictérico Obstructivo (descartar colecistitis aguda vs colangitis). 2. Encefalopatía Metabólica (probable origen hepático vs urémico). 3. Lesión Renal Aguda sobre crónica (oligúrica). 4. DM2 y HAS descontroladas crónicamente.",
+    "<ol><li><strong>Hipercaliemia Severa Sintomática (K+ 7.1 mmol/L):</strong> Urgencia vital inminente. Riesgo elevadísimo de arritmia letal o asistolia. Exacerbada por uso de ARA-II (Losartán), dieta hiperpotasémica y TFG severamente deprimida.</li><li><strong>Enfermedad Renal Crónica Estadio G4 (TFG CKD-EPI 28 mL/min):</strong> Complicada con oliguria de probable origen prerrenal (ingesta hídrica de ~120 ml/día) y anemia nefrogénica severa (Hb 8.5 g/dL).</li><li><strong>Diabetes Mellitus Tipo 2:</strong> Control glucémico a largo plazo aceptable (HbA1c 6.7%), pero con riesgo de hipoglucemias por acumulación de insulina (depuración renal retardada).</li><li><strong>Hipertensión Arterial Sistémica:</strong> Cifras tensionales descontroladas (153/70 mmHg).&nbsp;</li></ol>",
+    "DM, ERC"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "1. Patología Biliar Aguda / Síndrome Ictérico Obstructivo (descartar colecistitis aguda vs colangitis). 2. Encefalopatía Metabólica (probable origen hepático vs urémico). 3. Lesión Renal Aguda sobre crónica (oligúrica). 4. DM2 y HAS descontroladas crónicamente.",
+      "diagnosedDate": "1976",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "<ol><li><strong>Hipercaliemia Severa Sintomática (K+ 7.1 mmol/L):</strong> Urgencia vital inminente. Riesgo elevadísimo de arritmia letal o asistolia. Exacerbada por uso de ARA-II (Losartán), dieta hiperpotasémica y TFG severamente deprimida.</li><li><strong>Enfermedad Renal Crónica Estadio G4 (TFG CKD-EPI 28 mL/min):</strong> Complicada con oliguria de probable origen prerrenal (ingesta hídrica de ~120 ml/día) y anemia nefrogénica severa (Hb 8.5 g/dL).</li><li><strong>Diabetes Mellitus Tipo 2:</strong> Control glucémico a largo plazo aceptable (HbA1c 6.7%), pero con riesgo de hipoglucemias por acumulación de insulina (depuración renal retardada).</li><li><strong>Hipertensión Arterial Sistémica:</strong> Cifras tensionales descontroladas (153/70 mmHg).&nbsp;</li></ol>",
+      "diagnosedDate": "1976",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-3",
+      "name": "DM, ERC",
+      "diagnosedDate": "1976",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 3,
+  "attachmentsCount": 0
+}

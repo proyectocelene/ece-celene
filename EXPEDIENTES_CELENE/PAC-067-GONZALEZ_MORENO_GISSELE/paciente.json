@@ -1,0 +1,57 @@
+{
+  "id": "PAC-067",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.544505+00:00",
+  "updatedAt": "2026-05-21T01:29:42.544505+00:00",
+  "demographics": {
+    "firstName": "GONZALEZ",
+    "lastName": "MORENO GISSELE",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "649",
+    "hasWhatsApp": false,
+    "whatsappPhone": "649",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "1. Intertrigo Candidíásico: Agudizado y exacerbado por iatrogenia (uso de corticosteroides tópicos) y factores predisponentes (obesidad, diaforesis por bochornos). 2. Urticaria Crónica vs. Eccema Atópico exacerbado: Componente crónico reactivo al calor/estrés. A descartar farmacodermia tardía. 3. Síndrome Climatérico Severo: Con síntomas vasomotores y Síndrome Genitourinario de la Menopausia (resequedad vaginal). 4. Hipotiroidismo primario: En descontrol. Riesgo de hipertiroidismo subclínico/iatrogénico previo por dosis de 150 mcg vs. malabsorción por toma concomitante con IBP (Esomeprazol). 5. Obesidad Grado I (IMC 34.0). 6. Enfermedad por Refujo Gastroesofágico / Dispepsia.",
+    "Se analiza el caso: la paciente presenta candidiasis cutánea en pliegues exacerbada por uso de corticoides tópicos. Además, síntomas de menopausia con resequedad vaginal y posible hipotiroidismo. Las ronchas crónicas sugieren componente alérgico. La gastritis y la interacción medicamentosa requieren separación de tomas. Se inicia tratamiento antifúngico, antihistamínico, estrógenos locales, levotiroxina a dosis baja, y se ajusta protección gástrica."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "1. Intertrigo Candidíásico: Agudizado y exacerbado por iatrogenia (uso de corticosteroides tópicos) y factores predisponentes (obesidad, diaforesis por bochornos). 2. Urticaria Crónica vs. Eccema Atópico exacerbado: Componente crónico reactivo al calor/estrés. A descartar farmacodermia tardía. 3. Síndrome Climatérico Severo: Con síntomas vasomotores y Síndrome Genitourinario de la Menopausia (resequedad vaginal). 4. Hipotiroidismo primario: En descontrol. Riesgo de hipertiroidismo subclínico/iatrogénico previo por dosis de 150 mcg vs. malabsorción por toma concomitante con IBP (Esomeprazol). 5. Obesidad Grado I (IMC 34.0). 6. Enfermedad por Refujo Gastroesofágico / Dispepsia.",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "Se analiza el caso: la paciente presenta candidiasis cutánea en pliegues exacerbada por uso de corticoides tópicos. Además, síntomas de menopausia con resequedad vaginal y posible hipotiroidismo. Las ronchas crónicas sugieren componente alérgico. La gastritis y la interacción medicamentosa requieren separación de tomas. Se inicia tratamiento antifúngico, antihistamínico, estrógenos locales, levotiroxina a dosis baja, y se ajusta protección gástrica.",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 2,
+  "attachmentsCount": 0
+}

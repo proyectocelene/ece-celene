@@ -1,0 +1,35 @@
+{
+  "id": "PAC-183",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.593745+00:00",
+  "updatedAt": "2026-05-21T01:29:42.593745+00:00",
+  "demographics": {
+    "firstName": "MARIA CONCEPCIÓN",
+    "lastName": "MORALES SIMENTAL",
+    "birthDate": "1960-02-27",
+    "gender": "F",
+    "curpOrId": "",
+    "phone": "6611288975",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611288975",
+    "email": "",
+    "bloodType": "O+",
+    "address": "COL. CONSTITUCIÓN",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

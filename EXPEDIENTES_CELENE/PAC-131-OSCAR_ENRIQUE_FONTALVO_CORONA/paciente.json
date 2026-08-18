@@ -1,0 +1,67 @@
+{
+  "id": "PAC-131",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.571121+00:00",
+  "updatedAt": "2026-05-21T01:29:42.571121+00:00",
+  "demographics": {
+    "firstName": "OSCAR ENRIQUE",
+    "lastName": "FONTALVO CORONA",
+    "birthDate": "2012-03-28",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "323103106",
+    "hasWhatsApp": false,
+    "whatsappPhone": "323103106",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Alta sospecha de Trastorno Somatomorfo / Trastorno de Conversión Agudo secundario a probable estrés psicosocial severo, episodios de ansiedad y posible dinámica de acoso escolar (bullying) o conflicto familiar. Se detectan banderas rojas en la esfera emocional que sugieren que el cuadro físico es un mecanismo de defensa psicológico (conversión).",
+    "La evolución clínica en las últimas 24 horas confirma un cuadro de etiología predominantemente funcional/psicosomática, descartando patología quirúrgica urgente (como suboclusión intestinal por bridas post-apendicectomía).\n1. Trastorno Somatomorfo / Trastorno de Conversión Agudo (En remisión parcial): La rápida recuperación de la visión parcial y la disfagia tras la administración de ansiolítico (Hidroxizina) + psicoterapia de apoyo / validación, confirma que los síntomas neurológicos y respiratorios eran manifestaciones somáticas de un alto nivel de estrés/ansiedad (probables estresores psicosociales en el entorno escolar/familiar).\n2. Síndrome de Intestino Irritable (Colitis Espástica) post-infecciosa/nerviosa: El cambio del dolor hacia el marco cólico, con abdomen blando y ruidos normales, sumado al antecedente de diarrea hace 1 semana, es altamente compatible con espasmo colónico secundario al estrés prolongado y a la alteración transitoria de la microbiota intestinal.",
+    "Nota médica: Actualmente se encuentra bajo manejo médico sintomático restrictivo (vía sublingual) y en protocolo de estudios de imagen (USG Abdominal) para descartar patología adherencial residual; sin embargo, la clínica física no justifica la severidad ni la combinación de la sintomatología neurológica, respiratoria y gastrointestinal descrita por el paciente. Alta sospecha de Trastorno Somatomorfo / Trastorno de Conversión Agudo secundario a probable estrés psicosocial severo, episodios de ansiedad y posible dinámica de acoso escolar (bullying) o conflicto familiar."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Alta sospecha de Trastorno Somatomorfo / Trastorno de Conversión Agudo secundario a probable estrés psicosocial severo, episodios de ansiedad y posible dinámica de acoso escolar (bullying) o conflicto familiar. Se detectan banderas rojas en la esfera emocional que sugieren que el cuadro físico es un mecanismo de defensa psicológico (conversión).",
+      "diagnosedDate": "2012",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-2",
+      "name": "La evolución clínica en las últimas 24 horas confirma un cuadro de etiología predominantemente funcional/psicosomática, descartando patología quirúrgica urgente (como suboclusión intestinal por bridas post-apendicectomía).\n1. Trastorno Somatomorfo / Trastorno de Conversión Agudo (En remisión parcial): La rápida recuperación de la visión parcial y la disfagia tras la administración de ansiolítico (Hidroxizina) + psicoterapia de apoyo / validación, confirma que los síntomas neurológicos y respiratorios eran manifestaciones somáticas de un alto nivel de estrés/ansiedad (probables estresores psicosociales en el entorno escolar/familiar).\n2. Síndrome de Intestino Irritable (Colitis Espástica) post-infecciosa/nerviosa: El cambio del dolor hacia el marco cólico, con abdomen blando y ruidos normales, sumado al antecedente de diarrea hace 1 semana, es altamente compatible con espasmo colónico secundario al estrés prolongado y a la alteración transitoria de la microbiota intestinal.",
+      "diagnosedDate": "2012",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-3",
+      "name": "Nota médica: Actualmente se encuentra bajo manejo médico sintomático restrictivo (vía sublingual) y en protocolo de estudios de imagen (USG Abdominal) para descartar patología adherencial residual; sin embargo, la clínica física no justifica la severidad ni la combinación de la sintomatología neurológica, respiratoria y gastrointestinal descrita por el paciente. Alta sospecha de Trastorno Somatomorfo / Trastorno de Conversión Agudo secundario a probable estrés psicosocial severo, episodios de ansiedad y posible dinámica de acoso escolar (bullying) o conflicto familiar.",
+      "diagnosedDate": "2012",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 3,
+  "attachmentsCount": 0
+}

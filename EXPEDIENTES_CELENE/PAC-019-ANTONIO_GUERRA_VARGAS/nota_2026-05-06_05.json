@@ -1,0 +1,119 @@
+{
+  "id": "note-19-5",
+  "patientId": "PAC-019",
+  "fileName": "nota_2026-05-06_05.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-05-06T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "heartRate": 79,
+    "respiratoryRate": 12
+  },
+  "subjective": {
+    "reasonForVisit": "SEGUIMIENTO DOLOR DE PECHO, MAREO",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [],
+  "plan": {
+    "generalPlan": "1. BISOPROLOL 5 MG 30 TABLETAS\n   TOMAR 1 TABLETA VÍA ORAL CADA 24 HORAS (USO CONTINUO)\n\n2. EMPAGLIFLOZINA 25MG 10 TABLETAS\n   TOMAR 1 TABLETA VÍA ORAL CADA 24 HORAS (USO CONTINUO)\n\n3. ACIDO ACETILSALICILICO 100MG ADULTO 30 COMPRIMIDOS\n   TOMAR 1 COMPRIMIDO VÍA ORAL CADA 24 HORAS (ANTIAGREGANTE) (USO CONTINUO)\n\n4. ATORVASTATINA 20 MG 10 TABLETAS\n   TOMAR 2 TABLETA VÍA ORAL CADA 24 HORAS (USO CONTINUO)\n\n5. TELMISARTAN 80 MG 14 TABLETAS\n   TOMAR 1 TABLETA VÍA ORAL CADA 24 HORAS (USO CONTINUO)",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural.",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "BISOPROLOL 5 MG 30 TABLETAS",
+        "dosage": "TOMAR 1 TABLETA VÍA ORAL CADA 24 HORAS",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": "🩸 Presión Arterial"
+      },
+      {
+        "id": "rx-2",
+        "medication": "EMPAGLIFLOZINA 25MG 10 TABLETAS",
+        "dosage": "TOMAR 1 TABLETA VÍA ORAL CADA 24 HORAS",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": "🍬 Control de Glucosa"
+      },
+      {
+        "id": "rx-3",
+        "medication": "ACIDO ACETILSALICILICO 100MG ADULTO 30 COMPRIMIDOS",
+        "dosage": "TOMAR 1 COMPRIMIDO VÍA ORAL CADA 24 HORAS (ANTIAGREGANTE)",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": "🩸 Presión Arterial"
+      },
+      {
+        "id": "rx-4",
+        "medication": "ATORVASTATINA 20 MG 10 TABLETAS",
+        "dosage": "TOMAR 2 TABLETA VÍA ORAL CADA 24 HORAS",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": "🩸 Presión Arterial"
+      },
+      {
+        "id": "rx-5",
+        "medication": "TELMISARTAN 80 MG 14 TABLETAS",
+        "dosage": "TOMAR 1 TABLETA VÍA ORAL CADA 24 HORAS",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": "🩸 Presión Arterial"
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-019-05",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-05-06T12:00:00.000Z",
+  "updatedAt": "2026-05-06T12:00:00.000Z"
+}

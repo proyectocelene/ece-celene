@@ -1,0 +1,47 @@
+{
+  "id": "PAC-092",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.554139+00:00",
+  "updatedAt": "2026-05-21T01:29:42.554139+00:00",
+  "demographics": {
+    "firstName": "LEOPOLDO",
+    "lastName": "SERRANO PINEDA",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6611287295",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611287295",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Paciente masculino en la quinta década de la vida con factores de riesgo metabólico significativos. Cursa con el siguiente diagnóstico sindromático y nosológico:\n1. Síndrome Dispéptico con datos de alarma: Por edad (>50 años), saciedad temprana y distensión severa. A descartar enfermedad ácido-péptica, patología biliar o alteración estructural gástrica.\n2. Masas en pared abdominal en estudio: A descartar hernias de pared abdominal (umbilical/ventral) vs. lipomas, exacerbadas por aumento de presión intraabdominal.\n3. Obesidad Grado III (Mórbida): IMC de 43.4.\n4. Descontrol Hipertensivo / Crisis Hipertensiva Urgencia: TA 166/66 mmHg, con amplia presión de pulso.\n5. Glucosa alterada en ayuno: (119 mg/dL) a descartar prediabetes/Diabetes Mellitus tipo 2."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Paciente masculino en la quinta década de la vida con factores de riesgo metabólico significativos. Cursa con el siguiente diagnóstico sindromático y nosológico:\n1. Síndrome Dispéptico con datos de alarma: Por edad (>50 años), saciedad temprana y distensión severa. A descartar enfermedad ácido-péptica, patología biliar o alteración estructural gástrica.\n2. Masas en pared abdominal en estudio: A descartar hernias de pared abdominal (umbilical/ventral) vs. lipomas, exacerbadas por aumento de presión intraabdominal.\n3. Obesidad Grado III (Mórbida): IMC de 43.4.\n4. Descontrol Hipertensivo / Crisis Hipertensiva Urgencia: TA 166/66 mmHg, con amplia presión de pulso.\n5. Glucosa alterada en ayuno: (119 mg/dL) a descartar prediabetes/Diabetes Mellitus tipo 2.",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 2,
+  "attachmentsCount": 0
+}

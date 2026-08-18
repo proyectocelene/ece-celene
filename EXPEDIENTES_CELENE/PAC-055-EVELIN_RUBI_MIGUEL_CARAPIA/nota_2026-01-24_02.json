@@ -1,0 +1,162 @@
+{
+  "id": "note-55-2",
+  "patientId": "PAC-055",
+  "fileName": "nota_2026-01-24_02.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-01-24T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "SUA",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Levotiroxina Control de función tiroidea. No suspender sin indicación médica. Tomar 1 tableta cada 24 horas en ayuno, 30 minutos antes del desayuno.; Naproxeno Dolor pélvico tipo cólico. Tomar 1 tableta cada 12 horas por 5 días, con alimentos.; Butilhioscina Espasmo y cólico abdominal. Tomar 1 tableta cada 6 horas por 5 días, PRN.; Loperamida Tomar 1 cápsula después de cada evacuación diarreica, dosis máxima: 8 tabletas en 24 horas.; Fumarato ferroso Tomar 1 tableta cada 24 horas por 3 meses. Tomar con jugo cítrico. Indicaciones: Tratamiento/previsión de anemia.; Ácido fólico Tomar 1 tableta cada 24 horas por 3 meses.; Ketorolaco Aplicar dosis única en caso de dolor intenso. No repetir dosis ni combinar con otros AINEs.; Anticonceptivos orales combinados Control del sangrado uterino. Nota: Este esquema puede inhibir la lactancia.; Metoclopramida Náusea y vómito. Tomar 1 tableta cada 8 horas PRN.",
+    "nonPharmacological": "",
+    "warningSigns": "Sangrado que empapa más de 1 pañal por hora\nMareo, debilidad, palpitaciones o síncope\nDolor abdominal intenso persistente\nFiebre o sangrado que no cede",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Levotiroxina",
+        "dosage": "25 mcg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Naproxeno",
+        "dosage": "550 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Butilhioscina",
+        "dosage": "10 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Loperamida",
+        "dosage": "2 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Fumarato ferroso",
+        "dosage": "200 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 meses",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "Ácido fólico",
+        "dosage": "1 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 meses",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "Ketorolaco",
+        "dosage": "30 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-8",
+        "medication": "Anticonceptivos orales combinados",
+        "dosage": "tabletas (esquema)",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "continuo",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-9",
+        "medication": "Metoclopramida",
+        "dosage": "10 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-055-02",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-01-24T12:00:00.000Z",
+  "updatedAt": "2026-01-24T12:00:00.000Z"
+}

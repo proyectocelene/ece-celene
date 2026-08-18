@@ -1,0 +1,82 @@
+{
+  "id": "note-56-2",
+  "patientId": "PAC-056",
+  "fileName": "nota_2026-04-18_02.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-18T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente femenina de 17 años refiere dudas sobre estado de gravidez. Presenta síntomas generales de primer trimestre: poliaquiuria y cambios en el patrón del sueño (ronquido, pesadillas, xerostomía nocturna). Niega dolor abdominal o sangrado.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos Vitales: (Dentro de parámetros normales para la edad). Abdomen: Plano, blando, sin megalias. Fondo uterino no palpable (acorde a edad gestacional temprana). Exploración Ginecológica: No se realiza por falta de indicación aguda. FCF no auscultable por Doppler. Auxiliares Diagnósticos: Prueba de HCG cualitativa en sangre: POSITIVA. Edad Gestacional por FUM: 5.4 Semanas de Gestación (SDG).",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "1. Embarazo de 5.4 Semanas de Gestación por FUM. 2. Adolescente Primigesta (Embarazo en la adolescencia). 3. Riesgo Laboral por Exposición a Teratógenos Potenciales (Químicos de manicura). 4. Trastorno del sueño a clasificar (Probable rinitis gestacional o componente de ansiedad).",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Ácido Fólico Tomar 1 tableta vía oral cada 24 horas (preferentemente por la mañana)",
+    "nonPharmacological": "",
+    "warningSigns": "Sangrado transvaginal\ndolor abdominal tipo cólico fuerte\nfiebre\nardor al orinar",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Ácido Fólico",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "30 tabletas (1 mes)",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-056-02",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-18T12:00:00.000Z",
+  "updatedAt": "2026-04-18T12:00:00.000Z"
+}

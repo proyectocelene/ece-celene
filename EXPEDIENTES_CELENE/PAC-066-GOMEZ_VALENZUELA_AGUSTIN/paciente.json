@@ -1,0 +1,47 @@
+{
+  "id": "PAC-066",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.544071+00:00",
+  "updatedAt": "2026-05-21T01:29:42.544071+00:00",
+  "demographics": {
+    "firstName": "GOMEZ",
+    "lastName": "VALENZUELA AGUSTIN",
+    "birthDate": "2026-04-07",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6611133823",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611133823",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "DM2, HAS,"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "DM2, HAS,",
+      "diagnosedDate": "2026",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 2,
+  "attachmentsCount": 0
+}

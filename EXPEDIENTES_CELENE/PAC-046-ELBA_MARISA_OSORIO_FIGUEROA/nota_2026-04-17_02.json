@@ -1,0 +1,149 @@
+{
+  "id": "note-46-2",
+  "patientId": "PAC-046",
+  "fileName": "nota_2026-04-17_02.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-17T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 76.15,
+    "heightCm": 187.0,
+    "temperature": 36.5,
+    "heartRate": 61,
+    "respiratoryRate": 12,
+    "glucose": 99.0
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente refiere ictericia generalizada exacerbada, dolor intenso en hipocondrio derecho, oliguria franca, desorientación y amnesia reciente.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: PA 169/76 mmHg, FC 61 lpm, FR 12 rpm, Temp 36.5°C, Peso 76.15 kg, Talla 187 cm, Glucosa 99 mg/dL. Exploración: Ictericia generalizada en piel y escleras, Signo de Murphy positivo, asterixis bilateral, edema en miembros inferiores.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "1. Patología Biliar Aguda / Síndrome Ictérico Obstructivo (descartar colecistitis aguda vs colangitis). 2. Encefalopatía Metabólica (probable origen hepático vs urémico). 3. Lesión Renal Aguda sobre crónica (oligúrica). 4. DM2 y HAS descontroladas crónicamente.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Insulina Glargina Aplicar 30 UI por vía subcutánea cada 24 horas (preferentemente a la misma hora).; Furosemida 40 mg Tomar 1 tableta cada 12 horas (sujeta a valoración por nefrología debido a la anuria).; Amlodipino 5 mg Tomar 1 tableta cada 12 horas.; Losartán 50 mg Tomar 1 tableta cada 12 horas.; Atorvastatina 20 mg Tomar 1 tableta cada 24 horas (por la noche).; Alopurinol 300 mg Tomar 1 tableta cada 24 horas.; Paracetamol 500 mg Tomar 1 tableta cada 8 horas durante 5 días SOLO EN CASO DE DOLOR.",
+    "nonPharmacological": "Dieta hiposódica (baja en sal) y baja en potasio (evitar plátano, jitomate, cítricos) hasta obtener laboratorios.",
+    "warningSigns": "Acudir de inmediato a urgencias si presenta dificultad respiratoria, confusión o edema generalizado.\nEn caso de emergencia llamar al 911.",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Insulina Glargina",
+        "dosage": "30 UI",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Furosemida 40 mg",
+        "dosage": "40 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Amlodipino 5 mg",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Losartán 50 mg",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Atorvastatina 20 mg",
+        "dosage": "20 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "Alopurinol 300 mg",
+        "dosage": "300 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "Paracetamol 500 mg",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-046-02",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-17T12:00:00.000Z",
+  "updatedAt": "2026-04-17T12:00:00.000Z"
+}

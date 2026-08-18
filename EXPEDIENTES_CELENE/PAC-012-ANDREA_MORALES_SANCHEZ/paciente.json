@@ -1,0 +1,47 @@
+{
+  "id": "PAC-012",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.516364+00:00",
+  "updatedAt": "2026-05-21T01:29:42.516364+00:00",
+  "demographics": {
+    "firstName": "ANDREA",
+    "lastName": "MORALES SANCHEZ",
+    "birthDate": "2001-12-08",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "66113531525",
+    "hasWhatsApp": true,
+    "whatsappPhone": "66113531525",
+    "email": "",
+    "bloodType": "O+",
+    "address": "ROSARITO",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "RETIRO DE ISD"
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "RETIRO DE ISD",
+      "diagnosedDate": "2001",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

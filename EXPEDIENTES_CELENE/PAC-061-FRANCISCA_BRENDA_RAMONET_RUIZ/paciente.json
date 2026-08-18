@@ -1,0 +1,35 @@
+{
+  "id": "PAC-061",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.542008+00:00",
+  "updatedAt": "2026-05-21T01:29:42.542008+00:00",
+  "demographics": {
+    "firstName": "FRANCISCA BRENDA",
+    "lastName": "RAMONET RUIZ",
+    "birthDate": "1969-10-05",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6611262919",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6611262919",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [],
+  "chronicConditions": [],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

@@ -1,0 +1,47 @@
+{
+  "id": "PAC-109",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-05-21T01:29:42.560725+00:00",
+  "updatedAt": "2026-05-21T01:29:42.560725+00:00",
+  "demographics": {
+    "firstName": "MARIA PALOMA",
+    "lastName": "RIOS GONZALEZ",
+    "birthDate": "1990-01-01",
+    "gender": "Otro",
+    "curpOrId": "",
+    "phone": "6199578769",
+    "hasWhatsApp": true,
+    "whatsappPhone": "6199578769",
+    "email": "",
+    "bloodType": "O+",
+    "address": "Playas de Rosarito, B.C.",
+    "emergencyContact": {
+      "name": "",
+      "relationship": "",
+      "phone": ""
+    }
+  },
+  "background": {
+    "ahf": "",
+    "app": "",
+    "apnp": "",
+    "ago": ""
+  },
+  "allergies": [],
+  "activeConditions": [
+    "Galactorrea a estudio / Descartar hiperprolactinemia."
+  ],
+  "chronicConditions": [
+    {
+      "id": "cond-1",
+      "name": "Galactorrea a estudio / Descartar hiperprolactinemia.",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    }
+  ],
+  "notesCount": 1,
+  "attachmentsCount": 0
+}

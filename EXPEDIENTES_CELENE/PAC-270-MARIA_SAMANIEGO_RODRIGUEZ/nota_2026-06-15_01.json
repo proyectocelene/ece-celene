@@ -1,0 +1,108 @@
+{
+  "id": "note-270-1",
+  "patientId": "PAC-270",
+  "fileName": "nota_2026-06-15_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-06-15T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "temperature": 36.5,
+    "heartRate": 73,
+    "respiratoryRate": 12,
+    "glucose": 106.0,
+    "oxygenSaturation": 99
+  },
+  "subjective": {
+    "reasonForVisit": "Paciente con TCE, sospecha de hematoma subdural y pielonefritis.",
+    "currentIllness": "<!--StartFragment--><p>Paciente femenina de 68 años acude a consulta externa para revisión de rutina (glucosa). Durante el interrogatorio refiere antecedente de traumatismo craneoencefálico y contusión cervical hace 1 semana tras sufrir accidente en autobús (desconoce cinemática y zona de impacto). Niega pérdida del estado de alerta en el momento, pero refiere haberse sentido \"atarantada\" y con mucho sueño. Evolución clínica con cefalea, mareo, desorientación y ataxia (refiere \"irse de lado\" al caminar). Concomitantemente presenta náuseas y vómito (último episodio ayer por la noche, actualmente tolera líquidos), dolor en flancos y orina de mal olor. Niega disuria y fiebre.\n<b>Medicamentos:</b> Refiere uso de Captopril pero no recuerda esquema. Ácido acetilsalicílico (suspendido por la paciente desde el accidente). Naproxeno reciente para el dolor.</p><p></p><!--EndFragment-->",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "<!--StartFragment--><b>Signos Vitales:</b> TA 164/94 mmHg, FC 73 lpm, Glucosa capilar (ayuno &gt;12 hrs) 106 mg/dL.&nbsp;<div><b><br></b></div><div><b>Exploración Física:</b> Glasgow 15/15. Desorientada respecto a su esquema farmacológico. Pupilas isocóricas y normorreflécticas. Ptosis palpebral izquierda (refiere secuela de accidente de hace 5 años). Otoscopia bilateral íntegra y sin alteraciones. Cráneo sin hematomas ni hundimientos palpables, pero con dolor a la palpación. Cuello con dolor a la movilización y palpación. Marcha atáxica con lateralización. Abdomen blando, depresible, Giordano positivo bilateral.\n<b>Pruebas de consultorio:</b> Tira reactiva en orina: concentrada, mal olor, Proteínas (+), Nitritos (-), Leucocitos (+++).<!--EndFragment--></div>",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "<p>Paciente geriátrica cursando con cuadro clínico de alto riesgo caracterizado por:</p><p><!--StartFragment--><!--EndFragment--></p><ol><li><p>Traumatismo craneoencefálico de 7 días de evolución con datos de focalización neurológica (marcha atáxica, desorientación, somnolencia, emesis) y antecedente de uso de antiagregante plaquetario. Alta sospecha de hematoma subdural subagudo.</p></li><li><p>Cuadro clínico y tira reactiva sugerentes de Pielonefritis aguda.</p></li><li><p>Descontrol hipertensivo.</p></li><li><p>Cervicalgia postraumática.</p></li></ol>",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "<!--StartFragment--><li><p>Se suspende inmediatamente el uso de AINEs (Naproxeno) por riesgo de lesión renal y alteración plaquetaria en contexto de trauma craneal.</p></li><li><p>Se elabora y entrega hoja de referencia para traslado inmediato a Urgencias de Segundo Nivel para valoración por Neurocirugía y abordaje integral.</p></li><li><p>Ante la posibilidad de diferimiento del traslado por parte de la paciente/familiares, se instaura esquema ambulatorio de soporte:</p><ul><li><p>Ceftriaxona 1 g IM cada 24 horas por 3 días (terapia empírica ante intolerancia oral intermitente).</p></li><li><p>Paracetamol 500 mg VO cada 8 horas (PRN para dolor).</p></li><li><p>Ondansetrón 8 mg SL cada 8 horas (PRN para náusea/vómito).</p></li></ul></li><li><p>Se solicitan estudios de gabinete y laboratorio de carácter URGENTE: TAC de cráneo simple, Rx de columna cervical (AP y lateral), BH, QS, ES, TP, TPT, EGO y Urocultivo.</p></li><li><p>Se explican ampliamente a la paciente y familiar los datos de alarma neurológica, con indicación estricta de acudir a urgencias hospitalarias de forma inmediata en caso de presentarlos.</p></li><!--EndFragment-->",
+    "nonPharmacological": "",
+    "warningSigns": "<ul>\n<li>Fiebre persistente &gt; 38.5 °C.</li>\n<li>Dolor intenso que no mejora.</li>\n<li>Vómito persistente o deshidratación.</li>\n<li>Dificultad respiratoria o sangrado.</li>\n</ul><div><!--StartFragment-->Si la paciente presenta vómito que no cede, alteración en el estado de conciencia (no despierta o dice incoherencias), asimetría en la cara, debilidad en brazos o piernas, o si el dolor de cabeza empeora severamente, deberá acudir de inmediato al hospital más cercano. Cita de revisión en 24-48 horas con los resultados de los estudios solicitados.<!--EndFragment--></div>",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "PARACETAMOL 500 MG 10 TABLETAS",
+        "dosage": "Tomar 💊💊 **2 tabletas** por vía oral 🕒 cada 8 horas ⏳ durante 5 días",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": "💊 Alivia el dolor y baja la fiebre."
+      },
+      {
+        "id": "rx-2",
+        "medication": "CAPTOPRIL 50 MG 30 TABLETAS",
+        "dosage": "TOMAR 1 TABLETA VÍA ORAL CADA 8 A 12 HORAS",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "Uso continuo",
+        "instructions": "",
+        "indicationFor": "💊 Ayuda a bajar la presión arterial alta."
+      },
+      {
+        "id": "rx-3",
+        "medication": "CEFTRIAXONA SOLUCION INYECTABLE 1 GR 1 AMPOLLETA",
+        "dosage": "Tomar 🧪 **1 ampolleta(s)** por vía intramuscular 🕒 cada 24 horas ⏳ durante 3 días",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 días",
+        "instructions": "",
+        "indicationFor": "💉 Mata bacterias causantes de infecciones graves."
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-270-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-06-15T12:00:00.000Z",
+  "updatedAt": "2026-06-15T12:00:00.000Z"
+}
