@@ -17,6 +17,7 @@ interface ServiceReceiptPrintProps {
   note: ClinicalNote;
   patient: Patient;
   receipt?: Receipt;
+  initialBlankMode?: boolean;
   onClose: () => void;
 }
 
@@ -24,10 +25,12 @@ export function ServiceReceiptPrint({
   note,
   patient,
   receipt,
+  initialBlankMode = false,
   onClose,
 }: ServiceReceiptPrintProps) {
   const { clinicConfig, currentUser } = useAuth();
   const [printFormat, setPrintFormat] = useState<'letter' | 'thermal'>('letter');
+  const [isBlankMode, setIsBlankMode] = useState(initialBlankMode);
 
   const activeReceipt: Receipt = receipt || note.receipt || {
     receiptFolio: `REC-${patient.id}-${Date.now().toString().slice(-4)}`,
@@ -69,45 +72,50 @@ export function ServiceReceiptPrint({
   const handlePrint = () => {
     const elementId = printFormat === 'letter' ? 'printable-receipt-sheet' : 'printable-thermal-ticket';
     PrintService.printElement(elementId, {
-      title: `Recibo de Aportacion - ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id})`,
+      title: `Recibo de Aportacion ${isBlankMode ? 'Manual en Blanco' : ''} - ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id})`,
     });
   };
 
   const renderReceiptHalf = (isCopy: boolean) => (
     <div className="border border-slate-300 p-4 rounded-xl bg-white space-y-2.5 flex flex-col justify-between page-break-inside-avoid shadow-2xs">
-      {/* Header con Logo 640x153 */}
-      <div className="flex items-start justify-between border-b-2 border-slate-800 pb-2">
-        <div className="flex items-center gap-3">
-          <div className="h-10 max-w-[170px] shrink-0 flex items-center">
-            <img
-              src={clinicConfig?.logoUrl || 'https://i.ibb.co/k2LCbnsF/tcarta-volante.png'}
-              alt="Logo Celene"
-              className="h-full w-auto object-contain"
-            />
-          </div>
-          <div>
-            <h2 className="text-xs font-black text-slate-900 uppercase tracking-tight">
-              {clinicConfig?.clinicName || 'PROYECTO CELENE ROSARITO'}
-            </h2>
-            <p className="text-[10px] font-bold text-slate-700 uppercase">
-              {clinicConfig?.foundationName || 'FUNDACIÓN PROYECTO CELENE'}
-            </p>
-            <p className="text-[8.5px] text-slate-600 flex items-center gap-0.5">
-              <MapPin className="w-2 h-2 shrink-0" />
-              {clinicConfig?.address || 'Gral. Guadalupe Victoria, Lienzo Charro, Playas de Rosarito'} • Tel: {clinicConfig?.phone || '661 104 4050'}
-            </p>
-          </div>
+      {/* 1. Encabezado Oficial de 3 Columnas */}
+      <div className="grid grid-cols-12 items-center gap-2 border-b-2 border-slate-900 pb-2">
+        {/* Izquierda: Logo sin recuadros */}
+        <div className="col-span-3 flex items-center justify-start">
+          <img
+            src={clinicConfig?.logoUrl || 'https://i.ibb.co/k2LCbnsF/tcarta-volante.png'}
+            alt="Logo Consultorio Comunitario Proyecto Celene"
+            className="h-10 sm:h-11 w-auto max-w-full object-contain"
+          />
         </div>
 
-        <div className="text-right shrink-0 space-y-0.5">
-          <span className="inline-block px-2 py-0.5 bg-emerald-800 text-white rounded font-extrabold text-[9px] uppercase tracking-wider shadow-2xs">
-            {isCopy ? 'COPIA PARA ARCHIVO' : 'ORIGINAL - PACIENTE'}
-          </span>
-          <p className="text-xs font-mono font-bold text-slate-900 mt-0.5">
-            Folio: {activeReceipt.receiptFolio || `REC-${patient.id}`}
+        {/* Centro: Proyecto Celene Rosarito, Fundación, Dirección, Tel y Web (CENTRADO) */}
+        <div className="col-span-6 text-center space-y-0.5">
+          <h2 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-tight">
+            {clinicConfig?.clinicName || 'PROYECTO CELENE ROSARITO'}
+          </h2>
+          <p className="text-[10px] font-bold text-slate-800 uppercase">
+            {clinicConfig?.foundationName || 'FUNDACIÓN PROYECTO CELENE'}
           </p>
-          <p className="text-[10px] text-slate-600 font-medium">
-            Fecha: {DateTimeService.formatDate(note.date, { year: 'numeric', month: 'short', day: 'numeric' })}
+          <p className="text-[8px] text-slate-600 flex items-center justify-center gap-1 font-medium">
+            <MapPin className="w-2 h-2 text-slate-500 shrink-0" />
+            {clinicConfig?.address || 'Gral. Guadalupe Victoria, Lienzo Charro, Playas de Rosarito'}
+          </p>
+          <p className="text-[8px] text-slate-600">
+            Tel: {clinicConfig?.phone || '661 104 4050'} • consultorio@proyectocelene.org • proyectocelene.org
+          </p>
+        </div>
+
+        {/* Derecha: Badge de Recibo, Fecha y Folio alineados a la derecha */}
+        <div className="col-span-3 flex flex-col items-end justify-center text-right space-y-0.5">
+          <span className="px-2 py-0.5 border-2 border-slate-900 text-slate-900 font-extrabold rounded text-[8.5px] uppercase tracking-wider">
+            {isCopy ? 'COPIA ARCHIVO' : 'RECIBO APORTACIÓN'}
+          </span>
+          <p className="text-[9.5px] text-slate-700">
+            Fecha: <strong className="text-slate-900 font-bold">{DateTimeService.formatDate(note.date, { year: 'numeric', month: 'numeric', day: 'numeric' })}</strong>
+          </p>
+          <p className="text-[9.5px] text-slate-600 font-mono">
+            Folio: <strong className="text-slate-900 font-bold">{activeReceipt.receiptFolio || `REC-${patient.id}`}</strong>
           </p>
         </div>
       </div>
@@ -135,74 +143,107 @@ export function ServiceReceiptPrint({
         </div>
       </div>
 
-      {/* Concepts Table with Subsidy Breakdown */}
-      <div className="space-y-1">
-        <table className="w-full text-xs">
-          <thead>
-            <tr className="border-b border-slate-300 text-[9px] text-slate-600 uppercase font-black">
-              <th className="text-left pb-1">Concepto / Servicio Prestado</th>
-              <th className="text-right pb-1">Valor Privado</th>
-              <th className="text-right pb-1">Subsidio Celene</th>
-              <th className="text-right pb-1">Cuota Aportada</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-100">
-            {activeReceipt.services.map((s) => {
-              const commercial = s.commercialCost || s.amount;
-              const subsidy = Math.max(0, commercial - s.amount);
-              return (
-                <tr key={s.id}>
-                  <td className="py-1 text-slate-900 font-semibold text-[11px]">
-                    {s.description}
-                    {s.amount === 0 && (
-                      <span className="ml-1.5 text-[8.5px] px-1 py-0.2 rounded bg-emerald-100 text-emerald-900 font-black">
-                        100% EXENTO
-                      </span>
-                    )}
-                  </td>
-                  <td className="py-1 text-right font-mono text-slate-500 text-[10px]">
-                    ${commercial.toFixed(2)}
-                  </td>
-                  <td className="py-1 text-right font-mono text-emerald-700 font-bold text-[10px]">
-                    {subsidy > 0 ? `-$${subsidy.toFixed(2)}` : '$0.00'}
-                  </td>
-                  <td className="py-1 text-right font-mono font-bold text-slate-900 text-[11px]">
-                    ${s.amount.toFixed(2)}
-                  </td>
+      {/* Mode 1: Llenado Digital vs Mode 2: Formato en Blanco para Llenar a Mano */}
+      {isBlankMode ? (
+        <div className="space-y-2 py-1">
+          <table className="w-full text-xs border border-slate-300">
+            <thead>
+              <tr className="bg-slate-100 border-b border-slate-300 text-[9px] text-slate-700 uppercase font-black">
+                <th className="py-1 px-2 text-left w-12">CANT.</th>
+                <th className="py-1 px-2 text-left">DESCRIPCIÓN DEL CONCEPTO O SERVICIO</th>
+                <th className="py-1 px-2 text-right w-28">CUOTA RECUPERACIÓN</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-200">
+              {[1, 2, 3, 4].map((i) => (
+                <tr key={i} className="h-6">
+                  <td className="border-r border-slate-200"></td>
+                  <td className="border-r border-slate-200"></td>
+                  <td></td>
                 </tr>
-              );
-            })}
-          </tbody>
-          <tfoot>
-            <tr className="border-t-2 border-slate-800 font-black">
-              <td className="pt-1 text-slate-900 text-[11px] uppercase">TOTALES:</td>
-              <td className="pt-1 text-right font-mono text-slate-600 text-[10px]">
-                ${totalCommercial.toFixed(2)}
-              </td>
-              <td className="pt-1 text-right font-mono text-emerald-800 text-[10px]">
-                -${totalSubsidy.toFixed(2)} ({percentSubsidized}%)
-              </td>
-              <td className="pt-1 text-right font-mono text-xs text-blue-950 font-black">
-                ${activeReceipt.totalAmount.toFixed(2)} MXN
-              </td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
+              ))}
+            </tbody>
+            <tfoot>
+              <tr className="border-t-2 border-slate-800 font-black bg-slate-50">
+                <td colSpan={2} className="py-1 px-2 text-right text-[10px] uppercase">TOTAL RECIBIDO:</td>
+                <td className="py-1 px-2 text-right font-mono text-xs">$ __________ MXN</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      ) : (
+        <div className="space-y-1">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b border-slate-300 text-[9px] text-slate-600 uppercase font-black">
+                <th className="text-left pb-1">Concepto / Servicio Prestado</th>
+                <th className="text-right pb-1">Valor Privado</th>
+                <th className="text-right pb-1">Subsidio Celene</th>
+                <th className="text-right pb-1">Cuota Aportada</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100">
+              {activeReceipt.services.map((s) => {
+                const commercial = s.commercialCost || s.amount;
+                const subsidy = Math.max(0, commercial - s.amount);
+                return (
+                  <tr key={s.id}>
+                    <td className="py-1 text-slate-900 font-semibold text-[11px]">
+                      {s.description}
+                      {s.amount === 0 && (
+                        <span className="ml-1.5 text-[8.5px] px-1 py-0.2 rounded bg-emerald-100 text-emerald-900 font-black">
+                          100% EXENTO
+                        </span>
+                      )}
+                    </td>
+                    <td className="py-1 text-right font-mono text-slate-500 text-[10px]">
+                      ${commercial.toFixed(2)}
+                    </td>
+                    <td className="py-1 text-right font-mono text-emerald-700 font-bold text-[10px]">
+                      {subsidy > 0 ? `-$${subsidy.toFixed(2)}` : '$0.00'}
+                    </td>
+                    <td className="py-1 text-right font-mono font-bold text-slate-900 text-[11px]">
+                      ${s.amount.toFixed(2)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+            <tfoot>
+              <tr className="border-t-2 border-slate-800 font-black">
+                <td className="pt-1 text-slate-900 text-[11px] uppercase">TOTALES:</td>
+                <td className="pt-1 text-right font-mono text-slate-600 text-[10px]">
+                  ${totalCommercial.toFixed(2)}
+                </td>
+                <td className="pt-1 text-right font-mono text-emerald-800 text-[10px]">
+                  -${totalSubsidy.toFixed(2)} ({percentSubsidized}%)
+                </td>
+                <td className="pt-1 text-right font-mono text-xs text-blue-950 font-black">
+                  ${activeReceipt.totalAmount.toFixed(2)} MXN
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      )}
 
       {/* Payment Summary, Notes & Signatures */}
       <div className="flex items-end justify-between border-t border-slate-200 pt-1.5 text-[10px] text-slate-700">
         <div className="space-y-0.5 max-w-[65%]">
-          <p className="text-[9.5px]">
-            Método: <strong className="text-slate-900">{activeReceipt.paymentMethod}</strong>
-            {activeReceipt.receivedAmount !== undefined && (
-              <> • Recibido: <strong className="text-emerald-800 font-mono">${activeReceipt.receivedAmount.toFixed(2)}</strong></>
-            )}
-            {(activeReceipt.pendingAmount ?? 0) > 0 && (
-              <> • Saldo pendiente: <strong className="text-rose-800 font-mono">${(activeReceipt.pendingAmount ?? 0).toFixed(2)}</strong></>
-            )}
-          </p>
-          {activeReceipt.notes && <p className="italic text-[9px] text-slate-600">Nota: {activeReceipt.notes}</p>}
+          {!isBlankMode && (
+            <p className="text-[9.5px]">
+              Método: <strong className="text-slate-900">{activeReceipt.paymentMethod}</strong>
+              {activeReceipt.receivedAmount !== undefined && (
+                <> • Recibido: <strong className="text-emerald-800 font-mono">${activeReceipt.receivedAmount.toFixed(2)}</strong></>
+              )}
+              {(activeReceipt.pendingAmount ?? 0) > 0 && (
+                <> • Saldo pendiente: <strong className="text-rose-800 font-mono">${(activeReceipt.pendingAmount ?? 0).toFixed(2)}</strong></>
+              )}
+            </p>
+          )}
+          {activeReceipt.notes && !isBlankMode && (
+            <p className="italic text-[9px] text-slate-600">Nota: {activeReceipt.notes}</p>
+          )}
           <p className="text-[8px] text-slate-500 leading-tight">
             * Comprobante de donativo / aportación solidaria de recuperación. Fundación Proyecto Celene es una A.C. sin fines de lucro.
           </p>
@@ -210,11 +251,11 @@ export function ServiceReceiptPrint({
 
         <div className="flex items-center gap-4 text-center">
           <div className="w-28">
-            <div className="border-b border-slate-800 h-5"></div>
+            <div className="border-b border-slate-800 h-6"></div>
             <span className="text-[7.5px] text-slate-600 block pt-0.5 font-bold uppercase">Firma Paciente</span>
           </div>
           <div className="w-28">
-            <div className="border-b border-slate-800 h-5"></div>
+            <div className="border-b border-slate-800 h-6"></div>
             <span className="text-[7.5px] text-slate-600 block pt-0.5 font-bold uppercase">Firma / Sello Recepción</span>
           </div>
         </div>
@@ -233,13 +274,24 @@ export function ServiceReceiptPrint({
               Recibo de Donativo y Aportación Solidaria
             </h3>
             <p className="text-xs text-slate-300">
-              {printFormat === 'letter'
-                ? 'Formato oficial de 2 tantos en 1 hoja carta (Original Paciente + Copia Archivo)'
-                : 'Formato Ticket Térmico POS (58mm / 80mm)'}
+              {isBlankMode ? 'Modo: Formato en Blanco para Llenar a Mano' : 'Modo: Recibo con Desglose Digital'}
             </p>
           </div>
 
           <div className="flex items-center gap-2">
+            {/* Toggle Blank Mode */}
+            <button
+              type="button"
+              onClick={() => setIsBlankMode(!isBlankMode)}
+              className={`text-xs px-2.5 py-1 rounded-md font-semibold transition-colors cursor-pointer border ${
+                isBlankMode
+                  ? 'bg-amber-500 text-white border-amber-600 font-bold'
+                  : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'
+              }`}
+            >
+              {isBlankMode ? '✓ Formato a Mano' : 'Cambiar a Llenado Manual'}
+            </button>
+
             {/* Format toggle */}
             <div className="bg-slate-800 p-0.5 rounded-lg flex items-center border border-slate-700 mr-2">
               <button

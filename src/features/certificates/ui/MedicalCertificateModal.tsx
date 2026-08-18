@@ -1,7 +1,10 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useWorkspace } from '@/app/providers/WorkspaceContext';
 import { useAuth } from '@/app/providers/AuthContext';
 import type { Patient } from '@/entities/patient/model/schemas';
 import type { ClinicalNote, VitalSigns } from '@/entities/clinical-note/model/schemas';
+import type { MedicalCertificate } from '@/entities/certificates/model/schemas';
+import { CertificateService } from '@/entities/certificates/api/certificateService';
 import { PatientService } from '@/entities/patient/api/patientService';
 import { ClinicalNoteService } from '@/entities/clinical-note/api/clinicalNoteService';
 import { PrintService } from '@/shared/lib/printService';
@@ -13,25 +16,34 @@ import {
   ShieldCheck,
   Edit3,
   Eye,
+  Save,
 } from 'lucide-react';
 
 interface MedicalCertificateModalProps {
   isOpen: boolean;
   onClose: () => void;
   patient: Patient;
+  patientFolderName?: string;
   latestNote?: ClinicalNote | null;
+  existingCertificate?: MedicalCertificate | null;
+  onCertificateSaved?: () => void;
 }
 
 export function MedicalCertificateModal({
   isOpen,
   onClose,
   patient,
+  patientFolderName,
   latestNote,
+  existingCertificate,
+  onCertificateSaved,
 }: MedicalCertificateModalProps) {
+  const { rootDirHandle } = useWorkspace();
   const { clinicConfig, currentUser, supervisorDoctor, logAuditAction } = useAuth();
   const [viewMode, setViewMode] = useState<'preview' | 'edit'>('preview');
+  const [isSaving, setIsSaving] = useState(false);
 
-  // Valores predeterminados o cargados de la última consulta
+  // Valores predeterminados o cargados
   const [certificateType, setCertificateType] = useState<string>('Certificado de Salud General');
   const [recipient, setRecipient] = useState<string>('A QUIEN CORRESPONDA');
   const [bloodType, setBloodType] = useState<string>('No determinado / No especificado');
@@ -61,14 +73,44 @@ export function MedicalCertificateModal({
     }
   );
 
+  useEffect(() => {
+    if (existingCertificate) {
+      setCertificateType(existingCertificate.type || 'Certificado de Salud General');
+      setRecipient(existingCertificate.recipient || 'A QUIEN CORRESPONDA');
+      setBloodType(existingCertificate.bloodType || 'No determinado / No especificado');
+      setDictum(existingCertificate.dictum || '');
+      setPhysicalExamText(existingCertificate.physicalExamText || '');
+      setObservations(existingCertificate.observations || '');
+      setValidityDays(String(existingCertificate.validityDays || 30));
+      if (existingCertificate.vitals) {
+        setVitals(existingCertificate.vitals);
+      }
+    }
+  }, [existingCertificate]);
+
   const age = PatientService.calculateAge(patient.demographics.birthDate);
   const bmiCalc = ClinicalNoteService.calculateBMI(vitals.weightKg, vitals.heightCm);
 
   const isPasante =
     currentUser?.role === 'pasante' ||
+    existingCertificate?.attendingDoctorRole === 'pasante' ||
     latestNote?.attendingDoctorRole === 'pasante' ||
     latestNote?.attendingDoctorTitle?.includes('PASANTE') ||
     currentUser?.username?.toLowerCase().includes('sebastian');
+
+  const attendingDoctorName =
+    currentUser?.fullName || existingCertificate?.attendingDoctorName || 'Dr. Sebastián Garduño Conde';
+  const attendingDoctorTitle =
+    currentUser?.title || existingCertificate?.attendingDoctorTitle || 'MÉDICO PASANTE DEL SERVICIO SOCIAL (MPSS)';
+  const attendingDoctorLicense =
+    currentUser?.licenseNumber || existingCertificate?.attendingDoctorLicense || 'MPSS - UABC';
+
+  const supervisorDoctorName =
+    supervisorDoctor?.fullName || existingCertificate?.supervisorDoctorName || 'Dr. Carlos Donato Dueñas Prieto';
+  const supervisorDoctorTitle =
+    supervisorDoctor?.title || existingCertificate?.supervisorDoctorTitle || 'MÉDICO GENERAL';
+  const supervisorDoctorLicense =
+    supervisorDoctor?.licenseNumber || existingCertificate?.supervisorDoctorLicense || 'CÉD. PROF. 15504256';
 
   const formattedGender =
     patient.demographics.gender === 'M'
@@ -78,14 +120,63 @@ export function MedicalCertificateModal({
       : patient.demographics.gender || 'No especificado';
 
   const formattedDateExtended = useMemo(() => {
-    return DateTimeService.formatDate(new Date(), {
+    const certDate = existingCertificate?.date ? new Date(existingCertificate.date) : new Date();
+    return DateTimeService.formatDate(certDate, {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     });
-  }, []);
+  }, [existingCertificate]);
+
+  const handleSaveToDisk = async () => {
+    if (!rootDirHandle || !patientFolderName) return;
+    setIsSaving(true);
+    try {
+      const now = new Date().toISOString();
+      await CertificateService.savePatientCertificate(rootDirHandle, patientFolderName, {
+        id: existingCertificate?.id || (crypto.randomUUID ? crypto.randomUUID() : `cert-${Date.now()}`),
+        patientId: patient.id,
+        date: existingCertificate?.date || now,
+        type: certificateType,
+        recipient,
+        bloodType,
+        validityDays: parseInt(validityDays, 10) || 30,
+        vitals,
+        dictum,
+        physicalExamText,
+        observations,
+        attendingDoctorName,
+        attendingDoctorTitle,
+        attendingDoctorLicense,
+        attendingDoctorRole: isPasante ? 'pasante' : 'titular',
+        supervisorDoctorName: isPasante ? supervisorDoctorName : undefined,
+        supervisorDoctorTitle: isPasante ? supervisorDoctorTitle : undefined,
+        supervisorDoctorLicense: isPasante ? supervisorDoctorLicense : undefined,
+      });
+
+      await logAuditAction(
+        'CREAR_NOTA_MEDICA',
+        `Emisión y guardado de Certificado Médico (${certificateType}) para ${patient.demographics.firstName} ${patient.demographics.lastName}.`,
+        patient.id
+      );
+
+      if (onCertificateSaved) {
+        onCertificateSaved();
+      }
+    } catch (err) {
+      console.error('Error guardando certificado:', err);
+      alert('No se pudo guardar el certificado médico en disco.');
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   const handlePrint = async () => {
+    // Guardar automáticamente en disco si no estaba guardado
+    if (rootDirHandle && patientFolderName) {
+      await handleSaveToDisk();
+    }
+
     await logAuditAction(
       'IMPRIMIR_RECETA',
       `Impresión de Certificado Médico (${certificateType}) para el paciente ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id}).`,
@@ -99,50 +190,52 @@ export function MedicalCertificateModal({
   const renderPrintableContent = () => (
     <div
       id="printable-medical-certificate"
-      className="p-6 sm:p-8 bg-white border border-slate-300 rounded-xl space-y-4 text-left text-slate-900 shadow-2xs font-sans text-xs"
+      className="p-8 bg-white border border-slate-300 rounded-xl space-y-4 text-left text-slate-900 shadow-2xs font-sans text-xs"
     >
-      {/* 1. Membrete Institucional con Logo Horizontal */}
-      <div className="flex justify-between items-start border-b-2 border-slate-800 pb-3">
-        <div className="flex items-center gap-3.5">
-          <div className="h-12 max-w-[200px] shrink-0 flex items-center">
-            <img
-              src={clinicConfig?.logoUrl || 'https://i.ibb.co/k2LCbnsF/tcarta-volante.png'}
-              alt="Logo Fundación Celene"
-              className="h-full w-auto object-contain"
-            />
-          </div>
-          <div className="space-y-0.5">
-            <h2 className="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight">
-              {clinicConfig?.clinicName || 'PROYECTO CELENE ROSARITO'}
-            </h2>
-            <p className="text-[11px] font-bold text-slate-800 uppercase">
-              {clinicConfig?.foundationName || 'FUNDACIÓN PROYECTO CELENE'}
-            </p>
-            <p className="text-[10px] text-slate-700 flex items-center gap-1 font-medium">
-              <MapPin className="w-2.5 h-2.5 text-slate-700 shrink-0" />
-              {clinicConfig?.address || 'Gral. Guadalupe Victoria, Lienzo Charro, Playas de Rosarito'}
-            </p>
-            <p className="text-[10px] text-slate-700 font-medium">
-              Tel: {clinicConfig?.phone || '661 104 4050'} • {clinicConfig?.email || 'consultorio@proyectocelene.org'} • {clinicConfig?.website || 'proyectocelene.org'}
-            </p>
-          </div>
+      {/* 1. Encabezado Oficial de 3 Columnas */}
+      <div className="grid grid-cols-12 items-center gap-2 border-b-2 border-slate-900 pb-3">
+        {/* Izquierda: Logo sin recuadros */}
+        <div className="col-span-3 flex items-center justify-start">
+          <img
+            src={clinicConfig?.logoUrl || 'https://i.ibb.co/k2LCbnsF/tcarta-volante.png'}
+            alt="Logo Consultorio Comunitario Proyecto Celene"
+            className="h-12 sm:h-14 w-auto max-w-full object-contain"
+          />
         </div>
 
-        <div className="text-right shrink-0 space-y-0.5">
-          <div className="px-3 py-0.5 border-2 border-slate-900 text-slate-900 font-bold rounded text-center text-xs tracking-wider uppercase">
-            CERTIFICADO MÉDICO
-          </div>
-          <p className="text-[11px] font-semibold text-slate-800 pt-0.5">
-            Fecha: <strong className="text-slate-900 font-bold">{DateTimeService.formatDate(new Date())}</strong>
+        {/* Centro: Proyecto Celene Rosarito, Fundación, Dirección, Tel y Web (CENTRADO) */}
+        <div className="col-span-6 text-center space-y-0.5">
+          <h2 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-tight">
+            {clinicConfig?.clinicName || 'PROYECTO CELENE ROSARITO'}
+          </h2>
+          <p className="text-[10px] font-bold text-slate-800 uppercase">
+            {clinicConfig?.foundationName || 'FUNDACIÓN PROYECTO CELENE'}
           </p>
-          <p className="text-[11px] font-mono text-slate-800">
+          <p className="text-[8.5px] text-slate-600 flex items-center justify-center gap-1 font-medium">
+            <MapPin className="w-2.5 h-2.5 text-slate-500 shrink-0" />
+            {clinicConfig?.address || 'Gral. Guadalupe Victoria, Lienzo Charro, Playas de Rosarito'}
+          </p>
+          <p className="text-[8.5px] text-slate-600">
+            Tel: {clinicConfig?.phone || '661 104 4050'} • consultorio@proyectocelene.org • proyectocelene.org
+          </p>
+        </div>
+
+        {/* Derecha: Badge de Certificado Médico, Fecha y Folio alineados a la derecha */}
+        <div className="col-span-3 flex flex-col items-end justify-center text-right space-y-1">
+          <span className="px-2.5 py-0.5 border-2 border-slate-900 text-slate-900 font-extrabold rounded-md text-[10px] uppercase tracking-wider">
+            CERTIFICADO MÉDICO
+          </span>
+          <p className="text-[10px] text-slate-700">
+            Fecha: <strong className="text-slate-900 font-bold">{DateTimeService.formatDate(existingCertificate?.date || new Date())}</strong>
+          </p>
+          <p className="text-[10px] text-slate-600 font-mono">
             Folio: <strong className="text-slate-900 font-bold">{patient.id}</strong>
           </p>
         </div>
       </div>
 
       {/* 2. Destinatario y Título Central */}
-      <div className="text-center py-2 space-y-1">
+      <div className="text-center py-1 space-y-0.5">
         <span className="text-[11px] font-bold text-slate-600 uppercase tracking-widest block">
           {recipient}
         </span>
@@ -152,7 +245,7 @@ export function MedicalCertificateModal({
       </div>
 
       {/* 3. Declaración Inicial Formal */}
-      <div className="text-xs text-slate-900 leading-relaxed text-justify space-y-2">
+      <div className="text-xs text-slate-900 leading-relaxed text-justify space-y-1">
         <p>
           El que suscribe, médico legalmente autorizado para ejercer la profesión médica por la <strong>Dirección General de Profesiones</strong> y la <strong>Universidad Autónoma de Baja California</strong>, hace constar que el día de hoy se practicó un examen médico clínico integral al paciente:
         </p>
@@ -252,66 +345,60 @@ export function MedicalCertificateModal({
       </div>
 
       {/* 10. Firmas Institucionales UABC */}
-      <div className="signature-box pt-6 border-t border-slate-300 page-break-inside-avoid">
+      <div className="signature-box pt-8 border-t border-slate-300 page-break-inside-avoid">
         <div className="flex justify-between items-end gap-8 text-[10px]">
           {isPasante ? (
             <>
               {/* Firma MPSS */}
-              <div className="flex-1 text-center border-t-2 border-slate-800 pt-1.5 space-y-0.2">
+              <div className="flex-1 text-center border-t-2 border-slate-800 pt-2 space-y-0.5">
                 <p className="font-bold text-slate-900 text-xs sm:text-sm">
-                  {currentUser?.fullName || 'Dr. Sebastián Garduño Conde'}
+                  {attendingDoctorName}
                 </p>
                 <p className="text-[10px] text-slate-800 font-bold uppercase">
-                  {currentUser?.title || 'MÉDICO PASANTE DEL SERVICIO SOCIAL (MPSS)'}
+                  {attendingDoctorTitle}
                 </p>
-                <p className="text-[10px] text-slate-700 font-mono font-medium">
-                  {currentUser?.licenseNumber || 'MATRÍCULA MPSS - UABC'}
+                <p className="text-xs text-slate-900 font-mono font-bold">
+                  {attendingDoctorLicense}
                 </p>
-                <p className="text-[10px] text-slate-800 font-semibold">
+                <p className="text-[10px] text-slate-700 font-semibold">
                   UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
                 </p>
-                <p className="text-[9px] text-slate-600 font-bold tracking-wider uppercase">MÉDICO EXAMINADOR</p>
+                <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO EXAMINADOR</p>
               </div>
 
               {/* Firma Supervisor */}
-              <div className="flex-1 text-center border-t-2 border-slate-800 pt-1.5 space-y-0.2">
+              <div className="flex-1 text-center border-t-2 border-slate-800 pt-2 space-y-0.5">
                 <p className="font-bold text-slate-900 text-xs sm:text-sm">
-                  {supervisorDoctor?.fullName || 'Dr. Carlos Donato Dueñas Prieto'}
+                  {supervisorDoctorName}
                 </p>
                 <p className="text-[10px] text-slate-800 font-bold uppercase">
-                  {supervisorDoctor?.title || 'MÉDICO GENERAL'}
+                  {supervisorDoctorTitle}
                 </p>
-                <p className="text-[10px] text-slate-700 font-mono font-bold">
-                  {supervisorDoctor?.licenseNumber || 'CÉD. PROF. 15504256'}
+                <p className="text-xs text-slate-900 font-mono font-bold">
+                  {supervisorDoctorLicense}
                 </p>
-                <p className="text-[10px] text-slate-800 font-semibold">
+                <p className="text-[10px] text-slate-700 font-semibold">
                   UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
                 </p>
-                <p className="text-[9px] text-slate-600 font-bold tracking-wider uppercase">MÉDICO SUPERVISOR</p>
+                <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO SUPERVISOR</p>
               </div>
             </>
           ) : (
-            <>
-              <div className="text-left text-xs text-slate-700 space-y-0.5">
-                <p>Folio institucional: <strong className="text-slate-900 font-mono font-bold">{patient.id}-CERT</strong></p>
-                <p className="text-[10px] text-slate-500">Proyecto Celene Rosarito • Expediente Electrónico</p>
-              </div>
-              <div className="text-center w-72 border-t-2 border-slate-800 pt-1.5 space-y-0.2">
-                <p className="font-bold text-slate-900 text-xs sm:text-sm">
-                  {currentUser?.fullName || 'Dr. Carlos Donato Dueñas Prieto'}
-                </p>
-                <p className="text-[10px] text-slate-800 font-bold uppercase">
-                  {currentUser?.title || 'MÉDICO GENERAL'}
-                </p>
-                <p className="text-[10px] text-slate-700 font-mono font-bold">
-                  {currentUser?.licenseNumber || 'CÉD. PROF. 15504256'}
-                </p>
-                <p className="text-[10px] text-slate-800 font-semibold">
-                  UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
-                </p>
-                <p className="text-[9px] text-slate-600 font-bold tracking-wider uppercase">MÉDICO TRATANTE</p>
-              </div>
-            </>
+            <div className="mx-auto text-center w-72 border-t-2 border-slate-800 pt-2 space-y-0.5">
+              <p className="font-bold text-slate-900 text-xs sm:text-sm">
+                {attendingDoctorName}
+              </p>
+              <p className="text-[10px] text-slate-800 font-bold uppercase">
+                {attendingDoctorTitle}
+              </p>
+              <p className="text-xs text-slate-900 font-mono font-bold">
+                {attendingDoctorLicense}
+              </p>
+              <p className="text-[10px] text-slate-700 font-semibold">
+                UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
+              </p>
+              <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO TRATANTE</p>
+            </div>
           )}
         </div>
       </div>
@@ -322,7 +409,7 @@ export function MedicalCertificateModal({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title="Certificado Médico Oficial"
+      title={existingCertificate ? `Certificado Médico (${existingCertificate.fileName})` : 'Certificado Médico Oficial'}
       description={`Expediente: ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id})`}
       maxWidth="4xl"
     >
@@ -357,15 +444,31 @@ export function MedicalCertificateModal({
             </button>
           </div>
 
-          <Button
-            variant="primary"
-            size="sm"
-            leftIcon={<Printer className="w-4 h-4" />}
-            onClick={handlePrint}
-            className="bg-blue-600 hover:bg-blue-700 text-white shadow-xs font-bold"
-          >
-            Imprimir Certificado
-          </Button>
+          <div className="flex items-center gap-2">
+            {rootDirHandle && patientFolderName && !existingCertificate && (
+              <Button
+                variant="outline"
+                size="sm"
+                leftIcon={<Save className="w-4 h-4 text-emerald-600" />}
+                onClick={handleSaveToDisk}
+                isLoading={isSaving}
+                className="text-emerald-950 border-emerald-300 hover:bg-emerald-50 text-xs font-bold shadow-2xs"
+              >
+                Guardar en Historial
+              </Button>
+            )}
+
+            <Button
+              variant="primary"
+              size="sm"
+              leftIcon={<Printer className="w-4 h-4" />}
+              onClick={handlePrint}
+              isLoading={isSaving}
+              className="bg-blue-600 hover:bg-blue-700 text-white shadow-xs font-bold"
+            >
+              Imprimir Certificado
+            </Button>
+          </div>
         </div>
 
         {/* Mode 1: Editor / Personalizador */}

@@ -110,6 +110,30 @@ export class CatalogSearchService {
   }
 
   /**
+   * Búsqueda en memoria instantánea sobre el catálogo de medicamentos
+   */
+  static searchMedications(query: string, limit = 10): MedicationEntry[] {
+    const q = normalizeString(query);
+    if (!q) return [];
+
+    const terms = q.split(/\s+/).filter(Boolean);
+    const all = this.getAllMedications();
+
+    const matches = all.filter((item) => {
+      const genNorm = normalizeString(item.genericName);
+      const catNorm = normalizeString(item.category || '');
+      const brandsNorm = normalizeString((item.brandNames || []).join(' '));
+
+      if (genNorm.startsWith(q) || genNorm.includes(q)) return true;
+      if (brandsNorm.includes(q)) return true;
+
+      return terms.every((term) => genNorm.includes(term) || catNorm.includes(term) || brandsNorm.includes(term));
+    });
+
+    return matches.slice(0, limit);
+  }
+
+  /**
    * Búsqueda en memoria instantánea sobre el catálogo CIE-10.
    */
   static searchCIE10(query: string, limit = 10): CIE10Entry[] {
@@ -132,25 +156,92 @@ export class CatalogSearchService {
   }
 
   /**
-   * Búsqueda en memoria instantánea sobre el catálogo de Medicamentos.
+   * Obtiene o infiere la indicación terapéutica predeterminada según el medicamento o su categoría
    */
-  static searchMedications(query: string, limit = 8): MedicationEntry[] {
-    const q = normalizeString(query);
-    if (!q) return [];
+  static getMedicationIndication(med: MedicationEntry): string {
+    if (med.defaultIndication) return med.defaultIndication;
 
-    const terms = q.split(/\s+/).filter(Boolean);
-    const catalog = this.getAllMedications();
+    const cat = normalizeString(med.category);
+    const gen = normalizeString(med.genericName);
 
-    const matches = catalog.filter((item) => {
-      const genNorm = normalizeString(item.genericName);
-      const catNorm = normalizeString(item.category || '');
-      const brandsNorm = item.brandNames ? item.brandNames.map(normalizeString).join(' ') : '';
+    if (cat.includes('antibiotico') || cat.includes('penicilina') || cat.includes('cefalosporina') || cat.includes('quinolona') || cat.includes('macrolido')) {
+      return 'Tratamiento de Infección bacteriana';
+    }
+    if (cat.includes('antiviral')) {
+      return 'Tratamiento de Infección viral';
+    }
+    if (cat.includes('antimicotico') || cat.includes('antifungico')) {
+      return 'Tratamiento de Infección por hongos / micosis';
+    }
+    if (cat.includes('analgesico') || cat.includes('aine') || cat.includes('antiinflamatorio') || gen.includes('paracetamol') || gen.includes('ibuprofeno') || gen.includes('ketorolaco') || gen.includes('naproxeno') || gen.includes('diclofenaco') || gen.includes('tramadol')) {
+      return 'Alivio de Dolor, Inflamación y/o Fiebre';
+    }
+    if (cat.includes('antihipertensivo') || cat.includes('cardio') || gen.includes('losartan') || gen.includes('captopril') || gen.includes('enalapril') || gen.includes('amlodipino') || gen.includes('metoprolol') || gen.includes('telmisartan') || gen.includes('hidroclorotiazida')) {
+      return 'Control de Presión Arterial (Hipertensión)';
+    }
+    if (cat.includes('antidiabetico') || cat.includes('hipoglucemiante') || cat.includes('insulina') || gen.includes('metformina') || gen.includes('glibenclamida') || gen.includes('dapagliflozina') || gen.includes('empagliflozina') || gen.includes('sitagliptina') || gen.includes('linagliptina')) {
+      return 'Control de Glucosa (Diabetes Mellitus)';
+    }
+    if (cat.includes('gastrico') || cat.includes('antiacido') || cat.includes('inhibidor de bomba') || gen.includes('omeprazol') || gen.includes('pantoprazol') || gen.includes('esomeprazol') || gen.includes('ranitidina') || gen.includes('sucralfato') || gen.includes('magaldrato')) {
+      return 'Protección gástrica / Gastritis / Reflujo';
+    }
+    if (cat.includes('antihistaminico') || cat.includes('antialergico') || gen.includes('loratadina') || gen.includes('cetirizina') || gen.includes('clorfenamina') || gen.includes('fexofenadina')) {
+      return 'Alivio de Alergia / Prurito / Congestión';
+    }
+    if (cat.includes('broncodilatador') || cat.includes('asma') || gen.includes('salbutamol') || gen.includes('budesonida') || gen.includes('ipratropio') || gen.includes('montelukast')) {
+      return 'Manejo de Broncoespasmo / Asma / Tos';
+    }
+    if (cat.includes('estatina') || cat.includes('lipem') || cat.includes('dislipidemia') || gen.includes('atorvastatina') || gen.includes('pravastatina') || gen.includes('rosuvastatina') || gen.includes('bezafibrato') || gen.includes('fenofibrato')) {
+      return 'Control de Colesterol y Triglicéridos';
+    }
+    if (cat.includes('antiespasmodico') || gen.includes('butilhioscina') || gen.includes('trimebutina') || gen.includes('plaver')) {
+      return 'Alivio de Cólico / Espasmo gastrointestinal';
+    }
+    if (cat.includes('antidiarrerico') || gen.includes('loperamida') || gen.includes('diosmectita')) {
+      return 'Control de Diarrea aguda';
+    }
+    if (cat.includes('procinetico') || cat.includes('antiemetico') || gen.includes('metoclopramida') || gen.includes('ondansetron') || gen.includes('dimenhidrinato')) {
+      return 'Alivio de Náuseas y Vómito';
+    }
+    if (cat.includes('oftalm') || cat.includes('colirio')) {
+      return 'Tratamiento Oftálmico';
+    }
+    if (cat.includes('psico') || cat.includes('ansiolitico') || cat.includes('sedante') || gen.includes('clonazepam') || gen.includes('diazepam') || gen.includes('alprazolam') || gen.includes('lorazepam')) {
+      return 'Manejo de Ansiedad / Insomnio';
+    }
 
-      return terms.every(
-        (term) => genNorm.includes(term) || catNorm.includes(term) || brandsNorm.includes(term)
-      );
-    });
+    return 'Tratamiento según indicación médica';
+  }
 
-    return matches.slice(0, limit);
+  /**
+   * Determina si un medicamento es antibiótico (requiere copia para farmacia bajo normativa)
+   */
+  static isAntibioticMed(medNameOrEntry: string | MedicationEntry): boolean {
+    const medString = typeof medNameOrEntry === 'string' ? medNameOrEntry : `${medNameOrEntry.genericName} ${medNameOrEntry.category}`;
+    const norm = normalizeString(medString);
+
+    const antibioticKeywords = [
+      'amoxicilina', 'clavulanico', 'ampicilina', 'cefalexina', 'ceftriaxona', 'cefixima', 'cefuroxima',
+      'ciprofloxacino', 'levofloxacino', 'azitromicina', 'claritromicina', 'eritromicina', 'clindamicina',
+      'trimetoprima', 'sulfametoxazol', 'nitrofurantoina', 'fosfomicina', 'metronidazol', 'gentamicina',
+      'amikacina', 'penicilina', 'doxiciclina', 'tetraciclina', 'vancomicina', 'antibiotico',
+    ];
+
+    return antibioticKeywords.some((keyword) => norm.includes(keyword));
+  }
+
+  /**
+   * Determina si un medicamento es controlado (psicotrópico, estupefaciente fracción II o III)
+   */
+  static isControlledMed(medNameOrEntry: string | MedicationEntry): boolean {
+    const medString = typeof medNameOrEntry === 'string' ? medNameOrEntry : `${medNameOrEntry.genericName} ${medNameOrEntry.category}`;
+    const norm = normalizeString(medString);
+
+    const controlledKeywords = [
+      'clonazepam', 'diazepam', 'alprazolam', 'lorazepam', 'midazolam', 'zolpidem', 'tramadol', 'morfina',
+      'fentanilo', 'buprenorfina', 'metilfenidato', 'modafinilo', 'fenobarbital', 'controlado', 'psicotropico',
+    ];
+
+    return controlledKeywords.some((keyword) => norm.includes(keyword));
   }
 }

@@ -9,6 +9,9 @@ export interface MedicationEntry {
   defaultDuration: string;
   defaultInstructions?: string;
   price?: number;
+  defaultIndication?: string;
+  isAntibiotic?: boolean;
+  isControlled?: boolean;
 }
 
 export const MEDICATIONS_CATALOG: MedicationEntry[] = [

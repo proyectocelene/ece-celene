@@ -7,14 +7,15 @@ import { PatientService } from '@/entities/patient/api/patientService';
 import { PrintService } from '@/shared/lib/printService';
 import { NotePermissionService } from '@/entities/clinical-note/lib/notePermissionService';
 import { DateTimeService } from '@/shared/lib/dateTimeService';
+import { CatalogSearchService } from '@/entities/catalogs/api/catalogSearchService';
 import { MedicationSchedulePrint } from '@/features/print-templates/ui/MedicationSchedulePrint';
 import { LabOrderPrintModal } from '@/features/print-templates/ui/LabOrderPrintModal';
 import { ServiceReceiptPrint } from '@/features/print-templates/ui/ServiceReceiptPrint';
+import { GeneralPlanPrintModal } from '@/features/print-templates/ui/GeneralPlanPrintModal';
 import { Modal, Button, Badge } from '@/shared/ui';
 import {
   FileText,
   Printer,
-  Activity,
   HeartPulse,
   Stethoscope,
   Pill,
@@ -26,6 +27,7 @@ import {
   Eye,
   Edit3,
   Lock,
+  FileCheck,
 } from 'lucide-react';
 
 interface ClinicalNoteViewerModalProps {
@@ -50,11 +52,17 @@ export function ClinicalNoteViewerModal({
   const [isScheduleOpen, setIsScheduleOpen] = useState(false);
   const [isLabOrderOpen, setIsLabOrderOpen] = useState(false);
   const [isReceiptOpen, setIsReceiptOpen] = useState(false);
+  const [isGeneralPlanOpen, setIsGeneralPlanOpen] = useState(false);
 
   if (!note || !patient) return null;
 
   const age = PatientService.calculateAge(patient.demographics.birthDate);
   const bmiCalc = ClinicalNoteService.calculateBMI(note.vitalSigns?.weightKg, note.vitalSigns?.heightCm);
+
+  // Detectar si hay antibióticos o medicamentos controlados
+  const hasAntibioticsOrControlled = (note.plan?.prescriptions || []).some(
+    (rx) => CatalogSearchService.isAntibioticMed(rx.medication) || CatalogSearchService.isControlledMed(rx.medication)
+  );
 
   const handlePrint = async () => {
     await logAuditAction(
@@ -105,55 +113,52 @@ export function ClinicalNoteViewerModal({
       ? 'Femenino'
       : patient.demographics.gender || 'No especificado';
 
-  // Renderizador de la Receta Médica Proporcional y de Alto Contraste
-  const renderPrescriptionContent = () => (
-    <div
-      id="printable-prescription-sheet"
-      className={`p-5 sm:p-6 bg-white border border-slate-300 rounded-xl space-y-3.5 text-left text-slate-900 shadow-2xs font-sans ${
-        isLargePrint ? 'text-sm' : 'text-xs'
-      }`}
-    >
-      {/* 1. Membrete con Logo Horizontal y Datos Oficiales de Alto Contraste */}
-      <div className="flex justify-between items-start border-b-2 border-slate-800 pb-2.5">
-        <div className="flex items-center gap-3">
-          <div className="h-12 max-w-[200px] shrink-0 flex items-center">
-            <img
-              src={clinicConfig?.logoUrl || 'https://i.ibb.co/k2LCbnsF/tcarta-volante.png'}
-              alt="Logo Fundación Celene"
-              className="h-full w-auto object-contain"
-            />
-          </div>
-          <div className="space-y-0.2">
-            <h2 className="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight">
-              {clinicConfig?.clinicName || 'PROYECTO CELENE ROSARITO'}
-            </h2>
-            <p className="text-[11px] font-bold text-slate-800 uppercase">
-              {clinicConfig?.foundationName || 'FUNDACIÓN PROYECTO CELENE'}
-            </p>
-            <p className="text-[10px] text-slate-700 flex items-center gap-1 font-medium">
-              <MapPin className="w-2.5 h-2.5 text-slate-700 shrink-0" />
-              {clinicConfig?.address || 'Gral. Guadalupe Victoria, Lienzo Charro, Playas de Rosarito'}
-            </p>
-            <p className="text-[10px] text-slate-700 font-medium">
-              Tel: {clinicConfig?.phone || '661 104 4050'} • {clinicConfig?.email || 'consultorio@proyectocelene.org'} • {clinicConfig?.website || 'proyectocelene.org'}
-            </p>
-          </div>
+  // Renderiza una hoja de receta (ya sea para el Paciente o Copia para Farmacia)
+  const renderSinglePrescriptionSheet = (copyLabel: 'ORIGINAL - PACIENTE' | 'COPIA - RETENCIÓN FARMACIA') => (
+    <div className="p-6 bg-white border border-slate-300 rounded-xl space-y-3 text-left text-slate-900 shadow-2xs font-sans page-break-inside-avoid">
+      {/* 1. Encabezado Oficial de 3 Columnas */}
+      <div className="grid grid-cols-12 items-center gap-2 border-b-2 border-slate-900 pb-2.5">
+        {/* Izquierda: Logo sin recuadros */}
+        <div className="col-span-3 flex items-center justify-start">
+          <img
+            src={clinicConfig?.logoUrl || 'https://i.ibb.co/k2LCbnsF/tcarta-volante.png'}
+            alt="Logo Consultorio Comunitario Proyecto Celene"
+            className="h-12 sm:h-14 w-auto max-w-full object-contain"
+          />
         </div>
 
-        <div className="text-right shrink-0 space-y-0.5">
-          <div className="px-3 py-0.5 border-2 border-slate-900 text-slate-900 font-bold rounded text-center text-xs tracking-wider uppercase">
-            RECETA MÉDICA
-          </div>
-          <p className="text-[11px] font-semibold text-slate-800 pt-0.5">
+        {/* Centro: Proyecto Celene Rosarito, Fundación, Dirección, Tel y Web (CENTRADO) */}
+        <div className="col-span-6 text-center space-y-0.5">
+          <h2 className="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-tight">
+            {clinicConfig?.clinicName || 'PROYECTO CELENE ROSARITO'}
+          </h2>
+          <p className="text-[10px] font-bold text-slate-800 uppercase">
+            {clinicConfig?.foundationName || 'FUNDACIÓN PROYECTO CELENE'}
+          </p>
+          <p className="text-[8.5px] text-slate-600 flex items-center justify-center gap-1 font-medium">
+            <MapPin className="w-2.5 h-2.5 text-slate-500 shrink-0" />
+            {clinicConfig?.address || 'Gral. Guadalupe Victoria, Lienzo Charro, Playas de Rosarito'}
+          </p>
+          <p className="text-[8.5px] text-slate-600">
+            Tel: {clinicConfig?.phone || '661 104 4050'} • consultorio@proyectocelene.org • proyectocelene.org
+          </p>
+        </div>
+
+        {/* Derecha: Badge de Receta Médica, Fecha y Folio alineados a la derecha */}
+        <div className="col-span-3 flex flex-col items-end justify-center text-right space-y-1">
+          <span className="px-2 py-0.5 border-2 border-slate-900 text-slate-900 font-extrabold rounded-md text-[9.5px] uppercase tracking-wider">
+            {copyLabel === 'ORIGINAL - PACIENTE' ? 'RECETA MÉDICA' : 'COPIA FARMACIA'}
+          </span>
+          <p className="text-[10px] text-slate-700">
             Fecha: <strong className="text-slate-900 font-bold">{DateTimeService.formatDate(note.date)}</strong>
           </p>
-          <p className="text-[11px] font-mono text-slate-800">
+          <p className="text-[10px] text-slate-600 font-mono">
             Folio: <strong className="text-slate-900 font-bold">{patient.id}</strong>
           </p>
         </div>
       </div>
 
-      {/* 2. Ficha Demográfica del Paciente: Nombre Completo sin recortar */}
+      {/* 2. Ficha Demográfica del Paciente */}
       <div className="patient-card grid grid-cols-1 sm:grid-cols-12 gap-2.5 p-2.5 rounded-lg border border-slate-300 bg-slate-50/80 text-xs">
         <div className="sm:col-span-5">
           <span className="text-slate-600 font-bold uppercase text-[9px] block">PACIENTE</span>
@@ -177,7 +182,7 @@ export function ClinicalNoteViewerModal({
         </div>
       </div>
 
-      {/* 3. Signos Vitales y Somatometría (Contraste Nítido) */}
+      {/* 3. Signos Vitales y Somatometría */}
       <div className="vitals-box p-1.5 rounded-lg border border-slate-300 bg-slate-50/50 text-[10px] grid grid-cols-4 sm:grid-cols-8 gap-1.5 text-center">
         <div>
           <span className="text-slate-700 block font-semibold">T.A. (mmHg)</span>
@@ -227,15 +232,15 @@ export function ClinicalNoteViewerModal({
         </div>
       )}
 
-      {/* 5. Prescripción Farmacológica (Rx) - Nítida, oscura y multi-página */}
+      {/* 5. Prescripción Médica */}
       <div className="space-y-2 pt-0.5">
         <div className="flex items-center justify-between border-b-2 border-slate-800 pb-1">
           <span className="font-bold text-xs uppercase tracking-wider text-slate-900 flex items-center gap-1">
             <span className="italic font-serif text-sm font-bold text-blue-800">℞</span> PRESCRIPCIÓN MÉDICA:
           </span>
-          {isLargePrint && (
-            <span className="text-[10px] font-bold text-purple-950 bg-purple-100 border border-purple-300 px-2 py-0.2 rounded">
-              FORMATO MACROTIPO (LETRA GRANDE)
+          {copyLabel.includes('FARMACIA') && (
+            <span className="text-[10px] font-bold text-amber-950 bg-amber-100 border border-amber-300 px-2 py-0.2 rounded">
+              RETENCIÓN FARMACIA (NORMATIVA COFEPRIS / LGS)
             </span>
           )}
         </div>
@@ -293,43 +298,43 @@ export function ClinicalNoteViewerModal({
         </div>
       )}
 
-      {/* 8. Firmas Institucionales UABC */}
-      <div className="signature-box pt-4 border-t border-slate-300 page-break-inside-avoid">
+      {/* 8. Firmas Institucionales y Cédula Profesional */}
+      <div className="signature-box pt-8 border-t border-slate-300 page-break-inside-avoid">
         <div className="flex justify-between items-end gap-6 text-[10px]">
           {isPasante ? (
             <>
               {/* Firma MPSS */}
-              <div className="flex-1 text-center border-t-2 border-slate-800 pt-1.5 space-y-0.2">
+              <div className="flex-1 text-center border-t-2 border-slate-800 pt-2 space-y-0.5">
                 <p className="font-bold text-slate-900 text-xs sm:text-sm">
                   {attendingDoctorName}
                 </p>
                 <p className="text-[10px] text-slate-800 font-bold uppercase">
                   {attendingDoctorTitle}
                 </p>
-                <p className="text-[10px] text-slate-700 font-mono font-medium">
+                <p className="text-xs text-slate-900 font-mono font-bold">
                   {attendingDoctorLicense}
                 </p>
-                <p className="text-[10px] text-slate-800 font-semibold">
+                <p className="text-[10px] text-slate-700 font-semibold">
                   UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
                 </p>
-                <p className="text-[9px] text-slate-600 font-bold tracking-wider uppercase">MÉDICO TRATANTE</p>
+                <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO TRATANTE</p>
               </div>
 
               {/* Firma Supervisor */}
-              <div className="flex-1 text-center border-t-2 border-slate-800 pt-1.5 space-y-0.2">
+              <div className="flex-1 text-center border-t-2 border-slate-800 pt-2 space-y-0.5">
                 <p className="font-bold text-slate-900 text-xs sm:text-sm">
                   {supervisorDoctorName}
                 </p>
                 <p className="text-[10px] text-slate-800 font-bold uppercase">
                   {supervisorDoctorTitle}
                 </p>
-                <p className="text-[10px] text-slate-700 font-mono font-bold">
+                <p className="text-xs text-slate-900 font-mono font-bold">
                   {supervisorDoctorLicense}
                 </p>
-                <p className="text-[10px] text-slate-800 font-semibold">
+                <p className="text-[10px] text-slate-700 font-semibold">
                   UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
                 </p>
-                <p className="text-[9px] text-slate-600 font-bold tracking-wider uppercase">MÉDICO SUPERVISOR</p>
+                <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO SUPERVISOR</p>
               </div>
             </>
           ) : (
@@ -338,20 +343,20 @@ export function ClinicalNoteViewerModal({
                 <p>Próxima cita de control: <strong className="text-slate-900 font-bold">{note.plan?.followUpDate || 'Según evolución clínica'}</strong></p>
                 <p className="text-[10px] text-slate-500">Proyecto Celene Rosarito • Expediente Electrónico</p>
               </div>
-              <div className="text-center w-72 border-t-2 border-slate-800 pt-1.5 space-y-0.2">
+              <div className="text-center w-72 border-t-2 border-slate-800 pt-2 space-y-0.5">
                 <p className="font-bold text-slate-900 text-xs sm:text-sm">
                   {attendingDoctorName}
                 </p>
                 <p className="text-[10px] text-slate-800 font-bold uppercase">
                   {attendingDoctorTitle}
                 </p>
-                <p className="text-[10px] text-slate-700 font-mono font-bold">
+                <p className="text-xs text-slate-900 font-mono font-bold">
                   {attendingDoctorLicense}
                 </p>
-                <p className="text-[10px] text-slate-800 font-semibold">
+                <p className="text-[10px] text-slate-700 font-semibold">
                   UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
                 </p>
-                <p className="text-[9px] text-slate-600 font-bold tracking-wider uppercase">MÉDICO TRATANTE</p>
+                <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO TRATANTE</p>
               </div>
             </>
           )}
@@ -383,7 +388,7 @@ export function ClinicalNoteViewerModal({
                 }`}
               >
                 <Pill className="w-3.5 h-3.5" />
-                Receta Médica
+                Receta Médica {hasAntibioticsOrControlled && '(Doble)'}
               </button>
 
               <button
@@ -400,6 +405,16 @@ export function ClinicalNoteViewerModal({
               </button>
 
               {/* Formatos Especiales */}
+              <button
+                type="button"
+                onClick={() => setIsGeneralPlanOpen(true)}
+                className="flex items-center gap-1.5 py-1.5 px-2.5 rounded-lg text-xs font-semibold bg-blue-50 text-blue-900 hover:bg-blue-100 border border-blue-200 transition-colors cursor-pointer"
+                title="Imprimir plan terapéutico e instrucciones de forma individual"
+              >
+                <FileText className="w-3.5 h-3.5 text-blue-600" />
+                Plan / Indicaciones
+              </button>
+
               <button
                 type="button"
                 onClick={() => setIsScheduleOpen(true)}
@@ -482,7 +497,7 @@ export function ClinicalNoteViewerModal({
                 onClick={handlePrint}
                 className="bg-blue-600 hover:bg-blue-700 text-white shadow-xs font-bold"
               >
-                Imprimir Receta
+                Imprimir Receta {hasAntibioticsOrControlled ? '(Doble)' : ''}
               </Button>
             </div>
           </div>
@@ -583,7 +598,7 @@ export function ClinicalNoteViewerModal({
               {/* 3. Objetivo */}
               <div className="space-y-2">
                 <div className="flex items-center gap-2 font-bold text-slate-800 border-b border-slate-200 pb-1">
-                  <Activity className="w-4 h-4 text-indigo-500" />
+                  <HeartPulse className="w-4 h-4 text-indigo-500" />
                   <span>3. Objetivo (Exploración Física)</span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs">
@@ -601,7 +616,7 @@ export function ClinicalNoteViewerModal({
                   )}
                   {note.objective?.chestAndLungs && (
                     <div>
-                      <strong className="text-slate-800 block">Tórax:</strong>
+                      <strong className="text-slate-800 block">Tórax y Pulmones:</strong>
                       <p className="text-slate-700 mt-0.5 whitespace-pre-wrap">{note.objective.chestAndLungs}</p>
                     </div>
                   )}
@@ -670,7 +685,7 @@ export function ClinicalNoteViewerModal({
                           <div className="flex items-center gap-2">
                             <span className="font-bold text-slate-800">{rx.medication}</span>
                             {rx.indicationFor && (
-                              <span className="text-[10px] px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">
+                              <span className="text-[10px] px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold">
                                 Para: {rx.indicationFor}
                               </span>
                             )}
@@ -681,9 +696,16 @@ export function ClinicalNoteViewerModal({
                     </div>
                   )}
 
+                  {note.plan?.generalPlan && (
+                    <div>
+                      <strong className="text-slate-800 block">Plan General:</strong>
+                      <p className="text-slate-700 mt-0.5 whitespace-pre-wrap">{note.plan.generalPlan}</p>
+                    </div>
+                  )}
+
                   {note.plan?.nonPharmacological && (
                     <div>
-                      <strong className="text-slate-800 block">Medidas Generales:</strong>
+                      <strong className="text-slate-800 block">Medidas Higiénico-Dietéticas:</strong>
                       <p className="text-slate-700 mt-0.5 whitespace-pre-wrap">{note.plan.nonPharmacological}</p>
                     </div>
                   )}
@@ -703,21 +725,46 @@ export function ClinicalNoteViewerModal({
 
           {/* Modo 2: Visualización en pantalla de la Receta Médica */}
           {viewMode === 'prescription' && (
-            <div>
-              {renderPrescriptionContent()}
+            <div id="printable-prescription-sheet" className="space-y-6">
+              {/* Hoja 1: Original Paciente */}
+              {renderSinglePrescriptionSheet('ORIGINAL - PACIENTE')}
+
+              {/* Hoja 2: Copia Farmacia si hay antibióticos o controlados */}
+              {hasAntibioticsOrControlled && (
+                <>
+                  <div className="no-print p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center gap-2 text-xs text-amber-900 font-medium">
+                    <FileCheck className="w-4 h-4 text-amber-600 shrink-0" />
+                    <span>
+                      Esta receta incluye antibióticos o medicamentos controlados. Se imprimirá automáticamente la <strong>Copia de Retención para Farmacia</strong> conforme a la legislación sanitaria.
+                    </span>
+                  </div>
+                  {renderSinglePrescriptionSheet('COPIA - RETENCIÓN FARMACIA')}
+                </>
+              )}
             </div>
           )}
 
-          {/* Si está en modo SOAP, mantener oculto el contenedor de la receta en el DOM para que PrintService siempre lo encuentre */}
+          {/* Si está en modo SOAP, mantener oculto el contenedor de la receta en el DOM para PrintService */}
           {viewMode === 'note' && (
             <div className="hidden">
-              {renderPrescriptionContent()}
+              <div id="printable-prescription-sheet" className="space-y-6">
+                {renderSinglePrescriptionSheet('ORIGINAL - PACIENTE')}
+                {hasAntibioticsOrControlled && renderSinglePrescriptionSheet('COPIA - RETENCIÓN FARMACIA')}
+              </div>
             </div>
           )}
         </div>
       </Modal>
 
       {/* Modales Especializados */}
+      {isGeneralPlanOpen && (
+        <GeneralPlanPrintModal
+          note={note}
+          patient={patient}
+          onClose={() => setIsGeneralPlanOpen(false)}
+        />
+      )}
+
       {isScheduleOpen && (
         <MedicationSchedulePrint
           note={note}

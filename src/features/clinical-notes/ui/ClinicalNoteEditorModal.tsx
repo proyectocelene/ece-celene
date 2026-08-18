@@ -23,6 +23,10 @@ import { PlanAndPrescriptionForm } from './submodules/PlanAndPrescriptionForm';
 import { LabOrderForm } from './submodules/LabOrderForm';
 import { ReceiptForm } from './submodules/ReceiptForm';
 import { ClinicalNoteViewerModal } from './ClinicalNoteViewerModal';
+import { LabOrderPrintModal } from '@/features/print-templates/ui/LabOrderPrintModal';
+import { GeneralPlanPrintModal } from '@/features/print-templates/ui/GeneralPlanPrintModal';
+import { MedicationSchedulePrint } from '@/features/print-templates/ui/MedicationSchedulePrint';
+import { ServiceReceiptPrint } from '@/features/print-templates/ui/ServiceReceiptPrint';
 import {
   Activity,
   Stethoscope,
@@ -35,6 +39,7 @@ import {
   Receipt as ReceiptIcon,
   Printer,
   Edit3,
+  Clock,
 } from 'lucide-react';
 
 interface ClinicalNoteEditorModalProps {
@@ -103,7 +108,12 @@ export function ClinicalNoteEditorModal({
     notes: '',
   });
 
+  // Estados de modales de impresión y vista previa directa sin guardar
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  const [isLabOrderPrintOpen, setIsLabOrderPrintOpen] = useState(false);
+  const [isGeneralPlanPrintOpen, setIsGeneralPlanPrintOpen] = useState(false);
+  const [isSchedulePrintOpen, setIsSchedulePrintOpen] = useState(false);
+  const [isBlankReceiptOpen, setIsBlankReceiptOpen] = useState(false);
 
   // Local storage auto-save key for new drafts
   const draftKey = `draft_note_${patient.id}`;
@@ -199,6 +209,50 @@ export function ClinicalNoteEditorModal({
         prescriptions: n.plan.prescriptions,
       }));
   }, [pastNotes, initialNote]);
+
+  // Extract past diagnoses from past notes and patient chronic conditions
+  const pastDiagnosesList = useMemo(() => {
+    const list: { description: string; cie10Code?: string; type?: string; notes?: string }[] = [];
+
+    // From chronic conditions
+    if (patient.chronicConditions && patient.chronicConditions.length > 0) {
+      for (const cond of patient.chronicConditions) {
+        list.push({
+          description: cond.name,
+          type: 'definitivo',
+          notes: cond.modificationsNotes,
+        });
+      }
+    }
+
+    // From past notes
+    for (const n of pastNotes) {
+      if (n.id !== initialNote?.id && n.diagnoses && n.diagnoses.length > 0) {
+        for (const d of n.diagnoses) {
+          list.push({
+            description: d.description,
+            cie10Code: d.cie10Code,
+            type: d.type,
+            notes: d.notes,
+          });
+        }
+      }
+    }
+
+    return list;
+  }, [pastNotes, patient.chronicConditions, initialNote]);
+
+  // Manejador para agregar un estudio de recordatorio directamente a la orden de laboratorio
+  const handleAddLabStudyFromReminder = (studyName: string) => {
+    if (!labOrder.studies.includes(studyName)) {
+      setLabOrder((prev) => ({
+        ...prev,
+        studies: [...prev.studies, studyName],
+      }));
+      // Cambiar a la pestaña de laboratorio para retroalimentar visualmente
+      setActiveTab('lab');
+    }
+  };
 
   // Transient note for live preview / direct print
   const transientNote: ClinicalNote = useMemo(() => {
@@ -302,7 +356,7 @@ export function ClinicalNoteEditorModal({
         description={`Expediente: ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id})`}
         maxWidth="4xl"
       >
-        <div className="space-y-5 text-left">
+        <div className="space-y-5 text-left font-sans">
           {/* Doctor Attribution Info Banner */}
           {currentUser && (
             <div className="p-3 bg-blue-50/70 border border-blue-100 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-blue-900">
@@ -320,7 +374,7 @@ export function ClinicalNoteEditorModal({
             </div>
           )}
 
-          {/* Header Options & Quick Print Button */}
+          {/* Header Options & Quick Print Toolbar */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-3 border-b border-slate-100">
             <div className="w-full sm:w-64">
               <Select
@@ -336,7 +390,7 @@ export function ClinicalNoteEditorModal({
               </Select>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <Button
                 type="button"
                 variant="outline"
@@ -344,10 +398,40 @@ export function ClinicalNoteEditorModal({
                 leftIcon={<Printer className="w-3.5 h-3.5 text-blue-600" />}
                 onClick={() => setIsPreviewOpen(true)}
                 className="text-xs font-semibold text-blue-800 bg-white"
-                title="Ver e imprimir la receta o formatos directamente"
+                title="Vista previa e impresión de la receta médica"
               >
-                Vista Previa e Imprimir Receta
+                Imprimir Receta
               </Button>
+
+              <button
+                type="button"
+                onClick={() => setIsLabOrderPrintOpen(true)}
+                className="flex items-center gap-1.5 py-1.5 px-2.5 rounded-lg text-xs font-bold bg-indigo-50 text-indigo-900 hover:bg-indigo-100 border border-indigo-200 transition-colors cursor-pointer shadow-2xs"
+                title="Imprimir solicitud de laboratorio y gabinete de forma directa"
+              >
+                <TestTubes className="w-3.5 h-3.5 text-indigo-600" />
+                <span>Imprimir Labs</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsGeneralPlanPrintOpen(true)}
+                className="flex items-center gap-1.5 py-1.5 px-2.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-900 hover:bg-blue-100 border border-blue-200 transition-colors cursor-pointer shadow-2xs"
+                title="Imprimir hoja de plan general e indicaciones terapéuticas"
+              >
+                <FileText className="w-3.5 h-3.5 text-blue-600" />
+                <span>Imprimir Plan</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsSchedulePrintOpen(true)}
+                className="flex items-center gap-1.5 py-1.5 px-2.5 rounded-lg text-xs font-bold bg-amber-50 text-amber-900 hover:bg-amber-100 border border-amber-200 transition-colors cursor-pointer shadow-2xs"
+                title="Imprimir horario visual de medicamentos"
+              >
+                <Clock className="w-3.5 h-3.5 text-amber-600" />
+                <span>Horario</span>
+              </button>
             </div>
           </div>
 
@@ -358,7 +442,7 @@ export function ClinicalNoteEditorModal({
               onClick={() => setActiveTab('subjective')}
               className={`flex items-center gap-1.5 py-2.5 px-3.5 text-xs font-semibold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === 'subjective'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-blue-600 text-blue-600 font-bold'
                   : 'border-transparent text-slate-500 hover:text-slate-700'
               }`}
             >
@@ -371,7 +455,7 @@ export function ClinicalNoteEditorModal({
               onClick={() => setActiveTab('vitals')}
               className={`flex items-center gap-1.5 py-2.5 px-3.5 text-xs font-semibold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === 'vitals'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-blue-600 text-blue-600 font-bold'
                   : 'border-transparent text-slate-500 hover:text-slate-700'
               }`}
             >
@@ -384,7 +468,7 @@ export function ClinicalNoteEditorModal({
               onClick={() => setActiveTab('objective')}
               className={`flex items-center gap-1.5 py-2.5 px-3.5 text-xs font-semibold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === 'objective'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-blue-600 text-blue-600 font-bold'
                   : 'border-transparent text-slate-500 hover:text-slate-700'
               }`}
             >
@@ -397,7 +481,7 @@ export function ClinicalNoteEditorModal({
               onClick={() => setActiveTab('diagnostics')}
               className={`flex items-center gap-1.5 py-2.5 px-3.5 text-xs font-semibold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === 'diagnostics'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-blue-600 text-blue-600 font-bold'
                   : 'border-transparent text-slate-500 hover:text-slate-700'
               }`}
             >
@@ -410,7 +494,7 @@ export function ClinicalNoteEditorModal({
               onClick={() => setActiveTab('plan')}
               className={`flex items-center gap-1.5 py-2.5 px-3.5 text-xs font-semibold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === 'plan'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-blue-600 text-blue-600 font-bold'
                   : 'border-transparent text-slate-500 hover:text-slate-700'
               }`}
             >
@@ -423,7 +507,7 @@ export function ClinicalNoteEditorModal({
               onClick={() => setActiveTab('lab')}
               className={`flex items-center gap-1.5 py-2.5 px-3.5 text-xs font-semibold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === 'lab'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-indigo-600 text-indigo-700 font-bold'
                   : 'border-transparent text-slate-500 hover:text-slate-700'
               }`}
             >
@@ -436,7 +520,7 @@ export function ClinicalNoteEditorModal({
               onClick={() => setActiveTab('receipt')}
               className={`flex items-center gap-1.5 py-2.5 px-3.5 text-xs font-semibold border-b-2 whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === 'receipt'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-emerald-600 text-emerald-700 font-bold'
                   : 'border-transparent text-slate-500 hover:text-slate-700'
               }`}
             >
@@ -456,11 +540,20 @@ export function ClinicalNoteEditorModal({
             )}
 
             {activeTab === 'objective' && (
-              <ObjectiveForm value={objective} onChange={setObjective} />
+              <ObjectiveForm
+                value={objective}
+                onChange={setObjective}
+                patient={patient}
+                onAddLabStudy={handleAddLabStudyFromReminder}
+              />
             )}
 
             {activeTab === 'diagnostics' && (
-              <DiagnosticsForm value={diagnoses} onChange={setDiagnoses} />
+              <DiagnosticsForm
+                value={diagnoses}
+                onChange={setDiagnoses}
+                pastDiagnoses={pastDiagnosesList}
+              />
             )}
 
             {activeTab === 'plan' && (
@@ -473,11 +566,20 @@ export function ClinicalNoteEditorModal({
             )}
 
             {activeTab === 'lab' && (
-              <LabOrderForm value={labOrder} onChange={setLabOrder} />
+              <LabOrderForm
+                value={labOrder}
+                onChange={setLabOrder}
+                onPrintLabOrder={() => setIsLabOrderPrintOpen(true)}
+              />
             )}
 
             {activeTab === 'receipt' && (
-              <ReceiptForm value={receipt} onChange={setReceipt} patientId={patient.id} />
+              <ReceiptForm
+                value={receipt}
+                onChange={setReceipt}
+                patientId={patient.id}
+                onPrintBlankReceipt={() => setIsBlankReceiptOpen(false)}
+              />
             )}
           </div>
 
@@ -510,6 +612,44 @@ export function ClinicalNoteEditorModal({
           onClose={() => setIsPreviewOpen(false)}
           note={transientNote}
           patient={patient}
+        />
+      )}
+
+      {/* Direct Lab Order Print Modal */}
+      {isLabOrderPrintOpen && (
+        <LabOrderPrintModal
+          note={transientNote}
+          patient={patient}
+          labOrder={labOrder}
+          onClose={() => setIsLabOrderPrintOpen(false)}
+        />
+      )}
+
+      {/* Direct General Plan Print Modal */}
+      {isGeneralPlanPrintOpen && (
+        <GeneralPlanPrintModal
+          note={transientNote}
+          patient={patient}
+          onClose={() => setIsGeneralPlanPrintOpen(false)}
+        />
+      )}
+
+      {/* Direct Medication Schedule Print Modal */}
+      {isSchedulePrintOpen && (
+        <MedicationSchedulePrint
+          note={transientNote}
+          patient={patient}
+          onClose={() => setIsSchedulePrintOpen(false)}
+        />
+      )}
+
+      {/* Blank Receipt Modal */}
+      {isBlankReceiptOpen && (
+        <ServiceReceiptPrint
+          note={transientNote}
+          patient={patient}
+          initialBlankMode={true}
+          onClose={() => setIsBlankReceiptOpen(false)}
         />
       )}
     </>

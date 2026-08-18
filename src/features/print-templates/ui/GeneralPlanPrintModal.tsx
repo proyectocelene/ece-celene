@@ -1,34 +1,20 @@
-import type { ClinicalNote, LabOrder } from '@/entities/clinical-note/model/schemas';
+import type { ClinicalNote } from '@/entities/clinical-note/model/schemas';
 import type { Patient } from '@/entities/patient/model/schemas';
 import { PatientService } from '@/entities/patient/api/patientService';
 import { useAuth } from '@/app/providers/AuthContext';
 import { PrintService } from '@/shared/lib/printService';
 import { DateTimeService } from '@/shared/lib/dateTimeService';
 import { Button } from '@/shared/ui';
-import { Printer, X, TestTubes, CheckCircle2, AlertCircle, MapPin } from 'lucide-react';
+import { Printer, X, FileText, ShieldAlert, Calendar, MapPin } from 'lucide-react';
 
-interface LabOrderPrintModalProps {
+interface GeneralPlanPrintModalProps {
   note: ClinicalNote;
   patient: Patient;
-  labOrder?: LabOrder;
   onClose: () => void;
 }
 
-export function LabOrderPrintModal({
-  note,
-  patient,
-  labOrder,
-  onClose,
-}: LabOrderPrintModalProps) {
+export function GeneralPlanPrintModal({ note, patient, onClose }: GeneralPlanPrintModalProps) {
   const { clinicConfig, currentUser, supervisorDoctor } = useAuth();
-
-  const activeLabOrder: LabOrder = labOrder || note.labOrder || {
-    studies: [],
-    otherStudies: '',
-    fastingHours: 8,
-    clinicalNotes: '',
-    urgency: 'Ordinario',
-  };
 
   const age = PatientService.calculateAge(patient.demographics.birthDate);
   const formattedGender =
@@ -37,12 +23,6 @@ export function LabOrderPrintModal({
       : patient.demographics.gender === 'F'
       ? 'Femenino'
       : patient.demographics.gender || 'No especificado';
-
-  const handlePrint = () => {
-    PrintService.printElement('printable-lab-order-sheet', {
-      title: `Orden de Laboratorio - ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id})`,
-    });
-  };
 
   const isPasante =
     currentUser?.role === 'pasante' ||
@@ -75,6 +55,12 @@ export function LabOrderPrintModal({
   const supervisorDoctorLicense =
     supervisorDoctor?.licenseNumber || note.supervisorDoctorLicense || 'CÉD. PROF. 15504256';
 
+  const handlePrint = () => {
+    PrintService.printElement('printable-general-plan-sheet', {
+      title: `Plan Terapéutico e Indicaciones - ${patient.demographics.firstName} ${patient.demographics.lastName}`,
+    });
+  };
+
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col max-h-[95vh] text-left">
@@ -82,11 +68,11 @@ export function LabOrderPrintModal({
         <div className="p-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-700">
           <div>
             <h3 className="font-bold text-base flex items-center gap-2">
-              <TestTubes className="w-5 h-5 text-indigo-400" />
-              Solicitud de Laboratorio y Estudios de Gabinete
+              <FileText className="w-5 h-5 text-blue-400" />
+              Hoja de Indicaciones Terapéuticas y Plan de Cuidados
             </h3>
             <p className="text-xs text-slate-300">
-              Formato oficial con membrete centrado e instrucciones claras para el paciente.
+              Formato independiente para instrucciones al paciente, dieta, signos de alarma o referencia.
             </p>
           </div>
 
@@ -104,18 +90,18 @@ export function LabOrderPrintModal({
               size="md"
               leftIcon={<Printer className="w-4 h-4" />}
               onClick={handlePrint}
-              className="bg-indigo-600 hover:bg-indigo-500 shadow-md font-bold"
+              className="bg-blue-600 hover:bg-blue-500 shadow-md font-bold"
             >
-              Imprimir Solicitud
+              Imprimir Plan
             </Button>
           </div>
         </div>
 
-        {/* Print Content Area */}
+        {/* Printable Content */}
         <div className="p-6 sm:p-8 overflow-y-auto bg-slate-50">
           <div
-            id="printable-lab-order-sheet"
-            className="p-8 bg-white border border-slate-300 rounded-2xl shadow-xs font-sans text-slate-900 space-y-4"
+            id="printable-general-plan-sheet"
+            className="p-8 bg-white border border-slate-300 rounded-2xl shadow-xs font-sans text-slate-900 space-y-4 text-xs"
           >
             {/* 1. Encabezado Oficial de 3 Columnas */}
             <div className="grid grid-cols-12 items-center gap-2 border-b-2 border-slate-900 pb-3">
@@ -145,10 +131,10 @@ export function LabOrderPrintModal({
                 </p>
               </div>
 
-              {/* Derecha: Badge de Orden de Laboratorio, Fecha y Folio alineados a la derecha */}
+              {/* Derecha: Badge de Indicaciones / Plan, Fecha y Folio alineados a la derecha */}
               <div className="col-span-3 flex flex-col items-end justify-center text-right space-y-1">
                 <span className="px-2 py-0.5 border-2 border-slate-900 text-slate-900 font-extrabold rounded-md text-[9.5px] uppercase tracking-wider">
-                  ORDEN DE LABORATORIO
+                  INDICACIONES Y PLAN
                 </span>
                 <p className="text-[10px] text-slate-700">
                   Fecha: <strong className="text-slate-900 font-bold">{DateTimeService.formatDate(note.date)}</strong>
@@ -160,102 +146,78 @@ export function LabOrderPrintModal({
             </div>
 
             {/* 2. Ficha del Paciente */}
-            <div className="grid grid-cols-1 sm:grid-cols-12 gap-2.5 p-3 rounded-xl border border-slate-300 bg-slate-50 text-xs">
-              <div className="sm:col-span-5">
-                <span className="text-slate-500 font-bold uppercase text-[9px] block">PACIENTE</span>
-                <strong className="text-slate-900 text-sm font-bold uppercase block">
+            <div className="grid grid-cols-1 sm:grid-cols-12 gap-2.5 p-2.5 rounded-lg border border-slate-300 bg-slate-50 text-xs">
+              <div className="sm:col-span-6">
+                <span className="text-slate-600 font-bold uppercase text-[9px] block">PACIENTE</span>
+                <strong className="text-slate-900 text-xs font-bold uppercase block">
                   {patient.demographics.firstName} {patient.demographics.lastName}
                 </strong>
-                <span className="text-slate-600 text-[10px]">
-                  Fecha Nac: {patient.demographics.birthDate || 'No registrada'}
-                </span>
               </div>
-
-              <div className="sm:col-span-2">
-                <span className="text-slate-500 font-bold uppercase text-[9px] block">EDAD / SEXO</span>
-                <span className="text-slate-900 font-bold text-xs block">{age.displayText} • {formattedGender}</span>
-              </div>
-
               <div className="sm:col-span-3">
-                <span className="text-slate-500 font-bold uppercase text-[9px] block">EXPEDIENTE / FOLIO</span>
-                <span className="font-mono font-bold text-slate-900 text-xs block">{patient.id}</span>
-                <span className="text-slate-600 text-[10px]">Fecha: {DateTimeService.formatDate(note.date)}</span>
+                <span className="text-slate-600 font-bold uppercase text-[9px] block">EDAD / SEXO</span>
+                <span className="text-slate-900 font-semibold text-xs block">{age.displayText} • {formattedGender}</span>
               </div>
-
-              <div className="sm:col-span-2 text-right">
-                <span className="text-slate-500 font-bold uppercase text-[9px] block">CARÁCTER</span>
-                <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-black uppercase ${
-                  activeLabOrder.urgency === 'Urgente'
-                    ? 'bg-rose-100 text-rose-900 border border-rose-300'
-                    : 'bg-indigo-100 text-indigo-900 border border-indigo-200'
-                }`}>
-                  {activeLabOrder.urgency}
-                </span>
-                {activeLabOrder.fastingHours !== undefined && (
-                  <span className="text-[10px] text-slate-600 font-medium block mt-0.5">
-                    Ayuno: {activeLabOrder.fastingHours} hrs
-                  </span>
-                )}
+              <div className="sm:col-span-3 text-right">
+                <span className="text-slate-600 font-bold uppercase text-[9px] block">FECHA DE EMISIÓN</span>
+                <strong className="text-slate-900 font-bold text-xs block">{DateTimeService.formatDate(note.date)}</strong>
               </div>
             </div>
 
-            {/* 3. Diagnósticos de Presunción */}
+            {/* 3. Diagnósticos */}
             {note.diagnoses && note.diagnoses.length > 0 && (
-              <div className="p-2.5 rounded-lg border border-slate-200 bg-white text-xs">
-                <span className="font-bold text-slate-700 uppercase text-[10px] block">DIAGNÓSTICO(S) / MOTIVO CLÍNICO:</span>
+              <div className="p-2.5 rounded-lg border border-blue-200 bg-blue-50/50">
+                <span className="font-bold text-blue-950 uppercase text-[10px] block">DIAGNÓSTICO(S) DE ATENCIÓN:</span>
                 <p className="font-bold text-slate-900 text-xs mt-0.5">
                   {note.diagnoses.map((d) => `${d.description}${d.cie10Code ? ` (${d.cie10Code})` : ''}`).join(' • ')}
                 </p>
               </div>
             )}
 
-            {/* 4. Lista de Estudios Solicitados */}
-            <div className="space-y-2">
-              <div className="flex items-center justify-between border-b-2 border-slate-800 pb-1">
-                <span className="font-bold text-xs uppercase tracking-wider text-slate-900">
-                  ESTUDIOS SOLICITADOS ({activeLabOrder.studies.length + (activeLabOrder.otherStudies ? 1 : 0)}):
-                </span>
-                <span className="text-[10px] text-slate-600 font-bold">
-                  Fundación Proyecto Celene Rosarito
-                </span>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {activeLabOrder.studies.map((study, idx) => (
-                  <div
-                    key={idx}
-                    className="p-2.5 rounded-xl border border-slate-300 bg-white flex items-start gap-2.5 shadow-2xs page-break-inside-avoid"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
-                    <span className="text-xs font-bold text-slate-900 leading-snug">{study}</span>
-                  </div>
-                ))}
-
-                {activeLabOrder.otherStudies && (
-                  <div className="p-2.5 rounded-xl border-2 border-indigo-300 bg-indigo-50/50 flex items-start gap-2.5 shadow-2xs page-break-inside-avoid sm:col-span-2">
-                    <CheckCircle2 className="w-4 h-4 text-indigo-700 shrink-0 mt-0.5" />
-                    <div>
-                      <span className="text-[10px] font-black uppercase text-indigo-950 block">Otros Estudios / Especificaciones:</span>
-                      <p className="text-xs font-bold text-slate-900 leading-snug">{activeLabOrder.otherStudies}</p>
-                    </div>
-                  </div>
-                )}
+            {/* 4. Plan Terapéutico General e Instrucciones */}
+            <div className="space-y-1.5 pt-1">
+              <span className="font-bold text-slate-900 uppercase text-[11px] block border-b border-slate-300 pb-1">
+                1. RECOMENDACIONES MÉDICAS Y PLAN GENERAL:
+              </span>
+              <div className="p-3 rounded-xl border border-slate-200 bg-white text-slate-900 leading-relaxed whitespace-pre-wrap">
+                {note.plan?.generalPlan || 'Continuar con las medidas generales indicadas en consulta y apego al estilo de vida saludable.'}
               </div>
             </div>
 
-            {/* 5. Instrucciones de Preparación al Paciente */}
-            {activeLabOrder.clinicalNotes && (
-              <div className="p-3 rounded-xl border border-amber-300 bg-amber-50/60 text-xs space-y-1 page-break-inside-avoid">
-                <span className="font-black text-amber-950 uppercase text-[10px] flex items-center gap-1.5 block">
-                  <AlertCircle className="w-3.5 h-3.5 text-amber-700" /> INSTRUCCIONES DE PREPARACIÓN AL PACIENTE Y NOTAS CLÍNICAS:
+            {/* 5. Medidas Higiénico-Dietéticas */}
+            {note.plan?.nonPharmacological && (
+              <div className="space-y-1.5 pt-1">
+                <span className="font-bold text-slate-900 uppercase text-[11px] block border-b border-slate-300 pb-1">
+                  2. MEDIDAS HIGIÉNICO-DIETÉTICAS Y CUIDADOS GENERALES:
                 </span>
-                <p className="text-amber-950 whitespace-pre-wrap leading-relaxed font-normal">
-                  {activeLabOrder.clinicalNotes}
+                <div className="p-3 rounded-xl border border-slate-200 bg-white text-slate-900 leading-relaxed whitespace-pre-wrap">
+                  {note.plan.nonPharmacological}
+                </div>
+              </div>
+            )}
+
+            {/* 6. Signos de Alarma */}
+            {note.plan?.warningSigns && (
+              <div className="p-3 rounded-xl border-2 border-rose-300 bg-rose-50/70 text-xs space-y-1 page-break-inside-avoid">
+                <span className="font-black text-rose-950 uppercase text-[10px] flex items-center gap-1.5 block">
+                  <ShieldAlert className="w-4 h-4 text-rose-700" /> SIGNOS DE ALARMA (ACUDIR A URGENCIAS SI PRESENTA):
+                </span>
+                <p className="font-bold text-rose-950 text-xs leading-snug whitespace-pre-wrap">
+                  {note.plan.warningSigns}
                 </p>
               </div>
             )}
 
-            {/* 6. Firmas Institucionales */}
+            {/* 7. Próxima Cita */}
+            {note.plan?.followUpDate && (
+              <div className="flex items-center gap-2 p-2.5 rounded-lg border border-emerald-300 bg-emerald-50 text-emerald-950 text-xs">
+                <Calendar className="w-4 h-4 text-emerald-700 shrink-0" />
+                <span>
+                  Próxima Cita de Control y Seguimiento: <strong>{note.plan.followUpDate}</strong>
+                </span>
+              </div>
+            )}
+
+            {/* 8. Firmas Institucionales */}
             <div className="signature-box pt-8 border-t border-slate-300 page-break-inside-avoid">
               <div className="flex justify-between items-end gap-6 text-[10px]">
                 {isPasante ? (
@@ -264,7 +226,7 @@ export function LabOrderPrintModal({
                       <p className="font-bold text-slate-900 text-xs sm:text-sm">{attendingDoctorName}</p>
                       <p className="text-[10px] text-slate-800 font-bold uppercase">{attendingDoctorTitle}</p>
                       <p className="text-[10px] text-slate-700 font-mono font-bold">{attendingDoctorLicense}</p>
-                      <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO SOLICITANTE</p>
+                      <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO TRATANTE</p>
                     </div>
 
                     <div className="flex-1 text-center border-t-2 border-slate-800 pt-2 space-y-0.5">
@@ -279,7 +241,7 @@ export function LabOrderPrintModal({
                     <p className="font-bold text-slate-900 text-xs sm:text-sm">{attendingDoctorName}</p>
                     <p className="text-[10px] text-slate-800 font-bold uppercase">{attendingDoctorTitle}</p>
                     <p className="text-[10px] text-slate-700 font-mono font-bold">{attendingDoctorLicense}</p>
-                    <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO SOLICITANTE</p>
+                    <p className="text-[9px] text-slate-600 font-bold uppercase">MÉDICO TRATANTE</p>
                   </div>
                 )}
               </div>

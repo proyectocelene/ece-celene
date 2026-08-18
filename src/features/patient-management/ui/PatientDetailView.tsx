@@ -436,7 +436,9 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
           isOpen={isCertificateModalOpen}
           onClose={() => setIsCertificateModalOpen(false)}
           patient={patient}
+          patientFolderName={folderName}
           latestNote={patientNotes.length > 0 ? patientNotes[patientNotes.length - 1] : null}
+          onCertificateSaved={loadPatientData}
         />
       )}
 

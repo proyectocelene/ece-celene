@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { Receipt, ReceiptServiceItem } from '@/entities/clinical-note/model/schemas';
 import { CLINIC_SERVICES_CATALOG } from '@/entities/catalogs/data/servicesData';
 import { Button, Input, Select } from '@/shared/ui';
@@ -8,26 +8,42 @@ import {
   Trash2,
   DollarSign,
   Gift,
+  Search,
+  FileEdit,
 } from 'lucide-react';
 
 interface ReceiptFormProps {
   value: Receipt;
   onChange: (receipt: Receipt) => void;
   patientId: string;
+  onPrintBlankReceipt?: () => void;
 }
 
-export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
+export function ReceiptForm({
+  value,
+  onChange,
+  patientId,
+  onPrintBlankReceipt,
+}: ReceiptFormProps) {
   const [descInput, setDescInput] = useState('Consulta Médica General');
   const [commercialInput, setCommercialInput] = useState<number>(650);
   const [amountInput, setAmountInput] = useState<number>(150);
   const [receivedInput, setReceivedInput] = useState<number>(value.receivedAmount ?? value.totalAmount ?? 150);
   const [selectedCategory, setSelectedCategory] = useState<string>('Todas');
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   const categories = ['Todas', ...Array.from(new Set(CLINIC_SERVICES_CATALOG.map((s) => s.categoria)))];
 
-  const filteredServices = selectedCategory === 'Todas'
-    ? CLINIC_SERVICES_CATALOG
-    : CLINIC_SERVICES_CATALOG.filter((s) => s.categoria === selectedCategory);
+  const filteredServices = useMemo(() => {
+    return CLINIC_SERVICES_CATALOG.filter((s) => {
+      const matchCat = selectedCategory === 'Todas' || s.categoria === selectedCategory;
+      const matchSearch =
+        !searchTerm.trim() ||
+        s.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        s.categoria.toLowerCase().includes(searchTerm.toLowerCase());
+      return matchCat && matchSearch;
+    });
+  }, [selectedCategory, searchTerm]);
 
   // Recalcular totales cuando cambian los servicios
   const updateReceipt = (newServices: ReceiptServiceItem[], customReceived?: number) => {
@@ -106,7 +122,6 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
     updateReceipt(value.services, val);
   };
 
-  // Sync received input if external value changes
   useEffect(() => {
     if (value.receivedAmount !== undefined) {
       setReceivedInput(value.receivedAmount);
@@ -119,7 +134,7 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
 
   return (
     <div className="space-y-6 animate-in fade-in duration-150 text-left font-sans">
-      {/* Box de Resumen Solidario Celene */}
+      {/* Resumen Solidario Celene */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div className="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1">
           <span className="text-[10px] font-bold uppercase text-slate-500 tracking-wider block">
@@ -156,31 +171,43 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
         </div>
       </div>
 
-      {/* Catálogo de Servicios Rápidos */}
+      {/* Catálogo de Servicios con Buscador Rápido */}
       <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-200 space-y-3.5">
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-900">
             <ReceiptIcon className="w-4 h-4 text-blue-600" />
             <span>Catálogo Oficial de Servicios (Proyecto Celene)</span>
           </div>
 
-          {/* Filtros por Categoría */}
-          <div className="flex flex-wrap gap-1">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setSelectedCategory(cat)}
-                className={`text-[10px] px-2 py-0.5 rounded-md font-semibold transition-all cursor-pointer ${
-                  selectedCategory === cat
-                    ? 'bg-blue-600 text-white shadow-2xs'
-                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          {/* Buscador Rápido */}
+          <div className="w-full sm:w-64 relative">
+            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              placeholder="Buscar servicio rápido..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-8 pr-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-100"
+            />
           </div>
+        </div>
+
+        {/* Filtros por Categoría */}
+        <div className="flex flex-wrap gap-1">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              type="button"
+              onClick={() => setSelectedCategory(cat)}
+              className={`text-[10px] px-2.5 py-0.5 rounded-md font-semibold transition-all cursor-pointer ${
+                selectedCategory === cat
+                  ? 'bg-blue-600 text-white shadow-2xs font-bold'
+                  : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
 
         {/* Grid de Servicios Rápidos */}
@@ -190,7 +217,7 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
               key={srv.id}
               type="button"
               onClick={() => handleAddCatalogService(srv.nombre, srv.costoPrivado, srv.cuotaCelene)}
-              className="text-left p-2 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:bg-blue-50/30 transition-all shadow-2xs flex flex-col justify-between group cursor-pointer"
+              className="text-left p-2.5 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:bg-blue-50/30 transition-all shadow-2xs flex flex-col justify-between group cursor-pointer"
             >
               <div className="flex items-start justify-between gap-1">
                 <span className="text-xs font-bold text-slate-800 group-hover:text-blue-900 leading-tight">
@@ -202,11 +229,13 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
               </div>
               <div className="flex items-center justify-between pt-1 mt-1 border-t border-slate-100">
                 <span className="text-[10px] text-slate-500 font-medium">{srv.categoria}</span>
-                <span className={`text-[10px] font-mono font-extrabold px-1.5 py-0.2 rounded ${
-                  srv.cuotaCelene === 0
-                    ? 'bg-emerald-100 text-emerald-900 font-black'
-                    : 'bg-blue-50 text-blue-900 border border-blue-200'
-                }`}>
+                <span
+                  className={`text-[10px] font-mono font-extrabold px-1.5 py-0.2 rounded ${
+                    srv.cuotaCelene === 0
+                      ? 'bg-emerald-100 text-emerald-900 font-black'
+                      : 'bg-blue-50 text-blue-900 border border-blue-200'
+                  }`}
+                >
                   {srv.cuotaCelene === 0 ? 'GRATIS ($0)' : `$${srv.cuotaCelene} MXN`}
                 </span>
               </div>
@@ -260,13 +289,23 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
 
       {/* Desglose de Conceptos en el Recibo */}
       <div className="space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-600 block">
-            Servicios del Recibo ({value.services.length})
+            Servicios del Recibo ({value.services.length}) • Folio:{' '}
+            <strong className="text-slate-900 font-mono">{value.receiptFolio || 'Automático'}</strong>
           </span>
-          <span className="text-xs text-slate-500 font-mono">
-            Folio: <strong>{value.receiptFolio || 'Automático'}</strong>
-          </span>
+
+          {onPrintBlankReceipt && (
+            <button
+              type="button"
+              onClick={onPrintBlankReceipt}
+              className="text-[11px] font-bold text-slate-700 hover:text-slate-900 bg-white hover:bg-slate-100 border border-slate-300 px-3 py-1 rounded-lg flex items-center gap-1.5 cursor-pointer shadow-2xs"
+              title="Imprimir formato de recibo en blanco para llenado manual a mano"
+            >
+              <FileEdit className="w-3.5 h-3.5 text-blue-600" />
+              <span>Imprimir Formato en Blanco (Llenado a Mano)</span>
+            </button>
+          )}
         </div>
 
         {value.services.length === 0 ? (
@@ -308,7 +347,7 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
                         onClick={() => toggleSubsidizeItem(srv.id)}
                         className={`text-[10px] px-2 py-0.5 rounded font-semibold transition-colors cursor-pointer ${
                           srv.amount === 0
-                            ? 'bg-emerald-600 text-white'
+                            ? 'bg-emerald-600 text-white font-bold'
                             : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                         }`}
                         title="Marcar este servicio como donativo exento ($0)"
