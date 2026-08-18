@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { FileSystemApi } from '@/shared/api/fileSystem';
 import { PatientIndexService } from '@/entities/patient/api/patientIndexService';
+import { CatalogSearchService } from '@/entities/catalogs/api/catalogSearchService';
 import type { PatientIndexEntry, PatientIndexFile } from '@/entities/patient/model/schemas';
 
 interface WorkspaceContextValue {
@@ -36,6 +37,8 @@ export const WorkspaceProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     try {
       const index = await PatientIndexService.loadOrRebuildIndex(handle);
       setIndexData(index);
+      // Inicializar / cargar catalogo_medicamentos.json físico en la carpeta local
+      await CatalogSearchService.initWorkspaceCatalog(handle);
     } catch (err) {
       console.error('[WorkspaceContext] Error cargando índice:', err);
       setError('No se pudo cargar o reconstruir el índice de pacientes.');
