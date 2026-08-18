@@ -3,26 +3,31 @@ import { useWorkspace } from '@/app/providers/WorkspaceContext';
 import { useAuth } from '@/app/providers/AuthContext';
 import { PatientService } from '@/entities/patient/api/patientService';
 import { PatientIndexService } from '@/entities/patient/api/patientIndexService';
+import { ClinicalNoteService } from '@/entities/clinical-note/api/clinicalNoteService';
 import type { Patient } from '@/entities/patient/model/schemas';
+import type { ClinicalNote } from '@/entities/clinical-note/model/schemas';
 import { PatientDemographicsTab } from './PatientDemographicsTab';
 import { PatientBackgroundTab } from './PatientBackgroundTab';
-import { Button, Badge, Card, Modal } from '@/shared/ui';
 import { PatientNotesTab } from '@/features/clinical-notes/ui/PatientNotesTab';
 import { PatientAttachmentsTab } from '@/features/attachments/ui/PatientAttachmentsTab';
+import { PatientVitalTrendsTab } from './PatientVitalTrendsTab';
+import { MedicalCertificateModal } from '@/features/certificates/ui/MedicalCertificateModal';
+import { Button, Card, Badge, Modal } from '@/shared/ui';
 import {
   ArrowLeft,
-  Calendar,
+  User,
+  HeartHandshake,
   FileText,
   Paperclip,
-  HeartHandshake,
-  User,
-  AlertCircle,
-  Folder,
-  Trash2,
-  ExternalLink,
-  MessageSquare,
   Activity,
+  AlertCircle,
   Phone,
+  Trash2,
+  Folder,
+  MessageSquare,
+  ExternalLink,
+  Award,
+  TrendingUp,
 } from 'lucide-react';
 
 interface PatientDetailViewProps {
@@ -35,19 +40,21 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
   const { rootDirHandle, reloadIndex } = useWorkspace();
   const { logAuditAction } = useAuth();
   const [patient, setPatient] = useState<Patient | null>(null);
+  const [patientNotes, setPatientNotes] = useState<ClinicalNote[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'demographics' | 'background' | 'notes' | 'attachments'>('demographics');
+  const [activeTab, setActiveTab] = useState<'demographics' | 'background' | 'notes' | 'trends' | 'attachments'>('demographics');
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isCertificateModalOpen, setIsCertificateModalOpen] = useState(false);
 
   // Sync with URL hash for navigation persistence on page refresh (F5)
   useEffect(() => {
     const hash = window.location.hash;
     if (hash.includes('tab=')) {
       const match = hash.match(/tab=([a-z]+)/);
-      if (match && ['demographics', 'background', 'notes', 'attachments'].includes(match[1])) {
+      if (match && ['demographics', 'background', 'notes', 'trends', 'attachments'].includes(match[1])) {
         setActiveTab(match[1] as typeof activeTab);
       }
     }
@@ -66,6 +73,9 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
       const data = await PatientService.loadPatient(rootDirHandle, folderName);
       if (data) {
         setPatient(data);
+        // Cargar notas médicas del paciente para las gráficas y certificados
+        const notes = await ClinicalNoteService.listPatientNotes(rootDirHandle, folderName);
+        setPatientNotes(notes);
       } else {
         setError(`No se pudo leer el archivo paciente.json en ${folderName}`);
       }
@@ -104,7 +114,7 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
     try {
       await PatientIndexService.deletePatientRecord(rootDirHandle, patient.id, folderName);
       await logAuditAction(
-        'ELIMINAR_ADJUNTO',
+        'ELIMINAR_PACIENTE',
         `Expediente completo eliminado del disco: ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id}).`,
         patient.id
       );
@@ -113,9 +123,10 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
       onBack();
     } catch (err) {
       console.error('Error eliminando paciente:', err);
-      alert('Error al eliminar el expediente del disco.');
+      alert('No se pudo eliminar el expediente del disco duro.');
     } finally {
       setIsDeleting(false);
+      setIsDeleteModalOpen(false);
     }
   };
 
@@ -154,27 +165,38 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
   const cleanWA = whatsappNumber.length === 10 ? `52${whatsappNumber}` : whatsappNumber;
 
   return (
-    <div className="space-y-6 pb-12 animate-in fade-in duration-200 text-left">
-      {/* Top Bar with Back Button, Open in new tab and Delete */}
+    <div className="space-y-6 pb-12 animate-in fade-in duration-200 text-left font-sans">
+      {/* Top Bar with Back Button, Certificate, Open in new tab and Delete */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Button
-          variant="ghost"
+          variant="outline"
           size="sm"
-          leftIcon={<ArrowLeft className="w-4 h-4 text-slate-600" />}
+          leftIcon={<ArrowLeft className="w-4 h-4" />}
           onClick={() => {
             window.location.hash = '';
             onBack();
           }}
-          className="text-slate-600 hover:text-slate-900"
         >
           Volver al Directorio
         </Button>
 
-        <div className="flex items-center gap-2">
-          {/* WhatsApp Direct link */}
-          {cleanWA && (
+        <div className="flex flex-wrap items-center gap-2">
+          {/* Certificate Generator Button */}
+          <Button
+            variant="outline"
+            size="sm"
+            leftIcon={<Award className="w-3.5 h-3.5 text-amber-600" />}
+            onClick={() => setIsCertificateModalOpen(true)}
+            className="bg-amber-50/70 border-amber-200 text-amber-900 hover:bg-amber-100 text-xs font-bold shadow-2xs"
+            title="Generar e imprimir Certificado Médico oficial de salud"
+          >
+            Certificado Médico
+          </Button>
+
+          {/* Direct WhatsApp Button */}
+          {whatsappNumber && (
             <a
-              href={`https://wa.me/${cleanWA}`}
+              href={`https://wa.me/${cleanWA}?text=Hola%20${encodeURIComponent(patient.demographics.firstName)},%20le%20escribimos%20de%20Proyecto%20Celene%20Rosarito`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 text-xs font-semibold transition-colors"
@@ -236,17 +258,17 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
                 </Badge>
               </div>
 
-              <div className="flex flex-wrap items-center gap-y-1 gap-x-3 text-xs text-slate-500">
-                <span className="font-bold text-slate-900 bg-slate-100 px-2 py-0.5 rounded">
-                  Edad: {age.displayText}
+              {/* Patient Basic Info Row */}
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-600">
+                <span>
+                  Fecha Nacimiento: <strong className="text-slate-900">{patient.demographics.birthDate || 'No registrada'}</strong>
                 </span>
                 <span>•</span>
-                <span className="flex items-center gap-1 font-medium text-slate-700">
-                  <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                  Fecha Nac.: {patient.demographics.birthDate || 'No registrada'}
+                <span>
+                  Edad: <strong className="text-slate-900">{age.displayText}</strong>
                 </span>
                 <span>•</span>
-                <span className="font-medium text-slate-700">
+                <span>
                   Sexo: {patient.demographics.gender === 'M' ? 'Masculino' : patient.demographics.gender === 'F' ? 'Femenino' : 'Otro'}
                 </span>
                 <span>•</span>
@@ -315,10 +337,10 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
       </Card>
 
       {/* Tabs Navigation */}
-      <div className="flex border-b border-slate-200 bg-white px-4 rounded-xl border">
+      <div className="flex border-b border-slate-200 bg-white px-2 sm:px-4 rounded-xl border overflow-x-auto">
         <button
           onClick={() => handleTabChange('demographics')}
-          className={`flex items-center gap-2 py-3 px-4 text-xs font-semibold border-b-2 transition-all cursor-pointer ${
+          className={`flex items-center gap-2 py-3 px-3 sm:px-4 text-xs font-semibold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
             activeTab === 'demographics'
               ? 'border-blue-600 text-blue-600'
               : 'border-transparent text-slate-500 hover:text-slate-800'
@@ -330,7 +352,7 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
 
         <button
           onClick={() => handleTabChange('background')}
-          className={`flex items-center gap-2 py-3 px-4 text-xs font-semibold border-b-2 transition-all cursor-pointer ${
+          className={`flex items-center gap-2 py-3 px-3 sm:px-4 text-xs font-semibold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
             activeTab === 'background'
               ? 'border-blue-600 text-blue-600'
               : 'border-transparent text-slate-500 hover:text-slate-800'
@@ -342,19 +364,31 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
 
         <button
           onClick={() => handleTabChange('notes')}
-          className={`flex items-center gap-2 py-3 px-4 text-xs font-semibold border-b-2 transition-all cursor-pointer ${
+          className={`flex items-center gap-2 py-3 px-3 sm:px-4 text-xs font-semibold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
             activeTab === 'notes'
               ? 'border-blue-600 text-blue-600'
               : 'border-transparent text-slate-500 hover:text-slate-800'
           }`}
         >
           <FileText className="w-4 h-4" />
-          Notas Médicas ({patient.notesCount || 0})
+          Consultas ({patient.notesCount || 0})
+        </button>
+
+        <button
+          onClick={() => handleTabChange('trends')}
+          className={`flex items-center gap-2 py-3 px-3 sm:px-4 text-xs font-semibold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
+            activeTab === 'trends'
+              ? 'border-blue-600 text-blue-600'
+              : 'border-transparent text-slate-500 hover:text-slate-800'
+          }`}
+        >
+          <TrendingUp className="w-4 h-4" />
+          Evolución y Gráficas
         </button>
 
         <button
           onClick={() => handleTabChange('attachments')}
-          className={`flex items-center gap-2 py-3 px-4 text-xs font-semibold border-b-2 transition-all cursor-pointer ${
+          className={`flex items-center gap-2 py-3 px-3 sm:px-4 text-xs font-semibold border-b-2 whitespace-nowrap transition-all cursor-pointer ${
             activeTab === 'attachments'
               ? 'border-blue-600 text-blue-600'
               : 'border-transparent text-slate-500 hover:text-slate-800'
@@ -383,6 +417,10 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
           />
         )}
 
+        {activeTab === 'trends' && (
+          <PatientVitalTrendsTab patient={patient} notes={patientNotes} />
+        )}
+
         {activeTab === 'attachments' && (
           <PatientAttachmentsTab
             patient={patient}
@@ -391,6 +429,16 @@ export function PatientDetailView({ patientId, folderName, onBack }: PatientDeta
           />
         )}
       </div>
+
+      {/* Modal Certificado Médico */}
+      {isCertificateModalOpen && (
+        <MedicalCertificateModal
+          isOpen={isCertificateModalOpen}
+          onClose={() => setIsCertificateModalOpen(false)}
+          patient={patient}
+          latestNote={patientNotes.length > 0 ? patientNotes[patientNotes.length - 1] : null}
+        />
+      )}
 
       {/* Confirmation Modal to Delete Patient */}
       <Modal

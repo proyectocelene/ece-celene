@@ -54,6 +54,7 @@ export const AuditActionSchema = z.enum([
   'REGISTRAR_MEDICO',
   'IMPRIMIR_RECETA',
   'ACTUALIZAR_CLINICA',
+  'CREAR_BACKUP',
 ]);
 
 export type AuditAction = z.infer<typeof AuditActionSchema>;

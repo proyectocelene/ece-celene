@@ -6,6 +6,7 @@ import { CreatePatientModal } from '@/features/patient-management/ui/CreatePatie
 import { PatientDetailView } from '@/features/patient-management/ui/PatientDetailView';
 import { AuditLogModal } from '@/features/audit/ui/AuditLogModal';
 import { UserProfileModal } from '@/features/auth/ui/UserProfileModal';
+import { BackupModal } from '@/features/backup/ui/BackupModal';
 import { Button, Input, Card, Badge } from '@/shared/ui';
 import {
   Folder,
@@ -22,6 +23,7 @@ import {
   ClipboardList,
   UserCheck,
   Activity,
+  Download,
 } from 'lucide-react';
 
 export function DashboardLayout() {
@@ -41,6 +43,7 @@ export function DashboardLayout() {
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const [isBackupModalOpen, setIsBackupModalOpen] = useState(false);
   const [selectedPatient, setSelectedPatient] = useState<{ id: string; folderName: string } | null>(null);
   const [isCreatingQuickPatient, setIsCreatingQuickPatient] = useState(false);
 
@@ -179,6 +182,18 @@ export function DashboardLayout() {
                 </div>
               </button>
             )}
+
+            {/* Respaldo ZIP Button */}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsBackupModalOpen(true)}
+              leftIcon={<Download className="w-3.5 h-3.5 text-blue-600" />}
+              className="text-xs font-semibold text-blue-900 bg-blue-50/60 hover:bg-blue-100 border-blue-200"
+              title="Descargar copia de seguridad .ZIP en 1 clic"
+            >
+              Respaldo ZIP
+            </Button>
 
             {/* Auditoría Button */}
             <Button
@@ -453,6 +468,12 @@ export function DashboardLayout() {
       <UserProfileModal
         isOpen={isProfileModalOpen}
         onClose={() => setIsProfileModalOpen(false)}
+      />
+
+      {/* Modal de Respaldo y Exportación ZIP */}
+      <BackupModal
+        isOpen={isBackupModalOpen}
+        onClose={() => setIsBackupModalOpen(false)}
       />
     </div>
   );
