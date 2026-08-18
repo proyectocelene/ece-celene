@@ -34,12 +34,12 @@ export function PlanAndPrescriptionForm({
   // Autocompletado reactivo de medicamentos y cuadro básico
   const suggestions: AutocompleteItem[] = useMemo(() => {
     if (!medication.trim() || medication.length < 2) return [];
-    const results = CatalogSearchService.searchMedications(medication, 6);
+    const results = CatalogSearchService.searchMedications(medication, 8);
     return results.map((item) => ({
       id: item.genericName,
       title: item.genericName,
       subtitle: item.brandNames ? `Marcas: ${item.brandNames.join(', ')} • ${item.category}` : item.category,
-      badge: item.defaultPresentation,
+      badge: item.price ? `${item.defaultPresentation} • $${item.price.toFixed(2)}` : item.defaultPresentation,
       raw: item,
     }));
   }, [medication]);
