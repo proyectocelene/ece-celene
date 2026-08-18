@@ -97,19 +97,29 @@ export const LabOrderSchema = z.object({
 export const ReceiptServiceItemSchema = z.object({
   id: z.string().default(''),
   description: z.string().default(''),
+  commercialCost: z.number().optional().default(0),
   amount: z.number().default(0),
+  isSubsidized: z.boolean().optional().default(false),
 });
 
 export const ReceiptSchema = z.object({
   receiptFolio: z.string().default(''),
   services: z.array(ReceiptServiceItemSchema).default([]),
+  totalCommercial: z.number().optional().default(0),
+  totalSubsidy: z.number().optional().default(0),
   totalAmount: z.number().default(0),
+  receivedAmount: z.number().optional().default(0),
+  pendingAmount: z.number().optional().default(0),
   paymentMethod: z.enum(['Efectivo', 'Transferencia', 'Tarjeta', 'Donativo Exento', 'Cuota de Recuperación']).default('Efectivo'),
   notes: z.string().optional().default(''),
 }).default({
   receiptFolio: '',
   services: [],
+  totalCommercial: 0,
+  totalSubsidy: 0,
   totalAmount: 0,
+  receivedAmount: 0,
+  pendingAmount: 0,
   paymentMethod: 'Efectivo',
   notes: '',
 });

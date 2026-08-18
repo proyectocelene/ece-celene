@@ -14,6 +14,7 @@ import {
   Pill,
   ChevronRight,
   Edit3,
+  Receipt,
 } from 'lucide-react';
 
 interface PatientNotesTabProps {
@@ -182,6 +183,13 @@ export function PatientNotesTab({ patient, patientFolderName, onNotesUpdated }: 
                         <Pill className="w-3 h-3" />
                         {note.plan.prescriptions.length} Recetados
                       </Badge>
+                    )}
+
+                    {note.receipt && note.receipt.totalAmount !== undefined && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold font-mono px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800" title={`Recibo: Folio ${note.receipt.receiptFolio || 'Generado'} • ${note.receipt.paymentMethod}`}>
+                        <Receipt className="w-3 h-3 text-emerald-600" />
+                        ${note.receipt.totalAmount} MXN
+                      </span>
                     )}
 
                     {/* Quick Edit Action Button */}

@@ -1,8 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Receipt, ReceiptServiceItem } from '@/entities/clinical-note/model/schemas';
 import { CLINIC_SERVICES_CATALOG } from '@/entities/catalogs/data/servicesData';
 import { Button, Input, Select } from '@/shared/ui';
-import { Receipt as ReceiptIcon, Plus, Trash2, DollarSign, Sparkles } from 'lucide-react';
+import {
+  Receipt as ReceiptIcon,
+  Plus,
+  Trash2,
+  DollarSign,
+  Gift,
+} from 'lucide-react';
 
 interface ReceiptFormProps {
   value: Receipt;
@@ -12,7 +18,9 @@ interface ReceiptFormProps {
 
 export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
   const [descInput, setDescInput] = useState('Consulta Médica General');
+  const [commercialInput, setCommercialInput] = useState<number>(650);
   const [amountInput, setAmountInput] = useState<number>(150);
+  const [receivedInput, setReceivedInput] = useState<number>(value.receivedAmount ?? value.totalAmount ?? 150);
   const [selectedCategory, setSelectedCategory] = useState<string>('Todas');
 
   const categories = ['Todas', ...Array.from(new Set(CLINIC_SERVICES_CATALOG.map((s) => s.categoria)))];
@@ -21,111 +29,215 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
     ? CLINIC_SERVICES_CATALOG
     : CLINIC_SERVICES_CATALOG.filter((s) => s.categoria === selectedCategory);
 
-  const addService = (desc: string, amount: number) => {
-    if (!desc.trim()) return;
-    const newItem: ReceiptServiceItem = {
-      id: `srv-${Date.now()}-${Math.random().toString(36).substring(2, 5)}`,
-      description: desc.trim(),
-      amount: Math.max(0, amount),
-    };
+  // Recalcular totales cuando cambian los servicios
+  const updateReceipt = (newServices: ReceiptServiceItem[], customReceived?: number) => {
+    const totalCommercial = newServices.reduce((acc, s) => acc + (s.commercialCost || s.amount), 0);
+    const totalAmount = newServices.reduce((acc, s) => acc + s.amount, 0);
+    const totalSubsidy = Math.max(0, totalCommercial - totalAmount);
 
-    const updatedServices = [...value.services, newItem];
-    const totalAmount = updatedServices.reduce((acc, s) => acc + s.amount, 0);
+    const received = customReceived !== undefined ? customReceived : (value.receivedAmount ?? totalAmount);
+    const pendingAmount = Math.max(0, totalAmount - received);
 
     onChange({
       ...value,
       receiptFolio: value.receiptFolio || `REC-${patientId}-${Date.now().toString().slice(-4)}`,
-      services: updatedServices,
+      services: newServices,
+      totalCommercial,
+      totalSubsidy,
       totalAmount,
+      receivedAmount: received,
+      pendingAmount,
     });
+  };
+
+  const handleAddCatalogService = (nombre: string, costoPrivado: number, cuotaCelene: number) => {
+    const newItem: ReceiptServiceItem = {
+      id: `srv-${Date.now()}-${Math.random().toString(36).substring(2, 5)}`,
+      description: nombre,
+      commercialCost: costoPrivado,
+      amount: cuotaCelene,
+      isSubsidized: cuotaCelene === 0 || cuotaCelene < costoPrivado,
+    };
+
+    const newServices = [...value.services, newItem];
+    const newTotal = newServices.reduce((acc, s) => acc + s.amount, 0);
+    updateReceipt(newServices, newTotal);
+  };
+
+  const handleAddManualService = () => {
+    if (!descInput.trim()) return;
+    const newItem: ReceiptServiceItem = {
+      id: `srv-${Date.now()}-${Math.random().toString(36).substring(2, 5)}`,
+      description: descInput.trim(),
+      commercialCost: Math.max(amountInput, commercialInput),
+      amount: Math.max(0, amountInput),
+      isSubsidized: amountInput < commercialInput,
+    };
+
+    const newServices = [...value.services, newItem];
+    const newTotal = newServices.reduce((acc, s) => acc + s.amount, 0);
+    updateReceipt(newServices, newTotal);
   };
 
   const removeService = (id: string) => {
-    const updatedServices = value.services.filter((s) => s.id !== id);
-    const totalAmount = updatedServices.reduce((acc, s) => acc + s.amount, 0);
-    onChange({
-      ...value,
-      services: updatedServices,
-      totalAmount,
-    });
+    const newServices = value.services.filter((s) => s.id !== id);
+    const newTotal = newServices.reduce((acc, s) => acc + s.amount, 0);
+    updateReceipt(newServices, newTotal);
   };
+
+  const toggleSubsidizeItem = (id: string) => {
+    const newServices = value.services.map((s) => {
+      if (s.id === id) {
+        const isFree = s.amount === 0;
+        return {
+          ...s,
+          amount: isFree ? (s.commercialCost ? Math.round(s.commercialCost * 0.25) : 100) : 0,
+          isSubsidized: !isFree,
+        };
+      }
+      return s;
+    });
+    const newTotal = newServices.reduce((acc, s) => acc + s.amount, 0);
+    updateReceipt(newServices, newTotal);
+  };
+
+  const handleReceivedChange = (val: number) => {
+    setReceivedInput(val);
+    updateReceipt(value.services, val);
+  };
+
+  // Sync received input if external value changes
+  useEffect(() => {
+    if (value.receivedAmount !== undefined) {
+      setReceivedInput(value.receivedAmount);
+    }
+  }, [value.receivedAmount]);
+
+  const totalCommercial = value.totalCommercial || value.services.reduce((acc, s) => acc + (s.commercialCost || s.amount), 0);
+  const totalSubsidy = value.totalSubsidy || Math.max(0, totalCommercial - value.totalAmount);
+  const percentSubsidized = totalCommercial > 0 ? Math.round((totalSubsidy / totalCommercial) * 100) : 0;
 
   return (
     <div className="space-y-6 animate-in fade-in duration-150 text-left font-sans">
-      <div className="p-4 rounded-2xl bg-emerald-50/40 border border-emerald-100 space-y-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-900">
-            <ReceiptIcon className="w-4 h-4 text-emerald-600" />
-            <span>Recibo de Donativo / Servicios de Proyecto Celene</span>
-          </div>
-
-          <span className="text-xs text-emerald-800 font-mono font-bold">
-            Folio: {value.receiptFolio || 'Automático'}
+      {/* Box de Resumen Solidario Celene */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-1">
+          <span className="text-[10px] font-bold uppercase text-slate-500 tracking-wider block">
+            Valor Comercial Privado
           </span>
+          <p className="text-lg font-mono font-black text-slate-700">
+            ${totalCommercial.toFixed(2)} <span className="text-xs text-slate-400 font-sans">MXN</span>
+          </p>
         </div>
 
-        {/* Category Filter for Quick Buttons */}
-        <div className="space-y-2">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="text-[11px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              Catálogo Oficial de Servicios y Cuotas Celene:
+        <div className="p-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-200 shadow-2xs space-y-1">
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] font-extrabold uppercase text-emerald-900 tracking-wider flex items-center gap-1">
+              <Gift className="w-3.5 h-3.5 text-emerald-600" /> Subsidio Donado Celene
             </span>
+            {percentSubsidized > 0 && (
+              <span className="text-[10px] px-1.5 py-0.2 rounded-full font-bold bg-emerald-200/80 text-emerald-900">
+                {percentSubsidized}% Ahorro
+              </span>
+            )}
+          </div>
+          <p className="text-lg font-mono font-black text-emerald-800">
+            -${totalSubsidy.toFixed(2)} <span className="text-xs text-emerald-700 font-sans">MXN</span>
+          </p>
+        </div>
 
-            {/* Category tabs */}
-            <div className="flex flex-wrap gap-1">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  type="button"
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`text-[10px] px-2 py-0.5 rounded-md font-semibold transition-all cursor-pointer ${
-                    selectedCategory === cat
-                      ? 'bg-emerald-600 text-white shadow-2xs'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+        <div className="p-3.5 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-md shadow-blue-600/15 space-y-1">
+          <span className="text-[10px] font-bold uppercase text-blue-100 tracking-wider block">
+            Cuota / Total Aporte Paciente
+          </span>
+          <p className="text-xl font-mono font-black text-white">
+            ${value.totalAmount.toFixed(2)} <span className="text-xs text-blue-200 font-sans">MXN</span>
+          </p>
+        </div>
+      </div>
+
+      {/* Catálogo de Servicios Rápidos */}
+      <div className="p-4 rounded-2xl bg-slate-50/80 border border-slate-200 space-y-3.5">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-900">
+            <ReceiptIcon className="w-4 h-4 text-blue-600" />
+            <span>Catálogo Oficial de Servicios (Proyecto Celene)</span>
           </div>
 
-          {/* Quick add service chips */}
-          <div className="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto p-1 bg-white/70 rounded-xl border border-slate-200/80">
-            {filteredServices.map((srv) => (
+          {/* Filtros por Categoría */}
+          <div className="flex flex-wrap gap-1">
+            {categories.map((cat) => (
               <button
-                key={srv.id}
+                key={cat}
                 type="button"
-                onClick={() => addService(srv.nombre, srv.cuotaCelene)}
-                className="text-xs px-2.5 py-1 rounded-lg bg-white border border-slate-200 hover:border-emerald-400 hover:bg-emerald-50/50 text-slate-700 hover:text-emerald-900 transition-all shadow-2xs flex items-center gap-1.5 cursor-pointer"
-                title={`Valor Comercial: $${srv.costoPrivado} MXN | Cuota Celene: $${srv.cuotaCelene} MXN`}
+                onClick={() => setSelectedCategory(cat)}
+                className={`text-[10px] px-2 py-0.5 rounded-md font-semibold transition-all cursor-pointer ${
+                  selectedCategory === cat
+                    ? 'bg-blue-600 text-white shadow-2xs'
+                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
+                }`}
               >
-                <span>+ {srv.nombre}</span>
-                <span className={`font-bold font-mono text-[10px] px-1 rounded ${
-                  srv.cuotaCelene === 0 ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-100 text-slate-700'
-                }`}>
-                  {srv.cuotaCelene === 0 ? 'GRATIS' : `$${srv.cuotaCelene}`}
-                </span>
+                {cat}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Manual Service Input */}
-        <div className="flex flex-col sm:flex-row items-end gap-3 pt-2 border-t border-emerald-100">
+        {/* Grid de Servicios Rápidos */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 max-h-48 overflow-y-auto p-1">
+          {filteredServices.map((srv) => (
+            <button
+              key={srv.id}
+              type="button"
+              onClick={() => handleAddCatalogService(srv.nombre, srv.costoPrivado, srv.cuotaCelene)}
+              className="text-left p-2 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:bg-blue-50/30 transition-all shadow-2xs flex flex-col justify-between group cursor-pointer"
+            >
+              <div className="flex items-start justify-between gap-1">
+                <span className="text-xs font-bold text-slate-800 group-hover:text-blue-900 leading-tight">
+                  {srv.nombre}
+                </span>
+                <span className="text-[9px] text-slate-400 line-through shrink-0 font-mono">
+                  ${srv.costoPrivado}
+                </span>
+              </div>
+              <div className="flex items-center justify-between pt-1 mt-1 border-t border-slate-100">
+                <span className="text-[10px] text-slate-500 font-medium">{srv.categoria}</span>
+                <span className={`text-[10px] font-mono font-extrabold px-1.5 py-0.2 rounded ${
+                  srv.cuotaCelene === 0
+                    ? 'bg-emerald-100 text-emerald-900 font-black'
+                    : 'bg-blue-50 text-blue-900 border border-blue-200'
+                }`}>
+                  {srv.cuotaCelene === 0 ? 'GRATIS ($0)' : `$${srv.cuotaCelene} MXN`}
+                </span>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {/* Entrada Manual de Conceptos Fuera de Catálogo */}
+        <div className="pt-2 border-t border-slate-200 flex flex-col sm:flex-row items-end gap-2.5">
           <div className="flex-1 w-full">
             <Input
-              label="Descripción del Servicio o Donativo Manual"
+              label="Otro Concepto / Donativo Manual"
               value={descInput}
               onChange={(e) => setDescInput(e.target.value)}
-              placeholder="Ej. Consulta Médica General, Curación..."
+              placeholder="Ej. Curación Especial, Donativo Voluntario..."
             />
           </div>
 
-          <div className="w-full sm:w-36">
+          <div className="w-full sm:w-32">
             <Input
-              label="Cuota (MXN)"
+              label="Costo Comercial"
+              type="number"
+              value={commercialInput}
+              onChange={(e) => setCommercialInput(parseFloat(e.target.value) || 0)}
+              leftIcon={<DollarSign className="w-4 h-4 text-slate-400" />}
+            />
+          </div>
+
+          <div className="w-full sm:w-32">
+            <Input
+              label="Cuota Paciente"
               type="number"
               value={amountInput}
               onChange={(e) => setAmountInput(parseFloat(e.target.value) || 0)}
@@ -137,48 +249,79 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
             type="button"
             variant="primary"
             size="md"
-            onClick={() => addService(descInput, amountInput)}
+            onClick={handleAddManualService}
             leftIcon={<Plus className="w-4 h-4" />}
-            className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white shadow-2xs font-semibold"
+            className="w-full sm:w-auto bg-slate-800 hover:bg-slate-900 text-white font-semibold text-xs shrink-0"
           >
             Agregar
           </Button>
         </div>
       </div>
 
-      {/* Services List Table */}
+      {/* Desglose de Conceptos en el Recibo */}
       <div className="space-y-3">
-        <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 block">
-          Desglose del Recibo ({value.services.length} conceptos)
-        </span>
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-600 block">
+            Servicios del Recibo ({value.services.length})
+          </span>
+          <span className="text-xs text-slate-500 font-mono">
+            Folio: <strong>{value.receiptFolio || 'Automático'}</strong>
+          </span>
+        </div>
 
         {value.services.length === 0 ? (
-          <div className="p-6 rounded-xl border border-dashed border-slate-200 text-center text-slate-400 text-xs">
-            Sin servicios o donativos agregados a este recibo.
+          <div className="p-6 rounded-xl border border-dashed border-slate-300 text-center text-slate-400 text-xs bg-white">
+            Selecciona arriba uno o más servicios para generar el recibo de donativo.
           </div>
         ) : (
-          <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-2xs">
+          <div className="border border-slate-300 rounded-xl overflow-hidden bg-white shadow-2xs">
             <table className="w-full text-xs text-left">
-              <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 font-semibold">
+              <thead className="bg-slate-100 border-b border-slate-200 text-slate-700 font-bold uppercase text-[10px]">
                 <tr>
                   <th className="py-2.5 px-4">Concepto / Servicio</th>
-                  <th className="py-2.5 px-4 text-right">Cuota Aportada</th>
-                  <th className="py-2.5 px-4 text-center w-12">Acción</th>
+                  <th className="py-2.5 px-3 text-right">Valor Comercial</th>
+                  <th className="py-2.5 px-3 text-right">Cuota Aportada</th>
+                  <th className="py-2.5 px-3 text-center">Subsidio 100%</th>
+                  <th className="py-2.5 px-3 text-center w-12">Quitar</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {value.services.map((srv) => (
                   <tr key={srv.id} className="hover:bg-slate-50/60">
-                    <td className="py-2.5 px-4 font-medium text-slate-800">{srv.description}</td>
-                    <td className="py-2.5 px-4 text-right font-mono font-bold text-slate-900">
+                    <td className="py-2.5 px-4 font-bold text-slate-900">
+                      {srv.description}
+                      {srv.amount === 0 && (
+                        <span className="ml-2 text-[9px] px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-900 font-bold">
+                          Exento / 100% Subsidiado
+                        </span>
+                      )}
+                    </td>
+                    <td className="py-2.5 px-3 text-right font-mono text-slate-500">
+                      ${(srv.commercialCost || srv.amount).toFixed(2)}
+                    </td>
+                    <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-900">
                       ${srv.amount.toFixed(2)} MXN
                     </td>
-                    <td className="py-2.5 px-4 text-center">
+                    <td className="py-2.5 px-3 text-center">
+                      <button
+                        type="button"
+                        onClick={() => toggleSubsidizeItem(srv.id)}
+                        className={`text-[10px] px-2 py-0.5 rounded font-semibold transition-colors cursor-pointer ${
+                          srv.amount === 0
+                            ? 'bg-emerald-600 text-white'
+                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                        }`}
+                        title="Marcar este servicio como donativo exento ($0)"
+                      >
+                        {srv.amount === 0 ? '✓ Exento ($0)' : 'Hacer $0'}
+                      </button>
+                    </td>
+                    <td className="py-2.5 px-3 text-center">
                       <button
                         type="button"
                         onClick={() => removeService(srv.id)}
                         className="text-slate-400 hover:text-rose-600 p-1 rounded cursor-pointer"
-                        title="Eliminar concepto"
+                        title="Eliminar servicio"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
                       </button>
@@ -186,20 +329,26 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
                   </tr>
                 ))}
               </tbody>
-              <tfoot className="bg-slate-50 border-t-2 border-slate-200 font-bold">
+              <tfoot className="bg-slate-50 border-t-2 border-slate-300 font-black">
                 <tr>
-                  <td className="py-3 px-4 text-slate-800 text-sm">TOTAL APORTACIÓN / DONATIVO:</td>
-                  <td className="py-3 px-4 text-right text-base text-emerald-700 font-mono">
+                  <td className="py-2.5 px-4 text-slate-800 text-xs uppercase">TOTALES:</td>
+                  <td className="py-2.5 px-3 text-right font-mono text-slate-600 text-xs">
+                    ${totalCommercial.toFixed(2)}
+                  </td>
+                  <td className="py-2.5 px-3 text-right font-mono text-sm text-blue-900">
                     ${value.totalAmount.toFixed(2)} MXN
                   </td>
-                  <td></td>
+                  <td colSpan={2} className="py-2.5 px-3 text-right text-[10px] text-emerald-800 font-bold">
+                    Subsidio: -${totalSubsidy.toFixed(2)} ({percentSubsidized}%)
+                  </td>
                 </tr>
               </tfoot>
             </table>
           </div>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+        {/* Datos de Cobro y Saldo */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
           <Select
             label="Método de Aportación / Pago"
             value={value.paymentMethod}
@@ -208,17 +357,34 @@ export function ReceiptForm({ value, onChange, patientId }: ReceiptFormProps) {
             <option value="Efectivo">Efectivo</option>
             <option value="Transferencia">Transferencia</option>
             <option value="Tarjeta">Tarjeta</option>
-            <option value="Donativo Exento">Donativo Exento (Sin costo)</option>
+            <option value="Donativo Exento">Donativo Exento (100% Gratuito)</option>
             <option value="Cuota de Recuperación">Cuota de Recuperación</option>
           </Select>
 
           <Input
-            label="Notas Adicionales del Recibo (Opcional)"
-            placeholder="Observaciones de pago o donativo..."
-            value={value.notes || ''}
-            onChange={(e) => onChange({ ...value, notes: e.target.value })}
+            label="Aporte Recibido Hoy (MXN)"
+            type="number"
+            value={receivedInput}
+            onChange={(e) => handleReceivedChange(parseFloat(e.target.value) || 0)}
+            leftIcon={<DollarSign className="w-4 h-4 text-slate-400" />}
           />
+
+          <div className="space-y-1">
+            <label className="block text-xs font-semibold text-slate-700">Saldo Pendiente / Adeudo</label>
+            <div className="h-9 px-3 rounded-xl border border-slate-200 bg-slate-100 flex items-center font-mono font-bold text-sm">
+              <span className={(value.pendingAmount ?? 0) > 0 ? 'text-rose-700' : 'text-emerald-700'}>
+                ${(value.pendingAmount ?? 0).toFixed(2)} MXN
+              </span>
+            </div>
+          </div>
         </div>
+
+        <Input
+          label="Observaciones o Comentarios del Recibo (Opcional)"
+          placeholder="Ej. Paciente aportó $100 en efectivo y cubre resto próxima consulta..."
+          value={value.notes || ''}
+          onChange={(e) => onChange({ ...value, notes: e.target.value })}
+        />
       </div>
     </div>
   );

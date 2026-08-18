@@ -92,8 +92,12 @@ export function ClinicalNoteEditorModal({
   });
   const [receipt, setReceipt] = useState<Receipt>({
     receiptFolio: '',
-    services: [{ id: '1', description: 'Consulta Médica General', amount: 200 }],
-    totalAmount: 200,
+    services: [{ id: '1', description: 'Consulta Médica General', commercialCost: 650, amount: 150, isSubsidized: true }],
+    totalCommercial: 650,
+    totalSubsidy: 500,
+    totalAmount: 150,
+    receivedAmount: 150,
+    pendingAmount: 0,
     paymentMethod: 'Efectivo',
     notes: '',
   });
@@ -115,7 +119,17 @@ export function ClinicalNoteEditorModal({
         setDiagnoses(initialNote.diagnoses || []);
         setPlan(initialNote.plan || { generalPlan: '', nonPharmacological: '', warningSigns: '', followUpDate: '', prescriptions: [] });
         setLabOrder(initialNote.labOrder || { studies: [], otherStudies: '', fastingHours: 8, clinicalNotes: '', urgency: 'Ordinario' });
-        setReceipt(initialNote.receipt || { receiptFolio: '', services: [{ id: '1', description: 'Consulta Médica General', amount: 200 }], totalAmount: 200, paymentMethod: 'Efectivo', notes: '' });
+        setReceipt(initialNote.receipt || {
+          receiptFolio: '',
+          services: [{ id: '1', description: 'Consulta Médica General', commercialCost: 650, amount: 150, isSubsidized: true }],
+          totalCommercial: 650,
+          totalSubsidy: 500,
+          totalAmount: 150,
+          receivedAmount: 150,
+          pendingAmount: 0,
+          paymentMethod: 'Efectivo',
+          notes: '',
+        });
       } else {
         // Modo Nueva Nota: Restaurar borrador de localStorage si existe
         const savedDraft = localStorage.getItem(draftKey);
@@ -142,7 +156,17 @@ export function ClinicalNoteEditorModal({
           setDiagnoses([]);
           setPlan({ generalPlan: '', nonPharmacological: '', warningSigns: '', followUpDate: '', prescriptions: [] });
           setLabOrder({ studies: [], otherStudies: '', fastingHours: 8, clinicalNotes: '', urgency: 'Ordinario' });
-          setReceipt({ receiptFolio: '', services: [{ id: '1', description: 'Consulta Médica General', amount: 200 }], totalAmount: 200, paymentMethod: 'Efectivo', notes: '' });
+          setReceipt({
+            receiptFolio: '',
+            services: [{ id: '1', description: 'Consulta Médica General', commercialCost: 650, amount: 150, isSubsidized: true }],
+            totalCommercial: 650,
+            totalSubsidy: 500,
+            totalAmount: 150,
+            receivedAmount: 150,
+            pendingAmount: 0,
+            paymentMethod: 'Efectivo',
+            notes: '',
+          });
         }
       }
     }
