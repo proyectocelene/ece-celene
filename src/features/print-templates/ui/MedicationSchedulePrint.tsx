@@ -17,7 +17,7 @@ export function MedicationSchedulePrint({
   patient,
   onClose,
 }: MedicationSchedulePrintProps) {
-  const { clinicConfig } = useAuth();
+  const { clinicConfig, currentUser } = useAuth();
   const prescriptions = note.plan?.prescriptions || [];
 
   const age = PatientService.calculateAge(patient.demographics.birthDate);
@@ -197,7 +197,7 @@ export function MedicationSchedulePrint({
               <div className="sm:col-span-3">
                 <span className="text-slate-600 font-bold uppercase text-[9px] block">MÉDICO TRATANTE</span>
                 <span className="font-bold text-slate-900 text-xs break-words block">
-                  {note.attendingDoctorName || 'Dr. Carlos Donato Dueñas Prieto'}
+                  {currentUser?.fullName || note.attendingDoctorName || 'Dr. Carlos Donato Dueñas Prieto'}
                 </span>
               </div>
             </div>

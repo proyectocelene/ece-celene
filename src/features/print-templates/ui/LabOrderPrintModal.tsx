@@ -19,7 +19,7 @@ export function LabOrderPrintModal({
   labOrder,
   onClose,
 }: LabOrderPrintModalProps) {
-  const { clinicConfig } = useAuth();
+  const { clinicConfig, currentUser, supervisorDoctor } = useAuth();
 
   const activeLabOrder: LabOrder = labOrder || note.labOrder || {
     studies: [],
@@ -43,7 +43,36 @@ export function LabOrderPrintModal({
     });
   };
 
-  const isPasante = note.attendingDoctorRole === 'pasante' || note.attendingDoctorTitle?.includes('PASANTE');
+  const isPasante =
+    currentUser?.role === 'pasante' ||
+    note.attendingDoctorRole === 'pasante' ||
+    note.attendingDoctorTitle?.includes('PASANTE') ||
+    note.attendingDoctorName?.toLowerCase().includes('sebastian') ||
+    currentUser?.username?.toLowerCase().includes('sebastian');
+
+  const attendingDoctorName =
+    currentUser?.role === 'pasante'
+      ? currentUser.fullName
+      : (note.attendingDoctorName || 'Dr. Carlos Donato Dueñas Prieto');
+
+  const attendingDoctorTitle =
+    currentUser?.role === 'pasante'
+      ? currentUser.title
+      : (note.attendingDoctorTitle || 'MÉDICO GENERAL');
+
+  const attendingDoctorLicense =
+    currentUser?.role === 'pasante'
+      ? currentUser.licenseNumber
+      : (note.attendingDoctorLicense || 'CÉD. PROF. 15504256');
+
+  const supervisorDoctorName =
+    supervisorDoctor?.fullName || note.supervisorDoctorName || 'Dr. Carlos Donato Dueñas Prieto';
+
+  const supervisorDoctorTitle =
+    supervisorDoctor?.title || note.supervisorDoctorTitle || 'MÉDICO GENERAL';
+
+  const supervisorDoctorLicense =
+    supervisorDoctor?.licenseNumber || note.supervisorDoctorLicense || 'CÉD. PROF. 15504256';
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
@@ -222,13 +251,13 @@ export function LabOrderPrintModal({
                   {/* Médico Tratante Pasante */}
                   <div className="border-t-2 border-slate-800 pt-2 space-y-0.5">
                     <p className="font-black text-slate-900 text-xs">
-                      {note.attendingDoctorName || 'Dr. Sebastián Garduño Conde'}
+                      {attendingDoctorName}
                     </p>
                     <p className="text-[10px] text-slate-700 font-bold uppercase">
-                      {note.attendingDoctorTitle || 'MÉDICO PASANTE DEL SERVICIO SOCIAL (MPSS)'}
+                      {attendingDoctorTitle}
                     </p>
                     <p className="text-[10px] text-slate-600 font-mono">
-                      {note.attendingDoctorLicense || 'MATRÍCULA MPSS - UABC'}
+                      {attendingDoctorLicense}
                     </p>
                     <p className="text-[10px] text-slate-700 font-semibold">
                       UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
@@ -239,13 +268,13 @@ export function LabOrderPrintModal({
                   {/* Médico Supervisor */}
                   <div className="border-t-2 border-slate-800 pt-2 space-y-0.5">
                     <p className="font-black text-slate-900 text-xs">
-                      {note.supervisorDoctorName || 'Dr. Carlos Donato Dueñas Prieto'}
+                      {supervisorDoctorName}
                     </p>
                     <p className="text-[10px] text-slate-700 font-bold uppercase">
-                      {note.supervisorDoctorTitle || 'MÉDICO GENERAL'}
+                      {supervisorDoctorTitle}
                     </p>
                     <p className="text-[10px] text-slate-600 font-mono font-bold">
-                      {note.supervisorDoctorLicense || 'CÉD. PROF. 15504256'}
+                      {supervisorDoctorLicense}
                     </p>
                     <p className="text-[10px] text-slate-700 font-semibold">
                       UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
@@ -256,13 +285,13 @@ export function LabOrderPrintModal({
               ) : (
                 <div className="max-w-xs mx-auto text-center text-xs border-t-2 border-slate-800 pt-2 space-y-0.5">
                   <p className="font-black text-slate-900 text-xs">
-                    {note.attendingDoctorName || 'Dr. Carlos Donato Dueñas Prieto'}
+                    {attendingDoctorName}
                   </p>
                   <p className="text-[10px] text-slate-700 font-bold uppercase">
-                    {note.attendingDoctorTitle || 'MÉDICO GENERAL'}
+                    {attendingDoctorTitle}
                   </p>
                   <p className="text-[10px] text-slate-600 font-mono font-bold">
-                    {note.attendingDoctorLicense || 'CÉD. PROF. 15504256'}
+                    {attendingDoctorLicense}
                   </p>
                   <p className="text-[10px] text-slate-700 font-semibold">
                     UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA

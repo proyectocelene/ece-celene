@@ -191,13 +191,13 @@ export function ClinicalNoteEditorModal({
       plan,
       labOrder,
       receipt,
-      attendingDoctorName: initialNote?.attendingDoctorName || currentUser?.fullName || 'Médico Tratante',
-      attendingDoctorTitle: initialNote?.attendingDoctorTitle || currentUser?.title || 'MÉDICO GENERAL',
-      attendingDoctorLicense: initialNote?.attendingDoctorLicense || currentUser?.licenseNumber || '',
-      attendingDoctorRole: initialNote?.attendingDoctorRole || currentUser?.role || 'titular',
-      supervisorDoctorName: (initialNote?.attendingDoctorRole || currentUser?.role) === 'pasante' ? (initialNote?.supervisorDoctorName || supervisorDoctor?.fullName) : undefined,
-      supervisorDoctorTitle: (initialNote?.attendingDoctorRole || currentUser?.role) === 'pasante' ? (initialNote?.supervisorDoctorTitle || supervisorDoctor?.title) : undefined,
-      supervisorDoctorLicense: (initialNote?.attendingDoctorRole || currentUser?.role) === 'pasante' ? (initialNote?.supervisorDoctorLicense || supervisorDoctor?.licenseNumber) : undefined,
+      attendingDoctorName: currentUser?.fullName || initialNote?.attendingDoctorName || 'Dr. Sebastián Garduño Conde',
+      attendingDoctorTitle: currentUser?.title || initialNote?.attendingDoctorTitle || 'MÉDICO PASANTE DEL SERVICIO SOCIAL (MPSS)',
+      attendingDoctorLicense: currentUser?.licenseNumber || initialNote?.attendingDoctorLicense || 'MPSS - UABC',
+      attendingDoctorRole: currentUser?.role || initialNote?.attendingDoctorRole || 'pasante',
+      supervisorDoctorName: (currentUser?.role === 'pasante' || initialNote?.attendingDoctorRole === 'pasante') ? (supervisorDoctor?.fullName || 'Dr. Carlos Donato Dueñas Prieto') : undefined,
+      supervisorDoctorTitle: (currentUser?.role === 'pasante' || initialNote?.attendingDoctorRole === 'pasante') ? (supervisorDoctor?.title || 'MÉDICO GENERAL') : undefined,
+      supervisorDoctorLicense: (currentUser?.role === 'pasante' || initialNote?.attendingDoctorRole === 'pasante') ? (supervisorDoctor?.licenseNumber || 'CED. PROF. 15504256') : undefined,
       createdAt: initialNote?.createdAt || new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
@@ -209,6 +209,8 @@ export function ClinicalNoteEditorModal({
 
     try {
       const now = new Date().toISOString();
+      const isCurrentPasante = (currentUser?.role || initialNote?.attendingDoctorRole) === 'pasante';
+
       const savedNote = await ClinicalNoteService.savePatientNote(rootDirHandle, patientFolderName, {
         id: initialNote?.id || (crypto.randomUUID ? crypto.randomUUID() : `note-${Date.now()}`),
         patientId: patient.id,
@@ -222,13 +224,13 @@ export function ClinicalNoteEditorModal({
         plan,
         labOrder,
         receipt,
-        attendingDoctorName: initialNote?.attendingDoctorName || currentUser?.fullName || 'Médico Tratante',
-        attendingDoctorTitle: initialNote?.attendingDoctorTitle || currentUser?.title || 'MÉDICO GENERAL',
-        attendingDoctorLicense: initialNote?.attendingDoctorLicense || currentUser?.licenseNumber || '',
-        attendingDoctorRole: initialNote?.attendingDoctorRole || currentUser?.role || 'titular',
-        supervisorDoctorName: (initialNote?.attendingDoctorRole || currentUser?.role) === 'pasante' ? (initialNote?.supervisorDoctorName || supervisorDoctor?.fullName) : undefined,
-        supervisorDoctorTitle: (initialNote?.attendingDoctorRole || currentUser?.role) === 'pasante' ? (initialNote?.supervisorDoctorTitle || supervisorDoctor?.title) : undefined,
-        supervisorDoctorLicense: (initialNote?.attendingDoctorRole || currentUser?.role) === 'pasante' ? (initialNote?.supervisorDoctorLicense || supervisorDoctor?.licenseNumber) : undefined,
+        attendingDoctorName: currentUser?.fullName || initialNote?.attendingDoctorName || 'Médico Tratante',
+        attendingDoctorTitle: currentUser?.title || initialNote?.attendingDoctorTitle || 'MÉDICO GENERAL',
+        attendingDoctorLicense: currentUser?.licenseNumber || initialNote?.attendingDoctorLicense || '',
+        attendingDoctorRole: currentUser?.role || initialNote?.attendingDoctorRole || 'titular',
+        supervisorDoctorName: isCurrentPasante ? (supervisorDoctor?.fullName || initialNote?.supervisorDoctorName || 'Dr. Carlos Donato Dueñas Prieto') : undefined,
+        supervisorDoctorTitle: isCurrentPasante ? (supervisorDoctor?.title || initialNote?.supervisorDoctorTitle || 'MÉDICO GENERAL') : undefined,
+        supervisorDoctorLicense: isCurrentPasante ? (supervisorDoctor?.licenseNumber || initialNote?.supervisorDoctorLicense || 'CED. PROF. 15504256') : undefined,
         createdAt: initialNote?.createdAt || now,
         updatedAt: now,
       });

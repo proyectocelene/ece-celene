@@ -63,7 +63,11 @@ export function MedicalCertificateModal({
   const age = PatientService.calculateAge(patient.demographics.birthDate);
   const bmiCalc = ClinicalNoteService.calculateBMI(vitals.weightKg, vitals.heightCm);
 
-  const isPasante = currentUser?.role === 'pasante';
+  const isPasante =
+    currentUser?.role === 'pasante' ||
+    latestNote?.attendingDoctorRole === 'pasante' ||
+    latestNote?.attendingDoctorTitle?.includes('PASANTE') ||
+    currentUser?.username?.toLowerCase().includes('sebastian');
 
   const formattedGender =
     patient.demographics.gender === 'M'

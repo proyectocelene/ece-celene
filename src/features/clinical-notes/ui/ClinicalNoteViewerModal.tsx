@@ -40,7 +40,7 @@ export function ClinicalNoteViewerModal({
   patient,
   onEditNote,
 }: ClinicalNoteViewerModalProps) {
-  const { clinicConfig, logAuditAction } = useAuth();
+  const { clinicConfig, currentUser, supervisorDoctor, logAuditAction } = useAuth();
   const [viewMode, setViewMode] = useState<'prescription' | 'note'>('prescription');
   const [isLargePrint, setIsLargePrint] = useState(false);
 
@@ -64,7 +64,36 @@ export function ClinicalNoteViewerModal({
     });
   };
 
-  const isPasante = note.attendingDoctorRole === 'pasante' || note.attendingDoctorTitle?.includes('PASANTE');
+  const isPasante =
+    currentUser?.role === 'pasante' ||
+    note.attendingDoctorRole === 'pasante' ||
+    note.attendingDoctorTitle?.includes('PASANTE') ||
+    note.attendingDoctorName?.toLowerCase().includes('sebastian') ||
+    currentUser?.username?.toLowerCase().includes('sebastian');
+
+  const attendingDoctorName =
+    currentUser?.role === 'pasante'
+      ? currentUser.fullName
+      : (note.attendingDoctorName || 'Dr. Carlos Donato Dueñas Prieto');
+
+  const attendingDoctorTitle =
+    currentUser?.role === 'pasante'
+      ? currentUser.title
+      : (note.attendingDoctorTitle || 'MÉDICO GENERAL');
+
+  const attendingDoctorLicense =
+    currentUser?.role === 'pasante'
+      ? currentUser.licenseNumber
+      : (note.attendingDoctorLicense || 'CÉD. PROF. 15504256');
+
+  const supervisorDoctorName =
+    supervisorDoctor?.fullName || note.supervisorDoctorName || 'Dr. Carlos Donato Dueñas Prieto';
+
+  const supervisorDoctorTitle =
+    supervisorDoctor?.title || note.supervisorDoctorTitle || 'MÉDICO GENERAL';
+
+  const supervisorDoctorLicense =
+    supervisorDoctor?.licenseNumber || note.supervisorDoctorLicense || 'CÉD. PROF. 15504256';
 
   const formattedGender =
     patient.demographics.gender === 'M'
@@ -269,13 +298,13 @@ export function ClinicalNoteViewerModal({
               {/* Firma MPSS */}
               <div className="flex-1 text-center border-t-2 border-slate-800 pt-1.5 space-y-0.2">
                 <p className="font-bold text-slate-900 text-xs sm:text-sm">
-                  {note.attendingDoctorName || 'Dr. Sebastián Garduño Conde'}
+                  {attendingDoctorName}
                 </p>
                 <p className="text-[10px] text-slate-800 font-bold uppercase">
-                  {note.attendingDoctorTitle || 'MÉDICO PASANTE DEL SERVICIO SOCIAL (MPSS)'}
+                  {attendingDoctorTitle}
                 </p>
                 <p className="text-[10px] text-slate-700 font-mono font-medium">
-                  {note.attendingDoctorLicense || 'MATRÍCULA MPSS - UABC'}
+                  {attendingDoctorLicense}
                 </p>
                 <p className="text-[10px] text-slate-800 font-semibold">
                   UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
@@ -286,13 +315,13 @@ export function ClinicalNoteViewerModal({
               {/* Firma Supervisor */}
               <div className="flex-1 text-center border-t-2 border-slate-800 pt-1.5 space-y-0.2">
                 <p className="font-bold text-slate-900 text-xs sm:text-sm">
-                  {note.supervisorDoctorName || 'Dr. Carlos Donato Dueñas Prieto'}
+                  {supervisorDoctorName}
                 </p>
                 <p className="text-[10px] text-slate-800 font-bold uppercase">
-                  {note.supervisorDoctorTitle || 'MÉDICO GENERAL'}
+                  {supervisorDoctorTitle}
                 </p>
                 <p className="text-[10px] text-slate-700 font-mono font-bold">
-                  {note.supervisorDoctorLicense || 'CÉD. PROF. 15504256'}
+                  {supervisorDoctorLicense}
                 </p>
                 <p className="text-[10px] text-slate-800 font-semibold">
                   UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
@@ -308,13 +337,13 @@ export function ClinicalNoteViewerModal({
               </div>
               <div className="text-center w-72 border-t-2 border-slate-800 pt-1.5 space-y-0.2">
                 <p className="font-bold text-slate-900 text-xs sm:text-sm">
-                  {note.attendingDoctorName || 'Dr. Carlos Donato Dueñas Prieto'}
+                  {attendingDoctorName}
                 </p>
                 <p className="text-[10px] text-slate-800 font-bold uppercase">
-                  {note.attendingDoctorTitle || 'MÉDICO GENERAL'}
+                  {attendingDoctorTitle}
                 </p>
                 <p className="text-[10px] text-slate-700 font-mono font-bold">
-                  {note.attendingDoctorLicense || 'CÉD. PROF. 15504256'}
+                  {attendingDoctorLicense}
                 </p>
                 <p className="text-[10px] text-slate-800 font-semibold">
                   UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA

@@ -19,7 +19,7 @@ export function ServiceReceiptPrint({
   receipt,
   onClose,
 }: ServiceReceiptPrintProps) {
-  const { clinicConfig } = useAuth();
+  const { clinicConfig, currentUser } = useAuth();
 
   const activeReceipt: Receipt = receipt || note.receipt || {
     receiptFolio: `REC-${patient.id}-${Date.now().toString().slice(-4)}`,
@@ -100,7 +100,7 @@ export function ServiceReceiptPrint({
         </div>
         <div>
           <span className="text-[8px] text-slate-600 font-bold block uppercase">MÉDICO / RECEPTOR</span>
-          <span className="text-slate-900 font-bold break-words block leading-tight">{note.attendingDoctorName || 'Dr. Carlos Donato Dueñas Prieto'}</span>
+          <span className="text-slate-900 font-bold break-words block leading-tight">{currentUser?.fullName || note.attendingDoctorName || 'Dr. Carlos Donato Dueñas Prieto'}</span>
           <span className="text-slate-700 text-[9px] block">UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA</span>
         </div>
       </div>
