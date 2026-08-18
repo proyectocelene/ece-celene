@@ -22,3 +22,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Confidential Patient Data & Local Clinical Folders (HIPAA / NOM-004 / NOM-024)
+EXPEDIENTES_CELENE/
+expedientes/
+pacientes/
+notas/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.bak
+*.backup
+index_pacientes.json
+usuarios_clinica.json
+auditoria_clinica.json
+config_clinica.json
+catalogo_medicamentos.json
