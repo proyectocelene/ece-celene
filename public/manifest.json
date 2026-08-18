@@ -1,0 +1,19 @@
+{
+  "name": "Expediente Clínico Electrónico (Local-First)",
+  "short_name": "ECE Local",
+  "description": "Sistema de expediente clínico electrónico local-first que opera directamente sobre archivos físicos sincronizados con Google Drive y OneDrive.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f8fafc",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
