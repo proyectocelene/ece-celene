@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useWorkspace } from '@/app/providers/WorkspaceContext';
 import { useAuth } from '@/app/providers/AuthContext';
 import { ClinicalNoteService } from '@/entities/clinical-note/api/clinicalNoteService';
+import { NotePermissionService } from '@/entities/clinical-note/lib/notePermissionService';
 import type {
   ClinicalNote,
   VitalSigns,
@@ -229,13 +230,23 @@ export function ClinicalNoteEditorModal({
 
   const handleSave = async () => {
     if (!rootDirHandle) return;
+
+    // Validación de seguridad: 48 horas y autoría estricta
+    if (initialNote) {
+      const perm = NotePermissionService.checkEditPermission(initialNote, currentUser);
+      if (!perm.canEdit) {
+        alert(perm.reason || 'No tienes permisos para modificar esta consulta médica.');
+        return;
+      }
+    }
+
     setIsSubmitting(true);
 
     try {
       const now = new Date().toISOString();
       const isCurrentPasante = (currentUser?.role || initialNote?.attendingDoctorRole) === 'pasante';
 
-      const savedNote = await ClinicalNoteService.savePatientNote(rootDirHandle, patientFolderName, {
+      await ClinicalNoteService.savePatientNote(rootDirHandle, patientFolderName, {
         id: initialNote?.id || (crypto.randomUUID ? crypto.randomUUID() : `note-${Date.now()}`),
         patientId: patient.id,
         fileName: initialNote?.fileName,
@@ -267,8 +278,8 @@ export function ClinicalNoteEditorModal({
       await logAuditAction(
         initialNote ? 'EDITAR_NOTA_MEDICA' : 'CREAR_NOTA_MEDICA',
         initialNote
-          ? `Nota médica editada y guardada (${savedNote.fileName}) con ${diagnoses.length} diagnósticos y ${plan.prescriptions.length} prescripciones.`
-          : `Nueva nota médica guardada (${savedNote.fileName}) con ${diagnoses.length} diagnósticos y ${plan.prescriptions.length} prescripciones.`,
+          ? `Edición de consulta médica de ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id}) realizada por ${currentUser?.fullName || 'Médico'}`
+          : `Registro de nueva consulta médica para ${patient.demographics.firstName} ${patient.demographics.lastName} (${patient.id}) realizada por ${currentUser?.fullName || 'Médico'}`,
         patient.id
       );
 

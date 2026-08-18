@@ -59,9 +59,18 @@ export const AuditActionSchema = z.enum([
 
 export type AuditAction = z.infer<typeof AuditActionSchema>;
 
+export const AuditLocationSchema = z.object({
+  latitude: z.number(),
+  longitude: z.number(),
+  accuracy: z.number().optional(),
+  timestamp: z.string().optional(),
+});
+
+export type AuditLocation = z.infer<typeof AuditLocationSchema>;
+
 export const AuditLogEntrySchema = z.object({
   id: z.string(),
-  timestamp: z.string().datetime(),
+  timestamp: z.string(),
   userId: z.string(),
   username: z.string(),
   userFullName: z.string(),
@@ -69,6 +78,7 @@ export const AuditLogEntrySchema = z.object({
   action: AuditActionSchema,
   details: z.string(),
   targetPatientId: z.string().optional(),
+  location: AuditLocationSchema.optional(),
 });
 
 export type AuditLogEntry = z.infer<typeof AuditLogEntrySchema>;

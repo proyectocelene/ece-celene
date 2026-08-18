@@ -5,6 +5,7 @@ import type { Patient } from '@/entities/patient/model/schemas';
 import { ClinicalNoteService } from '@/entities/clinical-note/api/clinicalNoteService';
 import { PatientService } from '@/entities/patient/api/patientService';
 import { PrintService } from '@/shared/lib/printService';
+import { NotePermissionService } from '@/entities/clinical-note/lib/notePermissionService';
 import { MedicationSchedulePrint } from '@/features/print-templates/ui/MedicationSchedulePrint';
 import { LabOrderPrintModal } from '@/features/print-templates/ui/LabOrderPrintModal';
 import { ServiceReceiptPrint } from '@/features/print-templates/ui/ServiceReceiptPrint';
@@ -23,6 +24,7 @@ import {
   Clock,
   Eye,
   Edit3,
+  Lock,
 } from 'lucide-react';
 
 interface ClinicalNoteViewerModalProps {
@@ -443,20 +445,34 @@ export function ClinicalNoteViewerModal({
                 <span>{isLargePrint ? '✓ Macrotipo' : 'Aa+ Letra Grande'}</span>
               </button>
 
-              {onEditNote && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    onClose();
-                    onEditNote(note);
-                  }}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-xs transition-colors cursor-pointer"
-                  title="Editar los datos, diagnósticos o medicamentos de esta consulta"
-                >
-                  <Edit3 className="w-3.5 h-3.5" />
-                  <span>Editar Consulta</span>
-                </button>
-              )}
+              {onEditNote && (() => {
+                const perm = NotePermissionService.checkEditPermission(note, currentUser);
+                if (perm.canEdit) {
+                  return (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        onClose();
+                        onEditNote(note);
+                      }}
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-xs transition-colors cursor-pointer"
+                      title={`Editar los datos de esta consulta (Cierra en ${perm.hoursRemaining}h)`}
+                    >
+                      <Edit3 className="w-3.5 h-3.5" />
+                      <span>Editar Consulta ({perm.hoursRemaining}h)</span>
+                    </button>
+                  );
+                }
+                return (
+                  <span
+                    className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed select-none"
+                    title={perm.reason}
+                  >
+                    <Lock className="w-3.5 h-3.5 text-slate-400" />
+                    <span>{perm.isTimeLocked ? 'Cerrada (>48h)' : 'Solo Autor'}</span>
+                  </span>
+                );
+              })()}
 
               <Button
                 variant="primary"

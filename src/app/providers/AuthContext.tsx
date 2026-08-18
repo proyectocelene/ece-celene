@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
 import { useWorkspace } from './WorkspaceContext';
 import { AuthService } from '@/entities/auth/api/authService';
-import type { User, ClinicConfig, AuditAction, UserRole } from '@/entities/auth/model/schemas';
+import type { User, ClinicConfig, AuditAction, UserRole, AuditLocation } from '@/entities/auth/model/schemas';
+import { GeolocationService } from '@/shared/lib/geolocationService';
 
 const ACTIVE_USER_STORAGE_KEY = 'active_doctor_session_id';
 
@@ -11,6 +12,10 @@ interface AuthContextValue {
   supervisorDoctor: User | null;
   availableUsers: User[];
   isLoadingAuth: boolean;
+  currentLocation: AuditLocation | null;
+  isLocationVerified: boolean;
+  locationError: string | null;
+  verifyLocation: () => Promise<AuditLocation | null>;
   login: (username: string, password: string) => Promise<boolean>;
   logout: () => Promise<void>;
   registerDoctor: (data: {
@@ -37,6 +42,31 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [supervisorDoctor, setSupervisorDoctor] = useState<User | null>(null);
   const [availableUsers, setAvailableUsers] = useState<User[]>([]);
   const [isLoadingAuth, setIsLoadingAuth] = useState(true);
+
+  // Geolocation security states
+  const [currentLocation, setCurrentLocation] = useState<AuditLocation | null>(() => GeolocationService.getLastKnownLocation());
+  const [isLocationVerified, setIsLocationVerified] = useState<boolean>(() => !!GeolocationService.getLastKnownLocation());
+  const [locationError, setLocationError] = useState<string | null>(null);
+
+  const verifyLocation = useCallback(async (): Promise<AuditLocation | null> => {
+    try {
+      setLocationError(null);
+      const loc = await GeolocationService.getCurrentLocation();
+      setCurrentLocation(loc);
+      setIsLocationVerified(true);
+      return loc;
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Error verificando la ubicación del consultorio.';
+      setLocationError(msg);
+      // No marcar como verificado si fue denegado expresamente
+      return null;
+    }
+  }, []);
+
+  // Intentar verificar ubicación al iniciar
+  useEffect(() => {
+    verifyLocation();
+  }, [verifyLocation]);
 
   const refreshUsersAndConfig = useCallback(async () => {
     if (!rootDirHandle) {
@@ -83,10 +113,27 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (!rootDirHandle) return false;
     setIsLoadingAuth(true);
     try {
+      // Re-verificar ubicación durante el inicio de sesión
+      let loc = currentLocation;
+      if (!loc) {
+        loc = await verifyLocation();
+      }
+
       const user = await AuthService.authenticate(rootDirHandle, username, password);
       if (user) {
         setCurrentUser(user);
         localStorage.setItem(ACTIVE_USER_STORAGE_KEY, user.id);
+
+        // Registrar auditoría de inicio de sesión con ubicación GPS
+        await AuthService.recordAudit(
+          rootDirHandle,
+          user,
+          'INICIO_SESION',
+          `Inicio de sesión exitoso de '${user.fullName}' desde ${loc ? `Lat: ${loc.latitude}, Lon: ${loc.longitude}` : 'Ubicación local'}`,
+          undefined,
+          loc || undefined
+        );
+
         return true;
       }
       return false;
@@ -104,7 +151,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         rootDirHandle,
         currentUser,
         'CIERRE_SESION',
-        `Cierre de sesión del usuario '${currentUser.fullName}'`
+        `Cierre de sesión del usuario '${currentUser.fullName}'`,
+        undefined,
+        currentLocation || undefined
       );
     }
     localStorage.removeItem(ACTIVE_USER_STORAGE_KEY);
@@ -144,7 +193,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const logAuditAction = async (action: AuditAction, details: string, targetPatientId?: string) => {
     if (!rootDirHandle || !currentUser) return;
     try {
-      await AuthService.recordAudit(rootDirHandle, currentUser, action, details, targetPatientId);
+      await AuthService.recordAudit(
+        rootDirHandle,
+        currentUser,
+        action,
+        details,
+        targetPatientId,
+        currentLocation || undefined
+      );
     } catch (err) {
       console.error('[AuthContext] Error registrando auditoría:', err);
     }
@@ -157,6 +213,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       supervisorDoctor,
       availableUsers,
       isLoadingAuth,
+      currentLocation,
+      isLocationVerified,
+      locationError,
+      verifyLocation,
       login,
       logout,
       registerDoctor,
@@ -171,6 +231,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       supervisorDoctor,
       availableUsers,
       isLoadingAuth,
+      currentLocation,
+      isLocationVerified,
+      locationError,
+      verifyLocation,
       refreshUsersAndConfig,
     ]
   );

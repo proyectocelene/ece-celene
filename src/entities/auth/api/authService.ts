@@ -6,6 +6,7 @@ import {
   type AuditLogFile,
   type AuditAction,
   type UserRole,
+  type AuditLocation,
   UsersFileSchema,
   ClinicConfigSchema,
   AuditLogFileSchema,
@@ -219,7 +220,8 @@ export class AuthService {
     user: User,
     action: AuditAction,
     details: string,
-    targetPatientId?: string
+    targetPatientId?: string,
+    location?: AuditLocation
   ): Promise<AuditLogEntry> {
     let auditFile: AuditLogFile;
 
@@ -255,6 +257,7 @@ export class AuthService {
       action,
       details,
       targetPatientId,
+      location,
     };
 
     const updatedLogs: AuditLogFile = {

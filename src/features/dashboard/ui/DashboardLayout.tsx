@@ -7,6 +7,7 @@ import { PatientDetailView } from '@/features/patient-management/ui/PatientDetai
 import { AuditLogModal } from '@/features/audit/ui/AuditLogModal';
 import { UserProfileModal } from '@/features/auth/ui/UserProfileModal';
 import { BackupModal } from '@/features/backup/ui/BackupModal';
+import { LocationSecurityModal } from '@/features/security/ui/LocationSecurityModal';
 import { Button, Input, Card, Badge } from '@/shared/ui';
 import {
   Folder,
@@ -24,6 +25,7 @@ import {
   UserCheck,
   Activity,
   Download,
+  MapPin,
 } from 'lucide-react';
 
 export function DashboardLayout() {
@@ -38,7 +40,7 @@ export function DashboardLayout() {
     reloadIndex,
   } = useWorkspace();
 
-  const { currentUser, clinicConfig, logout, logAuditAction } = useAuth();
+  const { currentUser, clinicConfig, logout, logAuditAction, currentLocation } = useAuth();
 
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
@@ -205,6 +207,17 @@ export function DashboardLayout() {
             >
               Auditoría
             </Button>
+
+            {/* GPS Location badge */}
+            {currentLocation && (
+              <div
+                className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800"
+                title={`Ubicación GPS: ${currentLocation.latitude}, ${currentLocation.longitude} (Precisión: ±${currentLocation.accuracy || 10}m)`}
+              >
+                <MapPin className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
+                <span>GPS Verificado</span>
+              </div>
+            )}
 
             {/* Folder indicator */}
             <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100/80 border border-slate-200/60 text-xs text-slate-600">
@@ -475,6 +488,9 @@ export function DashboardLayout() {
         isOpen={isBackupModalOpen}
         onClose={() => setIsBackupModalOpen(false)}
       />
+
+      {/* Verificación Obligatoria de Ubicación de Seguridad */}
+      <LocationSecurityModal />
     </div>
   );
 }

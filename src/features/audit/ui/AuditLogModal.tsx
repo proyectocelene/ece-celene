@@ -3,7 +3,7 @@ import { useWorkspace } from '@/app/providers/WorkspaceContext';
 import { AuthService } from '@/entities/auth/api/authService';
 import type { AuditLogEntry } from '@/entities/auth/model/schemas';
 import { Modal, Button, Badge, Input } from '@/shared/ui';
-import { ShieldCheck, Search, RefreshCw, Clock } from 'lucide-react';
+import { ShieldCheck, Search, RefreshCw, Clock, MapPin } from 'lucide-react';
 
 interface AuditLogModalProps {
   isOpen: boolean;
@@ -149,7 +149,15 @@ export function AuditLogModal({ isOpen, onClose }: AuditLogModalProps) {
                       {getActionBadge(log.action)}
                     </td>
                     <td className="py-2.5 px-4 text-slate-600">
-                      {log.details}
+                      <div>
+                        <span>{log.details}</span>
+                        {log.location && (
+                          <div className="mt-1 inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
+                            <MapPin className="w-2.5 h-2.5 text-emerald-600" />
+                            <span>GPS: {log.location.latitude}, {log.location.longitude}</span>
+                          </div>
+                        )}
+                      </div>
                     </td>
                   </tr>
                 ))}

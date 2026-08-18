@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useWorkspace } from '@/app/providers/WorkspaceContext';
+import { useAuth } from '@/app/providers/AuthContext';
 import { ClinicalNoteService } from '@/entities/clinical-note/api/clinicalNoteService';
+import { NotePermissionService } from '@/entities/clinical-note/lib/notePermissionService';
 import type { ClinicalNote } from '@/entities/clinical-note/model/schemas';
 import type { Patient } from '@/entities/patient/model/schemas';
 import { ClinicalNoteEditorModal } from './ClinicalNoteEditorModal';
@@ -15,6 +17,7 @@ import {
   ChevronRight,
   Edit3,
   Receipt,
+  Lock,
 } from 'lucide-react';
 
 interface PatientNotesTabProps {
@@ -25,6 +28,7 @@ interface PatientNotesTabProps {
 
 export function PatientNotesTab({ patient, patientFolderName, onNotesUpdated }: PatientNotesTabProps) {
   const { rootDirHandle } = useWorkspace();
+  const { currentUser } = useAuth();
   const [notes, setNotes] = useState<ClinicalNote[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isEditorOpen, setIsEditorOpen] = useState(false);
@@ -192,19 +196,35 @@ export function PatientNotesTab({ patient, patientFolderName, onNotesUpdated }: 
                       </span>
                     )}
 
-                    {/* Quick Edit Action Button */}
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleEditNote(note);
-                      }}
-                      className="p-1.5 rounded-lg text-amber-700 hover:bg-amber-50 border border-amber-200 text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
-                      title="Editar esta consulta o receta"
-                    >
-                      <Edit3 className="w-3.5 h-3.5" />
-                      <span className="hidden sm:inline">Editar</span>
-                    </button>
+                    {/* Quick Edit Action Button con bloqueo de 48h y autoría */}
+                    {(() => {
+                      const perm = NotePermissionService.checkEditPermission(note, currentUser);
+                      if (perm.canEdit) {
+                        return (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleEditNote(note);
+                            }}
+                            className="p-1.5 px-2 rounded-lg text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-300 text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer shadow-2xs"
+                            title={`Editar consulta (Cierra en ${perm.hoursRemaining}h)`}
+                          >
+                            <Edit3 className="w-3.5 h-3.5" />
+                            <span className="hidden sm:inline">Editar ({perm.hoursRemaining}h)</span>
+                          </button>
+                        );
+                      }
+                      return (
+                        <span
+                          className="p-1.5 px-2 rounded-lg bg-slate-100 text-slate-400 border border-slate-200 text-xs font-medium flex items-center gap-1 cursor-not-allowed select-none"
+                          title={perm.reason}
+                        >
+                          <Lock className="w-3 h-3 text-slate-400" />
+                          <span className="hidden sm:inline">{perm.isTimeLocked ? 'Cerrada (>48h)' : 'Solo Autor'}</span>
+                        </span>
+                      );
+                    })()}
 
                     <div className="flex items-center gap-1 text-xs font-bold text-blue-600 group-hover:translate-x-1 transition-transform">
                       <span>Ver / Imprimir</span>
