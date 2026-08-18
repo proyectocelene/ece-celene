@@ -1,0 +1,118 @@
+{
+  "id": "note-169-4",
+  "patientId": "PAC-169",
+  "fileName": "nota_2026-04-24_04.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-24T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 70.2,
+    "heightCm": 158.0,
+    "temperature": 36.5,
+    "heartRate": 70,
+    "respiratoryRate": 12
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: PA 121/69, FC 70, FR 12, Temp 36.5, Peso 70.2, Talla 158. Diagnóstico: PB MASTITIS NO PUERPERAL.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Mastitis no puerperal.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Gabapentina 1 cápsula vía oral cada 24 horas (por la noche) antes de dormir. Puede causar un poco de sueño, por eso se indica por la noche.; Naproxeno 1 tableta vía oral cada 12 horas durante 5 días. Utilizar ÚNICAMENTE en caso de presentar dolor o inflamación en el seno. Si no hay dolor, omitir la toma. Tomar con alimentos.; Paracetamol 2 tabletas juntas (1 g) vía oral cada 8 horas durante 5 días. Medicamento de base para el control del dolor general.; Tramadol 1 tableta vía oral cada 8 a 12 horas SOLO en caso de crisis de dolor muy intenso que no ceda con el Paracetamol ni el Naproxeno. Puede causar mareo o náuseas. Suspender inmediatamente si el dolor cede.",
+    "nonPharmacological": "El objetivo de esta dieta es disminuir la inflamación de los tejidos de tu pecho, reducir la retención de líquidos y evitar las sustancias que estimulan la formación de quistes y aumentan el dolor (mastalgia).\n\n🚫 LO QUE DEBEMOS EVITAR O LIMITAR:\n- Cafeína y Metilxantinas: cero café, refrescos de cola, bebidas energizantes, té negro/verde y chocolate.\n- Sodio (Sal): evitar embutidos, enlatados, sopas instantáneas y botanas.\n- Grasas saturadas y trans: comida rápida, frituras, manteca y lácteos enteros.\n\n✅ LO QUE DEBEMOS AUMENTAR:\n- Fibra: verduras de hoja verde, avena, leguminosas.\n- Omega-3: salmón, atún, semillas de chía y linaza.\n- Vitamina E: almendras, nueces, aguacate, aceite de oliva y semillas de girasol.\n- Agua natural: mínimo 2 a 2.5 litros al día.\n\nEjemplo de menú de 1 día:\n☀️ Desayuno: Omelette de 2 claras y 1 huevo entero con espinacas y champiñones, 1 rebanada de pan integral tostado con 1/3 de aguacate, 1 taza de té de manzanilla.\n🍎 Colación: 1 manzana verde, 10 almendras.\n🥗 Comida: Filete de pescado, 1/2 taza de arroz integral o quinoa, ensalada fresca.\n🍓 Colación: 1 taza de papaya o melón con 1 cucharada de semillas de chía.\n🌙 Cena: 2 tostadas horneadas con ensalada de pollo desmenuzado con yogur griego, té relajante.\n\nTips extras: Suplementación con Aceite de Onagra o Vitamina E, ejercicio ligero.",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Gabapentina",
+        "dosage": "300 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Naproxeno",
+        "dosage": "550 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Paracetamol",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Tramadol",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-169-04",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-24T12:00:00.000Z",
+  "updatedAt": "2026-04-24T12:00:00.000Z"
+}

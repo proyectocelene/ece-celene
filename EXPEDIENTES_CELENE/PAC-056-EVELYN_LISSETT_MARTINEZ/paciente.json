@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "Embarazo del primer trimestre (5.4 SDG por FUM). Riesgo laboral por exposición a químicos (manicurista). Alteraciones del sueño / Probable rinitis o SAOS leve asociado al embarazo y/o ansiedad. Esquema de vacunación incompleto.",
-    "1. Embarazo de 5.4 Semanas de Gestación por FUM. 2. Adolescente Primigesta (Embarazo en la adolescencia). 3. Riesgo Laboral por Exposición a Teratógenos Potenciales (Químicos de manicura). 4. Trastorno del sueño a clasificar (Probable rinitis gestacional o componente de ansiedad)."
+    "1. Embarazo de 5.4 Semanas de Gestación por FUM. 2. Adolescente Primigesta (Embarazo en la adolescencia). 3. Riesgo Laboral por Exposición a Teratógenos Potenciales (Químicos de manicura). 4. Trastorno del sueño a clasificar (Probable rinitis gestacional o componente de ansiedad).",
+    "Embarazo del primer trimestre (5.4 SDG por FUM). Riesgo laboral por exposición a químicos (manicurista). Alteraciones del sueño / Probable rinitis o SAOS leve asociado al embarazo y/o ansiedad. Esquema de vacunación incompleto."
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "Embarazo del primer trimestre (5.4 SDG por FUM). Riesgo laboral por exposición a químicos (manicurista). Alteraciones del sueño / Probable rinitis o SAOS leve asociado al embarazo y/o ansiedad. Esquema de vacunación incompleto.",
+      "name": "1. Embarazo de 5.4 Semanas de Gestación por FUM. 2. Adolescente Primigesta (Embarazo en la adolescencia). 3. Riesgo Laboral por Exposición a Teratógenos Potenciales (Químicos de manicura). 4. Trastorno del sueño a clasificar (Probable rinitis gestacional o componente de ansiedad).",
       "diagnosedDate": "2008",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "1. Embarazo de 5.4 Semanas de Gestación por FUM. 2. Adolescente Primigesta (Embarazo en la adolescencia). 3. Riesgo Laboral por Exposición a Teratógenos Potenciales (Químicos de manicura). 4. Trastorno del sueño a clasificar (Probable rinitis gestacional o componente de ansiedad).",
+      "name": "Embarazo del primer trimestre (5.4 SDG por FUM). Riesgo laboral por exposición a químicos (manicurista). Alteraciones del sueño / Probable rinitis o SAOS leve asociado al embarazo y/o ansiedad. Esquema de vacunación incompleto.",
       "diagnosedDate": "2008",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

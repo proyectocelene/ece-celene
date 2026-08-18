@@ -1,0 +1,168 @@
+{
+  "id": "note-123-2",
+  "patientId": "PAC-123",
+  "fileName": "nota_1972-10-04_02.json",
+  "schemaVersion": "1.0.0",
+  "date": "1972-10-04T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 77.0,
+    "heightCm": 99.0,
+    "temperature": 36.0,
+    "heartRate": 85,
+    "respiratoryRate": 12
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Síntomas vasomotores (bochornos) y alteración del estado de ánimo.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: PA 135/72, FC 85, FR 12, Temp 36°C, Peso 77 kg, Talla 99 cm. Edad 53 años.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Síndrome climatérico (Posmenopausia, 5 años de evolución), Anemia ferropénica, Dislipidemia mixta, Diabetes.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "TIBOLONA 2.5 mg; GABAPENTINA 300 mg; FUMARATO FERROSO 200 mg; ATORVASTATINA 20 mg; METFORMINA 850 mg; METRONIDAZOL 500 mg; FLUCONAZOL 150 mg; TERBINAFINA 250 mg; ESTRÓGENOS CONJUGADOS CREMA VAGINAL Iniciar con dosis baja y ajustar según respuesta clínica y tolerancia local. Indicación: Atrofia vaginal / síntomas genitourinarios de la menopausia.",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "TIBOLONA",
+        "dosage": "2.5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "GABAPENTINA",
+        "dosage": "300 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "30 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "FUMARATO FERROSO",
+        "dosage": "200 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "ATORVASTATINA",
+        "dosage": "20 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "METFORMINA",
+        "dosage": "850 mg",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "METRONIDAZOL",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "FLUCONAZOL",
+        "dosage": "150 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-8",
+        "medication": "TERBINAFINA",
+        "dosage": "250 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 meses",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-9",
+        "medication": "ESTRÓGENOS CONJUGADOS CREMA VAGINAL",
+        "dosage": "0.625 mg/g",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-123-02",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1972-10-04T12:00:00.000Z",
+  "updatedAt": "1972-10-04T12:00:00.000Z"
+}

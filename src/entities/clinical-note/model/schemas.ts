@@ -54,8 +54,9 @@ export const ObjectiveSchema = z.object({
 export const DiagnosisItemSchema = z.object({
   id: z.string().default(''),
   cie10Code: z.string().optional().default(''),
+  code: z.string().optional(),
   description: z.string().default(''),
-  type: z.enum(['presuntivo', 'definitivo']).default('presuntivo'),
+  type: z.string().optional().default('presuntivo'),
   notes: z.string().optional().default(''),
 });
 
@@ -158,13 +159,13 @@ export const ClinicalNoteSchema = z.object({
   plan: PlanSchema.optional().default({ generalPlan: '', nonPharmacological: '', warningSigns: '', followUpDate: '', prescriptions: [] }),
   labOrder: LabOrderSchema.optional(),
   receipt: ReceiptSchema.optional(),
-  attendingDoctorName: z.string().optional(),
-  attendingDoctorTitle: z.string().optional(),
-  attendingDoctorLicense: z.string().optional(),
-  attendingDoctorRole: z.string().optional(),
-  supervisorDoctorName: z.string().optional(),
-  supervisorDoctorTitle: z.string().optional(),
-  supervisorDoctorLicense: z.string().optional(),
+  attendingDoctorName: z.string().nullable().optional(),
+  attendingDoctorTitle: z.string().nullable().optional(),
+  attendingDoctorLicense: z.string().nullable().optional(),
+  attendingDoctorRole: z.string().nullable().optional(),
+  supervisorDoctorName: z.string().nullable().optional(),
+  supervisorDoctorTitle: z.string().nullable().optional(),
+  supervisorDoctorLicense: z.string().nullable().optional(),
   createdAt: z.string().optional().default(() => new Date().toISOString()),
   updatedAt: z.string().optional().default(() => new Date().toISOString()),
 });

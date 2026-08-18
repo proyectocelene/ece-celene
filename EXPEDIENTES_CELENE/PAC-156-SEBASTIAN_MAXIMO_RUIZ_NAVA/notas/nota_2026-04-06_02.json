@@ -1,0 +1,149 @@
+{
+  "id": "note-156-2",
+  "patientId": "PAC-156",
+  "fileName": "nota_2026-04-06_02.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-06T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 75.0,
+    "heightCm": 161.0,
+    "temperature": 36.5,
+    "heartRate": 70,
+    "respiratoryRate": 12,
+    "glucose": 99.0
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Balanopostitis micótica, LUTS/Hiperplasia Prostática (en estudio), Diabetes Mellitus tipo 2, Hipertensión Arterial.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Fluconazol Tomar 1 cápsula vía oral hoy mismo, y tomar la segunda cápsula en exactamente 72 horas (3 días). ESTA PASTILLA ES PARA LA INFECCIÓN POR HONGOS; Crema de Clotrimazol 1% / Dexametasona 0.04% Aplicar una capa muy fina sobre la piel afectada del glande y prepucio cada 12 horas por 10 días. ESTA CREMA AYUDA EN LA INFECCIÓN POR LOS HONGOS (Ver indicaciones de lavado).; Fenazopiridina Tomar 1 tableta vía oral cada 8 horas por 5 días para el ardor. La orina se teñirá de rojo/naranja, es normal. TOMAR PASTILLAS DESPUÉS DE REALIZARSE ESTUDIOS DE LABORATORIO; Tamsulosina Tomar 1 cápsula vía oral cada 24 horas, siempre por la noche, 30 minutos después de cenar. ESTE MEDICAMENTO ES PARA SU PRÓSTATA; Linagliptina Tomar 1 tableta vía oral al día (por la mañana), para optimizar el control de la glucosa. ESTE MEDICAMENTO ES PARA SU DIABETES / AZÚCAR; Metformina Continuar tomando 1 tableta cada 12 horas (con desayuno y cena), como lo hace habitualmente. ESTE MEDICAMENTO ES PARA SU DIABETES / AZÚCAR; Losartán Continuar tomando 1 tableta CADA 12 HORAS - DESAYUNO Y CENA. ESTE MEDICAMENTO ES PARA SU PRESIÓN",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural. Elimine por completo el consumo de azúcares, panes dulces, sodas y jugos. Tome abundantes líquidos (agua natural).",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Fluconazol",
+        "dosage": "150 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "2 dosis",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Crema de Clotrimazol 1% / Dexametasona 0.04%",
+        "dosage": "capa fina",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "10 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Fenazopiridina",
+        "dosage": "100 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Tamsulosina",
+        "dosage": "0.4 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Linagliptina",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "Metformina",
+        "dosage": "850 mg",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "Losartán",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-156-02",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-06T12:00:00.000Z",
+  "updatedAt": "2026-04-06T12:00:00.000Z"
+}

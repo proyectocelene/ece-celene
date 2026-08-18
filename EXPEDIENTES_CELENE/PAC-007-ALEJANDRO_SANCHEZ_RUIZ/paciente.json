@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "**📝 DIAGNÓSTICO**\n\nHipertensión Arterial (Presión alta).\n\nParálisis Facial Derecha (Parálisis de Bell).",
-    "1. **Hipertensión Arterial Sistémica (HAS):** Crónica, en aparente descontrol terapéutico o requiriendo optimización de tratamiento (esquema doble con Nifedipina + Amlodipino + Hidroclorotiazida).\n2. **Parálisis Facial Periférica Derecha (Parálisis de Bell):** De 1 mes de evolución. Actualmente en fase de recuperación. Presenta complicación por lagoftalmos con riesgo de queratopatía por exposición.\n3. **Prevención Secundaria de EVC:** Paciente de muy alto riesgo cardiovascular.\n4. **Dislipidemia Mixta:** En tratamiento con Atorvastatina.\n5. **Hiperplasia Prostática Benigna (HPB) (probable):** Se inicia manejo para síntomas de vaciamiento.\n6. **[Dolor Neuropático / Otro]**: En manejo con Gabapentina."
+    "1. **Hipertensión Arterial Sistémica (HAS):** Crónica, en aparente descontrol terapéutico o requiriendo optimización de tratamiento (esquema doble con Nifedipina + Amlodipino + Hidroclorotiazida).\n2. **Parálisis Facial Periférica Derecha (Parálisis de Bell):** De 1 mes de evolución. Actualmente en fase de recuperación. Presenta complicación por lagoftalmos con riesgo de queratopatía por exposición.\n3. **Prevención Secundaria de EVC:** Paciente de muy alto riesgo cardiovascular.\n4. **Dislipidemia Mixta:** En tratamiento con Atorvastatina.\n5. **Hiperplasia Prostática Benigna (HPB) (probable):** Se inicia manejo para síntomas de vaciamiento.\n6. **[Dolor Neuropático / Otro]**: En manejo con Gabapentina.",
+    "**📝 DIAGNÓSTICO**\n\nHipertensión Arterial (Presión alta).\n\nParálisis Facial Derecha (Parálisis de Bell)."
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "**📝 DIAGNÓSTICO**\n\nHipertensión Arterial (Presión alta).\n\nParálisis Facial Derecha (Parálisis de Bell).",
+      "name": "1. **Hipertensión Arterial Sistémica (HAS):** Crónica, en aparente descontrol terapéutico o requiriendo optimización de tratamiento (esquema doble con Nifedipina + Amlodipino + Hidroclorotiazida).\n2. **Parálisis Facial Periférica Derecha (Parálisis de Bell):** De 1 mes de evolución. Actualmente en fase de recuperación. Presenta complicación por lagoftalmos con riesgo de queratopatía por exposición.\n3. **Prevención Secundaria de EVC:** Paciente de muy alto riesgo cardiovascular.\n4. **Dislipidemia Mixta:** En tratamiento con Atorvastatina.\n5. **Hiperplasia Prostática Benigna (HPB) (probable):** Se inicia manejo para síntomas de vaciamiento.\n6. **[Dolor Neuropático / Otro]**: En manejo con Gabapentina.",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "1. **Hipertensión Arterial Sistémica (HAS):** Crónica, en aparente descontrol terapéutico o requiriendo optimización de tratamiento (esquema doble con Nifedipina + Amlodipino + Hidroclorotiazida).\n2. **Parálisis Facial Periférica Derecha (Parálisis de Bell):** De 1 mes de evolución. Actualmente en fase de recuperación. Presenta complicación por lagoftalmos con riesgo de queratopatía por exposición.\n3. **Prevención Secundaria de EVC:** Paciente de muy alto riesgo cardiovascular.\n4. **Dislipidemia Mixta:** En tratamiento con Atorvastatina.\n5. **Hiperplasia Prostática Benigna (HPB) (probable):** Se inicia manejo para síntomas de vaciamiento.\n6. **[Dolor Neuropático / Otro]**: En manejo con Gabapentina.",
+      "name": "**📝 DIAGNÓSTICO**\n\nHipertensión Arterial (Presión alta).\n\nParálisis Facial Derecha (Parálisis de Bell).",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

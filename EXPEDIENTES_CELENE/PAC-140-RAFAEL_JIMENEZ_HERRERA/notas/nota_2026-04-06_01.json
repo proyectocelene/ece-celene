@@ -1,0 +1,120 @@
+{
+  "id": "note-140-1",
+  "patientId": "PAC-140",
+  "fileName": "nota_2026-04-06_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-06T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 64.4,
+    "heightCm": 1.7,
+    "temperature": 36.5,
+    "heartRate": 92,
+    "respiratoryRate": 12,
+    "glucose": 149.0,
+    "oxygenSaturation": 99
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Motivo de envío: Valoración y manejo psicoterapéutico por Trastorno por Consumo de Sustancias (Fase de abstinencia aguda) y Trastorno de Estrés Postraumático (TEPT). Resumen Clínico (Anamnesis): Se trata de paciente masculino que acude a consulta de primer nivel por voluntad propia solicitando apoyo para el cese de consumo de metanfetamina (cristal). Patrón de consumo: Vía inhalada y fumada. 1 globo cada 3 días. Evolución de 6 años. Cuenta con periodos previos de abstinencia (10 años, 6 meses, 15 días). Último consumo: Hace 24 hrs. Gatillos identificados: Ansiedad, desesperación y estrés derivado de situación socioeconómica actual (desempleo). Antecedentes Psiquiátricos y Trauma (¡IMPORTANTE!): El paciente cursa con ideación paranoide y delirios de persecución secundarios al consumo/abstinencia. Presenta antecedentes de trauma severo por violencia física, tortura y violencia psicológica (trato denigrante, humillación) sufridos por parte de autoridades e institucionalización previa en centro de rehabilitación tipo 'anexo'. Por este motivo, se solicita manejo estrictamente ambulatorio, ya que el paciente tiene terror a la institucionalización y cuenta con una red de apoyo familiar estable, segura y libre de consumo (esposa, hija, nieta). Tratamiento Actual: Se inició esquema de puenteo farmacológico con Olanzapina 5 mg (1 cada 24 hrs, noche) y Pregabalina 75 mg (1 cada 24 hrs, noche) para control de agitación, ideación paranoide y descarga adrenérgica, con buena tolerancia previa referida por el paciente.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: Presión Arterial 135/76, FC 92, FR 12, Temperatura 36.5°C, Peso 64.4 kg, Talla 1.70 cm, Glucosa 149, SatO2 99%.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Diagnóstico: TRASTORNO DE CONSUMO DE SUSTANCIAS. Comorbilidad: Trastorno de Estrés Postraumático (TEPT).",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Olanzapina Tomar 1 (una) tableta por vía oral cada 24 horas, por la noche, durante 30 días. (Nota: Sugerir presentación genérica para apego al tratamiento).; Pregabalina Tomar 1 (una) cápsula por vía oral cada 12 horas, por la noche, durante 30 días.; Levodropropizina Tomar 10 ml por vía oral cada 8 horas, durante 5 a 7 días.; Ibuprofeno Tomar 1 (una) tableta por vía oral cada 8 horas, únicamente en caso de presentar dolor de cabeza o malestar corporal general, durante 3 días.",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural.",
+    "warningSigns": "Queda estrictamente prohibido el uso de antigripales que contengan Fenilefrina o Pseudoefedrina.\nAcudir a valoración al centro de atención psicológica ambulatoria (UNEME-CAPA o equivalente) lo antes posible.\nCita de revaloración médica en 5 días o antes si presenta datos de alarma (dificultad para respirar, dolor en el pecho, fiebre o agitación incontrolable).\nEn caso de alguna emergencia llamar al 911 o acudir a urgencias a su brevedad.\nEn caso de crisis emocional o necesidad de orientación inmediata, comunicarse a Línea SIMISAE: 800 911 32 32 (Atención psicológica gratuita 24/7).",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Olanzapina",
+        "dosage": "10 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "30 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Pregabalina",
+        "dosage": "75 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "30 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Levodropropizina",
+        "dosage": "600 mg/100 ml",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Ibuprofeno",
+        "dosage": "400 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-140-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-06T12:00:00.000Z",
+  "updatedAt": "2026-04-06T12:00:00.000Z"
+}

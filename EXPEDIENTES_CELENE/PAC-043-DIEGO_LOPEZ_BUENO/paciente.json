@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "PROSTATITIS",
-    "Se integra el diagnóstico de **Prostatitis Aguda**. El cuadro es clásico: dolor perineal asociado a síntomas de tracto urinario inferior (almacenamiento y vaciamiento) y hallazgos positivos al tacto rectal (próstata aumentada y dolorosa). La presencia de leucocituria aséptica (nitritos negativos) en un paciente joven sexualmente activo sugiere una etiología bacteriana atípica o gram positiva, por lo que se requiere cobertura antibiótica de amplio espectro con alta penetración prostática. No hay datos actuales de retención aguda de orina ni fiebre, por lo que el manejo será ambulatorio."
+    "Se integra el diagnóstico de **Prostatitis Aguda**. El cuadro es clásico: dolor perineal asociado a síntomas de tracto urinario inferior (almacenamiento y vaciamiento) y hallazgos positivos al tacto rectal (próstata aumentada y dolorosa). La presencia de leucocituria aséptica (nitritos negativos) en un paciente joven sexualmente activo sugiere una etiología bacteriana atípica o gram positiva, por lo que se requiere cobertura antibiótica de amplio espectro con alta penetración prostática. No hay datos actuales de retención aguda de orina ni fiebre, por lo que el manejo será ambulatorio.",
+    "PROSTATITIS"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "PROSTATITIS",
+      "name": "Se integra el diagnóstico de **Prostatitis Aguda**. El cuadro es clásico: dolor perineal asociado a síntomas de tracto urinario inferior (almacenamiento y vaciamiento) y hallazgos positivos al tacto rectal (próstata aumentada y dolorosa). La presencia de leucocituria aséptica (nitritos negativos) en un paciente joven sexualmente activo sugiere una etiología bacteriana atípica o gram positiva, por lo que se requiere cobertura antibiótica de amplio espectro con alta penetración prostática. No hay datos actuales de retención aguda de orina ni fiebre, por lo que el manejo será ambulatorio.",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "Se integra el diagnóstico de **Prostatitis Aguda**. El cuadro es clásico: dolor perineal asociado a síntomas de tracto urinario inferior (almacenamiento y vaciamiento) y hallazgos positivos al tacto rectal (próstata aumentada y dolorosa). La presencia de leucocituria aséptica (nitritos negativos) en un paciente joven sexualmente activo sugiere una etiología bacteriana atípica o gram positiva, por lo que se requiere cobertura antibiótica de amplio espectro con alta penetración prostática. No hay datos actuales de retención aguda de orina ni fiebre, por lo que el manejo será ambulatorio.",
+      "name": "PROSTATITIS",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

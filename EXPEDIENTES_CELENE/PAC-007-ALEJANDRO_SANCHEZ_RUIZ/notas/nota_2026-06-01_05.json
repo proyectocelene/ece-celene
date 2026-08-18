@@ -1,0 +1,76 @@
+{
+  "id": "note-7-5",
+  "patientId": "PAC-007",
+  "fileName": "nota_2026-06-01_05.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-06-01T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta de prueba",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [],
+  "plan": {
+    "generalPlan": "",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Paracetamol 500mg",
+        "dosage": "1 tableta cada 8 horas",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "3 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-007-05",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-06-01T12:00:00.000Z",
+  "updatedAt": "2026-06-01T12:00:00.000Z"
+}

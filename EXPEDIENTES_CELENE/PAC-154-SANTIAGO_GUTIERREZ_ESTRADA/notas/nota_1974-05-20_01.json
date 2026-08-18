@@ -1,0 +1,162 @@
+{
+  "id": "note-154-1",
+  "patientId": "PAC-154",
+  "fileName": "nota_1974-05-20_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "1974-05-20T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "HIPERURICEMIA",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Losartán 50 mg Tomar 1 tableta cada 12 horas; Amlodipino 5 mg Tomar 1 tableta cada 12 horas; Atorvastatina 20 mg Tomar 1 tableta por la noche; Alopurinol 100 mg Tomar según esquema de titulación después del desayuno; Probenecid 500 mg Beber al menos 2-3 litros de agua al día para prevenir cálculos renales. Tomar con alimentos.; Metformina 850 mg Tomar 1 tableta vía oral cada 12 horas; Dicloxacilina 500 mg Tomar con el estómago vacío, 1 hora antes de las comidas, solo con agua. No suspender aunque la herida mejore.; Colchicina 1 mg Tomar con el desayuno. Es un escudo contra ataques de gota al iniciar alopurinol.; Etoricoxib 90 mg Tomar después del desayuno",
+    "nonPharmacological": "Prohibido: alcohol, carnes rojas, bebidas azucaradas/refrescos, vísceras, carnes de caza, extractos de carne. Consumo limitado (1x/semana): carnes rojas, mariscos, embutidos. Recomendado diario: agua 2.5-3 litros, lácteos bajos en grasa, cerezas, fresas, cítricos, manzana, verduras, cereales integrales, pollo sin piel, pavo, huevo (3-4x/semana). Consejos para cicatrización: Vitamina C, proteína magra, zinc. Ejemplo menú: desayuno: yogur griego con fresas y avena + café sin azúcar; comida: pechuga de pollo a la plancha con verduras al vapor y arroz; cena: queso panela asado con ensalada y té de manzanilla.",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Losartán 50 mg",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Amlodipino 5 mg",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Atorvastatina 20 mg",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Alopurinol 100 mg",
+        "dosage": "Titulación: Semanas 1-2: 100 mg cada 24h; Semanas 3-4: 200 mg cada 24h; Semana 5+: 300 mg cada 24h",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Probenecid 500 mg",
+        "dosage": "1/2 tableta (250 mg) dos veces al día primera semana, luego 1 tableta cada 12 horas",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "Metformina 850 mg",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "Dicloxacilina 500 mg",
+        "dosage": "1 cápsula",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "10 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-8",
+        "medication": "Colchicina 1 mg",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-9",
+        "medication": "Etoricoxib 90 mg",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-154-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1974-05-20T12:00:00.000Z",
+  "updatedAt": "1974-05-20T12:00:00.000Z"
+}

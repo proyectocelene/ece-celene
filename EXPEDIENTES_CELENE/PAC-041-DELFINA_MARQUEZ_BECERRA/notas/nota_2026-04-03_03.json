@@ -1,0 +1,89 @@
+{
+  "id": "note-41-3",
+  "patientId": "PAC-041",
+  "fileName": "nota_2026-04-03_03.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-03T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 84.0,
+    "heightCm": 1.56,
+    "temperature": 36.5,
+    "heartRate": 79,
+    "respiratoryRate": 12,
+    "glucose": 99.0
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente femenina de 38 años acude por dolor en seno izquierdo de 3 días de evolución. Refiere dolor tipo punzante y sensación de calor (\"pinchazos\"), intermitente de predominio vespertino/nocturno, intensidad 5/10. Niega relación con ciclo menstrual (terminó su periodo hace 1 semana). Niega secreción, tumoración percibida por ella, cambios cutáneos o traumatismos. Refiere escalofríos y fatiga que asocia a carga laboral; niega fiebre. AHF: Madre con DM e HAS. APNP: Tabaquismo (1-2 cig/semana desde los 22 años). AGO: G3 C3. Anticoncepción: OTB. Último PAP > 3 años. Mastografía: Nunca.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos Vitales: TA: 129/76 mmHg | FC: 79 lpm | FR: 12 rpm | Temp: 36.5 °C | Glucosa capilar: 99 mg/dL. Somatometría: Peso: 84 kg | Talla: 1.56 m | IMC: 34.5 kg/m² (Obesidad Grado I). Exploración Física: Consciente, orientada. Cuello con presencia de acantosis nigricans. Exploración mamaria: Mama izquierda con masa palpable en región retroareolar, dolorosa a la palpación media/profunda, sin secreción a la expresión, sin retracción de piel ni pezón. Huecos axilares sin adenopatías palpables. Mama derecha sin alteraciones aparentes.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "1. Nódulo mamario izquierdo en estudio (CIE-10: N63). 2. Obesidad Grado I (CIE-10: E66.9). 3. Sospecha de Resistencia a la Insulina clínica (acantosis nigricans). 4. Rezago en tamizaje cervicouterino.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Naproxeno solo en caso de dolor persistente",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Naproxeno",
+        "dosage": "550 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 a 5 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-041-03",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-03T12:00:00.000Z",
+  "updatedAt": "2026-04-03T12:00:00.000Z"
+}

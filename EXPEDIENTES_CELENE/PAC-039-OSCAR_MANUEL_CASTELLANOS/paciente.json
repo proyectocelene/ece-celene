@@ -29,32 +29,14 @@
   },
   "allergies": [],
   "activeConditions": [
-    "HAS",
-    "Paciente de 30 años con DM2 y dislipidemia. Actualmente asintomático, con glucosa basal de 138 mg/dL, lo cual se encuentra ligeramente por encima de las metas estrictas, pero metabólicamente estable. Se detecta la necesidad de optimizar la posología para garantizar una mayor adherencia terapéutica debido a la carga previa de tabletas. Se realiza simplificación del esquema migrando a terapia combinada (Metformina/Glimepirida) y manteniendo la inhibición de DPP-4 (Vildagliptina), optimizando también la dosis de estatina para riesgo cardiovascular. Se requiere intervención intensiva en el estilo de vida para reducción de peso.",
     "CERVICOVAGINITIS",
-    "DM2, HAS"
+    "DM2, HAS",
+    "HAS",
+    "Paciente de 30 años con DM2 y dislipidemia. Actualmente asintomático, con glucosa basal de 138 mg/dL, lo cual se encuentra ligeramente por encima de las metas estrictas, pero metabólicamente estable. Se detecta la necesidad de optimizar la posología para garantizar una mayor adherencia terapéutica debido a la carga previa de tabletas. Se realiza simplificación del esquema migrando a terapia combinada (Metformina/Glimepirida) y manteniendo la inhibición de DPP-4 (Vildagliptina), optimizando también la dosis de estatina para riesgo cardiovascular. Se requiere intervención intensiva en el estilo de vida para reducción de peso."
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "HAS",
-      "diagnosedDate": "1990",
-      "status": "Controlada",
-      "currentTreatment": "Tratamiento médico continuo",
-      "modificationsNotes": "",
-      "linkedMedications": []
-    },
-    {
-      "id": "cond-2",
-      "name": "Paciente de 30 años con DM2 y dislipidemia. Actualmente asintomático, con glucosa basal de 138 mg/dL, lo cual se encuentra ligeramente por encima de las metas estrictas, pero metabólicamente estable. Se detecta la necesidad de optimizar la posología para garantizar una mayor adherencia terapéutica debido a la carga previa de tabletas. Se realiza simplificación del esquema migrando a terapia combinada (Metformina/Glimepirida) y manteniendo la inhibición de DPP-4 (Vildagliptina), optimizando también la dosis de estatina para riesgo cardiovascular. Se requiere intervención intensiva en el estilo de vida para reducción de peso.",
-      "diagnosedDate": "1990",
-      "status": "Controlada",
-      "currentTreatment": "Tratamiento médico continuo",
-      "modificationsNotes": "",
-      "linkedMedications": []
-    },
-    {
-      "id": "cond-3",
       "name": "CERVICOVAGINITIS",
       "diagnosedDate": "1990",
       "status": "Controlada",
@@ -63,8 +45,26 @@
       "linkedMedications": []
     },
     {
-      "id": "cond-4",
+      "id": "cond-2",
       "name": "DM2, HAS",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-3",
+      "name": "HAS",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-4",
+      "name": "Paciente de 30 años con DM2 y dislipidemia. Actualmente asintomático, con glucosa basal de 138 mg/dL, lo cual se encuentra ligeramente por encima de las metas estrictas, pero metabólicamente estable. Se detecta la necesidad de optimizar la posología para garantizar una mayor adherencia terapéutica debido a la carga previa de tabletas. Se realiza simplificación del esquema migrando a terapia combinada (Metformina/Glimepirida) y manteniendo la inhibición de DPP-4 (Vildagliptina), optimizando también la dosis de estatina para riesgo cardiovascular. Se requiere intervención intensiva en el estilo de vida para reducción de peso.",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "TINEA CORPORIS",
-    "Paciente en la tercera década de la vida. Por la morfología de la lesión (placa circular, antecedente de descamación, crecimiento centrífugo) se integra diagnóstico presuntivo principal de Tinea Corporis. Se decide iniciar prueba terapéutica con antimicótico tópico de amplio espectro. Se deja esteroide tópico en reserva estricta para evitar efecto de \"tiña incógnita\" o enmascaramiento de patologías mamarias malignas (ej. Enfermedad de Paget), con plan de derivación a Dermatología ante falla terapéutica. Adicionalmente, por IMC de 18.65, se detecta necesidad de ajuste calórico para ganancia ponderal. Se aprovecha la consulta para actualización de tamizaje cervicouterino."
+    "Paciente en la tercera década de la vida. Por la morfología de la lesión (placa circular, antecedente de descamación, crecimiento centrífugo) se integra diagnóstico presuntivo principal de Tinea Corporis. Se decide iniciar prueba terapéutica con antimicótico tópico de amplio espectro. Se deja esteroide tópico en reserva estricta para evitar efecto de \"tiña incógnita\" o enmascaramiento de patologías mamarias malignas (ej. Enfermedad de Paget), con plan de derivación a Dermatología ante falla terapéutica. Adicionalmente, por IMC de 18.65, se detecta necesidad de ajuste calórico para ganancia ponderal. Se aprovecha la consulta para actualización de tamizaje cervicouterino.",
+    "TINEA CORPORIS"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "TINEA CORPORIS",
+      "name": "Paciente en la tercera década de la vida. Por la morfología de la lesión (placa circular, antecedente de descamación, crecimiento centrífugo) se integra diagnóstico presuntivo principal de Tinea Corporis. Se decide iniciar prueba terapéutica con antimicótico tópico de amplio espectro. Se deja esteroide tópico en reserva estricta para evitar efecto de \"tiña incógnita\" o enmascaramiento de patologías mamarias malignas (ej. Enfermedad de Paget), con plan de derivación a Dermatología ante falla terapéutica. Adicionalmente, por IMC de 18.65, se detecta necesidad de ajuste calórico para ganancia ponderal. Se aprovecha la consulta para actualización de tamizaje cervicouterino.",
       "diagnosedDate": "1996",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "Paciente en la tercera década de la vida. Por la morfología de la lesión (placa circular, antecedente de descamación, crecimiento centrífugo) se integra diagnóstico presuntivo principal de Tinea Corporis. Se decide iniciar prueba terapéutica con antimicótico tópico de amplio espectro. Se deja esteroide tópico en reserva estricta para evitar efecto de \"tiña incógnita\" o enmascaramiento de patologías mamarias malignas (ej. Enfermedad de Paget), con plan de derivación a Dermatología ante falla terapéutica. Adicionalmente, por IMC de 18.65, se detecta necesidad de ajuste calórico para ganancia ponderal. Se aprovecha la consulta para actualización de tamizaje cervicouterino.",
+      "name": "TINEA CORPORIS",
       "diagnosedDate": "1996",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

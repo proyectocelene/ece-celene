@@ -1,0 +1,114 @@
+{
+  "id": "note-107-1",
+  "patientId": "PAC-107",
+  "fileName": "nota_1962-08-07_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "1962-08-07T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "heartRate": 70
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "GASTROENTERITIS",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Paracetamol 500 mg Tomar en caso de dolor de cabeza o malestar.; Vida Suero Oral Prevenir deshidratación.; Butilhioscina 10 mg Si presenta cólico o dolor abdominal fuerte. Suspender al ceder el dolor.; Loperamida 2 mg Suspender cuando las evacuaciones sean sólidas.",
+    "nonPharmacological": "Dieta blanda/astringente (arroz, manzana, pera, pollo a la plancha). Evitar lácteos, irritantes, grasas y azúcares refinados.",
+    "warningSigns": "Acudir a urgencias si presenta fiebre persistente (>38.3 °C), sangre en las heces, vómito que no permite la vía oral o datos de deshidratación severa.",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Paracetamol 500 mg",
+        "dosage": "2 tabletas",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 a 5 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Vida Suero Oral",
+        "dosage": "1 sobre disuelto en 1 litro de agua, tomar 250 ml después de cada evacuación líquida",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Butilhioscina 10 mg",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Loperamida 2 mg",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "No exceder 4 tabletas en 24 horas",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-107-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1962-08-07T12:00:00.000Z",
+  "updatedAt": "1962-08-07T12:00:00.000Z"
+}

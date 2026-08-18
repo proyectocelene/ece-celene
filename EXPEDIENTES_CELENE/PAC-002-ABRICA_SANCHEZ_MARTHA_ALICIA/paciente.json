@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "DM2",
-    "1. Diabetes Mellitus tipo 2 (Descontrolada, con evidente mal apego terapéutico y riesgo por automedicación).\n2. Probable Neuropatía Diabética / Dolor crónico.\n3. Síndrome de ansiedad y sintomatología depresiva con insomnio secundario.\n4. Obesidad (clase II, según IMC registrado).\n5. Estreñimiento."
+    "1. Diabetes Mellitus tipo 2 (Descontrolada, con evidente mal apego terapéutico y riesgo por automedicación).\n2. Probable Neuropatía Diabética / Dolor crónico.\n3. Síndrome de ansiedad y sintomatología depresiva con insomnio secundario.\n4. Obesidad (clase II, según IMC registrado).\n5. Estreñimiento.",
+    "DM2"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "DM2",
+      "name": "1. Diabetes Mellitus tipo 2 (Descontrolada, con evidente mal apego terapéutico y riesgo por automedicación).\n2. Probable Neuropatía Diabética / Dolor crónico.\n3. Síndrome de ansiedad y sintomatología depresiva con insomnio secundario.\n4. Obesidad (clase II, según IMC registrado).\n5. Estreñimiento.",
       "diagnosedDate": "1968",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "1. Diabetes Mellitus tipo 2 (Descontrolada, con evidente mal apego terapéutico y riesgo por automedicación).\n2. Probable Neuropatía Diabética / Dolor crónico.\n3. Síndrome de ansiedad y sintomatología depresiva con insomnio secundario.\n4. Obesidad (clase II, según IMC registrado).\n5. Estreñimiento.",
+      "name": "DM2",
       "diagnosedDate": "1968",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

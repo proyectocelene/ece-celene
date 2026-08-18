@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "CERVICOVAGINITIS",
-    "CISTITIS AGUDA"
+    "CISTITIS AGUDA",
+    "CERVICOVAGINITIS"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "CERVICOVAGINITIS",
+      "name": "CISTITIS AGUDA",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "CISTITIS AGUDA",
+      "name": "CERVICOVAGINITIS",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

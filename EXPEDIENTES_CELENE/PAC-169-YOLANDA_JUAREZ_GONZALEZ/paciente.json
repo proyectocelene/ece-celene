@@ -30,9 +30,9 @@
   "allergies": [],
   "activeConditions": [
     "PB MASTITIS NO PUERPERAL",
-    "Mastitis no puerperal.",
     "Femenina en la cuarta década de la vida con cuadro clínico sugestivo de un proceso inflamatorio/infeccioso agudo focalizado en mama izquierda. La tríada de eritema periareolar, aumento de temperatura y red venosa prominente integra el síndrome doloroso agudo, orientando el diagnóstico topográfico y nosológico hacia una probable mastitis no puerperal (posible mastitis periductal). El dolor neuropático (\"choque eléctrico\") se asocia a la irritación de las terminaciones nerviosas intercostales por la inflamación aguda, exacerbado por el estado de hiperalgesia secundario a su antecedente de fibromialgia sin tratamiento. Es imperativo descartar colecciones abscedadas o patología maligna subyacente (carcinoma inflamatorio de mama) mediante estudios de imagen, dada la edad de la paciente y la presentación unilateral.",
-    "El cuadro clínico actual es compatible con **Mastalgia Crónica de predominio Neuropático (Neuralgia Intercostal)**, exacerbada por una **Mastopatía Fibroquística** de base y un estado de sensibilización central secundario a **Fibromialgia** no controlada. La persistencia de los \"choques eléctricos\" tras la fase aguda inflamatoria confirma que el componente principal del dolor es de origen nervioso, requiriendo un ajuste en la terapia de neuromodulación."
+    "El cuadro clínico actual es compatible con **Mastalgia Crónica de predominio Neuropático (Neuralgia Intercostal)**, exacerbada por una **Mastopatía Fibroquística** de base y un estado de sensibilización central secundario a **Fibromialgia** no controlada. La persistencia de los \"choques eléctricos\" tras la fase aguda inflamatoria confirma que el componente principal del dolor es de origen nervioso, requiriendo un ajuste en la terapia de neuromodulación.",
+    "Mastitis no puerperal."
   ],
   "chronicConditions": [
     {
@@ -46,15 +46,6 @@
     },
     {
       "id": "cond-2",
-      "name": "Mastitis no puerperal.",
-      "diagnosedDate": "1983",
-      "status": "Controlada",
-      "currentTreatment": "Tratamiento médico continuo",
-      "modificationsNotes": "",
-      "linkedMedications": []
-    },
-    {
-      "id": "cond-3",
       "name": "Femenina en la cuarta década de la vida con cuadro clínico sugestivo de un proceso inflamatorio/infeccioso agudo focalizado en mama izquierda. La tríada de eritema periareolar, aumento de temperatura y red venosa prominente integra el síndrome doloroso agudo, orientando el diagnóstico topográfico y nosológico hacia una probable mastitis no puerperal (posible mastitis periductal). El dolor neuropático (\"choque eléctrico\") se asocia a la irritación de las terminaciones nerviosas intercostales por la inflamación aguda, exacerbado por el estado de hiperalgesia secundario a su antecedente de fibromialgia sin tratamiento. Es imperativo descartar colecciones abscedadas o patología maligna subyacente (carcinoma inflamatorio de mama) mediante estudios de imagen, dada la edad de la paciente y la presentación unilateral.",
       "diagnosedDate": "1983",
       "status": "Controlada",
@@ -63,8 +54,17 @@
       "linkedMedications": []
     },
     {
-      "id": "cond-4",
+      "id": "cond-3",
       "name": "El cuadro clínico actual es compatible con **Mastalgia Crónica de predominio Neuropático (Neuralgia Intercostal)**, exacerbada por una **Mastopatía Fibroquística** de base y un estado de sensibilización central secundario a **Fibromialgia** no controlada. La persistencia de los \"choques eléctricos\" tras la fase aguda inflamatoria confirma que el componente principal del dolor es de origen nervioso, requiriendo un ajuste en la terapia de neuromodulación.",
+      "diagnosedDate": "1983",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-4",
+      "name": "Mastitis no puerperal.",
       "diagnosedDate": "1983",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "Cervicovaginitis. Obesidad.",
-    "CERVICOVAGINITIS"
+    "CERVICOVAGINITIS",
+    "Cervicovaginitis. Obesidad."
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "Cervicovaginitis. Obesidad.",
+      "name": "CERVICOVAGINITIS",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "CERVICOVAGINITIS",
+      "name": "Cervicovaginitis. Obesidad.",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

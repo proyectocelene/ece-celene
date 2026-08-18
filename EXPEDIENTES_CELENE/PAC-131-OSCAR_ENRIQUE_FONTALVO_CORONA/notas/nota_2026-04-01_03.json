@@ -1,0 +1,102 @@
+{
+  "id": "note-131-3",
+  "patientId": "PAC-131",
+  "fileName": "nota_2026-04-01_03.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-01T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente acude acompañado de sus padres refiriendo franca mejoría clínica.\n- Gastrointestinal: Refiere cese de intolerancia a la vía oral; presentó únicamente 2 episodios de vómito desde la última consulta y actualmente ya tolera dieta sólida (refiere haber ingerido filete de pescado sin complicaciones). Presentó 1 evacuación de consistencia pastosa y refiere estreñimiento intermitente. Menciona no canalizar gases de manera habitual, pero sí evacúa. Dificultad para pasar saliva (disfagia) con mejoría casi total.\n- Neurológico/Oftalmológico: Refiere mejoría significativa de la visión en ojo derecho (percibía una \"telita\"); refiere que la visión mejoró de un \"0/10\" a un \"5-6/10\".\n- Sistémico: Niega fiebre y escalofríos. Refiere estar durmiendo bien tras el inicio de Hidroxizina.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Paciente consciente, tranquilo, cooperador, con facies de mejoría y menor nivel de ansiedad aparente.\n- Signos Vitales: Estables, afebril, hemodinámicamente estable.\n- Exploración Física:\n   - Neurológico: Pupilas isocóricas y normorreflécticas. Movimientos oculares conservados. Funciones mentales superiores intactas.\n   - Cardiopulmonar: Ruidos cardíacos rítmicos, sin soplos. Campos pulmonares bien ventilados, sin disnea aparente el día de hoy.\n   - Abdomen: A la inspección sin distensión patológica. A la auscultación, ruidos peristálticos presentes y de características normales (se descarta silencio abdominal o ruidos metálicos). A la palpación, abdomen blando, depresible, con dolor a la palpación media/profunda localizado en marco cólico. Ausencia de datos de irritación peritoneal (rebote negativo).",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "La evolución clínica en las últimas 24 horas confirma un cuadro de etiología predominantemente funcional/psicosomática, descartando patología quirúrgica urgente (como suboclusión intestinal por bridas post-apendicectomía).\n1. Trastorno Somatomorfo / Trastorno de Conversión Agudo (En remisión parcial): La rápida recuperación de la visión parcial y la disfagia tras la administración de ansiolítico (Hidroxizina) + psicoterapia de apoyo / validación, confirma que los síntomas neurológicos y respiratorios eran manifestaciones somáticas de un alto nivel de estrés/ansiedad (probables estresores psicosociales en el entorno escolar/familiar).\n2. Síndrome de Intestino Irritable (Colitis Espástica) post-infecciosa/nerviosa: El cambio del dolor hacia el marco cólico, con abdomen blando y ruidos normales, sumado al antecedente de diarrea hace 1 semana, es altamente compatible con espasmo colónico secundario al estrés prolongado y a la alteración transitoria de la microbiota intestinal.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "BROMURO DE PINAVERIO Para el dolor en marco cólico y regulación del tránsito intestinal; Hidroxizina Control de la ansiedad, evitar sedación diurna; Ondansetrón En caso de náusea o vómito severo",
+    "nonPharmacological": "Dieta blanda, tipo FODMAP (libre de grasas, irritantes, picantes, lácteos enteros y cafeína) por 7 días. Comer en raciones pequeñas y frecuentes. Abundante hidratación oral.",
+    "warningSigns": "dolor abdominal incapacitante\ndistensión abdominal importante\nausencia de evacuaciones mayor a 48 hrs con vómito (sospecha de bridas)\nalteraciones del estado de alerta",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "BROMURO DE PINAVERIO",
+        "dosage": "100 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "10 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Hidroxizina",
+        "dosage": "25 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Ondansetrón",
+        "dosage": "8 mg",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-131-03",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-01T12:00:00.000Z",
+  "updatedAt": "2026-04-01T12:00:00.000Z"
+}

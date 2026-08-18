@@ -1,0 +1,172 @@
+{
+  "id": "note-33-1",
+  "patientId": "PAC-033",
+  "fileName": "nota_2025-09-06_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2025-09-06T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {},
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente refiere sensación de incontinencia, hace del baño delgado y pedacitos cortos. Refiere levantamiento de vejiga en 1996, también le quitaron matriz y ovarios. Sensación de incontinencia. Dolor abdominal inferior. Distensión abdominal intermitente.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Dolor a la palpación profunda en hipogastrio y fosas ilíacas. Antecedente de divertículos. Antecedentes de adherencias. Operada de ooforectomía e histerectomía en 1996. Edad: 75 años. Signos vitales: PA 140/70.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Diagnóstico: HAS. Además, antecedentes de divertículos, adherencias, cirugía pélvica.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "LOSARTÁN CONTROL DE PRESIÓN ARTERIAL; CLORTALIDONA DIURÉTICO PARA PRESIÓN Y EDEMA; GABAPENTINA DOLOR NEUROPÁTICO; OMEPRAZOL PROTECCIÓN GÁSTRICA; SENÓSIDOS Estreñimiento; PLANTAGO REGULAR INTESTINO; BROMURO DE PINAVERIO CÓLICOS Y DISTENSIÓN; BUTILHIOSCINA Cólico; TRIMEBUTINA REGULADOR DE MOTILIDAD INTESTINAL; PARACETAMOL ANALGESIA Y ANTITÉRMICO",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "LOSARTÁN",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "USO CRÓNICO, NO SUSPENDER",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "CLORTALIDONA",
+        "dosage": "½ tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "USO CRÓNICO, NO SUSPENDER",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "GABAPENTINA",
+        "dosage": "1 cápsula",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "SEGÚN EVOLUCIÓN",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "OMEPRAZOL",
+        "dosage": "1 cápsula",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "15 DÍAS",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "SENÓSIDOS",
+        "dosage": "2 tabletas",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "PLANTAGO",
+        "dosage": "1 sobre",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "BROMURO DE PINAVERIO",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-8",
+        "medication": "BUTILHIOSCINA",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-9",
+        "medication": "TRIMEBUTINA",
+        "dosage": "1 tableta",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-10",
+        "medication": "PARACETAMOL",
+        "dosage": "2 tabletas",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "5 DÍAS",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-033-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2025-09-06T12:00:00.000Z",
+  "updatedAt": "2025-09-06T12:00:00.000Z"
+}

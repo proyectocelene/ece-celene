@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "Balanopostitis micótica, LUTS/Hiperplasia Prostática (en estudio), Diabetes Mellitus tipo 2, Hipertensión Arterial.",
-    "1. Hipotensión ortostática / iatrogénica: El mareo es secundario a la disminución drástica de la presión arterial (125/66) frente a sus cifras habituales, provocada por el efecto sinérgico de Losartán + Amlodipino sumado al efecto vasodilatador alfabloqueador de la Tamsulosina.\n2. Diabetes Mellitus tipo 2 descontrolada: Persiste con hiperglucemia postprandial (234 mg/dL) que confirma el fracaso de la terapia oral (HbA1c previa 9.9%), haciendo imperativo el inicio de terapia con insulina basal.\n3. Alta sospecha de Cáncer de Próstata: El índice de PSA libre/total es del 11.8% (un valor <15% con PSA total >20 ng/mL es altamente sugestivo de malignidad), sumado al antecedente de IPP Grado III. Requiere biopsia prostática a la brevedad.\n4. Dislipidemia aterogénica: En tratamiento.\n5. Balanopostitis candidiásica: En remisión."
+    "1. Hipotensión ortostática / iatrogénica: El mareo es secundario a la disminución drástica de la presión arterial (125/66) frente a sus cifras habituales, provocada por el efecto sinérgico de Losartán + Amlodipino sumado al efecto vasodilatador alfabloqueador de la Tamsulosina.\n2. Diabetes Mellitus tipo 2 descontrolada: Persiste con hiperglucemia postprandial (234 mg/dL) que confirma el fracaso de la terapia oral (HbA1c previa 9.9%), haciendo imperativo el inicio de terapia con insulina basal.\n3. Alta sospecha de Cáncer de Próstata: El índice de PSA libre/total es del 11.8% (un valor <15% con PSA total >20 ng/mL es altamente sugestivo de malignidad), sumado al antecedente de IPP Grado III. Requiere biopsia prostática a la brevedad.\n4. Dislipidemia aterogénica: En tratamiento.\n5. Balanopostitis candidiásica: En remisión.",
+    "Balanopostitis micótica, LUTS/Hiperplasia Prostática (en estudio), Diabetes Mellitus tipo 2, Hipertensión Arterial."
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "Balanopostitis micótica, LUTS/Hiperplasia Prostática (en estudio), Diabetes Mellitus tipo 2, Hipertensión Arterial.",
+      "name": "1. Hipotensión ortostática / iatrogénica: El mareo es secundario a la disminución drástica de la presión arterial (125/66) frente a sus cifras habituales, provocada por el efecto sinérgico de Losartán + Amlodipino sumado al efecto vasodilatador alfabloqueador de la Tamsulosina.\n2. Diabetes Mellitus tipo 2 descontrolada: Persiste con hiperglucemia postprandial (234 mg/dL) que confirma el fracaso de la terapia oral (HbA1c previa 9.9%), haciendo imperativo el inicio de terapia con insulina basal.\n3. Alta sospecha de Cáncer de Próstata: El índice de PSA libre/total es del 11.8% (un valor <15% con PSA total >20 ng/mL es altamente sugestivo de malignidad), sumado al antecedente de IPP Grado III. Requiere biopsia prostática a la brevedad.\n4. Dislipidemia aterogénica: En tratamiento.\n5. Balanopostitis candidiásica: En remisión.",
       "diagnosedDate": "1958",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "1. Hipotensión ortostática / iatrogénica: El mareo es secundario a la disminución drástica de la presión arterial (125/66) frente a sus cifras habituales, provocada por el efecto sinérgico de Losartán + Amlodipino sumado al efecto vasodilatador alfabloqueador de la Tamsulosina.\n2. Diabetes Mellitus tipo 2 descontrolada: Persiste con hiperglucemia postprandial (234 mg/dL) que confirma el fracaso de la terapia oral (HbA1c previa 9.9%), haciendo imperativo el inicio de terapia con insulina basal.\n3. Alta sospecha de Cáncer de Próstata: El índice de PSA libre/total es del 11.8% (un valor <15% con PSA total >20 ng/mL es altamente sugestivo de malignidad), sumado al antecedente de IPP Grado III. Requiere biopsia prostática a la brevedad.\n4. Dislipidemia aterogénica: En tratamiento.\n5. Balanopostitis candidiásica: En remisión.",
+      "name": "Balanopostitis micótica, LUTS/Hiperplasia Prostática (en estudio), Diabetes Mellitus tipo 2, Hipertensión Arterial.",
       "diagnosedDate": "1958",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

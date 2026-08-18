@@ -1,0 +1,2850 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-08-18T02:07:10.361Z",
+  "totalMedications": 207,
+  "medications": [
+    {
+      "genericName": "Amoxicilina / Ácido Clavulánico 875/125 mg",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (875/125 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Tomar al inicio de los alimentos para mejorar absorción y tolerancia gastrointestinal.",
+      "price": 99
+    },
+    {
+      "genericName": "Amoxicilina / Ácido Clavulánico 500/125 mg",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (500/125 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Tomar con los alimentos.",
+      "price": 95
+    },
+    {
+      "genericName": "Amoxicilina / Ácido Clavulánico 250/62.5 mg / 5 mL",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Frasco con polvo para suspensión 60 mL",
+      "defaultDosage": "Dosis ponderal (40-50 mg/kg/día)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Agitar bien antes de usar. Mantener en refrigeración una vez preparado.",
+      "price": 64
+    },
+    {
+      "genericName": "Amoxicilina / Ácido Clavulánico 400/57 mg / 5 mL",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Frasco con suspensión 50 o 60 mL",
+      "defaultDosage": "Dosis ponderal (25-45 mg/kg/día)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar con alimentos. Conservar en refrigerador.",
+      "price": 64
+    },
+    {
+      "genericName": "Amoxicilina / Ácido Clavulánico 600/42.9 mg / 5 mL",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Frasco con polvo para suspensión 100 mL",
+      "defaultDosage": "Dosis ponderal (90 mg/kg/día para OMA recurrente)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Agitar antes de cada toma. Mantener en refrigeración.",
+      "price": 88
+    },
+    {
+      "genericName": "Amoxicilina / Ácido Clavulánico 125/31.25 mg / 5 mL",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Frasco con suspensión 60 mL",
+      "defaultDosage": "Dosis ponderal pediátrica",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Refrigerar una vez reconstituido.",
+      "price": 42
+    },
+    {
+      "genericName": "Amoxicilina / Ácido Clavulánico 200/28.5 mg / 5 mL",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Frasco con suspensión 40 o 50 mL",
+      "defaultDosage": "Dosis ponderal",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar con alimentos.",
+      "price": 33
+    },
+    {
+      "genericName": "Amoxicilina 500 mg",
+      "brandNames": [
+        "Amoxil"
+      ],
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Caja con 12 cápsulas",
+      "defaultDosage": "1 cápsula (500 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Completar el ciclo antibiótico.",
+      "price": 39
+    },
+    {
+      "genericName": "Amoxicilina 250 mg / 5 mL",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Frasco con suspensión 75 mL",
+      "defaultDosage": "Dosis ponderal (50 mg/kg/día)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Agitar antes de usar.",
+      "price": 34
+    },
+    {
+      "genericName": "Amoxicilina 500 mg / 5 mL",
+      "category": "Antibióticos / Penicilinas",
+      "defaultPresentation": "Frasco con suspensión 75 mL",
+      "defaultDosage": "Dosis ponderal (50-90 mg/kg/día)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar con o sin alimentos.",
+      "price": 42
+    },
+    {
+      "genericName": "Amoxicilina / Bromhexina 500/8 mg",
+      "category": "Antibióticos / Mucolíticos",
+      "defaultPresentation": "Caja con 12 cápsulas",
+      "defaultDosage": "1 cápsula",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Abundantes líquidos durante el tratamiento.",
+      "price": 36
+    },
+    {
+      "genericName": "Amoxicilina / Bromhexina 250/8 mg / 5 mL",
+      "category": "Antibióticos / Mucolíticos",
+      "defaultPresentation": "Frasco con suspensión",
+      "defaultDosage": "Dosis ponderal",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Agitar antes de cada toma.",
+      "price": 49
+    },
+    {
+      "genericName": "Ampicilina 500 mg",
+      "brandNames": [
+        "Binotal",
+        "Pentrexyl"
+      ],
+      "category": "Antibióticos / Aminopenicilinas",
+      "defaultPresentation": "Caja con 20 cápsulas",
+      "defaultDosage": "1 cápsula (500 mg)",
+      "defaultFrequency": "Cada 6 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Tomar 1 hora antes o 2 horas después de los alimentos (en ayuno).",
+      "price": 48
+    },
+    {
+      "genericName": "Ampicilina 1 g",
+      "category": "Antibióticos / Aminopenicilinas",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (1 g)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar en ayuno con vaso lleno de agua.",
+      "price": 49
+    },
+    {
+      "genericName": "Ampicilina 1 g Inyectable",
+      "category": "Antibióticos / Aminopenicilinas",
+      "defaultPresentation": "Frasco ámpula con diluyente 5 mL",
+      "defaultDosage": "1 ámpula (1 g)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Aplicación intramuscular profunda o IV lenta.",
+      "price": 36
+    },
+    {
+      "genericName": "Ampicilina 250 mg / 5 mL",
+      "category": "Antibióticos / Aminopenicilinas",
+      "defaultPresentation": "Frasco con suspensión 90 mL",
+      "defaultDosage": "Dosis ponderal (50-100 mg/kg/día)",
+      "defaultFrequency": "Cada 6 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar con estómago vacío.",
+      "price": 44
+    },
+    {
+      "genericName": "Ampicilina / Metamizol / Guaifenesina / Clorfenamina Adulto",
+      "brandNames": [
+        "Tribedoce Compuesto Antigripal Inyectable"
+      ],
+      "category": "Antibióticos / Antigripales Inyectables",
+      "defaultPresentation": "Caja con 3 ampolletas",
+      "defaultDosage": "1 ampolleta",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Aplicar intramuscular profunda en glúteo.",
+      "price": 94
+    },
+    {
+      "genericName": "Ampicilina / Metamizol / Guaifenesina / Clorfenamina Infantil",
+      "category": "Antibióticos / Antigripales Inyectables",
+      "defaultPresentation": "Caja con 3 ampolletas",
+      "defaultDosage": "1 ampolleta infantil",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Aplicación intramuscular según peso.",
+      "price": 88
+    },
+    {
+      "genericName": "Bencilpenicilina Procaínica / Cristalina 800,000 UI",
+      "brandNames": [
+        "Penprocilina",
+        "Penafril"
+      ],
+      "category": "Antibióticos / Penicilinas Inyectables",
+      "defaultPresentation": "Frasco ámpula con diluyente 2 mL",
+      "defaultDosage": "1 ampolleta (800,000 UI)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Aplicar exclusivamente vía intramuscular profunda. Realizar prueba de alergia previa si es necesario.",
+      "price": 25
+    },
+    {
+      "genericName": "Bencilpenicilina Procaínica / Cristalina 400,000 UI",
+      "category": "Antibióticos / Penicilinas Inyectables",
+      "defaultPresentation": "Frasco ámpula con diluyente 2 mL",
+      "defaultDosage": "1 ampolleta (400,000 UI)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Vía intramuscular en niños según peso.",
+      "price": 21
+    },
+    {
+      "genericName": "Bencilpenicilina Benzatínica 1,200,000 UI",
+      "brandNames": [
+        "Benzetacil"
+      ],
+      "category": "Antibióticos / Penicilinas de Depósito",
+      "defaultPresentation": "Frasco ámpula con diluyente",
+      "defaultDosage": "1 ampolleta (1,200,000 UI)",
+      "defaultFrequency": "Dosis única (o cada 21 días para profilaxis)",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Aplicación intramuscular profunda lenta con aguja calibre 21G.",
+      "price": 31
+    },
+    {
+      "genericName": "Ceftriaxona 1 g Inyectable",
+      "brandNames": [
+        "Rocephin",
+        "Cefaxona"
+      ],
+      "category": "Cefalosporinas (3ra Gen)",
+      "defaultPresentation": "Frasco ámpula con lidocaína diluyente 3.5 mL",
+      "defaultDosage": "1 ampolleta (1 g)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Aplicar IM profunda en región glútea.",
+      "price": 79
+    },
+    {
+      "genericName": "Ceftriaxona 500 mg Inyectable",
+      "category": "Cefalosporinas (3ra Gen)",
+      "defaultPresentation": "Frasco ámpula con diluyente",
+      "defaultDosage": "1 ampolleta (500 mg o dosis ponderal)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Uso pediátrico o ajuste renal.",
+      "price": 49
+    },
+    {
+      "genericName": "Cefotaxima 1 g Inyectable",
+      "brandNames": [
+        "Claforan"
+      ],
+      "category": "Cefalosporinas (3ra Gen)",
+      "defaultPresentation": "Frasco ámpula con diluyente 4 mL",
+      "defaultDosage": "1 ampolleta (1 g)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Aplicación IM o IV.",
+      "price": 88
+    },
+    {
+      "genericName": "Ceftazidima 1 g Inyectable",
+      "brandNames": [
+        "Fortum"
+      ],
+      "category": "Cefalosporinas (3ra Gen - Antipseudomónica)",
+      "defaultPresentation": "Frasco ámpula con diluyente",
+      "defaultDosage": "1 ampolleta (1 g)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Uso en infecciones complejas o ITU por Pseudomonas.",
+      "price": 121
+    },
+    {
+      "genericName": "Cefuroxima 500 mg",
+      "brandNames": [
+        "Zinnat",
+        "Ceftin"
+      ],
+      "category": "Cefalosporinas (2da Gen)",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Tomar inmediatamente después de las comidas.",
+      "price": 195
+    },
+    {
+      "genericName": "Cefuroxima 250 mg / 5 mL",
+      "category": "Cefalosporinas (2da Gen)",
+      "defaultPresentation": "Frasco con suspensión 50 mL",
+      "defaultDosage": "Dosis ponderal (20-30 mg/kg/día)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar con leche o alimentos.",
+      "price": 139
+    },
+    {
+      "genericName": "Cefaclor 500 mg",
+      "brandNames": [
+        "Ceclor"
+      ],
+      "category": "Cefalosporinas (2da Gen)",
+      "defaultPresentation": "Caja con 15 cápsulas",
+      "defaultDosage": "1 cápsula (500 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Tomar con o sin alimentos.",
+      "price": 274
+    },
+    {
+      "genericName": "Cefaclor 250 mg / 5 mL",
+      "category": "Cefalosporinas (2da Gen)",
+      "defaultPresentation": "Frasco con suspensión 75 mL",
+      "defaultDosage": "Dosis ponderal (20-40 mg/kg/día)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Agitar antes de usar.",
+      "price": 129
+    },
+    {
+      "genericName": "Cefalexina 500 mg",
+      "brandNames": [
+        "Keflex"
+      ],
+      "category": "Cefalosporinas (1ra Gen)",
+      "defaultPresentation": "Caja con 20 cápsulas",
+      "defaultDosage": "1 cápsula (500 mg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Excelente para infecciones de piel y tejidos blandos.",
+      "price": 84
+    },
+    {
+      "genericName": "Cefalexina 250 mg / 5 mL",
+      "category": "Cefalosporinas (1ra Gen)",
+      "defaultPresentation": "Frasco con suspensión 100 mL",
+      "defaultDosage": "Dosis ponderal (25-50 mg/kg/día)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Mantener en refrigeración.",
+      "price": 74
+    },
+    {
+      "genericName": "Cefalexina / Bromhexina 500/8.7 mg",
+      "category": "Cefalosporinas / Mucolíticos",
+      "defaultPresentation": "Caja con 12 cápsulas",
+      "defaultDosage": "1 cápsula",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar con abundante agua.",
+      "price": 72
+    },
+    {
+      "genericName": "Cefixima 400 mg",
+      "brandNames": [
+        "Denvar"
+      ],
+      "category": "Cefalosporinas (3ra Gen Oral)",
+      "defaultPresentation": "Caja con 3 o 5 cápsulas",
+      "defaultDosage": "1 cápsula (400 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Comodidad posológica en toma única diaria.",
+      "price": 149
+    },
+    {
+      "genericName": "Cefixima 100 mg / 5 mL",
+      "category": "Cefalosporinas (3ra Gen Oral)",
+      "defaultPresentation": "Frasco con suspensión 50 mL",
+      "defaultDosage": "Dosis ponderal (8 mg/kg/día)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Agitar bien antes de dosificar.",
+      "price": 149
+    },
+    {
+      "genericName": "Dicloxacilina 500 mg",
+      "brandNames": [
+        "Brispen",
+        "Posipen"
+      ],
+      "category": "Antibióticos / Anti-estafilocócicos",
+      "defaultPresentation": "Caja con 12 o 20 cápsulas",
+      "defaultDosage": "1 cápsula (500 mg)",
+      "defaultFrequency": "Cada 6 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Tomar 1 hora antes o 2 horas después de comer (estómago vacío).",
+      "price": 43
+    },
+    {
+      "genericName": "Dicloxacilina 250 mg / 5 mL",
+      "category": "Antibióticos / Anti-estafilocócicos",
+      "defaultPresentation": "Frasco con suspensión 60 mL",
+      "defaultDosage": "Dosis ponderal (25-50 mg/kg/día)",
+      "defaultFrequency": "Cada 6 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar en ayunas con agua.",
+      "price": 38
+    },
+    {
+      "genericName": "Claritromicina 500 mg",
+      "brandNames": [
+        "Klaricid",
+        "Adel"
+      ],
+      "category": "Macrólidos",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Tomar con alimentos.",
+      "price": 133
+    },
+    {
+      "genericName": "Claritromicina 250 mg / 5 mL",
+      "category": "Macrólidos",
+      "defaultPresentation": "Frasco con suspensión 60 mL",
+      "defaultDosage": "Dosis ponderal (15 mg/kg/día)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "No refrigerar la suspensión.",
+      "price": 166
+    },
+    {
+      "genericName": "Azitromicina 500 mg",
+      "brandNames": [
+        "Azitrocin",
+        "Macrozit"
+      ],
+      "category": "Macrólidos / Azálidos",
+      "defaultPresentation": "Caja con 3 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Tomar 1 hora antes o 2 horas después de los alimentos.",
+      "price": 110
+    },
+    {
+      "genericName": "Azitromicina 200 mg / 5 mL",
+      "category": "Macrólidos / Azálidos",
+      "defaultPresentation": "Frasco con suspensión 15 o 30 mL",
+      "defaultDosage": "Dosis ponderal (10 mg/kg/día)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Tomar a la misma hora durante 3 días.",
+      "price": 104
+    },
+    {
+      "genericName": "Eritromicina 500 mg",
+      "brandNames": [
+        "Pantomicina",
+        "Ilosone"
+      ],
+      "category": "Macrólidos",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 6 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Tomar con las comidas para reducir molestias gástricas.",
+      "price": 62
+    },
+    {
+      "genericName": "Ciprofloxacino 500 mg",
+      "brandNames": [
+        "Ciproflox",
+        "Cipro"
+      ],
+      "category": "Quinolonas (Fluoroquinolonas)",
+      "defaultPresentation": "Caja con 12 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Evitar tomar junto con antiácidos, leche o suplementos de calcio/hierro.",
+      "price": 84
+    },
+    {
+      "genericName": "Levofloxacino 500 mg",
+      "brandNames": [
+        "Tavanic",
+        "Elequine"
+      ],
+      "category": "Quinolonas Respiratorias",
+      "defaultPresentation": "Caja con 7 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar con abundante agua.",
+      "price": 149
+    },
+    {
+      "genericName": "Levofloxacino 750 mg",
+      "brandNames": [
+        "Elequine 750"
+      ],
+      "category": "Quinolonas Respiratorias",
+      "defaultPresentation": "Caja con 7 tabletas",
+      "defaultDosage": "1 tableta (750 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Pauta corta de alta eficacia en neumonía o sinusitis aguda.",
+      "price": 229
+    },
+    {
+      "genericName": "Moxifloxacino 400 mg",
+      "brandNames": [
+        "Avelox"
+      ],
+      "category": "Quinolonas Respiratorias",
+      "defaultPresentation": "Caja con 7 tabletas",
+      "defaultDosage": "1 tableta (400 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "No requiere ajuste renal.",
+      "price": 259
+    },
+    {
+      "genericName": "Norfloxacino 400 mg",
+      "brandNames": [
+        "Noroxin"
+      ],
+      "category": "Quinolonas Urinarias",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 tableta (400 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Tomar con estómago vacío.",
+      "price": 79
+    },
+    {
+      "genericName": "Norfloxacino / Fenazopiridina 400/100 mg",
+      "brandNames": [
+        "Mictasol",
+        "Pirifur"
+      ],
+      "category": "Antisépticos Urinarios",
+      "defaultPresentation": "Caja con 16 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Advertir que teñirá la orina de color anaranjado/rojizo.",
+      "price": 199
+    },
+    {
+      "genericName": "Clindamicina 300 mg",
+      "brandNames": [
+        "Dalacin C"
+      ],
+      "category": "Lincosamidas / Anaerobicidas",
+      "defaultPresentation": "Caja con 16 cápsulas",
+      "defaultDosage": "1 cápsula (300 mg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Tomar con un vaso grande de agua para evitar irritación esofágica.",
+      "price": 120
+    },
+    {
+      "genericName": "Clindamicina 600 mg / 4 mL Inyectable",
+      "category": "Lincosamidas",
+      "defaultPresentation": "Caja con 1 ampolleta",
+      "defaultDosage": "1 ampolleta (600 mg)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Aplicar IM profunda.",
+      "price": 47
+    },
+    {
+      "genericName": "Lincomicina 600 mg / 2 mL Inyectable",
+      "brandNames": [
+        "Lincocin"
+      ],
+      "category": "Lincosamidas",
+      "defaultPresentation": "Caja con 6 ampolletas",
+      "defaultDosage": "1 ampolleta (600 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Aplicar IM profunda en glúteo.",
+      "price": 79
+    },
+    {
+      "genericName": "Trimetoprima / Sulfametoxazol 160/800 mg (Forte)",
+      "brandNames": [
+        "Bactrim F",
+        "Septra DS"
+      ],
+      "category": "Sulfonamidas / Antifolatos",
+      "defaultPresentation": "Caja con 14 tabletas",
+      "defaultDosage": "1 tableta (160/800 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Beber abundantes líquidos. Contraindicado en alergia a sulfas.",
+      "price": 39
+    },
+    {
+      "genericName": "Trimetoprima / Sulfametoxazol 80/400 mg / 5 mL",
+      "category": "Sulfonamidas / Antifolatos",
+      "defaultPresentation": "Frasco con suspensión 120 mL",
+      "defaultDosage": "Dosis ponderal (8-10 mg/kg TMP/día)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Agitar antes de usar.",
+      "price": 31
+    },
+    {
+      "genericName": "Doxiciclina 100 mg",
+      "brandNames": [
+        "Vibramicina"
+      ],
+      "category": "Tetraciclinas",
+      "defaultPresentation": "Caja con 10 cápsulas",
+      "defaultDosage": "1 cápsula (100 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 14 días",
+      "defaultInstructions": "Tomar con abundante agua erguido (no acostarse en 30 min para evitar esofagitis).",
+      "price": 34
+    },
+    {
+      "genericName": "Minociclina 100 mg",
+      "brandNames": [
+        "Minocin"
+      ],
+      "category": "Tetraciclinas",
+      "defaultPresentation": "Caja con 10 cápsulas",
+      "defaultDosage": "1 cápsula (100 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 30 días (acné) o según indicación",
+      "defaultInstructions": "Evitar exposición solar directa durante el tratamiento.",
+      "price": 234
+    },
+    {
+      "genericName": "Amikacina 500 mg / 2 mL Inyectable",
+      "brandNames": [
+        "Amikin"
+      ],
+      "category": "Aminoglucósidos",
+      "defaultPresentation": "Caja con 1 o 2 ampolletas",
+      "defaultDosage": "1 ampolleta (500 mg o 15 mg/kg/día)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Vigilar función renal e hidratación adecuada.",
+      "price": 44
+    },
+    {
+      "genericName": "Gentamicina 160 mg / 2 mL Inyectable",
+      "brandNames": [
+        "Garamicina"
+      ],
+      "category": "Aminoglucósidos",
+      "defaultPresentation": "Caja con 1 o 5 ampolletas",
+      "defaultDosage": "1 ampolleta (160 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Aplicar intramuscular profunda.",
+      "price": 19
+    },
+    {
+      "genericName": "Gentamicina 80 mg / 2 mL Inyectable",
+      "category": "Aminoglucósidos",
+      "defaultPresentation": "Caja con 1 ampolleta",
+      "defaultDosage": "1 ampolleta (80 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Aplicar IM.",
+      "price": 18
+    },
+    {
+      "genericName": "Nitrofurantoína 100 mg",
+      "brandNames": [
+        "Macrodantina",
+        "Furadantina"
+      ],
+      "category": "Antisépticos Urinarios",
+      "defaultPresentation": "Caja con 40 cápsulas",
+      "defaultDosage": "1 cápsula (100 mg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Tomar con alimentos o leche para reducir náuseas.",
+      "price": 79
+    },
+    {
+      "genericName": "Fosfomicina Trometamol 3 g Granulado",
+      "brandNames": [
+        "Monurol"
+      ],
+      "category": "Antibióticos Urinarios",
+      "defaultPresentation": "Caja con 1 sobre granulado",
+      "defaultDosage": "1 sobre (3 g)",
+      "defaultFrequency": "Dosis única",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Disolver en medio vaso de agua y tomar por la noche antes de acostarse con la vejiga vacía.",
+      "price": 369
+    },
+    {
+      "genericName": "Ácido Nalidíxico / Fenazopiridina 500/50 mg",
+      "brandNames": [
+        "Wintomylon"
+      ],
+      "category": "Quinolonas Urinarias",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "2 tabletas",
+      "defaultFrequency": "Cada 6 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Tiñe la orina de color anaranjado.",
+      "price": 64
+    },
+    {
+      "genericName": "Metronidazol 500 mg",
+      "brandNames": [
+        "Flagyl"
+      ],
+      "category": "Antiparasitarios / Nitroimidazoles",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "NO consumir alcohol durante el tratamiento ni hasta 48h después (efecto antabús).",
+      "price": 28
+    },
+    {
+      "genericName": "Metronidazol 250 mg / 5 mL Suspensión",
+      "category": "Antiparasitarios / Nitroimidazoles",
+      "defaultPresentation": "Frasco con suspensión 120 mL",
+      "defaultDosage": "Dosis ponderal (30-50 mg/kg/día)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Tomar con alimentos.",
+      "price": 31
+    },
+    {
+      "genericName": "Metronidazol / Diyodohidroxiquinoleína 400/200 mg",
+      "brandNames": [
+        "Flagylox",
+        "Diodoquín"
+      ],
+      "category": "Antiparasitarios Mixtos",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 10 días",
+      "defaultInstructions": "Para amebiasis luminal e invasiva. Prohibido ingerir alcohol.",
+      "price": 59
+    },
+    {
+      "genericName": "Nitazoxanida 500 mg",
+      "brandNames": [
+        "Daxon",
+        "Paramix"
+      ],
+      "category": "Antiparasitarios de Amplio Espectro",
+      "defaultPresentation": "Caja con 6 o 7 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Tomar con alimentos. Puede teñir la orina de color amarillo brillante.",
+      "price": 69
+    },
+    {
+      "genericName": "Nitazoxanida 100 mg / 5 mL Suspensión",
+      "category": "Antiparasitarios Pediátricos",
+      "defaultPresentation": "Frasco con suspensión 60 mL",
+      "defaultDosage": "Dosis ponderal (7.5 mg/kg/toma)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Administrar con alimentos.",
+      "price": 69
+    },
+    {
+      "genericName": "Albendazol 200 mg",
+      "brandNames": [
+        "Zentel"
+      ],
+      "category": "Antihelmínticos",
+      "defaultPresentation": "Caja con 6 tabletas",
+      "defaultDosage": "2 tabletas (400 mg)",
+      "defaultFrequency": "Dosis única (repetir en 14 días si es oxiuriasis)",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Tomar con alimentos grasos para mejorar absorción.",
+      "price": 13
+    },
+    {
+      "genericName": "Albendazol 400 mg Suspensión",
+      "category": "Antihelmínticos Pediátricos",
+      "defaultPresentation": "Frasco con suspensión 20 mL",
+      "defaultDosage": "Todo el frasco (400 mg)",
+      "defaultFrequency": "Dosis única",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Tomar todo el contenido en una sola toma.",
+      "price": 7
+    },
+    {
+      "genericName": "Ivermectina 6 mg",
+      "brandNames": [
+        "Ivexterm",
+        "Stromectol"
+      ],
+      "category": "Antiparasitarios / Acaricidas",
+      "defaultPresentation": "Caja con 4 tabletas",
+      "defaultDosage": "Dosis ponderal (1 gota/kg o 1 tableta por cada 30 kg de peso)",
+      "defaultFrequency": "Dosis única (repetir en 7 a 14 días en escabiasis/pediculosis)",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Tomar en ayunas con vaso de agua.",
+      "price": 101
+    },
+    {
+      "genericName": "Fluconazol 150 mg",
+      "brandNames": [
+        "Diflucan",
+        "Afungil"
+      ],
+      "category": "Antimicóticos Sistémicos",
+      "defaultPresentation": "Caja con 1 cápsula",
+      "defaultDosage": "1 cápsula (150 mg)",
+      "defaultFrequency": "Dosis única",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Tratamiento de candidiasis vulvovaginal aguda.",
+      "price": 35
+    },
+    {
+      "genericName": "Fluconazol 100 mg",
+      "category": "Antimicóticos Sistémicos",
+      "defaultPresentation": "Caja con 10 cápsulas",
+      "defaultDosage": "1 cápsula (100 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 14 a 28 días",
+      "defaultInstructions": "Tomar a la misma hora.",
+      "price": 179
+    },
+    {
+      "genericName": "Fluconazol / Tinidazol 37.5/500 mg",
+      "brandNames": [
+        "Gynotran Oral"
+      ],
+      "category": "Antimicóticos / Antiprotozoarios",
+      "defaultPresentation": "Caja con 4 tabletas",
+      "defaultDosage": "4 tabletas juntos",
+      "defaultFrequency": "Dosis única",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Tomar las 4 tabletas juntas por la noche con alimentos.",
+      "price": 199
+    },
+    {
+      "genericName": "Ketoconazol 200 mg",
+      "brandNames": [
+        "Nizoral"
+      ],
+      "category": "Antimicóticos Azólicos",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (200 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 14 días",
+      "defaultInstructions": "Tomar con los alimentos.",
+      "price": 27
+    },
+    {
+      "genericName": "Itraconazol 100 mg",
+      "brandNames": [
+        "Sporanox",
+        "Isox"
+      ],
+      "category": "Antimicóticos Triazólicos",
+      "defaultPresentation": "Caja con 15 cápsulas",
+      "defaultDosage": "1 a 2 cápsulas (100-200 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 15 a 30 días",
+      "defaultInstructions": "Tomar inmediatamente después de una comida completa.",
+      "price": 110
+    },
+    {
+      "genericName": "Itraconazol / Secnidazol 33.3/166.6 mg",
+      "brandNames": [
+        "Sporasec"
+      ],
+      "category": "Antimicóticos / Antiprotozoarios",
+      "defaultPresentation": "Caja con 16 cápsulas",
+      "defaultDosage": "2 cápsulas",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Tratamiento de infecciones mixtas vaginales/pélvicas.",
+      "price": 219
+    },
+    {
+      "genericName": "Terbinafina 250 mg",
+      "brandNames": [
+        "Lamisil"
+      ],
+      "category": "Antimicóticos / Alilaminas",
+      "defaultPresentation": "Caja con 28 tabletas",
+      "defaultDosage": "1 tableta (250 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 6 a 12 semanas (según onicomicosis)",
+      "defaultInstructions": "Tomar una vez al día con agua.",
+      "price": 229
+    },
+    {
+      "genericName": "Aciclovir 400 mg",
+      "brandNames": [
+        "Zovirax",
+        "Ciclovir"
+      ],
+      "category": "Antivirales",
+      "defaultPresentation": "Caja con 35 tabletas",
+      "defaultDosage": "1 tableta (400 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Iniciar precozmente ante los primeros pródromos o vesículas.",
+      "price": 179
+    },
+    {
+      "genericName": "Aciclovir 200 mg",
+      "category": "Antivirales",
+      "defaultPresentation": "Caja con 25 tabletas",
+      "defaultDosage": "1 tableta (200 mg)",
+      "defaultFrequency": "Cada 4 a 5 horas (5 veces al día)",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Omitir la toma nocturna.",
+      "price": 75
+    },
+    {
+      "genericName": "Valaciclovir 500 mg",
+      "brandNames": [
+        "Valtrex",
+        "Rapivir"
+      ],
+      "category": "Antivirales",
+      "defaultPresentation": "Caja con 10 comprimidos",
+      "defaultDosage": "1 a 2 comprimidos (500-1000 mg)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 días",
+      "defaultInstructions": "Mayor biodisponibilidad y mejor apego posológico.",
+      "price": 209
+    },
+    {
+      "genericName": "Oseltamivir 75 mg",
+      "brandNames": [
+        "Tamiflu",
+        "Seltaferon"
+      ],
+      "category": "Antivirales / Anti-Influenza",
+      "defaultPresentation": "Caja con 10 cápsulas",
+      "defaultDosage": "1 cápsula (75 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Iniciar dentro de las primeras 48 horas de inicio de síntomas de Influenza A/B.",
+      "price": 299
+    },
+    {
+      "genericName": "Oseltamivir 6 mg / mL Suspensión",
+      "category": "Antivirales Pediátricos",
+      "defaultPresentation": "Frasco con suspensión 60 mL",
+      "defaultDosage": "Dosis ponderal (30-75 mg/dosis según peso)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Administrar con jeringa dosificadora.",
+      "price": 267
+    },
+    {
+      "genericName": "Paracetamol 500 mg",
+      "brandNames": [
+        "Tempra",
+        "Tylenol"
+      ],
+      "category": "Analgésicos y Antipiréticos",
+      "defaultPresentation": "Caja con 10 o 20 tabletas",
+      "defaultDosage": "1 a 2 tabletas (500-1000 mg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "No exceder de 4 g al día. Evitar alcohol.",
+      "price": 8
+    },
+    {
+      "genericName": "Paracetamol 650 mg / 750 mg",
+      "brandNames": [
+        "Tempra Forte"
+      ],
+      "category": "Analgésicos y Antipiréticos",
+      "defaultPresentation": "Caja con 10 o 24 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Tomar en caso de dolor o fiebre.",
+      "price": 18
+    },
+    {
+      "genericName": "Paracetamol Jarabe Infantil 3.2 g / 100 mL",
+      "brandNames": [
+        "Tempra Jarabe"
+      ],
+      "category": "Analgésicos Pediátricos",
+      "defaultPresentation": "Frasco con 120 mL",
+      "defaultDosage": "Dosis ponderal (10-15 mg/kg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Usar vaso o vasito dosificador.",
+      "price": 34
+    },
+    {
+      "genericName": "Paracetamol Gotas Pediátricas 100 mg / mL",
+      "brandNames": [
+        "Tempra Gotas"
+      ],
+      "category": "Analgésicos Pediátricos",
+      "defaultPresentation": "Frasco gotero 30 mL sabor uva",
+      "defaultDosage": "2 gotas por kg de peso",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Aplicar directamente en boca.",
+      "price": 159
+    },
+    {
+      "genericName": "Paracetamol / Cafeína 500/50 mg",
+      "brandNames": [
+        "Cafiaspirina P",
+        "Saridon"
+      ],
+      "category": "Analgésicos para Cefalea",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Potenciador analgésico para cefalea tensional.",
+      "price": 27
+    },
+    {
+      "genericName": "Paracetamol / Cafeína / Fenilefrina",
+      "brandNames": [
+        "Sedalmerck"
+      ],
+      "category": "Analgésicos / Antigripales",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Tomar con agua.",
+      "price": 52
+    },
+    {
+      "genericName": "Ibuprofeno 400 mg",
+      "brandNames": [
+        "Advil",
+        "Motrin",
+        "Actron"
+      ],
+      "category": "AINEs",
+      "defaultPresentation": "Caja con 10 cápsulas de gel",
+      "defaultDosage": "1 cápsula (400 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Tomar con o después de alimentos.",
+      "price": 21
+    },
+    {
+      "genericName": "Ibuprofeno 600 mg / 800 mg",
+      "brandNames": [
+        "Motrin Retard"
+      ],
+      "category": "AINEs",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Siempre con alimentos.",
+      "price": 34
+    },
+    {
+      "genericName": "Ibuprofeno Suspensión 2 g / 100 mL (100 mg / 5 mL)",
+      "brandNames": [
+        "Motrin Infantil",
+        "Advil Infantil"
+      ],
+      "category": "AINEs Pediátricos",
+      "defaultPresentation": "Frasco con suspensión 120 mL",
+      "defaultDosage": "Dosis ponderal (5-10 mg/kg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Agitar bien antes de usar.",
+      "price": 31
+    },
+    {
+      "genericName": "Paracetamol / Ibuprofeno 500/200 mg",
+      "brandNames": [
+        "Maxigesic",
+        "Combogesic"
+      ],
+      "category": "Analgésicos Combinados",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Efecto sinérgico para dolor moderado a severo.",
+      "price": 169
+    },
+    {
+      "genericName": "Ketorolaco 10 mg",
+      "brandNames": [
+        "Dolac"
+      ],
+      "category": "AINEs Potentes",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (10 mg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Máximo 5 días",
+      "defaultInstructions": "No prolongar más de 5 días para proteger mucosa gástrica y función renal.",
+      "price": 25
+    },
+    {
+      "genericName": "Ketorolaco 30 mg Sublingual",
+      "brandNames": [
+        "Supradol Sublingual"
+      ],
+      "category": "AINEs Potentes",
+      "defaultPresentation": "Caja con 4 tabletas sublinguales",
+      "defaultDosage": "1 tableta (30 mg)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Sublingual",
+      "defaultDuration": "Máximo 2 a 3 días",
+      "defaultInstructions": "Disolver debajo de la lengua sin masticar.",
+      "price": 53
+    },
+    {
+      "genericName": "Ketorolaco 30 mg / 1 mL Inyectable",
+      "brandNames": [
+        "Dolac Inyectable"
+      ],
+      "category": "AINEs Inyectables",
+      "defaultPresentation": "Caja con 3 ampolletas",
+      "defaultDosage": "1 ampolleta (30 mg)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Máximo 2 días",
+      "defaultInstructions": "Aplicar IM profunda.",
+      "price": 44
+    },
+    {
+      "genericName": "Ketorolaco / Tramadol 10/25 mg",
+      "brandNames": [
+        "Sinergix",
+        "Tradol Duo"
+      ],
+      "category": "Analgésicos Mixtos (Opioide + AINE)",
+      "defaultPresentation": "Caja con 10 cápsulas o tabletas sublinguales",
+      "defaultDosage": "1 cápsula o tableta sublingual",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Para dolor agudo moderado a severo (postraumático / quirúrgico).",
+      "price": 99
+    },
+    {
+      "genericName": "Diclofenaco Sódico 100 mg",
+      "brandNames": [
+        "Voltaren"
+      ],
+      "category": "AINEs",
+      "defaultPresentation": "Caja con 20 tabletas de liberación prolongada",
+      "defaultDosage": "1 tableta (100 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Tomar después de los alimentos.",
+      "price": 35
+    },
+    {
+      "genericName": "Diclofenaco Sódico 75 mg / 3 mL Inyectable",
+      "brandNames": [
+        "Voltaren Inyectable"
+      ],
+      "category": "AINEs Inyectables",
+      "defaultPresentation": "Caja con 2 ampolletas",
+      "defaultDosage": "1 ampolleta (75 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 2 días",
+      "defaultInstructions": "Aplicar IM profunda en cuadrante superior externo del glúteo.",
+      "price": 20
+    },
+    {
+      "genericName": "Diclofenaco / Vitaminas B1, B6, B12",
+      "brandNames": [
+        "Dolo-Neurobión Forte",
+        "Tribedoce Compuesto"
+      ],
+      "category": "Analgésicos / Neurotrópicos",
+      "defaultPresentation": "Caja con 30 tabletas o 6 ampolletas",
+      "defaultDosage": "1 tableta cada 8-12h o 1 ampolleta IM al día",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Ideal para lumbalgias, ciatalgias y neuropatías dolorosas.",
+      "price": 64
+    },
+    {
+      "genericName": "Naproxeno Sódico 550 mg",
+      "brandNames": [
+        "Flanax 550"
+      ],
+      "category": "AINEs",
+      "defaultPresentation": "Caja con 12 tabletas",
+      "defaultDosage": "1 tableta (550 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Tomar con alimentos.",
+      "price": 39
+    },
+    {
+      "genericName": "Naproxeno Sódico / Paracetamol 275/300 mg",
+      "brandNames": [
+        "Febrax",
+        "Dafloxen F"
+      ],
+      "category": "AINEs Combinados",
+      "defaultPresentation": "Caja con 10 o 16 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Tomar con agua después de comer.",
+      "price": 34
+    },
+    {
+      "genericName": "Meloxicam 15 mg",
+      "brandNames": [
+        "Mobicox",
+        "Exel"
+      ],
+      "category": "AINEs Preferentes COX-2",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (15 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 14 días",
+      "defaultInstructions": "Tomar una sola vez al día con la comida principal.",
+      "price": 40
+    },
+    {
+      "genericName": "Celecoxib 200 mg",
+      "brandNames": [
+        "Celebrex"
+      ],
+      "category": "Inhibidores Selectivos COX-2",
+      "defaultPresentation": "Caja con 10 o 20 cápsulas",
+      "defaultDosage": "1 cápsula (200 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 10 a 14 días",
+      "defaultInstructions": "Menor riesgo de sangrado gastrointestinal.",
+      "price": 99
+    },
+    {
+      "genericName": "Etoricoxib 90 mg",
+      "brandNames": [
+        "Arcoxia"
+      ],
+      "category": "Inhibidores Selectivos COX-2",
+      "defaultPresentation": "Caja con 28 comprimidos",
+      "defaultDosage": "1 comprimido (90 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 14 días",
+      "defaultInstructions": "Controlar presión arterial durante tratamientos prolongados.",
+      "price": 199
+    },
+    {
+      "genericName": "Etoricoxib 120 mg",
+      "brandNames": [
+        "Arcoxia 120"
+      ],
+      "category": "Inhibidores Selectivos COX-2",
+      "defaultPresentation": "Caja con 7 comprimidos",
+      "defaultDosage": "1 comprimido (120 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por un máximo de 8 días",
+      "defaultInstructions": "Indicado para ataque agudo de gota o dolor postoperatorio severo.",
+      "price": 149
+    },
+    {
+      "genericName": "Metamizol Sódico (Dipirona) 500 mg",
+      "brandNames": [
+        "Neo-Melubrina"
+      ],
+      "category": "Analgésicos y Espasmolíticos",
+      "defaultPresentation": "Caja con 10 comprimidos",
+      "defaultDosage": "1 a 2 comprimidos (500-1000 mg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Excelente antipirético y analgésico.",
+      "price": 11
+    },
+    {
+      "genericName": "Metamizol Sódico 1 g / 2 mL Inyectable",
+      "category": "Analgésicos Inyectables",
+      "defaultPresentation": "Caja con 3 ampolletas",
+      "defaultDosage": "1 ampolleta (1 g)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 2 a 3 días",
+      "defaultInstructions": "Aplicación IM profunda o infusión IV lenta.",
+      "price": 20
+    },
+    {
+      "genericName": "Clonixinato de Lisina 250 mg",
+      "brandNames": [
+        "Dorixina"
+      ],
+      "category": "Analgésicos No Narcóticos",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (250 mg)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Tomar con alimentos.",
+      "price": 45
+    },
+    {
+      "genericName": "Clonixinato de Lisina / Ciclobenzaprina 125/5 mg",
+      "brandNames": [
+        "Dorixina Relax"
+      ],
+      "category": "Analgésicos / Relajantes Musculares",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Puede ocasionar somnolencia; tomar preferentemente por la noche.",
+      "price": 249
+    },
+    {
+      "genericName": "Tramadol 50 mg",
+      "brandNames": [
+        "Tradol"
+      ],
+      "category": "Analgésicos Opioides Débiles",
+      "defaultPresentation": "Caja con 10 cápsulas",
+      "defaultDosage": "1 cápsula (50 mg)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Para dolor moderado a severo. Puede provocar mareo o náusea leve.",
+      "price": 40
+    },
+    {
+      "genericName": "Paracetamol / Tramadol 325/37.5 mg",
+      "brandNames": [
+        "Zaldiar",
+        "Patral"
+      ],
+      "category": "Analgésicos Combinados Opioides",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 a 2 tabletas",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Excelente control del dolor agudo.",
+      "price": 127
+    },
+    {
+      "genericName": "Meloxicam / Metocarbamol 15/215 mg",
+      "brandNames": [
+        "Carbacol Forte",
+        "Flexiver"
+      ],
+      "category": "AINEs / Relajantes Musculares",
+      "defaultPresentation": "Caja con 10 cápsulas",
+      "defaultDosage": "1 cápsula",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Para espasmos musculares dolorosos y contracturas.",
+      "price": 87
+    },
+    {
+      "genericName": "Metocarbamol / Paracetamol 400/350 mg",
+      "brandNames": [
+        "Robaxin Plafenix"
+      ],
+      "category": "Relajantes Musculares",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 a 2 tabletas",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Tomar con alimentos.",
+      "price": 61
+    },
+    {
+      "genericName": "Naproxeno / Carisoprodol 250/200 mg",
+      "brandNames": [
+        "Naxodol",
+        "Caridoxen"
+      ],
+      "category": "AINEs / Relajantes Musculares",
+      "defaultPresentation": "Caja con 30 cápsulas",
+      "defaultDosage": "1 cápsula",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Alivio de espasmos musculares agudos.",
+      "price": 89
+    },
+    {
+      "genericName": "Metformina 500 mg",
+      "brandNames": [
+        "Dabex",
+        "Glucophage"
+      ],
+      "category": "Antidiabéticos / Biguanidas",
+      "defaultPresentation": "Caja con 60 tabletas",
+      "defaultDosage": "1 tableta (500 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con o inmediatamente después de los alimentos.",
+      "price": 54
+    },
+    {
+      "genericName": "Metformina 850 mg",
+      "brandNames": [
+        "Dabex 850"
+      ],
+      "category": "Antidiabéticos / Biguanidas",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (850 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con el desayuno o la cena.",
+      "price": 30
+    },
+    {
+      "genericName": "Metformina 500 / 750 / 850 mg Liberación Prolongada (XR)",
+      "brandNames": [
+        "Glucophage XR",
+        "Dabex XR"
+      ],
+      "category": "Antidiabéticos / Biguanidas XR",
+      "defaultPresentation": "Caja con 30 o 60 tabletas XR",
+      "defaultDosage": "1 a 2 tabletas",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar juntas con la cena. No masticar ni triturar.",
+      "price": 69
+    },
+    {
+      "genericName": "Glibenclamida 5 mg",
+      "brandNames": [
+        "Daonil",
+        "Euglucon"
+      ],
+      "category": "Antidiabéticos / Sulfonilureas",
+      "defaultPresentation": "Caja con 50 tabletas",
+      "defaultDosage": "1 tableta (5 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar 30 minutos antes del desayuno. Vigilar hipoglucemia.",
+      "price": 16
+    },
+    {
+      "genericName": "Metformina / Glibenclamida 500/5 mg",
+      "brandNames": [
+        "Bi-Euglucon M",
+        "Glucovance"
+      ],
+      "category": "Antidiabéticos Combinados",
+      "defaultPresentation": "Caja con 60 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con las comidas principales.",
+      "price": 58
+    },
+    {
+      "genericName": "Glimepirida 2 mg / 4 mg",
+      "brandNames": [
+        "Amaryl"
+      ],
+      "category": "Antidiabéticos / Sulfonilureas",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (2-4 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar inmediatamente antes o durante el desayuno.",
+      "price": 63
+    },
+    {
+      "genericName": "Sitagliptina 100 mg",
+      "brandNames": [
+        "Januvia"
+      ],
+      "category": "Inhibidores DPP-4",
+      "defaultPresentation": "Caja con 14 o 28 comprimidos",
+      "defaultDosage": "1 comprimido (100 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar una vez al día con o sin alimentos.",
+      "price": 249
+    },
+    {
+      "genericName": "Metformina / Sitagliptina 850/50 mg",
+      "brandNames": [
+        "Janumet"
+      ],
+      "category": "Antidiabéticos Combinados",
+      "defaultPresentation": "Caja con 28 o 56 comprimidos",
+      "defaultDosage": "1 comprimido",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con los alimentos dos veces al día.",
+      "price": 289
+    },
+    {
+      "genericName": "Vildagliptina 50 mg",
+      "brandNames": [
+        "Galvus"
+      ],
+      "category": "Inhibidores DPP-4",
+      "defaultPresentation": "Caja con 28 tabletas",
+      "defaultDosage": "1 tableta (50 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar por la mañana y noche con o sin comida.",
+      "price": 129
+    },
+    {
+      "genericName": "Metformina / Vildagliptina 850/50 mg",
+      "brandNames": [
+        "Galvus Met"
+      ],
+      "category": "Antidiabéticos Combinados",
+      "defaultPresentation": "Caja con 30 o 60 comprimidos",
+      "defaultDosage": "1 comprimido",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con alimentos.",
+      "price": 399
+    },
+    {
+      "genericName": "Linagliptina 5 mg",
+      "brandNames": [
+        "Trajenta"
+      ],
+      "category": "Inhibidores DPP-4 (Seguro Renal)",
+      "defaultPresentation": "Caja con 10 o 30 tabletas",
+      "defaultDosage": "1 tableta (5 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "No requiere ajuste por función renal o hepática.",
+      "price": 448
+    },
+    {
+      "genericName": "Dapagliflozina 10 mg",
+      "brandNames": [
+        "Forxiga"
+      ],
+      "category": "Inhibidores SGLT-2",
+      "defaultPresentation": "Caja con 28 tabletas",
+      "defaultDosage": "1 tableta (10 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar por la mañana. Protección cardiorrenal comprobada. Beber agua suficiente.",
+      "price": 799
+    },
+    {
+      "genericName": "Dapagliflozina / Metformina 10/1000 mg XR",
+      "brandNames": [
+        "Xigduo XR"
+      ],
+      "category": "Antidiabéticos Combinados SGLT2",
+      "defaultPresentation": "Caja con 28 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar por la noche con la cena.",
+      "price": 1399
+    },
+    {
+      "genericName": "Empagliflozina 25 mg",
+      "brandNames": [
+        "Jardianz"
+      ],
+      "category": "Inhibidores SGLT-2",
+      "defaultPresentation": "Caja con 10 o 30 tabletas",
+      "defaultDosage": "1 tableta (25 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Protección cardiovascular y renal.",
+      "price": 429
+    },
+    {
+      "genericName": "Semaglutida Oral 3 mg / 7 mg",
+      "brandNames": [
+        "Rybelsus"
+      ],
+      "category": "Agonistas GLP-1 Orales",
+      "defaultPresentation": "Caja con 10 o 30 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar en AYUNO ESTRICTO con medio vaso de agua natural. Esperar 30 minutos antes de comer o beber.",
+      "price": 879
+    },
+    {
+      "genericName": "Losartán Potásico 50 mg",
+      "brandNames": [
+        "Cozaar"
+      ],
+      "category": "Antihipertensivos / ARA-II",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (50 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar a la misma hora todos los días.",
+      "price": 66
+    },
+    {
+      "genericName": "Losartán / Hidroclorotiazida 50/12.5 mg",
+      "brandNames": [
+        "Hyzaar"
+      ],
+      "category": "Antihipertensivos Combinados",
+      "defaultPresentation": "Caja con 30 comprimidos",
+      "defaultDosage": "1 comprimido",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar por la mañana.",
+      "price": 129
+    },
+    {
+      "genericName": "Telmisartán 40 mg / 80 mg",
+      "brandNames": [
+        "Micardis"
+      ],
+      "category": "Antihipertensivos / ARA-II",
+      "defaultPresentation": "Caja con 14 o 28 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Vida media larga de 24 horas. Tomar por la mañana.",
+      "price": 89
+    },
+    {
+      "genericName": "Telmisartán / Hidroclorotiazida 80/12.5 mg",
+      "brandNames": [
+        "Micardis Plus"
+      ],
+      "category": "Antihipertensivos Combinados",
+      "defaultPresentation": "Caja con 14 o 28 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar por la mañana con o sin comida.",
+      "price": 133
+    },
+    {
+      "genericName": "Telmisartán / Amlodipino 80/5 mg",
+      "brandNames": [
+        "Twynsta"
+      ],
+      "category": "Antihipertensivos Combinados Duales",
+      "defaultPresentation": "Caja con 28 cápsulas",
+      "defaultDosage": "1 cápsula",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Excelente sinergia vasodilatadora y bloqueo SRAA.",
+      "price": 499
+    },
+    {
+      "genericName": "Valsartán 80 mg / 160 mg",
+      "brandNames": [
+        "Diovan"
+      ],
+      "category": "Antihipertensivos / ARA-II",
+      "defaultPresentation": "Caja con 14 o 30 comprimidos",
+      "defaultDosage": "1 comprimido",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con agua.",
+      "price": 124
+    },
+    {
+      "genericName": "Candesartán 8 mg / 16 mg",
+      "brandNames": [
+        "Atacand"
+      ],
+      "category": "Antihipertensivos / ARA-II",
+      "defaultPresentation": "Caja con 14 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar a la misma hora.",
+      "price": 209
+    },
+    {
+      "genericName": "Irbesartán 150 mg / 300 mg",
+      "brandNames": [
+        "Aprovel"
+      ],
+      "category": "Antihipertensivos / ARA-II",
+      "defaultPresentation": "Caja con 14 o 28 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Protección renal en diabetes.",
+      "price": 94
+    },
+    {
+      "genericName": "Enalapril 10 mg",
+      "brandNames": [
+        "Renitec"
+      ],
+      "category": "Antihipertensivos / IECA",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (10 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Vigilar presencia de tos seca.",
+      "price": 45
+    },
+    {
+      "genericName": "Captopril 25 mg",
+      "brandNames": [
+        "Capoten"
+      ],
+      "category": "Antihipertensivos / IECA",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (25 mg)",
+      "defaultFrequency": "Cada 8 a 12 horas (o sublingual en urgencias)",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Según indicación",
+      "defaultInstructions": "Tomar 1 hora antes de alimentos.",
+      "price": 27
+    },
+    {
+      "genericName": "Amlodipino 5 mg",
+      "brandNames": [
+        "Norvasc"
+      ],
+      "category": "Calcioantagonistas",
+      "defaultPresentation": "Caja con 10 o 30 tabletas",
+      "defaultDosage": "1 tableta (5 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Vigilar posible edema de tobillos.",
+      "price": 35
+    },
+    {
+      "genericName": "Nifedipino 30 mg Liberación Prolongada",
+      "brandNames": [
+        "Adalat CC",
+        "Adalat Oros"
+      ],
+      "category": "Calcioantagonistas",
+      "defaultPresentation": "Caja con 30 comprimidos",
+      "defaultDosage": "1 comprimido (30 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tragar entero sin masticar.",
+      "price": 78
+    },
+    {
+      "genericName": "Metoprolol 100 mg",
+      "brandNames": [
+        "Lopresor",
+        "Seloken"
+      ],
+      "category": "Betabloqueadores Cardioselectivos",
+      "defaultPresentation": "Caja con 20 o 50 tabletas",
+      "defaultDosage": "1/2 a 1 tableta (50-100 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con las comidas. No suspender abruptamente.",
+      "price": 29
+    },
+    {
+      "genericName": "Bisoprolol 2.5 mg / 5 mg",
+      "brandNames": [
+        "Concor"
+      ],
+      "category": "Betabloqueadores Cardioselectivos",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar por la mañana.",
+      "price": 110
+    },
+    {
+      "genericName": "Hidroclorotiazida 25 mg",
+      "category": "Diuréticos Tiazídicos",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1/2 a 1 tableta (12.5-25 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar por la mañana para evitar nicturia.",
+      "price": 24
+    },
+    {
+      "genericName": "Furosemida 40 mg",
+      "brandNames": [
+        "Lasix"
+      ],
+      "category": "Diuréticos de Asa",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 tableta (40 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Según indicación médica",
+      "defaultInstructions": "Tomar por la mañana. Mantener buena hidratación.",
+      "price": 13
+    },
+    {
+      "genericName": "Espironolactona 25 mg",
+      "brandNames": [
+        "Aldactone"
+      ],
+      "category": "Diuréticos Ahorradores de Potasio",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (25 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con alimentos.",
+      "price": 66
+    },
+    {
+      "genericName": "Atorvastatina 20 mg",
+      "brandNames": [
+        "Lipitor"
+      ],
+      "category": "Hipolipemiantes / Estatinas",
+      "defaultPresentation": "Caja con 10 o 30 tabletas",
+      "defaultDosage": "1 tableta (20 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar preferentemente por la noche.",
+      "price": 66
+    },
+    {
+      "genericName": "Rosuvastatina 10 mg / 20 mg",
+      "brandNames": [
+        "Crestor"
+      ],
+      "category": "Hipolipemiantes / Estatinas",
+      "defaultPresentation": "Caja con 15 o 30 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Alta potencia en reducción de LDL.",
+      "price": 132
+    },
+    {
+      "genericName": "Bezafibrato 200 mg",
+      "brandNames": [
+        "Bezalip"
+      ],
+      "category": "Fibratos (Triglicéridos)",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (200 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con o después de alimentos.",
+      "price": 59
+    },
+    {
+      "genericName": "Ácido Acetilsalicílico 100 mg (Protec)",
+      "brandNames": [
+        "Aspirina Protect"
+      ],
+      "category": "Antiagregantes Plaquetarios",
+      "defaultPresentation": "Caja con 30 comprimidos con capa entérica",
+      "defaultDosage": "1 comprimido (100 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con agua con la comida del mediodía.",
+      "price": 24
+    },
+    {
+      "genericName": "Clopidogrel 75 mg",
+      "brandNames": [
+        "Plavix"
+      ],
+      "category": "Antiagregantes Plaquetarios",
+      "defaultPresentation": "Caja con 28 tabletas",
+      "defaultDosage": "1 tableta (75 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar una vez al día con o sin alimentos.",
+      "price": 89
+    },
+    {
+      "genericName": "Diosmina / Hesperidina 450/50 mg",
+      "brandNames": [
+        "Daflon 500",
+        "Elatec"
+      ],
+      "category": "Venotónicos y Vasculoprotectores",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "2 tabletas al día (o 1 cada 12h)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 30 a 60 días",
+      "defaultInstructions": "Tomar al mediodía y noche con las comidas.",
+      "price": 173
+    },
+    {
+      "genericName": "Loratadina 10 mg",
+      "brandNames": [
+        "Clarityne"
+      ],
+      "category": "Antihistamínicos H1 (2da Gen)",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 tableta (10 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 10 días",
+      "defaultInstructions": "Tomar por la mañana. No causa sedación significativa.",
+      "price": 44
+    },
+    {
+      "genericName": "Loratadina / Betametasona 5/0.25 mg",
+      "brandNames": [
+        "Celestamine NS"
+      ],
+      "category": "Antihistamínicos con Corticoesteroide",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 días",
+      "defaultInstructions": "Alivio rápido de rinitis y dermatitis aguda alérgica.",
+      "price": 42
+    },
+    {
+      "genericName": "Cetirizina 10 mg",
+      "brandNames": [
+        "Zyrtec",
+        "Virlix"
+      ],
+      "category": "Antihistamínicos H1",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (10 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 10 días",
+      "defaultInstructions": "Tomar preferentemente por la noche.",
+      "price": 60
+    },
+    {
+      "genericName": "Levocetirizina 5 mg",
+      "brandNames": [
+        "Xuzal",
+        "Degraler"
+      ],
+      "category": "Antihistamínicos H1 (3ra Gen)",
+      "defaultPresentation": "Caja con 10 tabletas",
+      "defaultDosage": "1 tableta (5 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 7 a 14 días",
+      "defaultInstructions": "Tomar por la noche.",
+      "price": 99
+    },
+    {
+      "genericName": "Fexofenadina 120 mg / 180 mg",
+      "brandNames": [
+        "Allegra"
+      ],
+      "category": "Antihistamínicos No Sedantes",
+      "defaultPresentation": "Caja con 10 comprimidos",
+      "defaultDosage": "1 comprimido",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 10 a 14 días",
+      "defaultInstructions": "Tomar con agua. Evitar jugos cítricos al momento de la toma.",
+      "price": 129
+    },
+    {
+      "genericName": "Montelukast 10 mg",
+      "brandNames": [
+        "Singulair",
+        "Everest"
+      ],
+      "category": "Antagonistas de Leucotrienos",
+      "defaultPresentation": "Caja con 20 o 30 tabletas",
+      "defaultDosage": "1 tableta (10 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo / control",
+      "defaultInstructions": "Tomar por la noche antes de acostarse.",
+      "price": 199
+    },
+    {
+      "genericName": "Ambroxol 30 mg",
+      "brandNames": [
+        "Mucosolvan"
+      ],
+      "category": "Mucolíticos y Expectorantes",
+      "defaultPresentation": "Caja con 20 comprimidos",
+      "defaultDosage": "1 comprimido (30 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Beber abundantes líquidos.",
+      "price": 25
+    },
+    {
+      "genericName": "Salbutamol / Ipratropio para Nebulización",
+      "brandNames": [
+        "Combivent Respimat",
+        "Combivent Ampolletas"
+      ],
+      "category": "Broncodilatadores Combinados",
+      "defaultPresentation": "Caja con 10 ampolletas para nebulizar",
+      "defaultDosage": "1 ampolleta (2.5 mL)",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Inhalatoria",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Nebulizar con flujo de oxígeno de 6 a 8 L/min.",
+      "price": 154
+    },
+    {
+      "genericName": "Fluticasona Spray Nasal 27.5 mcg / 50 mcg",
+      "brandNames": [
+        "Flixonase",
+        "Avamys"
+      ],
+      "category": "Corticoesteroides Nasales",
+      "defaultPresentation": "Frasco con spray nasal 120 dosis",
+      "defaultDosage": "2 disparos en cada fosa nasal",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Inhalatoria",
+      "defaultDuration": "Por 30 días",
+      "defaultInstructions": "Sonar la nariz antes de aplicar. Inclinar la cabeza ligeramente hacia adelante.",
+      "price": 449
+    },
+    {
+      "genericName": "Mometasona Furoato Spray Nasal 50 mcg",
+      "brandNames": [
+        "Nasonex",
+        "Rinelon"
+      ],
+      "category": "Corticoesteroides Nasales",
+      "defaultPresentation": "Frasco con spray nasal 140 dosis",
+      "defaultDosage": "1 a 2 disparos en cada fosa nasal",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Inhalatoria",
+      "defaultDuration": "Por 30 días",
+      "defaultInstructions": "Aplicar diariamente por la mañana.",
+      "price": 234
+    },
+    {
+      "genericName": "Dexametasona 8 mg / 2 mL Inyectable",
+      "brandNames": [
+        "Alin"
+      ],
+      "category": "Corticoesteroides Sistémicos",
+      "defaultPresentation": "Caja con 1 ampolleta",
+      "defaultDosage": "1 ampolleta (8 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 1 a 3 días",
+      "defaultInstructions": "Aplicar IM profunda.",
+      "price": 14
+    },
+    {
+      "genericName": "Betametasona Dipropionato / Fosfato Sódico (Depósito)",
+      "brandNames": [
+        "Diprospan",
+        "Celestone Cronodose"
+      ],
+      "category": "Corticoesteroides de Depósito",
+      "defaultPresentation": "Caja con 1 jeringa prellenada o ampolleta",
+      "defaultDosage": "1 ampolleta (2 mL)",
+      "defaultFrequency": "Dosis única",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Aplicación intramuscular profunda lenta.",
+      "price": 56
+    },
+    {
+      "genericName": "Prednisona 5 mg / 20 mg / 50 mg",
+      "brandNames": [
+        "Meticorten"
+      ],
+      "category": "Corticoesteroides Orales",
+      "defaultPresentation": "Caja con 20 o 30 tabletas",
+      "defaultDosage": "Dosis según esquema médico con reducción gradual",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Según esquema de desescalamiento",
+      "defaultInstructions": "Tomar por la mañana con el desayuno.",
+      "price": 60
+    },
+    {
+      "genericName": "Omeprazol 20 mg",
+      "brandNames": [
+        "Losec",
+        "Ulsen"
+      ],
+      "category": "Inhibidores de Bomba de Protones (IBP)",
+      "defaultPresentation": "Frasco o caja con 120 cápsulas",
+      "defaultDosage": "1 cápsula (20 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 14 a 28 días",
+      "defaultInstructions": "Tomar por la mañana en ayunas 30 minutos antes del desayuno.",
+      "price": 147
+    },
+    {
+      "genericName": "Esomeprazol 40 mg",
+      "brandNames": [
+        "Nexium"
+      ],
+      "category": "Inhibidores de Bomba de Protones (IBP)",
+      "defaultPresentation": "Caja con 14 tabletas",
+      "defaultDosage": "1 tableta (40 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 14 a 28 días",
+      "defaultInstructions": "Tomar en ayunas.",
+      "price": 129
+    },
+    {
+      "genericName": "Dexlansoprazol 60 mg",
+      "brandNames": [
+        "Dexivant"
+      ],
+      "category": "Inhibidores de Bomba de Protones (Doble Liberación)",
+      "defaultPresentation": "Caja con 7 o 14 cápsulas",
+      "defaultDosage": "1 cápsula (60 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 14 a 28 días",
+      "defaultInstructions": "Tecnología de doble liberación retardada para ERGE.",
+      "price": 189
+    },
+    {
+      "genericName": "Butilhioscina 10 mg",
+      "brandNames": [
+        "Buscapina"
+      ],
+      "category": "Antiespasmódicos",
+      "defaultPresentation": "Caja con 10 o 20 tabletas",
+      "defaultDosage": "1 a 2 tabletas (10-20 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Tomar en caso de cólico o dolor abdominal espasmódico.",
+      "price": 29
+    },
+    {
+      "genericName": "Butilhioscina / Metamizol 10/250 mg",
+      "brandNames": [
+        "Buscapina Compositum"
+      ],
+      "category": "Antiespasmódicos con Analgésico",
+      "defaultPresentation": "Caja con 10 grageas",
+      "defaultDosage": "1 gragea",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Tomar en dolor tipo cólico moderado a severo.",
+      "price": 36
+    },
+    {
+      "genericName": "Bromuro de Pinaverio 100 mg",
+      "brandNames": [
+        "Dicetel"
+      ],
+      "category": "Espasmolíticos Intestinales (SII)",
+      "defaultPresentation": "Caja con 14 o 28 tabletas",
+      "defaultDosage": "1 tableta (100 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 14 a 30 días",
+      "defaultInstructions": "Tomar en medio de las comidas con un vaso con agua. No acostarse enseguida.",
+      "price": 60
+    },
+    {
+      "genericName": "Trimebutina 200 mg",
+      "brandNames": [
+        "Debridat",
+        "Libertrim"
+      ],
+      "category": "Reguladores de la Motilidad Digestiva",
+      "defaultPresentation": "Caja con 20 o 40 tabletas",
+      "defaultDosage": "1 tableta (200 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 14 a 28 días",
+      "defaultInstructions": "Tomar 15 a 20 minutos antes de los alimentos.",
+      "price": 84
+    },
+    {
+      "genericName": "Trimebutina / Simeticona 200/75 mg",
+      "brandNames": [
+        "Libertrim SII"
+      ],
+      "category": "Reguladores Digestivos y Antiflatulentos",
+      "defaultPresentation": "Caja con 24 comprimidos",
+      "defaultDosage": "1 comprimido",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 14 a 28 días",
+      "defaultInstructions": "Tomar antes del desayuno y cena.",
+      "price": 199
+    },
+    {
+      "genericName": "Metoclopramida 10 mg",
+      "brandNames": [
+        "Carnotprim",
+        "Plasil"
+      ],
+      "category": "Procinéticos y Antieméticos",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 tableta (10 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Tomar 20 a 30 minutos antes de las comidas.",
+      "price": 13
+    },
+    {
+      "genericName": "Racecadotrilo 100 mg",
+      "brandNames": [
+        "Hidrasec"
+      ],
+      "category": "Antidiarreicos Antisecretores",
+      "defaultPresentation": "Caja con 9 cápsulas",
+      "defaultDosage": "1 cápsula (100 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 días",
+      "defaultInstructions": "Tomar hasta que las evacuaciones se normalicen (máx. 5 días). Mantener hidratación oral.",
+      "price": 280
+    },
+    {
+      "genericName": "Sertralina 50 mg",
+      "brandNames": [
+        "Zoloft",
+        "Altruline"
+      ],
+      "category": "Antidepresivos / ISRS",
+      "defaultPresentation": "Caja con 14 o 28 tabletas",
+      "defaultDosage": "1 tableta (50 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar por la mañana con el desayuno. No suspender abruptamente.",
+      "price": 84.5
+    },
+    {
+      "genericName": "Escitalopram 10 mg",
+      "brandNames": [
+        "Lexapro"
+      ],
+      "category": "Antidepresivos / ISRS",
+      "defaultPresentation": "Caja con 14 o 28 tabletas",
+      "defaultDosage": "1 tableta (10 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar una vez al día con o sin alimentos.",
+      "price": 74
+    },
+    {
+      "genericName": "Duloxetina 30 mg / 60 mg",
+      "brandNames": [
+        "Cymbalta"
+      ],
+      "category": "Antidepresivos Duales (ISRN) / Dolor Neuropático",
+      "defaultPresentation": "Caja con 14 cápsulas",
+      "defaultDosage": "1 cápsula (30-60 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Eficaz en depresión, ansiedad y dolor neuropático/fibromialgia.",
+      "price": 74
+    },
+    {
+      "genericName": "Pregabalina 75 mg / 150 mg",
+      "brandNames": [
+        "Lyrica"
+      ],
+      "category": "Neuromoduladores / Dolor Neuropático",
+      "defaultPresentation": "Caja con 14 o 28 cápsulas",
+      "defaultDosage": "1 cápsula (75 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Iniciar con toma nocturna para reducir somnolencia inicial.",
+      "price": 74
+    },
+    {
+      "genericName": "Gabapentina 300 mg / 400 mg",
+      "brandNames": [
+        "Neurontin"
+      ],
+      "category": "Neuromoduladores",
+      "defaultPresentation": "Caja con 15 o 30 cápsulas",
+      "defaultDosage": "1 cápsula (300 mg)",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Titular dosis de forma gradual.",
+      "price": 111
+    },
+    {
+      "genericName": "Difenidol 25 mg",
+      "brandNames": [
+        "Vontrol"
+      ],
+      "category": "Antivertiginosos y Antieméticos",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (25 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 3 a 5 días",
+      "defaultInstructions": "Tomar en caso de vértigo o mareo postural.",
+      "price": 18
+    },
+    {
+      "genericName": "Betahistina 24 mg",
+      "brandNames": [
+        "Serc"
+      ],
+      "category": "Antivertiginosos (Síndrome de Ménière)",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (24 mg)",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 30 a 60 días",
+      "defaultInstructions": "Tomar con los alimentos.",
+      "price": 279
+    },
+    {
+      "genericName": "Melatonina 3 mg / 5 mg Sublingual",
+      "brandNames": [
+        "Sub-Z"
+      ],
+      "category": "Inductores del Sueño / Cronobiológicos",
+      "defaultPresentation": "Frasco o caja con 30 o 40 tabletas sublinguales",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Sublingual",
+      "defaultDuration": "Por 30 días",
+      "defaultInstructions": "Disolver debajo de la lengua 30 minutos antes de dormir en ambiente oscuro.",
+      "price": 99
+    },
+    {
+      "genericName": "Sildenafil 50 mg / 100 mg",
+      "brandNames": [
+        "Viagra"
+      ],
+      "category": "Disfunción Eréctil",
+      "defaultPresentation": "Caja con 1, 4 o 10 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "A demanda",
+      "defaultRoute": "Oral",
+      "defaultDuration": "A demanda",
+      "defaultInstructions": "Tomar 1 hora antes de la relación sexual. Contraindicado con nitratos.",
+      "price": 99
+    },
+    {
+      "genericName": "Tadalafil 5 mg (Uso Diario)",
+      "brandNames": [
+        "Cialis 5mg"
+      ],
+      "category": "Disfunción Eréctil / Hiperplasia Prostática",
+      "defaultPresentation": "Caja con 14 o 28 tabletas",
+      "defaultDosage": "1 tableta (5 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar a la misma hora todos los días.",
+      "price": 229
+    },
+    {
+      "genericName": "Tamsulosina 0.4 mg",
+      "brandNames": [
+        "Secotex",
+        "Asoflon"
+      ],
+      "category": "Urológicos / Alfa-1 Bloqueadores (HPB)",
+      "defaultPresentation": "Caja con 20 o 30 cápsulas de liberación prolongada",
+      "defaultDosage": "1 cápsula (0.4 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar 30 minutos después del desayuno o primera comida del día.",
+      "price": 99
+    },
+    {
+      "genericName": "Dutasterida / Tamsulosina 0.5/0.4 mg",
+      "brandNames": [
+        "Combodart"
+      ],
+      "category": "Urológicos Combinados (HPB)",
+      "defaultPresentation": "Caja con 30 cápsulas",
+      "defaultDosage": "1 cápsula",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar después del desayuno.",
+      "price": 499
+    },
+    {
+      "genericName": "Finasterida 5 mg",
+      "brandNames": [
+        "Proscar"
+      ],
+      "category": "Inhibidores de la 5-Alfa Reductasa (HPB)",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (5 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Reduce el tamaño de la glándula prostática.",
+      "price": 199
+    },
+    {
+      "genericName": "Fenazopiridina 100 mg",
+      "brandNames": [
+        "Pirimir"
+      ],
+      "category": "Analgésicos Urinarios",
+      "defaultPresentation": "Caja con 20 tabletas",
+      "defaultDosage": "1 a 2 tabletas (100-200 mg)",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 2 a 3 días",
+      "defaultInstructions": "Alivia disuria y ardor urinario. Tiñe la orina de color anaranjado.",
+      "price": 27
+    },
+    {
+      "genericName": "Levonorgestrel 1.5 mg",
+      "brandNames": [
+        "Postday",
+        "Prudence Unidosis"
+      ],
+      "category": "Anticoncepción de Emergencia",
+      "defaultPresentation": "Caja con 1 tableta",
+      "defaultDosage": "1 tableta (1.5 mg)",
+      "defaultFrequency": "Dosis única",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Dosis única",
+      "defaultInstructions": "Tomar lo antes posible dentro de las primeras 72 horas posteriores al coito sin protección.",
+      "price": 65
+    },
+    {
+      "genericName": "Clotrimazol Vaginal 2% Crema / Óvulos 200 mg",
+      "brandNames": [
+        "Canesten V"
+      ],
+      "category": "Antimicóticos Ginecológicos",
+      "defaultPresentation": "Tubo de crema 20 g con aplicadores o 3 óvulos",
+      "defaultDosage": "1 aplicación o 1 óvulo",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Tópica",
+      "defaultDuration": "Por 3 noches consecutivas",
+      "defaultInstructions": "Aplicar profundamente en vagina al acostarse.",
+      "price": 49
+    },
+    {
+      "genericName": "Metronidazol / Nistatina Óvulos",
+      "brandNames": [
+        "Flagystatin"
+      ],
+      "category": "Ginecológicos Antiinfecciosos Mixtos",
+      "defaultPresentation": "Caja con 10 o 12 óvulos",
+      "defaultDosage": "1 óvulo",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Tópica",
+      "defaultDuration": "Por 10 a 12 noches",
+      "defaultInstructions": "Introducir vía vaginal por la noche. Evitar relaciones sexuales durante el tratamiento.",
+      "price": 59
+    },
+    {
+      "genericName": "Clindamicina / Ketoconazol Óvulos 100/400 mg",
+      "brandNames": [
+        "Trexen Duo"
+      ],
+      "category": "Ginecológicos Antiinfecciosos Mixtos",
+      "defaultPresentation": "Caja con 7 óvulos",
+      "defaultDosage": "1 óvulo",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Tópica",
+      "defaultDuration": "Por 7 noches",
+      "defaultInstructions": "Aplicar al acostarse.",
+      "price": 91
+    },
+    {
+      "genericName": "Mupirocina 2% Ungüento",
+      "brandNames": [
+        "Bactroban"
+      ],
+      "category": "Antibióticos Tópicos",
+      "defaultPresentation": "Tubo con 15 g de ungüento",
+      "defaultDosage": "Capa fina",
+      "defaultFrequency": "Cada 8 a 12 horas",
+      "defaultRoute": "Tópica",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Lavar la zona antes de aplicar.",
+      "price": 84
+    },
+    {
+      "genericName": "Betametasona / Gentamicina / Clotrimazol Crema",
+      "brandNames": [
+        "Triderm",
+        "Quadriderm"
+      ],
+      "category": "Crema Triple Combinada Tópica",
+      "defaultPresentation": "Tubo con 30 o 40 g de crema",
+      "defaultDosage": "Capa fina",
+      "defaultFrequency": "Cada 12 horas",
+      "defaultRoute": "Tópica",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Aplicar sobre la lesión cutánea inflamatoria o infectada.",
+      "price": 32
+    },
+    {
+      "genericName": "Sulfadiazina de Plata 1% Crema",
+      "brandNames": [
+        "Silvadene",
+        "Argental"
+      ],
+      "category": "Quemaduras y Cicatrizantes",
+      "defaultPresentation": "Tubo con 28 g de crema",
+      "defaultDosage": "Capa estéril de 1 a 2 mm",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Tópica",
+      "defaultDuration": "Según evolución de la herida",
+      "defaultInstructions": "Aplicar sobre quemaduras y cubrir con gasa estéril.",
+      "price": 44
+    },
+    {
+      "genericName": "Óxido de Zinc 25% Pasta",
+      "brandNames": [
+        "Pasta de Lassar"
+      ],
+      "category": "Protectores Cutáneos y Antipañalitis",
+      "defaultPresentation": "Tubo con pasta",
+      "defaultDosage": "Capa generosa",
+      "defaultFrequency": "En cada cambio de pañal",
+      "defaultRoute": "Tópica",
+      "defaultDuration": "Según necesidad",
+      "defaultInstructions": "Excelente barrera protectora.",
+      "price": 19
+    },
+    {
+      "genericName": "Tobramicina / Dexametasona Gotas Oftálmicas",
+      "brandNames": [
+        "Tobradex"
+      ],
+      "category": "Oftálmicos Combinados",
+      "defaultPresentation": "Frasco gotero 5 mL",
+      "defaultDosage": "1 gota en el ojo afectado",
+      "defaultFrequency": "Cada 6 a 8 horas",
+      "defaultRoute": "Oftálmica",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "No tocar la punta del gotero con el ojo.",
+      "price": 79
+    },
+    {
+      "genericName": "Hipromelosa 0.5% Gotas Oftálmicas",
+      "brandNames": [
+        "Lagrimas Artificiales",
+        "Humylub"
+      ],
+      "category": "Lubricantes Oculares",
+      "defaultPresentation": "Frasco gotero 15 mL",
+      "defaultDosage": "1 a 2 gotas en cada ojo",
+      "defaultFrequency": "Cada 4 a 6 horas",
+      "defaultRoute": "Oftálmica",
+      "defaultDuration": "Según necesidad",
+      "defaultInstructions": "Para ojo seco y fatiga visual.",
+      "price": 44
+    },
+    {
+      "genericName": "Ciprofloxacino / Hidrocortisona / Lidocaína Gotas Óticas",
+      "brandNames": [
+        "Ciproflox Ótico",
+        "Oto-Eni"
+      ],
+      "category": "Óticos Antiinfecciosos y Analgésicos",
+      "defaultPresentation": "Frasco gotero 10 mL",
+      "defaultDosage": "3 a 4 gotas en el conducto auditivo",
+      "defaultFrequency": "Cada 8 horas",
+      "defaultRoute": "Otra",
+      "defaultDuration": "Por 5 a 7 días",
+      "defaultInstructions": "Mantener la cabeza inclinada 2 minutos tras aplicar.",
+      "price": 63
+    },
+    {
+      "genericName": "Complejo B (B1, B6, B12)",
+      "brandNames": [
+        "Neurobión",
+        "Bedoyecta"
+      ],
+      "category": "Vitaminas del Complejo B",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 30 días",
+      "defaultInstructions": "Tomar con el desayuno.",
+      "price": 23
+    },
+    {
+      "genericName": "Hidroxocobalamina / Tiamina / Piridoxina Inyectable",
+      "brandNames": [
+        "Bedoyecta Tri",
+        "Dolo-Bedoyecta"
+      ],
+      "category": "Vitaminas B Inyectables",
+      "defaultPresentation": "Caja con 5 ampolletas",
+      "defaultDosage": "1 ampolleta",
+      "defaultFrequency": "Cada 48 a 72 horas",
+      "defaultRoute": "Intramuscular",
+      "defaultDuration": "Por 5 dosis",
+      "defaultInstructions": "Aplicar IM profunda en glúteo.",
+      "price": 112
+    },
+    {
+      "genericName": "Ácido Fólico 5 mg",
+      "category": "Vitaminas / Antianémicos",
+      "defaultPresentation": "Caja con 20 o 50 tabletas",
+      "defaultDosage": "1 tableta (5 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo / embarazo",
+      "defaultInstructions": "Tomar diariamente.",
+      "price": 15
+    },
+    {
+      "genericName": "Fumarato Ferroso 200 mg",
+      "category": "Antianémicos / Hierro",
+      "defaultPresentation": "Caja con 50 comprimidos",
+      "defaultDosage": "1 comprimido",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 30 a 60 días",
+      "defaultInstructions": "Tomar con jugo de naranja (vitamina C) para mejorar absorción. Puede oscurecer las heces.",
+      "price": 18
+    },
+    {
+      "genericName": "Calcio / Vitamina D3 600 mg / 400 UI",
+      "brandNames": [
+        "Caltrate 600+D"
+      ],
+      "category": "Minerales y Vitaminas Óseas",
+      "defaultPresentation": "Frasco con 30 o 60 tabletas",
+      "defaultDosage": "1 tableta",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar con los alimentos.",
+      "price": 79
+    },
+    {
+      "genericName": "Alendronato 70 mg",
+      "brandNames": [
+        "Fosamax"
+      ],
+      "category": "Bisfosfonatos (Osteoporosis)",
+      "defaultPresentation": "Caja con 4 tabletas",
+      "defaultDosage": "1 tableta (70 mg)",
+      "defaultFrequency": "Cada semana (mismo día de la semana)",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Por 6 meses a 1 año",
+      "defaultInstructions": "Tomar en AYUNO estricto con un vaso lleno de agua. Permanecer erguido (sin acostarse) al menos 30 minutos.",
+      "price": 81
+    },
+    {
+      "genericName": "Levotiroxina Sódica 100 mcg",
+      "brandNames": [
+        "Eutirox",
+        "Karet",
+        "Synthroid"
+      ],
+      "category": "Hormonas Tiroideas",
+      "defaultPresentation": "Caja con 50 o 100 tabletas",
+      "defaultDosage": "1 tableta (100 mcg o según perfil tiroideo)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar en AYUNO ESTRICTO 30 a 60 minutos antes del desayuno con agua natural.",
+      "price": 109
+    },
+    {
+      "genericName": "Alopurinol 300 mg",
+      "brandNames": [
+        "Zyloprim"
+      ],
+      "category": "Antigotosos / Hipouricemiantes",
+      "defaultPresentation": "Caja con 20 o 30 tabletas",
+      "defaultDosage": "1 tableta (300 mg)",
+      "defaultFrequency": "Cada 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Tratamiento continuo",
+      "defaultInstructions": "Tomar después de la comida con abundante agua.",
+      "price": 33
+    },
+    {
+      "genericName": "Colchicina 1 mg",
+      "category": "Antigotosos Agudos",
+      "defaultPresentation": "Caja con 30 tabletas",
+      "defaultDosage": "1 tableta (1 mg)",
+      "defaultFrequency": "Cada 12 a 24 horas",
+      "defaultRoute": "Oral",
+      "defaultDuration": "Durante el ataque agudo de gota",
+      "defaultInstructions": "Tomar con agua.",
+      "price": 41
+    }
+  ]
+}

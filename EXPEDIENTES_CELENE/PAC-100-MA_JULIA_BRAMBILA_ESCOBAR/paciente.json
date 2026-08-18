@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "DM2, HAS, HIPERCOLESTEROLEMIA",
-    "Diabetes mellitus tipo 2, Hipertensión arterial sistémica"
+    "Diabetes mellitus tipo 2, Hipertensión arterial sistémica",
+    "DM2, HAS, HIPERCOLESTEROLEMIA"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "DM2, HAS, HIPERCOLESTEROLEMIA",
+      "name": "Diabetes mellitus tipo 2, Hipertensión arterial sistémica",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "Diabetes mellitus tipo 2, Hipertensión arterial sistémica",
+      "name": "DM2, HAS, HIPERCOLESTEROLEMIA",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

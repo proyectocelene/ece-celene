@@ -1,0 +1,299 @@
+{
+  "version": "1.0.0",
+  "lastLog": "2026-08-18T02:17:35.191Z",
+  "totalEntries": 27,
+  "logs": [
+    {
+      "id": "audit-1787019455191-xza7",
+      "timestamp": "2026-08-18T02:17:35.191Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "INICIO_SESION",
+      "details": "Inicio de sesión exitoso desde el dispositivo local."
+    },
+    {
+      "id": "audit-1787018347674-w72x",
+      "timestamp": "2026-08-18T01:59:07.674Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00101).",
+      "targetPatientId": "PAC-00101"
+    },
+    {
+      "id": "audit-1787018315257-vqob",
+      "timestamp": "2026-08-18T01:58:35.257Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00101).",
+      "targetPatientId": "PAC-00101"
+    },
+    {
+      "id": "audit-1787017464648-0jnc",
+      "timestamp": "2026-08-18T01:44:24.648Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00101).",
+      "targetPatientId": "PAC-00101"
+    },
+    {
+      "id": "audit-1787017420301-j1xu",
+      "timestamp": "2026-08-18T01:43:40.301Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00101).",
+      "targetPatientId": "PAC-00101"
+    },
+    {
+      "id": "audit-1787017351056-ek3i",
+      "timestamp": "2026-08-18T01:42:31.056Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "EDITAR_NOTA_MEDICA",
+      "details": "Nota médica editada y guardada (2026-08-17_1830_consulta.json) con 1 diagnósticos y 0 prescripciones.",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787016911275-dzjc",
+      "timestamp": "2026-08-18T01:35:11.275Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787016667952-pq2o",
+      "timestamp": "2026-08-18T01:31:07.952Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787016658703-i3nf",
+      "timestamp": "2026-08-18T01:30:58.703Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787016647590-veda",
+      "timestamp": "2026-08-18T01:30:47.590Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787016641665-bd62",
+      "timestamp": "2026-08-18T01:30:41.665Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "CREAR_NOTA_MEDICA",
+      "details": "Nota médica guardada (2026-08-17_1830_consulta.json) con 1 diagnósticos y 0 prescripciones.",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787016461530-ksep",
+      "timestamp": "2026-08-18T01:27:41.530Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787016409384-4ykq",
+      "timestamp": "2026-08-18T01:26:49.384Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787015840499-3y66",
+      "timestamp": "2026-08-18T01:17:20.499Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787015834184-ck41",
+      "timestamp": "2026-08-18T01:17:14.184Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787015658661-4akg",
+      "timestamp": "2026-08-18T01:14:18.661Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787015629276-fmbi",
+      "timestamp": "2026-08-18T01:13:49.276Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787015625077-0nye",
+      "timestamp": "2026-08-18T01:13:45.077Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787015323411-sl25",
+      "timestamp": "2026-08-18T01:08:43.411Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787015139857-bldo",
+      "timestamp": "2026-08-18T01:05:39.857Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "INICIO_SESION",
+      "details": "Inicio de sesión exitoso desde el dispositivo local."
+    },
+    {
+      "id": "audit-1787015023502-uy9v",
+      "timestamp": "2026-08-18T01:03:43.502Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "INICIO_SESION",
+      "details": "Inicio de sesión exitoso desde el dispositivo local."
+    },
+    {
+      "id": "audit-1787014974777-uzin",
+      "timestamp": "2026-08-18T01:02:54.777Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "INICIO_SESION",
+      "details": "Inicio de sesión exitoso desde el dispositivo local."
+    },
+    {
+      "id": "audit-1787014161499-ii15",
+      "timestamp": "2026-08-18T00:49:21.499Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787014120567-wk6p",
+      "timestamp": "2026-08-18T00:48:40.567Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "IMPRIMIR_RECETA",
+      "details": "Impresión de receta médica para el paciente Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787014117275-xs3g",
+      "timestamp": "2026-08-18T00:48:37.275Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "CREAR_NOTA_MEDICA",
+      "details": "Nota médica guardada (2026-08-17_1748_consulta.json) con 0 diagnósticos y 3 prescripciones.",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787013524081-0kbz",
+      "timestamp": "2026-08-18T00:38:44.081Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "CREAR_PACIENTE",
+      "details": "Creación de paciente de demostración: Alejandro Martínez Soto (PAC-00102).",
+      "targetPatientId": "PAC-00102"
+    },
+    {
+      "id": "audit-1787013422937-nceb",
+      "timestamp": "2026-08-18T00:37:02.937Z",
+      "userId": "usr-sebastian",
+      "username": "Dr. Sebastian",
+      "userFullName": "Dr. Sebastián Garduño Conde",
+      "userRole": "pasante",
+      "action": "INICIO_SESION",
+      "details": "Inicio de sesión exitoso desde el dispositivo local."
+    }
+  ]
+}

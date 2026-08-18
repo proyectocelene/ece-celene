@@ -1,0 +1,115 @@
+{
+  "id": "note-48-1",
+  "patientId": "PAC-048",
+  "fileName": "nota_1970-05-30_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "1970-05-30T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 70.5,
+    "glucose": 95.0
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "PACIENTE ACUDE POR MOLESTIAS EN REGIÓN VULVAR IZQUIERDA, REFIERE EN OCASIONES APARIENCIA DE GRANOS. NIEGA COMEZÓN, SOLO REFIERE DOLOR Y DESCARGA OSCURA. NIEGA MAL OLOR. NIEGA DISURIA. REFIERE ANTECEDENTE DE PAREJA CON HERPES Y USO DE DROGAS.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "EF NORMAL. EXPLORACIÓN GINECOLOGIA: EVIDENCIA DE ERITEMA Y PUNTILLEO EN CÉRVIX, SALIDA DE FLUJO BLANCO-AMARILLO DE OCE, NO SE PERSIVE OLOR. GENITALES EXTERNOS SIN EVIDENCIA DE ULCERAS O GRANOS. SIN DOLOR A LA MOVILIZACIÓN CERVICAL. PRUEBA RÁPIDA VIH NO REACTIVA.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Cervicovaginitis. Obesidad.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Fluconazol 150 mg; Metronidazol 500 mg; Doxiciclina 100 mg; Estrógenos conjugados ",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Fluconazol",
+        "dosage": "150 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Metronidazol",
+        "dosage": "500 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Doxiciclina",
+        "dosage": "100 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Estrógenos conjugados",
+        "dosage": "",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-048-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1970-05-30T12:00:00.000Z",
+  "updatedAt": "1970-05-30T12:00:00.000Z"
+}

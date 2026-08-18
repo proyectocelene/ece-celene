@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "EPOC",
-    "Se detectó polifarmacia y duplicidad terapéutica broncodilatadora que condicionaba taquicardia y agitación. Sospecha de microaspiración nocturna. Se descarta cardiomegalia, congestión venocapilar pulmonar, nódulos o masas pulmonares. EPOC severo, Diabetes Mellitus tipo 2."
+    "Se detectó polifarmacia y duplicidad terapéutica broncodilatadora que condicionaba taquicardia y agitación. Sospecha de microaspiración nocturna. Se descarta cardiomegalia, congestión venocapilar pulmonar, nódulos o masas pulmonares. EPOC severo, Diabetes Mellitus tipo 2.",
+    "EPOC"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "EPOC",
+      "name": "Se detectó polifarmacia y duplicidad terapéutica broncodilatadora que condicionaba taquicardia y agitación. Sospecha de microaspiración nocturna. Se descarta cardiomegalia, congestión venocapilar pulmonar, nódulos o masas pulmonares. EPOC severo, Diabetes Mellitus tipo 2.",
       "diagnosedDate": "1952",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "Se detectó polifarmacia y duplicidad terapéutica broncodilatadora que condicionaba taquicardia y agitación. Sospecha de microaspiración nocturna. Se descarta cardiomegalia, congestión venocapilar pulmonar, nódulos o masas pulmonares. EPOC severo, Diabetes Mellitus tipo 2.",
+      "name": "EPOC",
       "diagnosedDate": "1952",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

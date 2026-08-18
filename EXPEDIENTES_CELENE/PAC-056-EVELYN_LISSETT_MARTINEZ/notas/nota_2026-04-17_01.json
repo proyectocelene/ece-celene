@@ -1,0 +1,87 @@
+{
+  "id": "note-56-1",
+  "patientId": "PAC-056",
+  "fileName": "nota_2026-04-17_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-17T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 87.7,
+    "heightCm": 163.0,
+    "heartRate": 70,
+    "respiratoryRate": 12
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente femenina, estudiante y aplicadora de uñas, acude por control prenatal. Presenta garganta seca, ronquidos, poliaquiuria, pesadillas. Refiere exposición a químicos en el trabajo.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: PA 114/70, FC 70, FR 12, Peso 87.7 kg, Talla 163 cm. Embarazo de 5.4 semanas por FUM.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Embarazo del primer trimestre (5.4 SDG por FUM). Riesgo laboral por exposición a químicos (manicurista). Alteraciones del sueño / Probable rinitis o SAOS leve asociado al embarazo y/o ansiedad. Esquema de vacunación incompleto.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Ácido Fólico Tomar 1 tableta cada 24 horas.",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural.",
+    "warningSigns": "Sangrado vaginal\nDolor abdominal intenso\nFiebre o escalofríos\nArdor o dolor intenso al orinar\nVómitos que no permitan tolerar líquidos ni alimentos",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Ácido Fólico",
+        "dosage": "5 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-056-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-17T12:00:00.000Z",
+  "updatedAt": "2026-04-17T12:00:00.000Z"
+}

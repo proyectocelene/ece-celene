@@ -1,0 +1,159 @@
+{
+  "id": "note-128-6",
+  "patientId": "PAC-128",
+  "fileName": "nota_2026-04-11_06.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-11T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 150.0,
+    "heightCm": 20.3,
+    "temperature": 36.0,
+    "heartRate": 97,
+    "respiratoryRate": 12,
+    "glucose": 99.0
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente femenina de 46 años con antecedente de DM2. Presenta cuadro crónico de poliartralgias simétricas en pequeñas articulaciones de manos (interfalángicas y carpo) con rigidez matutina persistente. Reporta aumento significativo del dolor articular, el cual está impactando su estado anímico (ansiedad y depresión).",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: PA 118/78 mmHg, FC 97 lpm, FR 12 rpm, T 36°C, peso 150 kg (dato no validado), talla 20.3 cm (dato no validado), IMC 205 (dato no validado), glucosa 99 mg/dL. Laboratorios: Anti-CCP positivo (22.90 U/mL), FR negativo. Antecedente de VSG y PCR elevadas (VSG 115 mm/hr en marzo). HbA1c reciente 8.6%. Radiografía de manos con osteoartrosis y artrosis del carpo bilateral.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Paciente con DM2 mal controlada (HbA1c 8.6%) y probable Artritis Reumatoide Seronegativa/Artritis Inflamatoria Temprana, dada la poliartralgia simétrica, rigidez matutina, Anti-CCP positivo y reactantes de fase aguda elevados. Se requiere valoración por Reumatología para confirmar diagnóstico e iniciar FARMEs.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Insulina (Detemir) Aplicar exclusivamente por los próximos 3 días. Pendiente ajuste según bitácora de glucosa.; Dapagliflozina Tomar 1 tableta.; Metformina Tomar 1 tableta.; Rosuvastatina Tomar 1 tableta.; Pregabalina Tomar 2 cápsulas juntas.; Vitamina D3 Tomar 1 cápsula.; Celecoxib Tomar 1 cápsula.; Paracetamol Tomar 2 tabletas.",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural.",
+    "warningSigns": "En caso de alguna emergencia llamar al 911 o acudir a urgencias a su brevedad.\nEn caso de crisis emocional o necesidad de orientación inmediata, comunicarse a Línea SIMISAE: 800 911 32 32 (Atención psicológica gratuita 24/7).",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Insulina (Detemir)",
+        "dosage": "26 UI",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "3 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Dapagliflozina",
+        "dosage": "10 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Metformina",
+        "dosage": "850 mg",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Rosuvastatina",
+        "dosage": "10 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-5",
+        "medication": "Pregabalina",
+        "dosage": "150 mg (2 cápsulas = 300 mg)",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-6",
+        "medication": "Vitamina D3",
+        "dosage": "4000 UI",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-7",
+        "medication": "Celecoxib",
+        "dosage": "200 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-8",
+        "medication": "Paracetamol",
+        "dosage": "500 mg (2 tabletas = 1000 mg)",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-128-06",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-11T12:00:00.000Z",
+  "updatedAt": "2026-04-11T12:00:00.000Z"
+}

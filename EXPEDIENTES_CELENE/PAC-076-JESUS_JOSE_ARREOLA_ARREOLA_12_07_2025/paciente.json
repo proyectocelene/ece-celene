@@ -30,9 +30,9 @@
   "allergies": [],
   "activeConditions": [
     "Diagnóstico: Bronquitis viral, lesión renal en estudio.",
-    "BRONQUITIS VIRAL",
     "BRONQUITIS VIRAL, LESIÓN RENAL EN EL ESTUDIO",
-    "HAS, DISLIPIDEMIA"
+    "HAS, DISLIPIDEMIA",
+    "BRONQUITIS VIRAL"
   ],
   "chronicConditions": [
     {
@@ -46,15 +46,6 @@
     },
     {
       "id": "cond-2",
-      "name": "BRONQUITIS VIRAL",
-      "diagnosedDate": "1990",
-      "status": "Controlada",
-      "currentTreatment": "Tratamiento médico continuo",
-      "modificationsNotes": "",
-      "linkedMedications": []
-    },
-    {
-      "id": "cond-3",
       "name": "BRONQUITIS VIRAL, LESIÓN RENAL EN EL ESTUDIO",
       "diagnosedDate": "1990",
       "status": "Controlada",
@@ -63,8 +54,17 @@
       "linkedMedications": []
     },
     {
-      "id": "cond-4",
+      "id": "cond-3",
       "name": "HAS, DISLIPIDEMIA",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-4",
+      "name": "BRONQUITIS VIRAL",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

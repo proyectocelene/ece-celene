@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "URETRITIS",
-    "**Problema principal:**  \nVarón joven con disuria + piuria (esterasa leucocitaria +++, nitritos negativos) + factores de riesgo de ITS (múltiples parejas, uso inconsistente de preservativo, prácticas orales y vaginales).\n\n**Diagnóstico presuntivo:**  \n**Uretritis aguda** – probable etiología infecciosa de transmisión sexual (gonocócica o no gonocócica).\n\n**Justificación:**\n-   La tira reactiva muestra piuria sin nitritos, patrón característico de uretritis (no de infección urinaria baja típica).\n-   La ausencia de secreción visible no excluye uretritis, especialmente en fases tempranas o infecciones por _Chlamydia_/_Mycoplasma_.\n-   El antecedente de amoxicilina pudo enmascarar parcialmente los síntomas, pero no es tratamiento efectivo para los patógenos más probables.\n\n**Diagnósticos diferenciales descartados (por clínica y tira):**\n-   Infección urinaria baja (cistitis): improbable por nitritos negativos y ausencia de bacteriuria.\n-   Pielonefritis/prostatitis aguda: descartada por ausencia de fiebre, dolor lumbar o malestar general.\n-   Balanitis candidiásica: no hay lesiones activas en el momento."
+    "**Problema principal:**  \nVarón joven con disuria + piuria (esterasa leucocitaria +++, nitritos negativos) + factores de riesgo de ITS (múltiples parejas, uso inconsistente de preservativo, prácticas orales y vaginales).\n\n**Diagnóstico presuntivo:**  \n**Uretritis aguda** – probable etiología infecciosa de transmisión sexual (gonocócica o no gonocócica).\n\n**Justificación:**\n-   La tira reactiva muestra piuria sin nitritos, patrón característico de uretritis (no de infección urinaria baja típica).\n-   La ausencia de secreción visible no excluye uretritis, especialmente en fases tempranas o infecciones por _Chlamydia_/_Mycoplasma_.\n-   El antecedente de amoxicilina pudo enmascarar parcialmente los síntomas, pero no es tratamiento efectivo para los patógenos más probables.\n\n**Diagnósticos diferenciales descartados (por clínica y tira):**\n-   Infección urinaria baja (cistitis): improbable por nitritos negativos y ausencia de bacteriuria.\n-   Pielonefritis/prostatitis aguda: descartada por ausencia de fiebre, dolor lumbar o malestar general.\n-   Balanitis candidiásica: no hay lesiones activas en el momento.",
+    "URETRITIS"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "URETRITIS",
+      "name": "**Problema principal:**  \nVarón joven con disuria + piuria (esterasa leucocitaria +++, nitritos negativos) + factores de riesgo de ITS (múltiples parejas, uso inconsistente de preservativo, prácticas orales y vaginales).\n\n**Diagnóstico presuntivo:**  \n**Uretritis aguda** – probable etiología infecciosa de transmisión sexual (gonocócica o no gonocócica).\n\n**Justificación:**\n-   La tira reactiva muestra piuria sin nitritos, patrón característico de uretritis (no de infección urinaria baja típica).\n-   La ausencia de secreción visible no excluye uretritis, especialmente en fases tempranas o infecciones por _Chlamydia_/_Mycoplasma_.\n-   El antecedente de amoxicilina pudo enmascarar parcialmente los síntomas, pero no es tratamiento efectivo para los patógenos más probables.\n\n**Diagnósticos diferenciales descartados (por clínica y tira):**\n-   Infección urinaria baja (cistitis): improbable por nitritos negativos y ausencia de bacteriuria.\n-   Pielonefritis/prostatitis aguda: descartada por ausencia de fiebre, dolor lumbar o malestar general.\n-   Balanitis candidiásica: no hay lesiones activas en el momento.",
       "diagnosedDate": "1999",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "**Problema principal:**  \nVarón joven con disuria + piuria (esterasa leucocitaria +++, nitritos negativos) + factores de riesgo de ITS (múltiples parejas, uso inconsistente de preservativo, prácticas orales y vaginales).\n\n**Diagnóstico presuntivo:**  \n**Uretritis aguda** – probable etiología infecciosa de transmisión sexual (gonocócica o no gonocócica).\n\n**Justificación:**\n-   La tira reactiva muestra piuria sin nitritos, patrón característico de uretritis (no de infección urinaria baja típica).\n-   La ausencia de secreción visible no excluye uretritis, especialmente en fases tempranas o infecciones por _Chlamydia_/_Mycoplasma_.\n-   El antecedente de amoxicilina pudo enmascarar parcialmente los síntomas, pero no es tratamiento efectivo para los patógenos más probables.\n\n**Diagnósticos diferenciales descartados (por clínica y tira):**\n-   Infección urinaria baja (cistitis): improbable por nitritos negativos y ausencia de bacteriuria.\n-   Pielonefritis/prostatitis aguda: descartada por ausencia de fiebre, dolor lumbar o malestar general.\n-   Balanitis candidiásica: no hay lesiones activas en el momento.",
+      "name": "URETRITIS",
       "diagnosedDate": "1999",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

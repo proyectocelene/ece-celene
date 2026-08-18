@@ -29,14 +29,14 @@
   },
   "allergies": [],
   "activeConditions": [
-    "Mastitis Puerperal Recurrente: El cuadro sugiere una resolución incompleta del proceso infeccioso previo o una obstrucción de conductos persistente. Diagnóstico Diferencial: Se sospecha de Absceso Mamario (considerando la masa palpable y los escalofríos tras tratamiento antibiótico previo) vs. Galactocele (quiste de retención láctea). Planificación Familiar / Supresión de Lactancia: Paciente candidata a método hormonal combinado para facilitar el destete fisiológico y protección anticonceptiva.",
     "Mastitis puerperal recurrente, descartar absceso mamario. Consejería en planificación familiar por deseo de destete.",
+    "Mastitis Puerperal Recurrente: El cuadro sugiere una resolución incompleta del proceso infeccioso previo o una obstrucción de conductos persistente. Diagnóstico Diferencial: Se sospecha de Absceso Mamario (considerando la masa palpable y los escalofríos tras tratamiento antibiótico previo) vs. Galactocele (quiste de retención láctea). Planificación Familiar / Supresión de Lactancia: Paciente candidata a método hormonal combinado para facilitar el destete fisiológico y protección anticonceptiva.",
     "1. Mastitis puerperal recurrente / Descartar absceso mamario.\n2. Consejería en Planificación Familiar (Deseo de destete)."
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "Mastitis Puerperal Recurrente: El cuadro sugiere una resolución incompleta del proceso infeccioso previo o una obstrucción de conductos persistente. Diagnóstico Diferencial: Se sospecha de Absceso Mamario (considerando la masa palpable y los escalofríos tras tratamiento antibiótico previo) vs. Galactocele (quiste de retención láctea). Planificación Familiar / Supresión de Lactancia: Paciente candidata a método hormonal combinado para facilitar el destete fisiológico y protección anticonceptiva.",
+      "name": "Mastitis puerperal recurrente, descartar absceso mamario. Consejería en planificación familiar por deseo de destete.",
       "diagnosedDate": "2005",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -45,7 +45,7 @@
     },
     {
       "id": "cond-2",
-      "name": "Mastitis puerperal recurrente, descartar absceso mamario. Consejería en planificación familiar por deseo de destete.",
+      "name": "Mastitis Puerperal Recurrente: El cuadro sugiere una resolución incompleta del proceso infeccioso previo o una obstrucción de conductos persistente. Diagnóstico Diferencial: Se sospecha de Absceso Mamario (considerando la masa palpable y los escalofríos tras tratamiento antibiótico previo) vs. Galactocele (quiste de retención láctea). Planificación Familiar / Supresión de Lactancia: Paciente candidata a método hormonal combinado para facilitar el destete fisiológico y protección anticonceptiva.",
       "diagnosedDate": "2005",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

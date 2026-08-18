@@ -1,0 +1,89 @@
+{
+  "id": "note-189-1",
+  "patientId": "PAC-189",
+  "fileName": "nota_2026-05-21_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-05-21T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 68.0,
+    "heightCm": 1.65,
+    "temperature": 36.5,
+    "heartRate": 72,
+    "respiratoryRate": 16,
+    "oxygenSaturation": 98
+  },
+  "subjective": {
+    "reasonForVisit": "Control rutinario",
+    "currentIllness": "Paciente refiere dolor de cabeza ocasional",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Consciente, orientado, signos vitales normales",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Cefalea tensional [G44]",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Paracetamol 500 mg cada 8 horas PRN",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Paracetamol 500 mg",
+        "dosage": "1 tableta cada 8 horas",
+        "frequency": "Cada 8 horas",
+        "route": "Oral",
+        "duration": "5 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-189-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-05-21T12:00:00.000Z",
+  "updatedAt": "2026-05-21T12:00:00.000Z"
+}

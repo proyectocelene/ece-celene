@@ -1,0 +1,118 @@
+{
+  "id": "note-79-1",
+  "patientId": "PAC-079",
+  "fileName": "nota_2026-04-06_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "2026-04-06T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "weightKg": 80.7,
+    "temperature": 36.5,
+    "heartRate": 54,
+    "respiratoryRate": 12,
+    "oxygenSaturation": 99
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente masculino de 73 años con Enfermedad de Parkinson diagnosticada en 2022, sin seguimiento especializado. Refiere fenómeno de Delayed On (latencia de 3 horas para inicio de efecto motor) y Wearing-off de predominio sensorial (parestesias tipo choque eléctrico en miembros inferiores al finalizar la dosis). Presenta temblor de reposo en labios y miembros inferiores, episodios de freezing y debilidad distal en extremidades superiores. Refiere 2 caídas previas de propia altura que ameritaron sutura. Estreñimiento crónico severo, somnolencia diurna excesiva y apatía/síntomas depresivos.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "TA 154/100 mmHg, FC 54 lpm, edema bilateral en miembros inferiores, acrocianosis. Peso 80.7 kg, SatO2 99%.",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Enfermedad de Parkinson de 4 años de evolución con fluctuaciones motoras y sensoriales. Hipertensión Arterial Sistémica Descontrolada. Bradicardia a descartar bloqueo AV vs. disfunción sinusal. Edema de miembros inferiores (Estasis venosa por disfunción autonómica vs. Falla Cardíaca). Síndrome de Caídas del Adulto Mayor.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "Levodopa / Carbidopa Tomar 1 tableta cada 8 horas (Ej. 08:00, 16:00, 24:00 hrs). Tomar estrictamente con el estómago vacío (40 minutos antes de los alimentos o 2 horas después). No mezclar con leche, carne o huevo.; Losartan Tomar 1 tableta cada 24 horas por la mañana.; Sertralina Tomar media tableta (25 mg) por la mañana después del desayuno durante los primeros 7 días. A partir del día 8, tomar 1 tableta completa diaria.; Polietilenglicol 3350 Disolver 1 sobre en un vaso con agua o jugo natural y tomar una vez al día por las mañanas.",
+    "nonPharmacological": "Dieta saludable baja en sodio (sal) y azúcares refinados. Incrementar el consumo de agua natural.",
+    "warningSigns": "Acudir a urgencias en caso de presentar dolor en el pecho, falta de aire o desmayos.\nPrecaución extrema de caídas: Prohibido correr o caminar con prisa. Caminar con pasos firmes.\nHigiene venosa: Elevar ambas piernas por encima del nivel del pecho apoyadas en almohadas durante 30 minutos, 2 veces al día. Al estar sentado, realizar movimientos circulares con los tobillos.",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": [
+      {
+        "id": "rx-1",
+        "medication": "Levodopa / Carbidopa",
+        "dosage": "250 mg / 25 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-2",
+        "medication": "Losartan",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-3",
+        "medication": "Sertralina",
+        "dosage": "50 mg",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "7 días a media dosis, luego completa",
+        "instructions": "",
+        "indicationFor": ""
+      },
+      {
+        "id": "rx-4",
+        "medication": "Polietilenglicol 3350",
+        "dosage": "17 g",
+        "frequency": "Según indicación",
+        "route": "Oral",
+        "duration": "Por 5 a 7 días",
+        "instructions": "",
+        "indicationFor": ""
+      }
+    ]
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-079-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "2026-04-06T12:00:00.000Z",
+  "updatedAt": "2026-04-06T12:00:00.000Z"
+}

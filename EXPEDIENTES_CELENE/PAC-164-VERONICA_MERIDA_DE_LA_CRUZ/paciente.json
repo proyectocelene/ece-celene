@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "Diagnóstico: HAS, DM2, Dislipidemia, Cervicovaginitis.",
-    "HAS, DM2, Dislipidemia. Dolor en espalda."
+    "HAS, DM2, Dislipidemia. Dolor en espalda.",
+    "Diagnóstico: HAS, DM2, Dislipidemia, Cervicovaginitis."
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "Diagnóstico: HAS, DM2, Dislipidemia, Cervicovaginitis.",
+      "name": "HAS, DM2, Dislipidemia. Dolor en espalda.",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "HAS, DM2, Dislipidemia. Dolor en espalda.",
+      "name": "Diagnóstico: HAS, DM2, Dislipidemia, Cervicovaginitis.",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

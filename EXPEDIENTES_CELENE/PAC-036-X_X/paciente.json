@@ -29,22 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "CELULITIS",
     "XXX",
-    "Se sospecha infección de tejidos blandos con probable absceso y necrosis cutánea. Se considera probable loxoscelismo cutáneo complicado con sobreinfección bacteriana."
+    "Se sospecha infección de tejidos blandos con probable absceso y necrosis cutánea. Se considera probable loxoscelismo cutáneo complicado con sobreinfección bacteriana.",
+    "CELULITIS"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "CELULITIS",
-      "diagnosedDate": "1990",
-      "status": "Controlada",
-      "currentTreatment": "Tratamiento médico continuo",
-      "modificationsNotes": "",
-      "linkedMedications": []
-    },
-    {
-      "id": "cond-2",
       "name": "XXX",
       "diagnosedDate": "1990",
       "status": "Controlada",
@@ -53,8 +44,17 @@
       "linkedMedications": []
     },
     {
-      "id": "cond-3",
+      "id": "cond-2",
       "name": "Se sospecha infección de tejidos blandos con probable absceso y necrosis cutánea. Se considera probable loxoscelismo cutáneo complicado con sobreinfección bacteriana.",
+      "diagnosedDate": "1990",
+      "status": "Controlada",
+      "currentTreatment": "Tratamiento médico continuo",
+      "modificationsNotes": "",
+      "linkedMedications": []
+    },
+    {
+      "id": "cond-3",
+      "name": "CELULITIS",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

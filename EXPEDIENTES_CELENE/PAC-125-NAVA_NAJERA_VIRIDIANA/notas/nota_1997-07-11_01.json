@@ -1,0 +1,76 @@
+{
+  "id": "note-125-1",
+  "patientId": "PAC-125",
+  "fileName": "nota_1997-07-11_01.json",
+  "schemaVersion": "1.0.0",
+  "date": "1997-07-11T12:00:00.000Z",
+  "noteType": "Consulta General",
+  "vitalSigns": {
+    "temperature": 36.5,
+    "heartRate": 80,
+    "respiratoryRate": 12,
+    "glucose": 99.0
+  },
+  "subjective": {
+    "reasonForVisit": "Consulta Médica de Control",
+    "currentIllness": "Paciente refiere no tener fiebre, escalofríos, ictericia ni astenia marcada. Se realizó panel rápido de ITS en brigada de salud con resultado reactivo a Hepatitis C, confirmado con estudio el 05/11/2025.",
+    "systemsReview": ""
+  },
+  "objective": {
+    "generalAppearance": "Signos vitales: PA 120/80, FC 80, FR 12, Temp 36.5°C, Glucosa 99. Resultados de laboratorio: TGO 65 U/L, TGP 55 U/L, GGT 202 U/L, Hemoglobina 13.9 g/dL. Carga viral HCV 7,950 UI/mL (log 3.9).",
+    "headAndNeck": "",
+    "chestAndLungs": "",
+    "abdomen": "",
+    "extremities": "",
+    "neurological": ""
+  },
+  "diagnoses": [
+    {
+      "code": "CIE10",
+      "description": "Hepatitis C confirmada con ARN detectable. Paciente clínicamente estable sin signos de descompensación hepática.",
+      "type": "Presuntivo"
+    }
+  ],
+  "plan": {
+    "generalPlan": "",
+    "nonPharmacological": "",
+    "warningSigns": "",
+    "followUpDate": "Según evolución clínica",
+    "prescriptions": []
+  },
+  "labOrder": {
+    "studies": [],
+    "otherStudies": "",
+    "fastingHours": 8,
+    "clinicalNotes": "",
+    "urgency": "Ordinario"
+  },
+  "receipt": {
+    "receiptFolio": "REC-PAC-125-01",
+    "services": [
+      {
+        "id": "1",
+        "description": "Consulta Médica General",
+        "commercialCost": 650,
+        "amount": 150,
+        "isSubsidized": true
+      }
+    ],
+    "totalCommercial": 650,
+    "totalSubsidy": 500,
+    "totalAmount": 150,
+    "receivedAmount": 150,
+    "pendingAmount": 0,
+    "paymentMethod": "Efectivo",
+    "notes": ""
+  },
+  "attendingDoctorName": "Dr. Carlos Donato Dueñas Prieto",
+  "attendingDoctorTitle": "MÉDICO ESPECIALISTA",
+  "attendingDoctorLicense": "15504256",
+  "attendingDoctorRole": "titular",
+  "supervisorDoctorName": null,
+  "supervisorDoctorTitle": null,
+  "supervisorDoctorLicense": null,
+  "createdAt": "1997-07-11T12:00:00.000Z",
+  "updatedAt": "1997-07-11T12:00:00.000Z"
+}

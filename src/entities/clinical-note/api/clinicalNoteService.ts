@@ -47,7 +47,7 @@ export class ClinicalNoteService {
   }
 
   /**
-   * Lee todas las notas de consulta dentro de la subcarpeta /notas/ de un paciente.
+   * Lee todas las notas de consulta dentro de /notas/ o en la raíz de la carpeta del paciente.
    * Retorna las notas ordenadas cronológicamente (la más reciente primero).
    */
   static async listPatientNotes(
@@ -57,20 +57,39 @@ export class ClinicalNoteService {
     const patientDir = await getDirectory(rootDirHandle, patientFolderName);
     if (!patientDir) return [];
 
-    const notesDir = await getDirectory(patientDir, 'notas');
-    if (!notesDir) return [];
-
-    const files = await listFiles(notesDir, '.json');
     const notes: ClinicalNote[] = [];
 
-    for (const fileHandle of files) {
+    // 1. Leer de la subcarpeta /notas/ si existe
+    const notesDir = await getDirectory(patientDir, 'notas');
+    if (notesDir) {
+      const files = await listFiles(notesDir, '.json');
+      for (const fileHandle of files) {
+        try {
+          const note = await readJsonFile<ClinicalNote>(notesDir, fileHandle.name, ClinicalNoteSchema);
+          if (note) {
+            notes.push(note);
+          }
+        } catch (err) {
+          console.error(`[listPatientNotes] Error leyendo nota ${fileHandle.name} en /notas/:`, err);
+        }
+      }
+    }
+
+    // 2. Leer directamente de la carpeta del paciente (por compatibilidad o notas raíz)
+    const rootFiles = await listFiles(patientDir, '.json');
+    for (const fileHandle of rootFiles) {
+      if (fileHandle.name === 'paciente.json') continue;
+      // Evitar duplicar si ya se leyó
+      if (notes.some((n) => n.fileName === fileHandle.name || n.id === fileHandle.name.replace('.json', ''))) {
+        continue;
+      }
       try {
-        const note = await readJsonFile<ClinicalNote>(notesDir, fileHandle.name, ClinicalNoteSchema);
+        const note = await readJsonFile<ClinicalNote>(patientDir, fileHandle.name, ClinicalNoteSchema);
         if (note) {
           notes.push(note);
         }
       } catch (err) {
-        console.error(`[listPatientNotes] Error leyendo archivo de nota ${fileHandle.name}:`, err);
+        console.error(`[listPatientNotes] Error leyendo nota raíz ${fileHandle.name}:`, err);
       }
     }
 

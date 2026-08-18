@@ -29,13 +29,13 @@
   },
   "allergies": [],
   "activeConditions": [
-    "HAS, DM2, OBESIDAD",
-    "Diagnóstico: HAS, DM2, OBESIDAD"
+    "Diagnóstico: HAS, DM2, OBESIDAD",
+    "HAS, DM2, OBESIDAD"
   ],
   "chronicConditions": [
     {
       "id": "cond-1",
-      "name": "HAS, DM2, OBESIDAD",
+      "name": "Diagnóstico: HAS, DM2, OBESIDAD",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -44,7 +44,7 @@
     },
     {
       "id": "cond-2",
-      "name": "Diagnóstico: HAS, DM2, OBESIDAD",
+      "name": "HAS, DM2, OBESIDAD",
       "diagnosedDate": "1990",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",

@@ -30,8 +30,8 @@
   "allergies": [],
   "activeConditions": [
     "Paciente cursando con Síndrome Metabólico. Presenta descontrol glucémico severo con síntomas cardinales que integran el diagnóstico de Diabetes Mellitus tipo 2. Cursa con Hipertensión Arterial Sistémica fuera de metas terapéuticas y Obesidad Grado I. Se sospecha neuropatía diabética incipiente por las parestesias, así como dispepsia secundaria a la ingesta crónica de aspirina. Amerita rescate glucémico inmediato con insulinoterapia basal y ajuste de antihipertensivo.",
-    "Paciente cursando con probable crisis hiperglucémica y desequilibrio hidroelectrolítico grave. Dada la infraestructura limitada, se requiere traslado inmediato a segundo nivel para descartar acidosis metabólica, lesión renal aguda prerrenal y estabilización hemodinámica.",
-    "DM2, HAS"
+    "DM2, HAS",
+    "Paciente cursando con probable crisis hiperglucémica y desequilibrio hidroelectrolítico grave. Dada la infraestructura limitada, se requiere traslado inmediato a segundo nivel para descartar acidosis metabólica, lesión renal aguda prerrenal y estabilización hemodinámica."
   ],
   "chronicConditions": [
     {
@@ -45,7 +45,7 @@
     },
     {
       "id": "cond-2",
-      "name": "Paciente cursando con probable crisis hiperglucémica y desequilibrio hidroelectrolítico grave. Dada la infraestructura limitada, se requiere traslado inmediato a segundo nivel para descartar acidosis metabólica, lesión renal aguda prerrenal y estabilización hemodinámica.",
+      "name": "DM2, HAS",
       "diagnosedDate": "1984",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
@@ -54,7 +54,7 @@
     },
     {
       "id": "cond-3",
-      "name": "DM2, HAS",
+      "name": "Paciente cursando con probable crisis hiperglucémica y desequilibrio hidroelectrolítico grave. Dada la infraestructura limitada, se requiere traslado inmediato a segundo nivel para descartar acidosis metabólica, lesión renal aguda prerrenal y estabilización hemodinámica.",
       "diagnosedDate": "1984",
       "status": "Controlada",
       "currentTreatment": "Tratamiento médico continuo",
